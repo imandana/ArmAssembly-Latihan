@@ -1,0 +1,1444 @@
+
+libCPPtoARM.so:     file format elf32-littlearm
+
+
+Disassembly of section .plt:
+
+00000584 <__cxa_finalize@plt-0x14>:
+ 584:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+ 588:	e59fe004 	ldr	lr, [pc, #4]	; 594 <__cxa_finalize@plt-0x4>
+ 58c:	e08fe00e 	add	lr, pc, lr
+ 590:	e5bef008 	ldr	pc, [lr, #8]!
+ 594:	00011a28 	andeq	r1, r1, r8, lsr #20
+
+00000598 <__cxa_finalize@plt>:
+ 598:	e28fc600 	add	ip, pc, #0, 12
+ 59c:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5a0:	e5bcfa28 	ldr	pc, [ip, #2600]!	; 0xa28
+
+000005a4 <__cxa_type_match@plt>:
+ 5a4:	e28fc600 	add	ip, pc, #0, 12
+ 5a8:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5ac:	e5bcfa20 	ldr	pc, [ip, #2592]!	; 0xa20
+
+000005b0 <abort@plt>:
+ 5b0:	e28fc600 	add	ip, pc, #0, 12
+ 5b4:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5b8:	e5bcfa18 	ldr	pc, [ip, #2584]!	; 0xa18
+
+000005bc <__cxa_begin_cleanup@plt>:
+ 5bc:	e28fc600 	add	ip, pc, #0, 12
+ 5c0:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5c4:	e5bcfa10 	ldr	pc, [ip, #2576]!	; 0xa10
+
+000005c8 <__gnu_Unwind_Find_exidx@plt>:
+ 5c8:	e28fc600 	add	ip, pc, #0, 12
+ 5cc:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5d0:	e5bcfa08 	ldr	pc, [ip, #2568]!	; 0xa08
+
+000005d4 <memcpy@plt>:
+ 5d4:	e28fc600 	add	ip, pc, #0, 12
+ 5d8:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5dc:	e5bcfa00 	ldr	pc, [ip, #2560]!	; 0xa00
+
+000005e0 <__cxa_atexit@plt>:
+ 5e0:	e28fc600 	add	ip, pc, #0, 12
+ 5e4:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5e8:	e5bcf9f8 	ldr	pc, [ip, #2552]!	; 0x9f8
+
+Disassembly of section .text:
+
+000005ec <TambahNormal@@Base-0x3c>:
+     5ec:	e59f0004 	ldr	r0, [pc, #4]	; 5f8 <__cxa_atexit@plt+0x18>
+     5f0:	e08f0000 	add	r0, pc, r0
+     5f4:	eaffffe7 	b	598 <__cxa_finalize@plt>
+     5f8:	00011a08 	andeq	r1, r1, r8, lsl #20
+     5fc:	e3500000 	cmp	r0, #0
+     600:	012fff1e 	bxeq	lr
+     604:	e12fff10 	bx	r0
+     608:	e1a01000 	mov	r1, r0
+     60c:	e59f200c 	ldr	r2, [pc, #12]	; 620 <__cxa_atexit@plt+0x40>
+     610:	e59f000c 	ldr	r0, [pc, #12]	; 624 <__cxa_atexit@plt+0x44>
+     614:	e08f2002 	add	r2, pc, r2
+     618:	e08f0000 	add	r0, pc, r0
+     61c:	eaffffef 	b	5e0 <__cxa_atexit@plt>
+     620:	000119e4 	andeq	r1, r1, r4, ror #19
+     624:	ffffffdc 			; <UNDEFINED> instruction: 0xffffffdc
+
+00000628 <TambahNormal@@Base>:
+     628:	e0800001 	add	r0, r0, r1
+     62c:	e2400005 	sub	r0, r0, #5
+     630:	e12fff1e 	bx	lr
+
+00000634 <TambahChangeParamater@@Base>:
+     634:	e3a00019 	mov	r0, #25
+     638:	e12fff1e 	bx	lr
+
+0000063c <TambahChangeParamaterPassByPointer@@Base>:
+     63c:	e3a0200a 	mov	r2, #10
+     640:	e5802000 	str	r2, [r0]
+     644:	e3a02014 	mov	r2, #20
+     648:	e5812000 	str	r2, [r1]
+     64c:	e5900000 	ldr	r0, [r0]
+     650:	e280000f 	add	r0, r0, #15
+     654:	e12fff1e 	bx	lr
+
+00000658 <TambahChangeParamaterPassByReference@@Base>:
+     658:	e3a0200a 	mov	r2, #10
+     65c:	e5802000 	str	r2, [r0]
+     660:	e3a02014 	mov	r2, #20
+     664:	e5812000 	str	r2, [r1]
+     668:	e5900000 	ldr	r0, [r0]
+     66c:	e280000f 	add	r0, r0, #15
+     670:	e12fff1e 	bx	lr
+     674:	e5903000 	ldr	r3, [r0]
+     678:	e3130101 	tst	r3, #1073741824	; 0x40000000
+     67c:	13833102 	orrne	r3, r3, #-2147483648	; 0x80000000
+     680:	03c33102 	biceq	r3, r3, #-2147483648	; 0x80000000
+     684:	e0800003 	add	r0, r0, r3
+     688:	e12fff1e 	bx	lr
+     68c:	e92d4ff7 	push	{r0, r1, r2, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+     690:	e3510000 	cmp	r1, #0
+     694:	e1a05001 	mov	r5, r1
+     698:	0a000021 	beq	724 <TambahChangeParamaterPassByReference@@Base+0xcc>
+     69c:	e2418001 	sub	r8, r1, #1
+     6a0:	e1a06002 	mov	r6, r2
+     6a4:	e1a07000 	mov	r7, r0
+     6a8:	e3a0b000 	mov	fp, #0
+     6ac:	e1a09008 	mov	r9, r8
+     6b0:	e08b4009 	add	r4, fp, r9
+     6b4:	e0844fa4 	add	r4, r4, r4, lsr #31
+     6b8:	e1a040c4 	asr	r4, r4, #1
+     6bc:	e1a0a184 	lsl	sl, r4, #3
+     6c0:	e087500a 	add	r5, r7, sl
+     6c4:	e1a00005 	mov	r0, r5
+     6c8:	ebffffe9 	bl	674 <TambahChangeParamaterPassByReference@@Base+0x1c>
+     6cc:	e1540008 	cmp	r4, r8
+     6d0:	0a000011 	beq	71c <TambahChangeParamaterPassByReference@@Base+0xc4>
+     6d4:	e58d0004 	str	r0, [sp, #4]
+     6d8:	e28a0008 	add	r0, sl, #8
+     6dc:	e0870000 	add	r0, r7, r0
+     6e0:	ebffffe3 	bl	674 <TambahChangeParamaterPassByReference@@Base+0x1c>
+     6e4:	e59d3004 	ldr	r3, [sp, #4]
+     6e8:	e1560003 	cmp	r6, r3
+     6ec:	2a000003 	bcs	700 <TambahChangeParamaterPassByReference@@Base+0xa8>
+     6f0:	e154000b 	cmp	r4, fp
+     6f4:	0a000006 	beq	714 <TambahChangeParamaterPassByReference@@Base+0xbc>
+     6f8:	e2449001 	sub	r9, r4, #1
+     6fc:	eaffffeb 	b	6b0 <TambahChangeParamaterPassByReference@@Base+0x58>
+     700:	e2400001 	sub	r0, r0, #1
+     704:	e1560000 	cmp	r6, r0
+     708:	9a000005 	bls	724 <TambahChangeParamaterPassByReference@@Base+0xcc>
+     70c:	e284b001 	add	fp, r4, #1
+     710:	eaffffe6 	b	6b0 <TambahChangeParamaterPassByReference@@Base+0x58>
+     714:	e3a05000 	mov	r5, #0
+     718:	ea000001 	b	724 <TambahChangeParamaterPassByReference@@Base+0xcc>
+     71c:	e1560000 	cmp	r6, r0
+     720:	3afffff2 	bcc	6f0 <TambahChangeParamaterPassByReference@@Base+0x98>
+     724:	e1a00005 	mov	r0, r5
+     728:	e28dd00c 	add	sp, sp, #12
+     72c:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+     730:	e3500001 	cmp	r0, #1
+     734:	0a000006 	beq	754 <TambahChangeParamaterPassByReference@@Base+0xfc>
+     738:	e3500002 	cmp	r0, #2
+     73c:	0a000007 	beq	760 <TambahChangeParamaterPassByReference@@Base+0x108>
+     740:	e3500000 	cmp	r0, #0
+     744:	1a000008 	bne	76c <TambahChangeParamaterPassByReference@@Base+0x114>
+     748:	e59f0024 	ldr	r0, [pc, #36]	; 774 <TambahChangeParamaterPassByReference@@Base+0x11c>
+     74c:	e79f0000 	ldr	r0, [pc, r0]
+     750:	e12fff1e 	bx	lr
+     754:	e59f001c 	ldr	r0, [pc, #28]	; 778 <TambahChangeParamaterPassByReference@@Base+0x120>
+     758:	e79f0000 	ldr	r0, [pc, r0]
+     75c:	e12fff1e 	bx	lr
+     760:	e59f0014 	ldr	r0, [pc, #20]	; 77c <TambahChangeParamaterPassByReference@@Base+0x124>
+     764:	e79f0000 	ldr	r0, [pc, r0]
+     768:	e12fff1e 	bx	lr
+     76c:	e3a00000 	mov	r0, #0
+     770:	e12fff1e 	bx	lr
+     774:	000118a0 	andeq	r1, r1, r0, lsr #17
+     778:	0001188c 	andeq	r1, r1, ip, lsl #17
+     77c:	00011884 	andeq	r1, r1, r4, lsl #17
+     780:	e59f30ec 	ldr	r3, [pc, #236]	; 874 <TambahChangeParamaterPassByReference@@Base+0x21c>
+     784:	e92d4037 	push	{r0, r1, r2, r4, r5, lr}
+     788:	e1a04000 	mov	r4, r0
+     78c:	e79f3003 	ldr	r3, [pc, r3]
+     790:	e2415002 	sub	r5, r1, #2
+     794:	e3530000 	cmp	r3, #0
+     798:	0a000008 	beq	7c0 <TambahChangeParamaterPassByReference@@Base+0x168>
+     79c:	e1a00005 	mov	r0, r5
+     7a0:	e28d1004 	add	r1, sp, #4
+     7a4:	ebffff87 	bl	5c8 <__gnu_Unwind_Find_exidx@plt>
+     7a8:	e3500000 	cmp	r0, #0
+     7ac:	1a00000a 	bne	7dc <TambahChangeParamaterPassByReference@@Base+0x184>
+     7b0:	e3a03000 	mov	r3, #0
+     7b4:	e3a00009 	mov	r0, #9
+     7b8:	e5843010 	str	r3, [r4, #16]
+     7bc:	ea00002a 	b	86c <TambahChangeParamaterPassByReference@@Base+0x214>
+     7c0:	e59f30b0 	ldr	r3, [pc, #176]	; 878 <TambahChangeParamaterPassByReference@@Base+0x220>
+     7c4:	e59f00b0 	ldr	r0, [pc, #176]	; 87c <TambahChangeParamaterPassByReference@@Base+0x224>
+     7c8:	e79f3003 	ldr	r3, [pc, r3]
+     7cc:	e79f0000 	ldr	r0, [pc, r0]
+     7d0:	e0603003 	rsb	r3, r0, r3
+     7d4:	e1a031c3 	asr	r3, r3, #3
+     7d8:	e58d3004 	str	r3, [sp, #4]
+     7dc:	e1a02005 	mov	r2, r5
+     7e0:	e59d1004 	ldr	r1, [sp, #4]
+     7e4:	ebffffa8 	bl	68c <TambahChangeParamaterPassByReference@@Base+0x34>
+     7e8:	e2505000 	subs	r5, r0, #0
+     7ec:	0affffef 	beq	7b0 <TambahChangeParamaterPassByReference@@Base+0x158>
+     7f0:	ebffff9f 	bl	674 <TambahChangeParamaterPassByReference@@Base+0x1c>
+     7f4:	e5953004 	ldr	r3, [r5, #4]
+     7f8:	e3530001 	cmp	r3, #1
+     7fc:	03a03000 	moveq	r3, #0
+     800:	05843010 	streq	r3, [r4, #16]
+     804:	e5840048 	str	r0, [r4, #72]	; 0x48
+     808:	03a00005 	moveq	r0, #5
+     80c:	0a000016 	beq	86c <TambahChangeParamaterPassByReference@@Base+0x214>
+     810:	e3530000 	cmp	r3, #0
+     814:	e2850004 	add	r0, r5, #4
+     818:	b584004c 	strlt	r0, [r4, #76]	; 0x4c
+     81c:	b3a03001 	movlt	r3, #1
+     820:	ba000002 	blt	830 <TambahChangeParamaterPassByReference@@Base+0x1d8>
+     824:	ebffff92 	bl	674 <TambahChangeParamaterPassByReference@@Base+0x1c>
+     828:	e3a03000 	mov	r3, #0
+     82c:	e584004c 	str	r0, [r4, #76]	; 0x4c
+     830:	e594004c 	ldr	r0, [r4, #76]	; 0x4c
+     834:	e5843050 	str	r3, [r4, #80]	; 0x50
+     838:	e5903000 	ldr	r3, [r0]
+     83c:	e3530000 	cmp	r3, #0
+     840:	aa000006 	bge	860 <TambahChangeParamaterPassByReference@@Base+0x208>
+     844:	e7e30c53 	ubfx	r0, r3, #24, #4
+     848:	ebffffb8 	bl	730 <TambahChangeParamaterPassByReference@@Base+0xd8>
+     84c:	e3500000 	cmp	r0, #0
+     850:	e5840010 	str	r0, [r4, #16]
+     854:	03a00009 	moveq	r0, #9
+     858:	13a00000 	movne	r0, #0
+     85c:	ea000002 	b	86c <TambahChangeParamaterPassByReference@@Base+0x214>
+     860:	ebffff83 	bl	674 <TambahChangeParamaterPassByReference@@Base+0x1c>
+     864:	e5840010 	str	r0, [r4, #16]
+     868:	e3a00000 	mov	r0, #0
+     86c:	e28dd00c 	add	sp, sp, #12
+     870:	e8bd8030 	pop	{r4, r5, pc}
+     874:	00011868 	andeq	r1, r1, r8, ror #16
+     878:	00011828 	andeq	r1, r1, r8, lsr #16
+     87c:	00011810 	andeq	r1, r1, r0, lsl r8
+     880:	e5903000 	ldr	r3, [r0]
+     884:	e92d4010 	push	{r4, lr}
+     888:	e3130001 	tst	r3, #1
+     88c:	e1a04000 	mov	r4, r0
+     890:	1a000005 	bne	8ac <TambahChangeParamaterPassByReference@@Base+0x254>
+     894:	e3130002 	tst	r3, #2
+     898:	e2800048 	add	r0, r0, #72	; 0x48
+     89c:	0a000001 	beq	8a8 <TambahChangeParamaterPassByReference@@Base+0x250>
+     8a0:	eb000331 	bl	156c <TambahChangeParamaterPassByReference@@Base+0xf14>
+     8a4:	ea000000 	b	8ac <TambahChangeParamaterPassByReference@@Base+0x254>
+     8a8:	eb00032b 	bl	155c <TambahChangeParamaterPassByReference@@Base+0xf04>
+     8ac:	e5943000 	ldr	r3, [r4]
+     8b0:	e3130004 	tst	r3, #4
+     8b4:	1a000001 	bne	8c0 <TambahChangeParamaterPassByReference@@Base+0x268>
+     8b8:	e28400d0 	add	r0, r4, #208	; 0xd0
+     8bc:	eb00032e 	bl	157c <TambahChangeParamaterPassByReference@@Base+0xf24>
+     8c0:	e5943000 	ldr	r3, [r4]
+     8c4:	e3130008 	tst	r3, #8
+     8c8:	1a000001 	bne	8d4 <TambahChangeParamaterPassByReference@@Base+0x27c>
+     8cc:	e2840e15 	add	r0, r4, #336	; 0x150
+     8d0:	eb00032d 	bl	158c <TambahChangeParamaterPassByReference@@Base+0xf34>
+     8d4:	e5943000 	ldr	r3, [r4]
+     8d8:	e3130010 	tst	r3, #16
+     8dc:	18bd8010 	popne	{r4, pc}
+     8e0:	e2840e1d 	add	r0, r4, #464	; 0x1d0
+     8e4:	e8bd4010 	pop	{r4, lr}
+     8e8:	ea000349 	b	1614 <TambahChangeParamaterPassByReference@@Base+0xfbc>
+     8ec:	e5903000 	ldr	r3, [r0]
+     8f0:	e3530000 	cmp	r3, #0
+     8f4:	17930000 	ldrne	r0, [r3, r0]
+     8f8:	01a00003 	moveq	r0, r3
+     8fc:	e12fff1e 	bx	lr
+     900:	e3a00009 	mov	r0, #9
+     904:	e12fff1e 	bx	lr
+     908:	e12fff1e 	bx	lr
+     90c:	e92d4070 	push	{r4, r5, r6, lr}
+     910:	e1a05000 	mov	r5, r0
+     914:	e1a04001 	mov	r4, r1
+     918:	e1a00005 	mov	r0, r5
+     91c:	e5941040 	ldr	r1, [r4, #64]	; 0x40
+     920:	ebffff96 	bl	780 <TambahChangeParamaterPassByReference@@Base+0x128>
+     924:	e2506000 	subs	r6, r0, #0
+     928:	0a000000 	beq	930 <TambahChangeParamaterPassByReference@@Base+0x2d8>
+     92c:	ebffff1f 	bl	5b0 <abort@plt>
+     930:	e5943040 	ldr	r3, [r4, #64]	; 0x40
+     934:	e3a00001 	mov	r0, #1
+     938:	e1a01005 	mov	r1, r5
+     93c:	e1a02004 	mov	r2, r4
+     940:	e5853014 	str	r3, [r5, #20]
+     944:	e5953010 	ldr	r3, [r5, #16]
+     948:	e12fff33 	blx	r3
+     94c:	e3500008 	cmp	r0, #8
+     950:	0afffff0 	beq	918 <TambahChangeParamaterPassByReference@@Base+0x2c0>
+     954:	e3500007 	cmp	r0, #7
+     958:	1afffff3 	bne	92c <TambahChangeParamaterPassByReference@@Base+0x2d4>
+     95c:	e1a00006 	mov	r0, r6
+     960:	e5941040 	ldr	r1, [r4, #64]	; 0x40
+     964:	ebffffe7 	bl	908 <TambahChangeParamaterPassByReference@@Base+0x2b0>
+     968:	e2840004 	add	r0, r4, #4
+     96c:	eb0002f5 	bl	1548 <TambahChangeParamaterPassByReference@@Base+0xef0>
+     970:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
+     974:	e281e004 	add	lr, r1, #4
+     978:	e590800c 	ldr	r8, [r0, #12]
+     97c:	e1a04000 	mov	r4, r0
+     980:	e5909018 	ldr	r9, [r0, #24]
+     984:	e1a0a002 	mov	sl, r2
+     988:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     98c:	e24ddff3 	sub	sp, sp, #972	; 0x3cc
+     990:	e28dc00c 	add	ip, sp, #12
+     994:	e28db008 	add	fp, sp, #8
+     998:	e28d7f7a 	add	r7, sp, #488	; 0x1e8
+     99c:	e3a06000 	mov	r6, #0
+     9a0:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     9a4:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     9a8:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     9ac:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     9b0:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     9b4:	e89e000f 	ldm	lr, {r0, r1, r2, r3}
+     9b8:	e88c000f 	stm	ip, {r0, r1, r2, r3}
+     9bc:	e58d6008 	str	r6, [sp, #8]
+     9c0:	e1a00004 	mov	r0, r4
+     9c4:	e59d1048 	ldr	r1, [sp, #72]	; 0x48
+     9c8:	ebffff6c 	bl	780 <TambahChangeParamaterPassByReference@@Base+0x128>
+     9cc:	e35a0000 	cmp	sl, #0
+     9d0:	13a0a00a 	movne	sl, #10
+     9d4:	03a0a009 	moveq	sl, #9
+     9d8:	e2505000 	subs	r5, r0, #0
+     9dc:	138aa010 	orrne	sl, sl, #16
+     9e0:	159d3040 	ldrne	r3, [sp, #64]	; 0x40
+     9e4:	1a00000c 	bne	a1c <TambahChangeParamaterPassByReference@@Base+0x3c4>
+     9e8:	e59d3048 	ldr	r3, [sp, #72]	; 0x48
+     9ec:	e1a0100b 	mov	r1, fp
+     9f0:	e3a02e1e 	mov	r2, #480	; 0x1e0
+     9f4:	e1a00007 	mov	r0, r7
+     9f8:	e5843014 	str	r3, [r4, #20]
+     9fc:	ebfffef4 	bl	5d4 <memcpy@plt>
+     a00:	e5943010 	ldr	r3, [r4, #16]
+     a04:	e1a0000a 	mov	r0, sl
+     a08:	e1a01004 	mov	r1, r4
+     a0c:	e1a02007 	mov	r2, r7
+     a10:	e12fff33 	blx	r3
+     a14:	e59d3220 	ldr	r3, [sp, #544]	; 0x220
+     a18:	e1a06000 	mov	r6, r0
+     a1c:	e58d304c 	str	r3, [sp, #76]	; 0x4c
+     a20:	e3a00001 	mov	r0, #1
+     a24:	e58db000 	str	fp, [sp]
+     a28:	e1a0100a 	mov	r1, sl
+     a2c:	e58d9004 	str	r9, [sp, #4]
+     a30:	e1a02004 	mov	r2, r4
+     a34:	e1a03004 	mov	r3, r4
+     a38:	e12fff38 	blx	r8
+     a3c:	e3500000 	cmp	r0, #0
+     a40:	1a00000f 	bne	a84 <TambahChangeParamaterPassByReference@@Base+0x42c>
+     a44:	e3550000 	cmp	r5, #0
+     a48:	1a00000f 	bne	a8c <TambahChangeParamaterPassByReference@@Base+0x434>
+     a4c:	e1a0000b 	mov	r0, fp
+     a50:	e1a01007 	mov	r1, r7
+     a54:	e3a02e1e 	mov	r2, #480	; 0x1e0
+     a58:	e1a0a005 	mov	sl, r5
+     a5c:	ebfffedc 	bl	5d4 <memcpy@plt>
+     a60:	e3560008 	cmp	r6, #8
+     a64:	0affffd5 	beq	9c0 <TambahChangeParamaterPassByReference@@Base+0x368>
+     a68:	e3560007 	cmp	r6, #7
+     a6c:	1a000004 	bne	a84 <TambahChangeParamaterPassByReference@@Base+0x42c>
+     a70:	e1a00005 	mov	r0, r5
+     a74:	e59d1048 	ldr	r1, [sp, #72]	; 0x48
+     a78:	ebffffa2 	bl	908 <TambahChangeParamaterPassByReference@@Base+0x2b0>
+     a7c:	e28d000c 	add	r0, sp, #12
+     a80:	eb0002b0 	bl	1548 <TambahChangeParamaterPassByReference@@Base+0xef0>
+     a84:	e3a00009 	mov	r0, #9
+     a88:	ea000000 	b	a90 <TambahChangeParamaterPassByReference@@Base+0x438>
+     a8c:	e1a00005 	mov	r0, r5
+     a90:	e28ddff3 	add	sp, sp, #972	; 0x3cc
+     a94:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+     a98:	e5900044 	ldr	r0, [r0, #68]	; 0x44
+     a9c:	e12fff1e 	bx	lr
+     aa0:	e591303c 	ldr	r3, [r1, #60]	; 0x3c
+     aa4:	e92d40f0 	push	{r4, r5, r6, r7, lr}
+     aa8:	e281e004 	add	lr, r1, #4
+     aac:	e5813040 	str	r3, [r1, #64]	; 0x40
+     ab0:	e1a05000 	mov	r5, r0
+     ab4:	e1a04001 	mov	r4, r1
+     ab8:	e24ddf79 	sub	sp, sp, #484	; 0x1e4
+     abc:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     ac0:	e28dc004 	add	ip, sp, #4
+     ac4:	e28d6e1e 	add	r6, sp, #480	; 0x1e0
+     ac8:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     acc:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     ad0:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     ad4:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     ad8:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     adc:	e89e000f 	ldm	lr, {r0, r1, r2, r3}
+     ae0:	e88c000f 	stm	ip, {r0, r1, r2, r3}
+     ae4:	e3e03000 	mvn	r3, #0
+     ae8:	e52631e0 	str	r3, [r6, #-480]!	; 0xfffffe20
+     aec:	e1a00005 	mov	r0, r5
+     af0:	e59d1040 	ldr	r1, [sp, #64]	; 0x40
+     af4:	ebffff21 	bl	780 <TambahChangeParamaterPassByReference@@Base+0x128>
+     af8:	e3500000 	cmp	r0, #0
+     afc:	1a00000d 	bne	b38 <TambahChangeParamaterPassByReference@@Base+0x4e0>
+     b00:	e5953010 	ldr	r3, [r5, #16]
+     b04:	e1a01005 	mov	r1, r5
+     b08:	e1a02006 	mov	r2, r6
+     b0c:	e12fff33 	blx	r3
+     b10:	e3500008 	cmp	r0, #8
+     b14:	e1a07000 	mov	r7, r0
+     b18:	0afffff3 	beq	aec <TambahChangeParamaterPassByReference@@Base+0x494>
+     b1c:	e1a00006 	mov	r0, r6
+     b20:	ebffff56 	bl	880 <TambahChangeParamaterPassByReference@@Base+0x228>
+     b24:	e3570006 	cmp	r7, #6
+     b28:	1a000002 	bne	b38 <TambahChangeParamaterPassByReference@@Base+0x4e0>
+     b2c:	e1a00005 	mov	r0, r5
+     b30:	e1a01004 	mov	r1, r4
+     b34:	ebffff74 	bl	90c <TambahChangeParamaterPassByReference@@Base+0x2b4>
+     b38:	e3a00009 	mov	r0, #9
+     b3c:	e28ddf79 	add	sp, sp, #484	; 0x1e4
+     b40:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+     b44:	e5802018 	str	r2, [r0, #24]
+     b48:	e593203c 	ldr	r2, [r3, #60]	; 0x3c
+     b4c:	e580100c 	str	r1, [r0, #12]
+     b50:	e1a01003 	mov	r1, r3
+     b54:	e5832040 	str	r2, [r3, #64]	; 0x40
+     b58:	e3a02000 	mov	r2, #0
+     b5c:	eaffff83 	b	970 <TambahChangeParamaterPassByReference@@Base+0x318>
+     b60:	e92d4070 	push	{r4, r5, r6, lr}
+     b64:	e1a05000 	mov	r5, r0
+     b68:	e590600c 	ldr	r6, [r0, #12]
+     b6c:	e1a04001 	mov	r4, r1
+     b70:	e5903014 	ldr	r3, [r0, #20]
+     b74:	e3560000 	cmp	r6, #0
+     b78:	e5813040 	str	r3, [r1, #64]	; 0x40
+     b7c:	0a000002 	beq	b8c <TambahChangeParamaterPassByReference@@Base+0x534>
+     b80:	e3a02001 	mov	r2, #1
+     b84:	ebffff79 	bl	970 <TambahChangeParamaterPassByReference@@Base+0x318>
+     b88:	ea000010 	b	bd0 <TambahChangeParamaterPassByReference@@Base+0x578>
+     b8c:	e5903010 	ldr	r3, [r0, #16]
+     b90:	e1a01005 	mov	r1, r5
+     b94:	e3a00002 	mov	r0, #2
+     b98:	e1a02004 	mov	r2, r4
+     b9c:	e12fff33 	blx	r3
+     ba0:	e3500007 	cmp	r0, #7
+     ba4:	0a000004 	beq	bbc <TambahChangeParamaterPassByReference@@Base+0x564>
+     ba8:	e3500008 	cmp	r0, #8
+     bac:	1a000007 	bne	bd0 <TambahChangeParamaterPassByReference@@Base+0x578>
+     bb0:	e1a00005 	mov	r0, r5
+     bb4:	e1a01004 	mov	r1, r4
+     bb8:	ebffff53 	bl	90c <TambahChangeParamaterPassByReference@@Base+0x2b4>
+     bbc:	e1a00006 	mov	r0, r6
+     bc0:	e5941040 	ldr	r1, [r4, #64]	; 0x40
+     bc4:	ebffff4f 	bl	908 <TambahChangeParamaterPassByReference@@Base+0x2b0>
+     bc8:	e2840004 	add	r0, r4, #4
+     bcc:	eb00025d 	bl	1548 <TambahChangeParamaterPassByReference@@Base+0xef0>
+     bd0:	ebfffe76 	bl	5b0 <abort@plt>
+     bd4:	e590200c 	ldr	r2, [r0, #12]
+     bd8:	e3520000 	cmp	r2, #0
+     bdc:	1a000000 	bne	be4 <TambahChangeParamaterPassByReference@@Base+0x58c>
+     be0:	eaffffae 	b	aa0 <TambahChangeParamaterPassByReference@@Base+0x448>
+     be4:	e591203c 	ldr	r2, [r1, #60]	; 0x3c
+     be8:	e5812040 	str	r2, [r1, #64]	; 0x40
+     bec:	e3a02000 	mov	r2, #0
+     bf0:	eaffff5e 	b	970 <TambahChangeParamaterPassByReference@@Base+0x318>
+     bf4:	e12fff1e 	bx	lr
+     bf8:	e5903008 	ldr	r3, [r0, #8]
+     bfc:	e1a01000 	mov	r1, r0
+     c00:	e3530000 	cmp	r3, #0
+     c04:	012fff1e 	bxeq	lr
+     c08:	e3a00001 	mov	r0, #1
+     c0c:	e12fff13 	bx	r3
+     c10:	e3510004 	cmp	r1, #4
+     c14:	908ff101 	addls	pc, pc, r1, lsl #2
+     c18:	ea000011 	b	c64 <TambahChangeParamaterPassByReference@@Base+0x60c>
+     c1c:	ea000003 	b	c30 <TambahChangeParamaterPassByReference@@Base+0x5d8>
+     c20:	ea00000d 	b	c5c <TambahChangeParamaterPassByReference@@Base+0x604>
+     c24:	ea00000e 	b	c64 <TambahChangeParamaterPassByReference@@Base+0x60c>
+     c28:	ea00000b 	b	c5c <TambahChangeParamaterPassByReference@@Base+0x604>
+     c2c:	ea00000a 	b	c5c <TambahChangeParamaterPassByReference@@Base+0x604>
+     c30:	e352000f 	cmp	r2, #15
+     c34:	93530000 	cmpls	r3, #0
+     c38:	13a03001 	movne	r3, #1
+     c3c:	03a03000 	moveq	r3, #0
+     c40:	1a000007 	bne	c64 <TambahChangeParamaterPassByReference@@Base+0x60c>
+     c44:	e0800102 	add	r0, r0, r2, lsl #2
+     c48:	e59d2000 	ldr	r2, [sp]
+     c4c:	e5901004 	ldr	r1, [r0, #4]
+     c50:	e1a00003 	mov	r0, r3
+     c54:	e5821000 	str	r1, [r2]
+     c58:	e12fff1e 	bx	lr
+     c5c:	e3a00001 	mov	r0, #1
+     c60:	e12fff1e 	bx	lr
+     c64:	e3a00002 	mov	r0, #2
+     c68:	e12fff1e 	bx	lr
+     c6c:	e92d401f 	push	{r0, r1, r2, r3, r4, lr}
+     c70:	e1a02001 	mov	r2, r1
+     c74:	e3a01000 	mov	r1, #0
+     c78:	e28d300c 	add	r3, sp, #12
+     c7c:	e58d3000 	str	r3, [sp]
+     c80:	e1a03001 	mov	r3, r1
+     c84:	ebffffe1 	bl	c10 <TambahChangeParamaterPassByReference@@Base+0x5b8>
+     c88:	e59d000c 	ldr	r0, [sp, #12]
+     c8c:	e28dd014 	add	sp, sp, #20
+     c90:	e49df004 	pop	{pc}		; (ldr pc, [sp], #4)
+     c94:	e3510004 	cmp	r1, #4
+     c98:	908ff101 	addls	pc, pc, r1, lsl #2
+     c9c:	ea000011 	b	ce8 <TambahChangeParamaterPassByReference@@Base+0x690>
+     ca0:	ea000003 	b	cb4 <TambahChangeParamaterPassByReference@@Base+0x65c>
+     ca4:	ea00000d 	b	ce0 <TambahChangeParamaterPassByReference@@Base+0x688>
+     ca8:	ea00000e 	b	ce8 <TambahChangeParamaterPassByReference@@Base+0x690>
+     cac:	ea00000b 	b	ce0 <TambahChangeParamaterPassByReference@@Base+0x688>
+     cb0:	ea00000a 	b	ce0 <TambahChangeParamaterPassByReference@@Base+0x688>
+     cb4:	e352000f 	cmp	r2, #15
+     cb8:	93530000 	cmpls	r3, #0
+     cbc:	13a03001 	movne	r3, #1
+     cc0:	03a03000 	moveq	r3, #0
+     cc4:	1a000007 	bne	ce8 <TambahChangeParamaterPassByReference@@Base+0x690>
+     cc8:	e59d1000 	ldr	r1, [sp]
+     ccc:	e0800102 	add	r0, r0, r2, lsl #2
+     cd0:	e5911000 	ldr	r1, [r1]
+     cd4:	e5801004 	str	r1, [r0, #4]
+     cd8:	e1a00003 	mov	r0, r3
+     cdc:	e12fff1e 	bx	lr
+     ce0:	e3a00001 	mov	r0, #1
+     ce4:	e12fff1e 	bx	lr
+     ce8:	e3a00002 	mov	r0, #2
+     cec:	e12fff1e 	bx	lr
+     cf0:	e92d401f 	push	{r0, r1, r2, r3, r4, lr}
+     cf4:	e28d3010 	add	r3, sp, #16
+     cf8:	e1a0c001 	mov	ip, r1
+     cfc:	e3a01000 	mov	r1, #0
+     d00:	e5232004 	str	r2, [r3, #-4]!
+     d04:	e1a0200c 	mov	r2, ip
+     d08:	e58d3000 	str	r3, [sp]
+     d0c:	e1a03001 	mov	r3, r1
+     d10:	ebffffdf 	bl	c94 <TambahChangeParamaterPassByReference@@Base+0x63c>
+     d14:	e28dd014 	add	sp, sp, #20
+     d18:	e49df004 	pop	{pc}		; (ldr pc, [sp], #4)
+     d1c:	e592303c 	ldr	r3, [r2, #60]	; 0x3c
+     d20:	e282c004 	add	ip, r2, #4
+     d24:	e92d41f0 	push	{r4, r5, r6, r7, r8, lr}
+     d28:	e1a07000 	mov	r7, r0
+     d2c:	e5823040 	str	r3, [r2, #64]	; 0x40
+     d30:	e1a08001 	mov	r8, r1
+     d34:	e8bc000f 	ldm	ip!, {r0, r1, r2, r3}
+     d38:	e24ddf8e 	sub	sp, sp, #568	; 0x238
+     d3c:	e28de05c 	add	lr, sp, #92	; 0x5c
+     d40:	e28d4058 	add	r4, sp, #88	; 0x58
+     d44:	e1a0600d 	mov	r6, sp
+     d48:	e8ae000f 	stmia	lr!, {r0, r1, r2, r3}
+     d4c:	e8bc000f 	ldm	ip!, {r0, r1, r2, r3}
+     d50:	e8ae000f 	stmia	lr!, {r0, r1, r2, r3}
+     d54:	e8bc000f 	ldm	ip!, {r0, r1, r2, r3}
+     d58:	e8ae000f 	stmia	lr!, {r0, r1, r2, r3}
+     d5c:	e89c000f 	ldm	ip, {r0, r1, r2, r3}
+     d60:	e88e000f 	stm	lr, {r0, r1, r2, r3}
+     d64:	e3e03000 	mvn	r3, #0
+     d68:	e58d3058 	str	r3, [sp, #88]	; 0x58
+     d6c:	e1a00006 	mov	r0, r6
+     d70:	e59d1098 	ldr	r1, [sp, #152]	; 0x98
+     d74:	ebfffe81 	bl	780 <TambahChangeParamaterPassByReference@@Base+0x128>
+     d78:	e3500000 	cmp	r0, #0
+     d7c:	0a000001 	beq	d88 <TambahChangeParamaterPassByReference@@Base+0x730>
+     d80:	e3a05009 	mov	r5, #9
+     d84:	ea000011 	b	dd0 <TambahChangeParamaterPassByReference@@Base+0x778>
+     d88:	e1a00004 	mov	r0, r4
+     d8c:	e3a0100c 	mov	r1, #12
+     d90:	e1a02006 	mov	r2, r6
+     d94:	ebffffd5 	bl	cf0 <TambahChangeParamaterPassByReference@@Base+0x698>
+     d98:	e1a00004 	mov	r0, r4
+     d9c:	e1a01008 	mov	r1, r8
+     da0:	e12fff37 	blx	r7
+     da4:	e3500000 	cmp	r0, #0
+     da8:	1afffff4 	bne	d80 <TambahChangeParamaterPassByReference@@Base+0x728>
+     dac:	e59d3010 	ldr	r3, [sp, #16]
+     db0:	e3a00008 	mov	r0, #8
+     db4:	e1a01006 	mov	r1, r6
+     db8:	e1a02004 	mov	r2, r4
+     dbc:	e12fff33 	blx	r3
+     dc0:	e2403005 	sub	r3, r0, #5
+     dc4:	e1a05000 	mov	r5, r0
+     dc8:	e3d33004 	bics	r3, r3, #4
+     dcc:	1affffe6 	bne	d6c <TambahChangeParamaterPassByReference@@Base+0x714>
+     dd0:	e1a00004 	mov	r0, r4
+     dd4:	ebfffea9 	bl	880 <TambahChangeParamaterPassByReference@@Base+0x228>
+     dd8:	e1a00005 	mov	r0, r5
+     ddc:	e28ddf8e 	add	sp, sp, #568	; 0x238
+     de0:	e8bd81f0 	pop	{r4, r5, r6, r7, r8, pc}
+     de4:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
+     de8:	e1a07002 	mov	r7, r2
+     dec:	e591204c 	ldr	r2, [r1, #76]	; 0x4c
+     df0:	e24dd024 	sub	sp, sp, #36	; 0x24
+     df4:	e2539000 	subs	r9, r3, #0
+     df8:	e1a05001 	mov	r5, r1
+     dfc:	e282c004 	add	ip, r2, #4
+     e00:	e2008003 	and	r8, r0, #3
+     e04:	e5924000 	ldr	r4, [r2]
+     e08:	e58dc018 	str	ip, [sp, #24]
+     e0c:	e58d4014 	str	r4, [sp, #20]
+     e10:	1a000005 	bne	e2c <TambahChangeParamaterPassByReference@@Base+0x7d4>
+     e14:	e1a04404 	lsl	r4, r4, #8
+     e18:	e3a03003 	mov	r3, #3
+     e1c:	e58d4014 	str	r4, [sp, #20]
+     e20:	e5cd901d 	strb	r9, [sp, #29]
+     e24:	e5cd301c 	strb	r3, [sp, #28]
+     e28:	ea000009 	b	e54 <TambahChangeParamaterPassByReference@@Base+0x7fc>
+     e2c:	e3590002 	cmp	r9, #2
+     e30:	ca000007 	bgt	e54 <TambahChangeParamaterPassByReference@@Base+0x7fc>
+     e34:	e1a03824 	lsr	r3, r4, #16
+     e38:	e5cd301d 	strb	r3, [sp, #29]
+     e3c:	e1a04804 	lsl	r4, r4, #16
+     e40:	e3a02002 	mov	r2, #2
+     e44:	e6ef3073 	uxtb	r3, r3
+     e48:	e58d4014 	str	r4, [sp, #20]
+     e4c:	e5cd201c 	strb	r2, [sp, #28]
+     e50:	e08cc103 	add	ip, ip, r3, lsl #2
+     e54:	e3580002 	cmp	r8, #2
+     e58:	e5953050 	ldr	r3, [r5, #80]	; 0x50
+     e5c:	0595c038 	ldreq	ip, [r5, #56]	; 0x38
+     e60:	e2133001 	ands	r3, r3, #1
+     e64:	1a0000af 	bne	1128 <TambahChangeParamaterPassByReference@@Base+0xad0>
+     e68:	e2200008 	eor	r0, r0, #8
+     e6c:	e58d3004 	str	r3, [sp, #4]
+     e70:	e7e031d0 	ubfx	r3, r0, #3, #1
+     e74:	e58d3008 	str	r3, [sp, #8]
+     e78:	e59c4000 	ldr	r4, [ip]
+     e7c:	e3540000 	cmp	r4, #0
+     e80:	0a0000aa 	beq	1130 <TambahChangeParamaterPassByReference@@Base+0xad8>
+     e84:	e3590002 	cmp	r9, #2
+     e88:	e5953048 	ldr	r3, [r5, #72]	; 0x48
+     e8c:	e1a00007 	mov	r0, r7
+     e90:	e3a0100f 	mov	r1, #15
+     e94:	059ca004 	ldreq	sl, [ip, #4]
+     e98:	028c6008 	addeq	r6, ip, #8
+     e9c:	11dca0b2 	ldrhne	sl, [ip, #2]
+     ea0:	128c6004 	addne	r6, ip, #4
+     ea4:	11dc40b0 	ldrhne	r4, [ip]
+     ea8:	e3cab001 	bic	fp, sl, #1
+     eac:	e08bb003 	add	fp, fp, r3
+     eb0:	ebffff6d 	bl	c6c <TambahChangeParamaterPassByReference@@Base+0x614>
+     eb4:	e15b0000 	cmp	fp, r0
+     eb8:	83a0c000 	movhi	ip, #0
+     ebc:	8a000004 	bhi	ed4 <TambahChangeParamaterPassByReference@@Base+0x87c>
+     ec0:	e3c43001 	bic	r3, r4, #1
+     ec4:	e08bb003 	add	fp, fp, r3
+     ec8:	e150000b 	cmp	r0, fp
+     ecc:	23a0c000 	movcs	ip, #0
+     ed0:	33a0c001 	movcc	ip, #1
+     ed4:	e20aa001 	and	sl, sl, #1
+     ed8:	e2044001 	and	r4, r4, #1
+     edc:	e184408a 	orr	r4, r4, sl, lsl #1
+     ee0:	e3540001 	cmp	r4, #1
+     ee4:	0a000017 	beq	f48 <TambahChangeParamaterPassByReference@@Base+0x8f0>
+     ee8:	3a000002 	bcc	ef8 <TambahChangeParamaterPassByReference@@Base+0x8a0>
+     eec:	e3540002 	cmp	r4, #2
+     ef0:	0a000048 	beq	1018 <TambahChangeParamaterPassByReference@@Base+0x9c0>
+     ef4:	ea0000a8 	b	119c <TambahChangeParamaterPassByReference@@Base+0xb44>
+     ef8:	e3580000 	cmp	r8, #0
+     efc:	03a0c000 	moveq	ip, #0
+     f00:	120cc001 	andne	ip, ip, #1
+     f04:	e286a004 	add	sl, r6, #4
+     f08:	e35c0000 	cmp	ip, #0
+     f0c:	0a00000b 	beq	f40 <TambahChangeParamaterPassByReference@@Base+0x8e8>
+     f10:	e1a00006 	mov	r0, r6
+     f14:	ebfffdd6 	bl	674 <TambahChangeParamaterPassByReference@@Base+0x1c>
+     f18:	e585a038 	str	sl, [r5, #56]	; 0x38
+     f1c:	e1a04000 	mov	r4, r0
+     f20:	e1a00005 	mov	r0, r5
+     f24:	ebfffda4 	bl	5bc <__cxa_begin_cleanup@plt>
+     f28:	e3500000 	cmp	r0, #0
+     f2c:	0a00009a 	beq	119c <TambahChangeParamaterPassByReference@@Base+0xb44>
+     f30:	e1a00007 	mov	r0, r7
+     f34:	e3a0100f 	mov	r1, #15
+     f38:	e1a02004 	mov	r2, r4
+     f3c:	ea000093 	b	1190 <TambahChangeParamaterPassByReference@@Base+0xb38>
+     f40:	e1a0c00a 	mov	ip, sl
+     f44:	eaffffcb 	b	e78 <TambahChangeParamaterPassByReference@@Base+0x820>
+     f48:	e3580000 	cmp	r8, #0
+     f4c:	1a00001d 	bne	fc8 <TambahChangeParamaterPassByReference@@Base+0x970>
+     f50:	e35c0000 	cmp	ip, #0
+     f54:	0a00002d 	beq	1010 <TambahChangeParamaterPassByReference@@Base+0x9b8>
+     f58:	e5963004 	ldr	r3, [r6, #4]
+     f5c:	e596a000 	ldr	sl, [r6]
+     f60:	e3730002 	cmn	r3, #2
+     f64:	e1a0afaa 	lsr	sl, sl, #31
+     f68:	0a00008b 	beq	119c <TambahChangeParamaterPassByReference@@Base+0xb44>
+     f6c:	e3730001 	cmn	r3, #1
+     f70:	e2852058 	add	r2, r5, #88	; 0x58
+     f74:	e58d2010 	str	r2, [sp, #16]
+     f78:	0a000008 	beq	fa0 <TambahChangeParamaterPassByReference@@Base+0x948>
+     f7c:	e2860004 	add	r0, r6, #4
+     f80:	ebfffe59 	bl	8ec <TambahChangeParamaterPassByReference@@Base+0x294>
+     f84:	e1a0200a 	mov	r2, sl
+     f88:	e28d3010 	add	r3, sp, #16
+     f8c:	e1a01000 	mov	r1, r0
+     f90:	e1a00005 	mov	r0, r5
+     f94:	ebfffd82 	bl	5a4 <__cxa_type_match@plt>
+     f98:	e2504000 	subs	r4, r0, #0
+     f9c:	0a00001b 	beq	1010 <TambahChangeParamaterPassByReference@@Base+0x9b8>
+     fa0:	e1a00007 	mov	r0, r7
+     fa4:	e3a0100d 	mov	r1, #13
+     fa8:	ebffff2f 	bl	c6c <TambahChangeParamaterPassByReference@@Base+0x614>
+     fac:	e3540002 	cmp	r4, #2
+     fb0:	e59d2010 	ldr	r2, [sp, #16]
+     fb4:	01a03005 	moveq	r3, r5
+     fb8:	11a03002 	movne	r3, r2
+     fbc:	e5850020 	str	r0, [r5, #32]
+     fc0:	05a3202c 	streq	r2, [r3, #44]!	; 0x2c
+     fc4:	ea00007b 	b	11b8 <TambahChangeParamaterPassByReference@@Base+0xb60>
+     fc8:	e1a00007 	mov	r0, r7
+     fcc:	e3a0100d 	mov	r1, #13
+     fd0:	e5954020 	ldr	r4, [r5, #32]
+     fd4:	ebffff24 	bl	c6c <TambahChangeParamaterPassByReference@@Base+0x614>
+     fd8:	e1540000 	cmp	r4, r0
+     fdc:	1a00000b 	bne	1010 <TambahChangeParamaterPassByReference@@Base+0x9b8>
+     fe0:	e5953028 	ldr	r3, [r5, #40]	; 0x28
+     fe4:	e1560003 	cmp	r6, r3
+     fe8:	1a000008 	bne	1010 <TambahChangeParamaterPassByReference@@Base+0x9b8>
+     fec:	e1a00006 	mov	r0, r6
+     ff0:	ebfffd9f 	bl	674 <TambahChangeParamaterPassByReference@@Base+0x1c>
+     ff4:	e3a0100f 	mov	r1, #15
+     ff8:	e1a02000 	mov	r2, r0
+     ffc:	e1a00007 	mov	r0, r7
+    1000:	ebffff3a 	bl	cf0 <TambahChangeParamaterPassByReference@@Base+0x698>
+    1004:	e1a00007 	mov	r0, r7
+    1008:	e3a01000 	mov	r1, #0
+    100c:	ea00003b 	b	1100 <TambahChangeParamaterPassByReference@@Base+0xaa8>
+    1010:	e286c008 	add	ip, r6, #8
+    1014:	eaffff97 	b	e78 <TambahChangeParamaterPassByReference@@Base+0x820>
+    1018:	e5964000 	ldr	r4, [r6]
+    101c:	e3580000 	cmp	r8, #0
+    1020:	e3c44102 	bic	r4, r4, #-2147483648	; 0x80000000
+    1024:	1a000019 	bne	1090 <TambahChangeParamaterPassByReference@@Base+0xa38>
+    1028:	e35c0000 	cmp	ip, #0
+    102c:	0a000037 	beq	1110 <TambahChangeParamaterPassByReference@@Base+0xab8>
+    1030:	e59d3008 	ldr	r3, [sp, #8]
+    1034:	e3540000 	cmp	r4, #0
+    1038:	03833001 	orreq	r3, r3, #1
+    103c:	e3530000 	cmp	r3, #0
+    1040:	0a000032 	beq	1110 <TambahChangeParamaterPassByReference@@Base+0xab8>
+    1044:	e285c058 	add	ip, r5, #88	; 0x58
+    1048:	e28db010 	add	fp, sp, #16
+    104c:	e1a0a008 	mov	sl, r8
+    1050:	e15a0004 	cmp	sl, r4
+    1054:	0a000052 	beq	11a4 <TambahChangeParamaterPassByReference@@Base+0xb4c>
+    1058:	e28aa001 	add	sl, sl, #1
+    105c:	e58dc010 	str	ip, [sp, #16]
+    1060:	e58dc00c 	str	ip, [sp, #12]
+    1064:	e086010a 	add	r0, r6, sl, lsl #2
+    1068:	ebfffe1f 	bl	8ec <TambahChangeParamaterPassByReference@@Base+0x294>
+    106c:	e3a02000 	mov	r2, #0
+    1070:	e1a0300b 	mov	r3, fp
+    1074:	e1a01000 	mov	r1, r0
+    1078:	e1a00005 	mov	r0, r5
+    107c:	ebfffd48 	bl	5a4 <__cxa_type_match@plt>
+    1080:	e59dc00c 	ldr	ip, [sp, #12]
+    1084:	e3500000 	cmp	r0, #0
+    1088:	0afffff0 	beq	1050 <TambahChangeParamaterPassByReference@@Base+0x9f8>
+    108c:	ea00001f 	b	1110 <TambahChangeParamaterPassByReference@@Base+0xab8>
+    1090:	e1a00007 	mov	r0, r7
+    1094:	e3a0100d 	mov	r1, #13
+    1098:	e595a020 	ldr	sl, [r5, #32]
+    109c:	ebfffef2 	bl	c6c <TambahChangeParamaterPassByReference@@Base+0x614>
+    10a0:	e15a0000 	cmp	sl, r0
+    10a4:	1a000019 	bne	1110 <TambahChangeParamaterPassByReference@@Base+0xab8>
+    10a8:	e5953028 	ldr	r3, [r5, #40]	; 0x28
+    10ac:	e1560003 	cmp	r6, r3
+    10b0:	1a000016 	bne	1110 <TambahChangeParamaterPassByReference@@Base+0xab8>
+    10b4:	e3a0a000 	mov	sl, #0
+    10b8:	e3a03004 	mov	r3, #4
+    10bc:	e5854028 	str	r4, [r5, #40]	; 0x28
+    10c0:	e5853030 	str	r3, [r5, #48]	; 0x30
+    10c4:	e0863003 	add	r3, r6, r3
+    10c8:	e585a02c 	str	sl, [r5, #44]	; 0x2c
+    10cc:	e5853034 	str	r3, [r5, #52]	; 0x34
+    10d0:	e5963000 	ldr	r3, [r6]
+    10d4:	e153000a 	cmp	r3, sl
+    10d8:	aa00000a 	bge	1108 <TambahChangeParamaterPassByReference@@Base+0xab0>
+    10dc:	e2840001 	add	r0, r4, #1
+    10e0:	e0860100 	add	r0, r6, r0, lsl #2
+    10e4:	ebfffd62 	bl	674 <TambahChangeParamaterPassByReference@@Base+0x1c>
+    10e8:	e3a0100f 	mov	r1, #15
+    10ec:	e1a02000 	mov	r2, r0
+    10f0:	e1a00007 	mov	r0, r7
+    10f4:	ebfffefd 	bl	cf0 <TambahChangeParamaterPassByReference@@Base+0x698>
+    10f8:	e1a00007 	mov	r0, r7
+    10fc:	e1a0100a 	mov	r1, sl
+    1100:	e1a02005 	mov	r2, r5
+    1104:	ea000021 	b	1190 <TambahChangeParamaterPassByReference@@Base+0xb38>
+    1108:	e3a03001 	mov	r3, #1
+    110c:	e58d3004 	str	r3, [sp, #4]
+    1110:	e5963000 	ldr	r3, [r6]
+    1114:	e284c001 	add	ip, r4, #1
+    1118:	e3530000 	cmp	r3, #0
+    111c:	b2866004 	addlt	r6, r6, #4
+    1120:	e086c10c 	add	ip, r6, ip, lsl #2
+    1124:	eaffff53 	b	e78 <TambahChangeParamaterPassByReference@@Base+0x820>
+    1128:	e3a03000 	mov	r3, #0
+    112c:	e58d3004 	str	r3, [sp, #4]
+    1130:	e3590002 	cmp	r9, #2
+    1134:	da000001 	ble	1140 <TambahChangeParamaterPassByReference@@Base+0xae8>
+    1138:	ebfffdf0 	bl	900 <TambahChangeParamaterPassByReference@@Base+0x2a8>
+    113c:	ea000002 	b	114c <TambahChangeParamaterPassByReference@@Base+0xaf4>
+    1140:	e1a00007 	mov	r0, r7
+    1144:	e28d1014 	add	r1, sp, #20
+    1148:	eb00018b 	bl	177c <TambahChangeParamaterPassByReference@@Base+0x1124>
+    114c:	e3500000 	cmp	r0, #0
+    1150:	1a000011 	bne	119c <TambahChangeParamaterPassByReference@@Base+0xb44>
+    1154:	e59d3004 	ldr	r3, [sp, #4]
+    1158:	e3530000 	cmp	r3, #0
+    115c:	03a00008 	moveq	r0, #8
+    1160:	0a000017 	beq	11c4 <TambahChangeParamaterPassByReference@@Base+0xb6c>
+    1164:	e3a0100f 	mov	r1, #15
+    1168:	e1a00007 	mov	r0, r7
+    116c:	ebfffebe 	bl	c6c <TambahChangeParamaterPassByReference@@Base+0x614>
+    1170:	e3a0100e 	mov	r1, #14
+    1174:	e1a02000 	mov	r2, r0
+    1178:	e1a00007 	mov	r0, r7
+    117c:	ebfffedb 	bl	cf0 <TambahChangeParamaterPassByReference@@Base+0x698>
+    1180:	e59f2044 	ldr	r2, [pc, #68]	; 11cc <TambahChangeParamaterPassByReference@@Base+0xb74>
+    1184:	e1a00007 	mov	r0, r7
+    1188:	e3a0100f 	mov	r1, #15
+    118c:	e79f2002 	ldr	r2, [pc, r2]
+    1190:	ebfffed6 	bl	cf0 <TambahChangeParamaterPassByReference@@Base+0x698>
+    1194:	e3a00007 	mov	r0, #7
+    1198:	ea000009 	b	11c4 <TambahChangeParamaterPassByReference@@Base+0xb6c>
+    119c:	e3a00009 	mov	r0, #9
+    11a0:	ea000007 	b	11c4 <TambahChangeParamaterPassByReference@@Base+0xb6c>
+    11a4:	e1a00007 	mov	r0, r7
+    11a8:	e3a0100d 	mov	r1, #13
+    11ac:	ebfffeae 	bl	c6c <TambahChangeParamaterPassByReference@@Base+0x614>
+    11b0:	e59d3010 	ldr	r3, [sp, #16]
+    11b4:	e5850020 	str	r0, [r5, #32]
+    11b8:	e3a00006 	mov	r0, #6
+    11bc:	e5853024 	str	r3, [r5, #36]	; 0x24
+    11c0:	e5856028 	str	r6, [r5, #40]	; 0x28
+    11c4:	e28dd024 	add	sp, sp, #36	; 0x24
+    11c8:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+    11cc:	00010e54 	andeq	r0, r1, r4, asr lr
+    11d0:	e3a03000 	mov	r3, #0
+    11d4:	eaffff02 	b	de4 <TambahChangeParamaterPassByReference@@Base+0x78c>
+    11d8:	e3a03001 	mov	r3, #1
+    11dc:	eaffff00 	b	de4 <TambahChangeParamaterPassByReference@@Base+0x78c>
+    11e0:	e3a03002 	mov	r3, #2
+    11e4:	eafffefe 	b	de4 <TambahChangeParamaterPassByReference@@Base+0x78c>
+    11e8:	e92d43f0 	push	{r4, r5, r6, r7, r8, r9, lr}
+    11ec:	e1a05000 	mov	r5, r0
+    11f0:	e24ddf43 	sub	sp, sp, #268	; 0x10c
+    11f4:	e1a04002 	mov	r4, r2
+    11f8:	e3510004 	cmp	r1, #4
+    11fc:	908ff101 	addls	pc, pc, r1, lsl #2
+    1200:	ea0000b9 	b	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    1204:	ea000003 	b	1218 <TambahChangeParamaterPassByReference@@Base+0xbc0>
+    1208:	ea000014 	b	1260 <TambahChangeParamaterPassByReference@@Base+0xc08>
+    120c:	ea0000b6 	b	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    1210:	ea00007f 	b	1414 <TambahChangeParamaterPassByReference@@Base+0xdbc>
+    1214:	ea00009a 	b	1484 <TambahChangeParamaterPassByReference@@Base+0xe2c>
+    1218:	e3530000 	cmp	r3, #0
+    121c:	1a0000b2 	bne	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    1220:	e3a03001 	mov	r3, #1
+    1224:	e6ff1072 	uxth	r1, r2
+    1228:	e5902038 	ldr	r2, [r0, #56]	; 0x38
+    122c:	e1a00003 	mov	r0, r3
+    1230:	e243c001 	sub	ip, r3, #1
+    1234:	e011cc10 	ands	ip, r1, r0, lsl ip
+    1238:	1592c000 	ldrne	ip, [r2]
+    123c:	12822004 	addne	r2, r2, #4
+    1240:	1785c103 	strne	ip, [r5, r3, lsl #2]
+    1244:	e2833001 	add	r3, r3, #1
+    1248:	e3530011 	cmp	r3, #17
+    124c:	1afffff7 	bne	1230 <TambahChangeParamaterPassByReference@@Base+0xbd8>
+    1250:	e2140a02 	ands	r0, r4, #8192	; 0x2000
+    1254:	05852038 	streq	r2, [r5, #56]	; 0x38
+    1258:	0a0000b8 	beq	1540 <TambahChangeParamaterPassByReference@@Base+0xee8>
+    125c:	ea0000a4 	b	14f4 <TambahChangeParamaterPassByReference@@Base+0xe9c>
+    1260:	e3c32004 	bic	r2, r3, #4
+    1264:	e3520001 	cmp	r2, #1
+    1268:	1a00009f 	bne	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    126c:	e3530001 	cmp	r3, #1
+    1270:	e1a07824 	lsr	r7, r4, #16
+    1274:	e6ff4074 	uxth	r4, r4
+    1278:	e0846007 	add	r6, r4, r7
+    127c:	1a000006 	bne	129c <TambahChangeParamaterPassByReference@@Base+0xc44>
+    1280:	e3560010 	cmp	r6, #16
+    1284:	8a000098 	bhi	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    1288:	e357000f 	cmp	r7, #15
+    128c:	91a08003 	movls	r8, r3
+    1290:	93a06000 	movls	r6, #0
+    1294:	8a000094 	bhi	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    1298:	ea000005 	b	12b4 <TambahChangeParamaterPassByReference@@Base+0xc5c>
+    129c:	e3560020 	cmp	r6, #32
+    12a0:	8a000091 	bhi	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    12a4:	e357000f 	cmp	r7, #15
+    12a8:	9a000093 	bls	14fc <TambahChangeParamaterPassByReference@@Base+0xea4>
+    12ac:	e1a06004 	mov	r6, r4
+    12b0:	e3a08000 	mov	r8, #0
+    12b4:	e2969000 	adds	r9, r6, #0
+    12b8:	13a09001 	movne	r9, #1
+    12bc:	e3530005 	cmp	r3, #5
+    12c0:	13560000 	cmpne	r6, #0
+    12c4:	1a000088 	bne	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    12c8:	e357000f 	cmp	r7, #15
+    12cc:	8a000012 	bhi	131c <TambahChangeParamaterPassByReference@@Base+0xcc4>
+    12d0:	e5952000 	ldr	r2, [r5]
+    12d4:	e3120001 	tst	r2, #1
+    12d8:	0a00000f 	beq	131c <TambahChangeParamaterPassByReference@@Base+0xcc4>
+    12dc:	e3530005 	cmp	r3, #5
+    12e0:	e1a00005 	mov	r0, r5
+    12e4:	e3c21001 	bic	r1, r2, #1
+    12e8:	e4801048 	str	r1, [r0], #72	; 0x48
+    12ec:	1a000007 	bne	1310 <TambahChangeParamaterPassByReference@@Base+0xcb8>
+    12f0:	e3811002 	orr	r1, r1, #2
+    12f4:	e5851000 	str	r1, [r5]
+    12f8:	eb00009d 	bl	1574 <TambahChangeParamaterPassByReference@@Base+0xf1c>
+    12fc:	e3590000 	cmp	r9, #0
+    1300:	1a000007 	bne	1324 <TambahChangeParamaterPassByReference@@Base+0xccc>
+    1304:	e28d0080 	add	r0, sp, #128	; 0x80
+    1308:	eb000099 	bl	1574 <TambahChangeParamaterPassByReference@@Base+0xf1c>
+    130c:	ea00000f 	b	1350 <TambahChangeParamaterPassByReference@@Base+0xcf8>
+    1310:	e3c22003 	bic	r2, r2, #3
+    1314:	e5852000 	str	r2, [r5]
+    1318:	eb000091 	bl	1564 <TambahChangeParamaterPassByReference@@Base+0xf0c>
+    131c:	e3590000 	cmp	r9, #0
+    1320:	0a00007b 	beq	1514 <TambahChangeParamaterPassByReference@@Base+0xebc>
+    1324:	e5953000 	ldr	r3, [r5]
+    1328:	e3130004 	tst	r3, #4
+    132c:	0a000003 	beq	1340 <TambahChangeParamaterPassByReference@@Base+0xce8>
+    1330:	e1a00005 	mov	r0, r5
+    1334:	e3c33004 	bic	r3, r3, #4
+    1338:	e48030d0 	str	r3, [r0], #208	; 0xd0
+    133c:	eb000090 	bl	1584 <TambahChangeParamaterPassByReference@@Base+0xf2c>
+    1340:	e3580000 	cmp	r8, #0
+    1344:	1a000077 	bne	1528 <TambahChangeParamaterPassByReference@@Base+0xed0>
+    1348:	e357000f 	cmp	r7, #15
+    134c:	9affffec 	bls	1304 <TambahChangeParamaterPassByReference@@Base+0xcac>
+    1350:	e3590000 	cmp	r9, #0
+    1354:	0a000002 	beq	1364 <TambahChangeParamaterPassByReference@@Base+0xd0c>
+    1358:	e1a0000d 	mov	r0, sp
+    135c:	eb000088 	bl	1584 <TambahChangeParamaterPassByReference@@Base+0xf2c>
+    1360:	e2674010 	rsb	r4, r7, #16
+    1364:	e5952038 	ldr	r2, [r5, #56]	; 0x38
+    1368:	e3540000 	cmp	r4, #0
+    136c:	e1a03002 	mov	r3, r2
+    1370:	da000009 	ble	139c <TambahChangeParamaterPassByReference@@Base+0xd44>
+    1374:	e28d1080 	add	r1, sp, #128	; 0x80
+    1378:	e1a04084 	lsl	r4, r4, #1
+    137c:	e0811187 	add	r1, r1, r7, lsl #3
+    1380:	e3a03000 	mov	r3, #0
+    1384:	e1530004 	cmp	r3, r4
+    1388:	17920103 	ldrne	r0, [r2, r3, lsl #2]
+    138c:	17810103 	strne	r0, [r1, r3, lsl #2]
+    1390:	12833001 	addne	r3, r3, #1
+    1394:	1afffffa 	bne	1384 <TambahChangeParamaterPassByReference@@Base+0xd2c>
+    1398:	e0823103 	add	r3, r2, r3, lsl #2
+    139c:	e3590000 	cmp	r9, #0
+    13a0:	0a00000a 	beq	13d0 <TambahChangeParamaterPassByReference@@Base+0xd78>
+    13a4:	e3570010 	cmp	r7, #16
+    13a8:	e28d2f42 	add	r2, sp, #264	; 0x108
+    13ac:	e0836186 	add	r6, r3, r6, lsl #3
+    13b0:	21a04007 	movcs	r4, r7
+    13b4:	33a04010 	movcc	r4, #16
+    13b8:	e0824184 	add	r4, r2, r4, lsl #3
+    13bc:	e2444f63 	sub	r4, r4, #396	; 0x18c
+    13c0:	e1530006 	cmp	r3, r6
+    13c4:	14932004 	ldrne	r2, [r3], #4
+    13c8:	15a42004 	strne	r2, [r4, #4]!
+    13cc:	1afffffb 	bne	13c0 <TambahChangeParamaterPassByReference@@Base+0xd68>
+    13d0:	e3580000 	cmp	r8, #0
+    13d4:	12833004 	addne	r3, r3, #4
+    13d8:	e3580000 	cmp	r8, #0
+    13dc:	e5853038 	str	r3, [r5, #56]	; 0x38
+    13e0:	0a000002 	beq	13f0 <TambahChangeParamaterPassByReference@@Base+0xd98>
+    13e4:	e28d0080 	add	r0, sp, #128	; 0x80
+    13e8:	eb00005b 	bl	155c <TambahChangeParamaterPassByReference@@Base+0xf04>
+    13ec:	ea000040 	b	14f4 <TambahChangeParamaterPassByReference@@Base+0xe9c>
+    13f0:	e357000f 	cmp	r7, #15
+    13f4:	8a000001 	bhi	1400 <TambahChangeParamaterPassByReference@@Base+0xda8>
+    13f8:	e28d0080 	add	r0, sp, #128	; 0x80
+    13fc:	eb00005a 	bl	156c <TambahChangeParamaterPassByReference@@Base+0xf14>
+    1400:	e3590000 	cmp	r9, #0
+    1404:	0a00003a 	beq	14f4 <TambahChangeParamaterPassByReference@@Base+0xe9c>
+    1408:	e1a0000d 	mov	r0, sp
+    140c:	eb00005a 	bl	157c <TambahChangeParamaterPassByReference@@Base+0xf24>
+    1410:	ea000037 	b	14f4 <TambahChangeParamaterPassByReference@@Base+0xe9c>
+    1414:	e3530003 	cmp	r3, #3
+    1418:	1a000033 	bne	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    141c:	e1a06822 	lsr	r6, r2, #16
+    1420:	e6ff4072 	uxth	r4, r2
+    1424:	e0843006 	add	r3, r4, r6
+    1428:	e3530010 	cmp	r3, #16
+    142c:	8a00002e 	bhi	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    1430:	e5903000 	ldr	r3, [r0]
+    1434:	e3130008 	tst	r3, #8
+    1438:	0a000002 	beq	1448 <TambahChangeParamaterPassByReference@@Base+0xdf0>
+    143c:	e3c33008 	bic	r3, r3, #8
+    1440:	e4803150 	str	r3, [r0], #336	; 0x150
+    1444:	eb000061 	bl	15d0 <TambahChangeParamaterPassByReference@@Base+0xf78>
+    1448:	e28d7080 	add	r7, sp, #128	; 0x80
+    144c:	e0876186 	add	r6, r7, r6, lsl #3
+    1450:	e1a00007 	mov	r0, r7
+    1454:	e2466004 	sub	r6, r6, #4
+    1458:	eb00005c 	bl	15d0 <TambahChangeParamaterPassByReference@@Base+0xf78>
+    145c:	e5953038 	ldr	r3, [r5, #56]	; 0x38
+    1460:	e0834184 	add	r4, r3, r4, lsl #3
+    1464:	e1530004 	cmp	r3, r4
+    1468:	14932004 	ldrne	r2, [r3], #4
+    146c:	15a62004 	strne	r2, [r6, #4]!
+    1470:	1afffffb 	bne	1464 <TambahChangeParamaterPassByReference@@Base+0xe0c>
+    1474:	e5853038 	str	r3, [r5, #56]	; 0x38
+    1478:	e1a00007 	mov	r0, r7
+    147c:	eb000042 	bl	158c <TambahChangeParamaterPassByReference@@Base+0xf34>
+    1480:	ea00001b 	b	14f4 <TambahChangeParamaterPassByReference@@Base+0xe9c>
+    1484:	e3520010 	cmp	r2, #16
+    1488:	93530000 	cmpls	r3, #0
+    148c:	1a000016 	bne	14ec <TambahChangeParamaterPassByReference@@Base+0xe94>
+    1490:	e5903000 	ldr	r3, [r0]
+    1494:	e3130010 	tst	r3, #16
+    1498:	0a000002 	beq	14a8 <TambahChangeParamaterPassByReference@@Base+0xe50>
+    149c:	e3c33010 	bic	r3, r3, #16
+    14a0:	e48031d0 	str	r3, [r0], #464	; 0x1d0
+    14a4:	eb00005f 	bl	1628 <TambahChangeParamaterPassByReference@@Base+0xfd0>
+    14a8:	e28d6080 	add	r6, sp, #128	; 0x80
+    14ac:	e1a00006 	mov	r0, r6
+    14b0:	eb00005c 	bl	1628 <TambahChangeParamaterPassByReference@@Base+0xfd0>
+    14b4:	e5952038 	ldr	r2, [r5, #56]	; 0x38
+    14b8:	e3a03000 	mov	r3, #0
+    14bc:	e3a01001 	mov	r1, #1
+    14c0:	e0140311 	ands	r0, r4, r1, lsl r3
+    14c4:	15920000 	ldrne	r0, [r2]
+    14c8:	12822004 	addne	r2, r2, #4
+    14cc:	17860103 	strne	r0, [r6, r3, lsl #2]
+    14d0:	e2833001 	add	r3, r3, #1
+    14d4:	e3530004 	cmp	r3, #4
+    14d8:	1afffff8 	bne	14c0 <TambahChangeParamaterPassByReference@@Base+0xe68>
+    14dc:	e5852038 	str	r2, [r5, #56]	; 0x38
+    14e0:	e1a00006 	mov	r0, r6
+    14e4:	eb00004a 	bl	1614 <TambahChangeParamaterPassByReference@@Base+0xfbc>
+    14e8:	ea000001 	b	14f4 <TambahChangeParamaterPassByReference@@Base+0xe9c>
+    14ec:	e3a00002 	mov	r0, #2
+    14f0:	ea000012 	b	1540 <TambahChangeParamaterPassByReference@@Base+0xee8>
+    14f4:	e3a00000 	mov	r0, #0
+    14f8:	ea000010 	b	1540 <TambahChangeParamaterPassByReference@@Base+0xee8>
+    14fc:	e3560010 	cmp	r6, #16
+    1500:	93a08000 	movls	r8, #0
+    1504:	91a06008 	movls	r6, r8
+    1508:	9affff69 	bls	12b4 <TambahChangeParamaterPassByReference@@Base+0xc5c>
+    150c:	e2466010 	sub	r6, r6, #16
+    1510:	eaffff66 	b	12b0 <TambahChangeParamaterPassByReference@@Base+0xc58>
+    1514:	e3580000 	cmp	r8, #0
+    1518:	0a000005 	beq	1534 <TambahChangeParamaterPassByReference@@Base+0xedc>
+    151c:	e28d0080 	add	r0, sp, #128	; 0x80
+    1520:	eb00000f 	bl	1564 <TambahChangeParamaterPassByReference@@Base+0xf0c>
+    1524:	eaffff8e 	b	1364 <TambahChangeParamaterPassByReference@@Base+0xd0c>
+    1528:	e28d0080 	add	r0, sp, #128	; 0x80
+    152c:	eb00000c 	bl	1564 <TambahChangeParamaterPassByReference@@Base+0xf0c>
+    1530:	eaffff8a 	b	1360 <TambahChangeParamaterPassByReference@@Base+0xd08>
+    1534:	e357000f 	cmp	r7, #15
+    1538:	8affff89 	bhi	1364 <TambahChangeParamaterPassByReference@@Base+0xd0c>
+    153c:	eaffff70 	b	1304 <TambahChangeParamaterPassByReference@@Base+0xcac>
+    1540:	e28ddf43 	add	sp, sp, #268	; 0x10c
+    1544:	e8bd83f0 	pop	{r4, r5, r6, r7, r8, r9, pc}
+    1548:	e2801034 	add	r1, r0, #52	; 0x34
+    154c:	e8910038 	ldm	r1, {r3, r4, r5}
+    1550:	e92d0038 	push	{r3, r4, r5}
+    1554:	e8900fff 	ldm	r0, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp}
+    1558:	e89de000 	ldm	sp, {sp, lr, pc}
+    155c:	ec900b21 	fldmiax	r0, {d0-d15}	;@ Deprecated
+    1560:	e12fff1e 	bx	lr
+    1564:	ec800b21 	fstmiax	r0, {d0-d15}	;@ Deprecated
+    1568:	e12fff1e 	bx	lr
+    156c:	ec900b20 	vldmia	r0, {d0-d15}
+    1570:	e12fff1e 	bx	lr
+    1574:	ec800b20 	vstmia	r0, {d0-d15}
+    1578:	e12fff1e 	bx	lr
+    157c:	ecd00b20 	vldmia	r0, {d16-d31}
+    1580:	e12fff1e 	bx	lr
+    1584:	ecc00b20 	vstmia	r0, {d16-d31}
+    1588:	e12fff1e 	bx	lr
+    158c:	ecf00102 	ldfe	f0, [r0], #8
+    1590:	ecf01102 	ldfe	f1, [r0], #8
+    1594:	ecf02102 	ldfe	f2, [r0], #8
+    1598:	ecf03102 	ldfe	f3, [r0], #8
+    159c:	ecf04102 	ldfe	f4, [r0], #8
+    15a0:	ecf05102 	ldfe	f5, [r0], #8
+    15a4:	ecf06102 	ldfe	f6, [r0], #8
+    15a8:	ecf07102 	ldfe	f7, [r0], #8
+    15ac:	ecf08102 	ldfp	f0, [r0], #8
+    15b0:	ecf09102 	ldfp	f1, [r0], #8
+    15b4:	ecf0a102 	ldfp	f2, [r0], #8
+    15b8:	ecf0b102 	ldfp	f3, [r0], #8
+    15bc:	ecf0c102 	ldfp	f4, [r0], #8
+    15c0:	ecf0d102 	ldfp	f5, [r0], #8
+    15c4:	ecf0e102 	ldfp	f6, [r0], #8
+    15c8:	ecf0f102 	ldfp	f7, [r0], #8
+    15cc:	e12fff1e 	bx	lr
+    15d0:	ece00102 	stfe	f0, [r0], #8
+    15d4:	ece01102 	stfe	f1, [r0], #8
+    15d8:	ece02102 	stfe	f2, [r0], #8
+    15dc:	ece03102 	stfe	f3, [r0], #8
+    15e0:	ece04102 	stfe	f4, [r0], #8
+    15e4:	ece05102 	stfe	f5, [r0], #8
+    15e8:	ece06102 	stfe	f6, [r0], #8
+    15ec:	ece07102 	stfe	f7, [r0], #8
+    15f0:	ece08102 	stfp	f0, [r0], #8
+    15f4:	ece09102 	stfp	f1, [r0], #8
+    15f8:	ece0a102 	stfp	f2, [r0], #8
+    15fc:	ece0b102 	stfp	f3, [r0], #8
+    1600:	ece0c102 	stfp	f4, [r0], #8
+    1604:	ece0d102 	stfp	f5, [r0], #8
+    1608:	ece0e102 	stfp	f6, [r0], #8
+    160c:	ece0f102 	stfp	f7, [r0], #8
+    1610:	e12fff1e 	bx	lr
+    1614:	fcb08101 	ldc2	1, cr8, [r0], #4
+    1618:	fcb09101 	ldc2	1, cr9, [r0], #4
+    161c:	fcb0a101 	ldc2	1, cr10, [r0], #4
+    1620:	fcb0b101 	ldc2	1, cr11, [r0], #4
+    1624:	e12fff1e 	bx	lr
+    1628:	fca08101 	stc2	1, cr8, [r0], #4
+    162c:	fca09101 	stc2	1, cr9, [r0], #4
+    1630:	fca0a101 	stc2	1, cr10, [r0], #4
+    1634:	fca0b101 	stc2	1, cr11, [r0], #4
+    1638:	e12fff1e 	bx	lr
+    163c:	e92de000 	push	{sp, lr, pc}
+    1640:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    1644:	e3a03000 	mov	r3, #0
+    1648:	e92d000c 	push	{r2, r3}
+    164c:	e28d1004 	add	r1, sp, #4
+    1650:	ebfffd12 	bl	aa0 <TambahChangeParamaterPassByReference@@Base+0x448>
+    1654:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    1658:	e28dd048 	add	sp, sp, #72	; 0x48
+    165c:	e12fff1e 	bx	lr
+    1660:	e92de000 	push	{sp, lr, pc}
+    1664:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    1668:	e3a03000 	mov	r3, #0
+    166c:	e92d000c 	push	{r2, r3}
+    1670:	e28d1004 	add	r1, sp, #4
+    1674:	ebfffd39 	bl	b60 <TambahChangeParamaterPassByReference@@Base+0x508>
+    1678:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    167c:	e28dd048 	add	sp, sp, #72	; 0x48
+    1680:	e12fff1e 	bx	lr
+    1684:	e92de000 	push	{sp, lr, pc}
+    1688:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    168c:	e3a03000 	mov	r3, #0
+    1690:	e92d000c 	push	{r2, r3}
+    1694:	e28d1004 	add	r1, sp, #4
+    1698:	ebfffd4d 	bl	bd4 <TambahChangeParamaterPassByReference@@Base+0x57c>
+    169c:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    16a0:	e28dd048 	add	sp, sp, #72	; 0x48
+    16a4:	e12fff1e 	bx	lr
+    16a8:	e92de000 	push	{sp, lr, pc}
+    16ac:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    16b0:	e3a03000 	mov	r3, #0
+    16b4:	e92d000c 	push	{r2, r3}
+    16b8:	e28d3004 	add	r3, sp, #4
+    16bc:	ebfffd20 	bl	b44 <TambahChangeParamaterPassByReference@@Base+0x4ec>
+    16c0:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    16c4:	e28dd048 	add	sp, sp, #72	; 0x48
+    16c8:	e12fff1e 	bx	lr
+    16cc:	e92de000 	push	{sp, lr, pc}
+    16d0:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    16d4:	e3a03000 	mov	r3, #0
+    16d8:	e92d000c 	push	{r2, r3}
+    16dc:	e28d2004 	add	r2, sp, #4
+    16e0:	ebfffd8d 	bl	d1c <TambahChangeParamaterPassByReference@@Base+0x6c4>
+    16e4:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    16e8:	e28dd048 	add	sp, sp, #72	; 0x48
+    16ec:	e12fff1e 	bx	lr
+    16f0:	e5d03008 	ldrb	r3, [r0, #8]
+    16f4:	e3530000 	cmp	r3, #0
+    16f8:	1a00000b 	bne	172c <TambahChangeParamaterPassByReference@@Base+0x10d4>
+    16fc:	e5d03009 	ldrb	r3, [r0, #9]
+    1700:	e3530000 	cmp	r3, #0
+    1704:	0a00000f 	beq	1748 <TambahChangeParamaterPassByReference@@Base+0x10f0>
+    1708:	e2433001 	sub	r3, r3, #1
+    170c:	e5c03009 	strb	r3, [r0, #9]
+    1710:	e5903004 	ldr	r3, [r0, #4]
+    1714:	e2832004 	add	r2, r3, #4
+    1718:	e5802004 	str	r2, [r0, #4]
+    171c:	e5933000 	ldr	r3, [r3]
+    1720:	e5803000 	str	r3, [r0]
+    1724:	e3a03003 	mov	r3, #3
+    1728:	ea000000 	b	1730 <TambahChangeParamaterPassByReference@@Base+0x10d8>
+    172c:	e2433001 	sub	r3, r3, #1
+    1730:	e5c03008 	strb	r3, [r0, #8]
+    1734:	e5903000 	ldr	r3, [r0]
+    1738:	e1a02403 	lsl	r2, r3, #8
+    173c:	e5802000 	str	r2, [r0]
+    1740:	e1a00c23 	lsr	r0, r3, #24
+    1744:	e12fff1e 	bx	lr
+    1748:	e3a000b0 	mov	r0, #176	; 0xb0
+    174c:	e12fff1e 	bx	lr
+    1750:	e92d401f 	push	{r0, r1, r2, r3, r4, lr}
+    1754:	e3a01000 	mov	r1, #0
+    1758:	e28d300c 	add	r3, sp, #12
+    175c:	e3a0200c 	mov	r2, #12
+    1760:	e58d3000 	str	r3, [sp]
+    1764:	e1a03001 	mov	r3, r1
+    1768:	ebfffd28 	bl	c10 <TambahChangeParamaterPassByReference@@Base+0x5b8>
+    176c:	e59d000c 	ldr	r0, [sp, #12]
+    1770:	e28dd014 	add	sp, sp, #20
+    1774:	e49df004 	pop	{pc}		; (ldr pc, [sp], #4)
+    1778:	eafffff4 	b	1750 <TambahChangeParamaterPassByReference@@Base+0x10f8>
+    177c:	e92d43f0 	push	{r4, r5, r6, r7, r8, r9, lr}
+    1780:	e24dd014 	sub	sp, sp, #20
+    1784:	e1a05000 	mov	r5, r0
+    1788:	e1a07001 	mov	r7, r1
+    178c:	e3a06000 	mov	r6, #0
+    1790:	e1a00007 	mov	r0, r7
+    1794:	ebffffd5 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    1798:	e35000b0 	cmp	r0, #176	; 0xb0
+    179c:	e1a04000 	mov	r4, r0
+    17a0:	1a00000f 	bne	17e4 <TambahChangeParamaterPassByReference@@Base+0x118c>
+    17a4:	e3560000 	cmp	r6, #0
+    17a8:	1a0000d6 	bne	1b08 <TambahChangeParamaterPassByReference@@Base+0x14b0>
+    17ac:	e28d400c 	add	r4, sp, #12
+    17b0:	e1a01006 	mov	r1, r6
+    17b4:	e1a03006 	mov	r3, r6
+    17b8:	e58d4000 	str	r4, [sp]
+    17bc:	e1a00005 	mov	r0, r5
+    17c0:	e3a0200e 	mov	r2, #14
+    17c4:	ebfffd11 	bl	c10 <TambahChangeParamaterPassByReference@@Base+0x5b8>
+    17c8:	e58d4000 	str	r4, [sp]
+    17cc:	e1a00005 	mov	r0, r5
+    17d0:	e1a01006 	mov	r1, r6
+    17d4:	e3a0200f 	mov	r2, #15
+    17d8:	e1a03006 	mov	r3, r6
+    17dc:	ebfffd2c 	bl	c94 <TambahChangeParamaterPassByReference@@Base+0x63c>
+    17e0:	ea0000c8 	b	1b08 <TambahChangeParamaterPassByReference@@Base+0x14b0>
+    17e4:	e3c0107f 	bic	r1, r0, #127	; 0x7f
+    17e8:	e21110ff 	ands	r1, r1, #255	; 0xff
+    17ec:	1a00000f 	bne	1830 <TambahChangeParamaterPassByReference@@Base+0x11d8>
+    17f0:	e1a08100 	lsl	r8, r0, #2
+    17f4:	e28d900c 	add	r9, sp, #12
+    17f8:	e1a03001 	mov	r3, r1
+    17fc:	e58d9000 	str	r9, [sp]
+    1800:	e1a00005 	mov	r0, r5
+    1804:	e3a0200d 	mov	r2, #13
+    1808:	ebfffd00 	bl	c10 <TambahChangeParamaterPassByReference@@Base+0x5b8>
+    180c:	e6ef8078 	uxtb	r8, r8
+    1810:	e59d300c 	ldr	r3, [sp, #12]
+    1814:	e2888004 	add	r8, r8, #4
+    1818:	e3140040 	tst	r4, #64	; 0x40
+    181c:	e58d9000 	str	r9, [sp]
+    1820:	10688003 	rsbne	r8, r8, r3
+    1824:	00888003 	addeq	r8, r8, r3
+    1828:	e58d800c 	str	r8, [sp, #12]
+    182c:	ea000022 	b	18bc <TambahChangeParamaterPassByReference@@Base+0x1264>
+    1830:	e20030f0 	and	r3, r0, #240	; 0xf0
+    1834:	e3530080 	cmp	r3, #128	; 0x80
+    1838:	1a000012 	bne	1888 <TambahChangeParamaterPassByReference@@Base+0x1230>
+    183c:	e1a04400 	lsl	r4, r0, #8
+    1840:	e1a00007 	mov	r0, r7
+    1844:	ebffffa9 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    1848:	e1800004 	orr	r0, r0, r4
+    184c:	e3500902 	cmp	r0, #32768	; 0x8000
+    1850:	1a000001 	bne	185c <TambahChangeParamaterPassByReference@@Base+0x1204>
+    1854:	e3a00009 	mov	r0, #9
+    1858:	ea0000ab 	b	1b0c <TambahChangeParamaterPassByReference@@Base+0x14b4>
+    185c:	e1a04200 	lsl	r4, r0, #4
+    1860:	e3a01000 	mov	r1, #0
+    1864:	e1a00005 	mov	r0, r5
+    1868:	e1a03001 	mov	r3, r1
+    186c:	e6ff2074 	uxth	r2, r4
+    1870:	ebfffe5c 	bl	11e8 <TambahChangeParamaterPassByReference@@Base+0xb90>
+    1874:	e3500000 	cmp	r0, #0
+    1878:	1afffff5 	bne	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    187c:	e3140902 	tst	r4, #32768	; 0x8000
+    1880:	13a06001 	movne	r6, #1
+    1884:	eaffffc1 	b	1790 <TambahChangeParamaterPassByReference@@Base+0x1138>
+    1888:	e3530090 	cmp	r3, #144	; 0x90
+    188c:	1a000010 	bne	18d4 <TambahChangeParamaterPassByReference@@Base+0x127c>
+    1890:	e200300d 	and	r3, r0, #13
+    1894:	e353000d 	cmp	r3, #13
+    1898:	0affffed 	beq	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    189c:	e3a01000 	mov	r1, #0
+    18a0:	e28d800c 	add	r8, sp, #12
+    18a4:	e1a00005 	mov	r0, r5
+    18a8:	e58d8000 	str	r8, [sp]
+    18ac:	e204200f 	and	r2, r4, #15
+    18b0:	e1a03001 	mov	r3, r1
+    18b4:	ebfffcd5 	bl	c10 <TambahChangeParamaterPassByReference@@Base+0x5b8>
+    18b8:	e58d8000 	str	r8, [sp]
+    18bc:	e1a00005 	mov	r0, r5
+    18c0:	e3a01000 	mov	r1, #0
+    18c4:	e3a0200d 	mov	r2, #13
+    18c8:	e1a03001 	mov	r3, r1
+    18cc:	ebfffcf0 	bl	c94 <TambahChangeParamaterPassByReference@@Base+0x63c>
+    18d0:	eaffffae 	b	1790 <TambahChangeParamaterPassByReference@@Base+0x1138>
+    18d4:	e35300a0 	cmp	r3, #160	; 0xa0
+    18d8:	1a000009 	bne	1904 <TambahChangeParamaterPassByReference@@Base+0x12ac>
+    18dc:	e1e02000 	mvn	r2, r0
+    18e0:	e3a03eff 	mov	r3, #4080	; 0xff0
+    18e4:	e2022007 	and	r2, r2, #7
+    18e8:	e3100008 	tst	r0, #8
+    18ec:	e1a02253 	asr	r2, r3, r2
+    18f0:	e1a00005 	mov	r0, r5
+    18f4:	e0022003 	and	r2, r2, r3
+    18f8:	e3a01000 	mov	r1, #0
+    18fc:	13822901 	orrne	r2, r2, #16384	; 0x4000
+    1900:	ea00000a 	b	1930 <TambahChangeParamaterPassByReference@@Base+0x12d8>
+    1904:	e35300b0 	cmp	r3, #176	; 0xb0
+    1908:	1a000039 	bne	19f4 <TambahChangeParamaterPassByReference@@Base+0x139c>
+    190c:	e35000b1 	cmp	r0, #177	; 0xb1
+    1910:	1a000008 	bne	1938 <TambahChangeParamaterPassByReference@@Base+0x12e0>
+    1914:	e1a00007 	mov	r0, r7
+    1918:	ebffff74 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    191c:	e2502000 	subs	r2, r0, #0
+    1920:	0affffcb 	beq	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    1924:	e21210f0 	ands	r1, r2, #240	; 0xf0
+    1928:	1affffc9 	bne	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    192c:	e1a00005 	mov	r0, r5
+    1930:	e1a03001 	mov	r3, r1
+    1934:	ea00006f 	b	1af8 <TambahChangeParamaterPassByReference@@Base+0x14a0>
+    1938:	e35000b2 	cmp	r0, #178	; 0xb2
+    193c:	1a000019 	bne	19a8 <TambahChangeParamaterPassByReference@@Base+0x1350>
+    1940:	e3a01000 	mov	r1, #0
+    1944:	e3a0200d 	mov	r2, #13
+    1948:	e1a03001 	mov	r3, r1
+    194c:	e28d400c 	add	r4, sp, #12
+    1950:	e1a00005 	mov	r0, r5
+    1954:	e58d4000 	str	r4, [sp]
+    1958:	ebfffcac 	bl	c10 <TambahChangeParamaterPassByReference@@Base+0x5b8>
+    195c:	e1a00007 	mov	r0, r7
+    1960:	ebffff62 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    1964:	e3a08002 	mov	r8, #2
+    1968:	e2101080 	ands	r1, r0, #128	; 0x80
+    196c:	e59d300c 	ldr	r3, [sp, #12]
+    1970:	e200007f 	and	r0, r0, #127	; 0x7f
+    1974:	0a000005 	beq	1990 <TambahChangeParamaterPassByReference@@Base+0x1338>
+    1978:	e0833810 	add	r3, r3, r0, lsl r8
+    197c:	e1a00007 	mov	r0, r7
+    1980:	e58d300c 	str	r3, [sp, #12]
+    1984:	e2888007 	add	r8, r8, #7
+    1988:	ebffff58 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    198c:	eafffff5 	b	1968 <TambahChangeParamaterPassByReference@@Base+0x1310>
+    1990:	e2833f81 	add	r3, r3, #516	; 0x204
+    1994:	e58d4000 	str	r4, [sp]
+    1998:	e0833810 	add	r3, r3, r0, lsl r8
+    199c:	e1a00005 	mov	r0, r5
+    19a0:	e58d300c 	str	r3, [sp, #12]
+    19a4:	eaffffc6 	b	18c4 <TambahChangeParamaterPassByReference@@Base+0x126c>
+    19a8:	e35000b3 	cmp	r0, #179	; 0xb3
+    19ac:	1a000007 	bne	19d0 <TambahChangeParamaterPassByReference@@Base+0x1378>
+    19b0:	e1a00007 	mov	r0, r7
+    19b4:	ebffff4d 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    19b8:	e3a01001 	mov	r1, #1
+    19bc:	e200200f 	and	r2, r0, #15
+    19c0:	e20030f0 	and	r3, r0, #240	; 0xf0
+    19c4:	e2822001 	add	r2, r2, #1
+    19c8:	e1a00005 	mov	r0, r5
+    19cc:	ea000013 	b	1a20 <TambahChangeParamaterPassByReference@@Base+0x13c8>
+    19d0:	e20030fc 	and	r3, r0, #252	; 0xfc
+    19d4:	e35300b4 	cmp	r3, #180	; 0xb4
+    19d8:	0affff9d 	beq	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    19dc:	e2002007 	and	r2, r0, #7
+    19e0:	e3a01001 	mov	r1, #1
+    19e4:	e2822001 	add	r2, r2, #1
+    19e8:	e1a00005 	mov	r0, r5
+    19ec:	e3822702 	orr	r2, r2, #524288	; 0x80000
+    19f0:	eaffffce 	b	1930 <TambahChangeParamaterPassByReference@@Base+0x12d8>
+    19f4:	e35300c0 	cmp	r3, #192	; 0xc0
+    19f8:	1a000035 	bne	1ad4 <TambahChangeParamaterPassByReference@@Base+0x147c>
+    19fc:	e35000c6 	cmp	r0, #198	; 0xc6
+    1a00:	1a000008 	bne	1a28 <TambahChangeParamaterPassByReference@@Base+0x13d0>
+    1a04:	e1a00007 	mov	r0, r7
+    1a08:	ebffff38 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    1a0c:	e3a01003 	mov	r1, #3
+    1a10:	e200200f 	and	r2, r0, #15
+    1a14:	e20030f0 	and	r3, r0, #240	; 0xf0
+    1a18:	e2822001 	add	r2, r2, #1
+    1a1c:	e1a00005 	mov	r0, r5
+    1a20:	e1822603 	orr	r2, r2, r3, lsl #12
+    1a24:	eaffffc1 	b	1930 <TambahChangeParamaterPassByReference@@Base+0x12d8>
+    1a28:	e35000c7 	cmp	r0, #199	; 0xc7
+    1a2c:	1a000008 	bne	1a54 <TambahChangeParamaterPassByReference@@Base+0x13fc>
+    1a30:	e1a00007 	mov	r0, r7
+    1a34:	ebffff2d 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    1a38:	e2502000 	subs	r2, r0, #0
+    1a3c:	0affff84 	beq	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    1a40:	e21230f0 	ands	r3, r2, #240	; 0xf0
+    1a44:	1affff82 	bne	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    1a48:	e1a00005 	mov	r0, r5
+    1a4c:	e3a01004 	mov	r1, #4
+    1a50:	ea000028 	b	1af8 <TambahChangeParamaterPassByReference@@Base+0x14a0>
+    1a54:	e20030f8 	and	r3, r0, #248	; 0xf8
+    1a58:	e35300c0 	cmp	r3, #192	; 0xc0
+    1a5c:	1a000005 	bne	1a78 <TambahChangeParamaterPassByReference@@Base+0x1420>
+    1a60:	e200200f 	and	r2, r0, #15
+    1a64:	e3a01003 	mov	r1, #3
+    1a68:	e2822001 	add	r2, r2, #1
+    1a6c:	e1a00005 	mov	r0, r5
+    1a70:	e382280a 	orr	r2, r2, #655360	; 0xa0000
+    1a74:	eaffffad 	b	1930 <TambahChangeParamaterPassByReference@@Base+0x12d8>
+    1a78:	e35000c8 	cmp	r0, #200	; 0xc8
+    1a7c:	1a000009 	bne	1aa8 <TambahChangeParamaterPassByReference@@Base+0x1450>
+    1a80:	e1a00007 	mov	r0, r7
+    1a84:	ebffff19 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    1a88:	e3a01001 	mov	r1, #1
+    1a8c:	e20020f0 	and	r2, r0, #240	; 0xf0
+    1a90:	e200000f 	and	r0, r0, #15
+    1a94:	e2822010 	add	r2, r2, #16
+    1a98:	e2803001 	add	r3, r0, #1
+    1a9c:	e1a00005 	mov	r0, r5
+    1aa0:	e1832602 	orr	r2, r3, r2, lsl #12
+    1aa4:	ea000012 	b	1af4 <TambahChangeParamaterPassByReference@@Base+0x149c>
+    1aa8:	e35000c9 	cmp	r0, #201	; 0xc9
+    1aac:	1affff68 	bne	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    1ab0:	e1a00007 	mov	r0, r7
+    1ab4:	ebffff0d 	bl	16f0 <TambahChangeParamaterPassByReference@@Base+0x1098>
+    1ab8:	e3a01001 	mov	r1, #1
+    1abc:	e200200f 	and	r2, r0, #15
+    1ac0:	e20030f0 	and	r3, r0, #240	; 0xf0
+    1ac4:	e2822001 	add	r2, r2, #1
+    1ac8:	e1a00005 	mov	r0, r5
+    1acc:	e1822603 	orr	r2, r2, r3, lsl #12
+    1ad0:	ea000007 	b	1af4 <TambahChangeParamaterPassByReference@@Base+0x149c>
+    1ad4:	e20030f8 	and	r3, r0, #248	; 0xf8
+    1ad8:	e35300d0 	cmp	r3, #208	; 0xd0
+    1adc:	1affff5c 	bne	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    1ae0:	e2002007 	and	r2, r0, #7
+    1ae4:	e3a01001 	mov	r1, #1
+    1ae8:	e2822001 	add	r2, r2, #1
+    1aec:	e1a00005 	mov	r0, r5
+    1af0:	e3822702 	orr	r2, r2, #524288	; 0x80000
+    1af4:	e3a03005 	mov	r3, #5
+    1af8:	ebfffdba 	bl	11e8 <TambahChangeParamaterPassByReference@@Base+0xb90>
+    1afc:	e3500000 	cmp	r0, #0
+    1b00:	1affff53 	bne	1854 <TambahChangeParamaterPassByReference@@Base+0x11fc>
+    1b04:	eaffff21 	b	1790 <TambahChangeParamaterPassByReference@@Base+0x1138>
+    1b08:	e3a00000 	mov	r0, #0
+    1b0c:	e28dd014 	add	sp, sp, #20
+    1b10:	e8bd83f0 	pop	{r4, r5, r6, r7, r8, r9, pc}
+    1b14:	e92d401f 	push	{r0, r1, r2, r3, r4, lr}
+    1b18:	e590304c 	ldr	r3, [r0, #76]	; 0x4c
+    1b1c:	e1a00001 	mov	r0, r1
+    1b20:	e28d1004 	add	r1, sp, #4
+    1b24:	e5932004 	ldr	r2, [r3, #4]
+    1b28:	e1a02402 	lsl	r2, r2, #8
+    1b2c:	e58d2004 	str	r2, [sp, #4]
+    1b30:	e2832008 	add	r2, r3, #8
+    1b34:	e58d2008 	str	r2, [sp, #8]
+    1b38:	e3a02003 	mov	r2, #3
+    1b3c:	e5cd200c 	strb	r2, [sp, #12]
+    1b40:	e5d33007 	ldrb	r3, [r3, #7]
+    1b44:	e5cd300d 	strb	r3, [sp, #13]
+    1b48:	ebffff0b 	bl	177c <TambahChangeParamaterPassByReference@@Base+0x1124>
+    1b4c:	e28dd014 	add	sp, sp, #20
+    1b50:	e49df004 	pop	{pc}		; (ldr pc, [sp], #4)
+    1b54:	e92d4008 	push	{r3, lr}
+    1b58:	ebffff06 	bl	1778 <TambahChangeParamaterPassByReference@@Base+0x1120>
+    1b5c:	e5900048 	ldr	r0, [r0, #72]	; 0x48
+    1b60:	e8bd8008 	pop	{r3, pc}
+    1b64:	e92d4008 	push	{r3, lr}
+    1b68:	ebffff02 	bl	1778 <TambahChangeParamaterPassByReference@@Base+0x1120>
+    1b6c:	e590304c 	ldr	r3, [r0, #76]	; 0x4c
+    1b70:	e5d30007 	ldrb	r0, [r3, #7]
+    1b74:	e0830100 	add	r0, r3, r0, lsl #2
+    1b78:	e2800008 	add	r0, r0, #8
+    1b7c:	e8bd8008 	pop	{r3, pc}
+    1b80:	e92d4008 	push	{r3, lr}
+    1b84:	ebfffa89 	bl	5b0 <abort@plt>
+    1b88:	e92d4008 	push	{r3, lr}
+    1b8c:	ebfffa87 	bl	5b0 <abort@plt>

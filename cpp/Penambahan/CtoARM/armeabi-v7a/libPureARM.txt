@@ -1,0 +1,58 @@
+
+libPureARM.so:     file format elf32-littlearm
+
+
+Disassembly of section .plt:
+
+000003ac <__cxa_finalize@plt-0x14>:
+ 3ac:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+ 3b0:	e59fe004 	ldr	lr, [pc, #4]	; 3bc <__cxa_finalize@plt-0x4>
+ 3b4:	e08fe00e 	add	lr, pc, lr
+ 3b8:	e5bef008 	ldr	pc, [lr, #8]!
+ 3bc:	00010c30 	andeq	r0, r1, r0, lsr ip
+
+000003c0 <__cxa_finalize@plt>:
+ 3c0:	e28fc600 	add	ip, pc, #0, 12
+ 3c4:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+ 3c8:	e5bcfc30 	ldr	pc, [ip, #3120]!	; 0xc30
+
+000003cc <__cxa_atexit@plt>:
+ 3cc:	e28fc600 	add	ip, pc, #0, 12
+ 3d0:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+ 3d4:	e5bcfc28 	ldr	pc, [ip, #3112]!	; 0xc28
+
+Disassembly of section .text:
+
+000003d8 <TambahNormal@@Base-0x3c>:
+ 3d8:	e59f0004 	ldr	r0, [pc, #4]	; 3e4 <__cxa_atexit@plt+0x18>
+ 3dc:	e08f0000 	add	r0, pc, r0
+ 3e0:	eafffff6 	b	3c0 <__cxa_finalize@plt>
+ 3e4:	00010c1c 	andeq	r0, r1, ip, lsl ip
+ 3e8:	e3500000 	cmp	r0, #0
+ 3ec:	012fff1e 	bxeq	lr
+ 3f0:	e12fff10 	bx	r0
+ 3f4:	e1a01000 	mov	r1, r0
+ 3f8:	e59f200c 	ldr	r2, [pc, #12]	; 40c <__cxa_atexit@plt+0x40>
+ 3fc:	e59f000c 	ldr	r0, [pc, #12]	; 410 <__cxa_atexit@plt+0x44>
+ 400:	e08f2002 	add	r2, pc, r2
+ 404:	e08f0000 	add	r0, pc, r0
+ 408:	eaffffef 	b	3cc <__cxa_atexit@plt>
+ 40c:	00010bf8 	strdeq	r0, [r1], -r8
+ 410:	ffffffdc 			; <UNDEFINED> instruction: 0xffffffdc
+
+00000414 <TambahNormal@@Base>:
+ 414:	e0800001 	add	r0, r0, r1
+ 418:	e2400005 	sub	r0, r0, #5
+ 41c:	e12fff1e 	bx	lr
+
+00000420 <TambahChangeParamater@@Base>:
+ 420:	e3a00019 	mov	r0, #25
+ 424:	e12fff1e 	bx	lr
+
+00000428 <TambahChangeParamaterPassByPointer@@Base>:
+ 428:	e3a0200a 	mov	r2, #10
+ 42c:	e5802000 	str	r2, [r0]
+ 430:	e3a02014 	mov	r2, #20
+ 434:	e5812000 	str	r2, [r1]
+ 438:	e280000f 	add	r0, r0, #15
+ 43c:	e12fff1e 	bx	lr

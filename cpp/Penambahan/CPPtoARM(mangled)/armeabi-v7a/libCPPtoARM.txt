@@ -1,0 +1,1444 @@
+
+libCPPtoARM.so:     file format elf32-littlearm
+
+
+Disassembly of section .plt:
+
+000005a0 <__cxa_finalize@plt-0x14>:
+ 5a0:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+ 5a4:	e59fe004 	ldr	lr, [pc, #4]	; 5b0 <__cxa_finalize@plt-0x4>
+ 5a8:	e08fe00e 	add	lr, pc, lr
+ 5ac:	e5bef008 	ldr	pc, [lr, #8]!
+ 5b0:	00011a0c 	andeq	r1, r1, ip, lsl #20
+
+000005b4 <__cxa_finalize@plt>:
+ 5b4:	e28fc600 	add	ip, pc, #0, 12
+ 5b8:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5bc:	e5bcfa0c 	ldr	pc, [ip, #2572]!	; 0xa0c
+
+000005c0 <__cxa_type_match@plt>:
+ 5c0:	e28fc600 	add	ip, pc, #0, 12
+ 5c4:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5c8:	e5bcfa04 	ldr	pc, [ip, #2564]!	; 0xa04
+
+000005cc <abort@plt>:
+ 5cc:	e28fc600 	add	ip, pc, #0, 12
+ 5d0:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5d4:	e5bcf9fc 	ldr	pc, [ip, #2556]!	; 0x9fc
+
+000005d8 <__cxa_begin_cleanup@plt>:
+ 5d8:	e28fc600 	add	ip, pc, #0, 12
+ 5dc:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5e0:	e5bcf9f4 	ldr	pc, [ip, #2548]!	; 0x9f4
+
+000005e4 <__gnu_Unwind_Find_exidx@plt>:
+ 5e4:	e28fc600 	add	ip, pc, #0, 12
+ 5e8:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5ec:	e5bcf9ec 	ldr	pc, [ip, #2540]!	; 0x9ec
+
+000005f0 <memcpy@plt>:
+ 5f0:	e28fc600 	add	ip, pc, #0, 12
+ 5f4:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 5f8:	e5bcf9e4 	ldr	pc, [ip, #2532]!	; 0x9e4
+
+000005fc <__cxa_atexit@plt>:
+ 5fc:	e28fc600 	add	ip, pc, #0, 12
+ 600:	e28cca11 	add	ip, ip, #69632	; 0x11000
+ 604:	e5bcf9dc 	ldr	pc, [ip, #2524]!	; 0x9dc
+
+Disassembly of section .text:
+
+00000608 <_Z12TambahNormalii@@Base-0x3c>:
+     608:	e59f0004 	ldr	r0, [pc, #4]	; 614 <__cxa_atexit@plt+0x18>
+     60c:	e08f0000 	add	r0, pc, r0
+     610:	eaffffe7 	b	5b4 <__cxa_finalize@plt>
+     614:	000119ec 	andeq	r1, r1, ip, ror #19
+     618:	e3500000 	cmp	r0, #0
+     61c:	012fff1e 	bxeq	lr
+     620:	e12fff10 	bx	r0
+     624:	e1a01000 	mov	r1, r0
+     628:	e59f200c 	ldr	r2, [pc, #12]	; 63c <__cxa_atexit@plt+0x40>
+     62c:	e59f000c 	ldr	r0, [pc, #12]	; 640 <__cxa_atexit@plt+0x44>
+     630:	e08f2002 	add	r2, pc, r2
+     634:	e08f0000 	add	r0, pc, r0
+     638:	eaffffef 	b	5fc <__cxa_atexit@plt>
+     63c:	000119c8 	andeq	r1, r1, r8, asr #19
+     640:	ffffffdc 			; <UNDEFINED> instruction: 0xffffffdc
+
+00000644 <_Z12TambahNormalii@@Base>:
+     644:	e0800001 	add	r0, r0, r1
+     648:	e2400005 	sub	r0, r0, #5
+     64c:	e12fff1e 	bx	lr
+
+00000650 <_Z21TambahChangeParamaterii@@Base>:
+     650:	e3a00019 	mov	r0, #25
+     654:	e12fff1e 	bx	lr
+
+00000658 <_Z34TambahChangeParamaterPassByPointerPiS_@@Base>:
+     658:	e3a0200a 	mov	r2, #10
+     65c:	e5802000 	str	r2, [r0]
+     660:	e3a02014 	mov	r2, #20
+     664:	e5812000 	str	r2, [r1]
+     668:	e5900000 	ldr	r0, [r0]
+     66c:	e280000f 	add	r0, r0, #15
+     670:	e12fff1e 	bx	lr
+
+00000674 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base>:
+     674:	e3a0200a 	mov	r2, #10
+     678:	e5802000 	str	r2, [r0]
+     67c:	e3a02014 	mov	r2, #20
+     680:	e5812000 	str	r2, [r1]
+     684:	e5900000 	ldr	r0, [r0]
+     688:	e280000f 	add	r0, r0, #15
+     68c:	e12fff1e 	bx	lr
+     690:	e5903000 	ldr	r3, [r0]
+     694:	e3130101 	tst	r3, #1073741824	; 0x40000000
+     698:	13833102 	orrne	r3, r3, #-2147483648	; 0x80000000
+     69c:	03c33102 	biceq	r3, r3, #-2147483648	; 0x80000000
+     6a0:	e0800003 	add	r0, r0, r3
+     6a4:	e12fff1e 	bx	lr
+     6a8:	e92d4ff7 	push	{r0, r1, r2, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+     6ac:	e3510000 	cmp	r1, #0
+     6b0:	e1a05001 	mov	r5, r1
+     6b4:	0a000021 	beq	740 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcc>
+     6b8:	e2418001 	sub	r8, r1, #1
+     6bc:	e1a06002 	mov	r6, r2
+     6c0:	e1a07000 	mov	r7, r0
+     6c4:	e3a0b000 	mov	fp, #0
+     6c8:	e1a09008 	mov	r9, r8
+     6cc:	e08b4009 	add	r4, fp, r9
+     6d0:	e0844fa4 	add	r4, r4, r4, lsr #31
+     6d4:	e1a040c4 	asr	r4, r4, #1
+     6d8:	e1a0a184 	lsl	sl, r4, #3
+     6dc:	e087500a 	add	r5, r7, sl
+     6e0:	e1a00005 	mov	r0, r5
+     6e4:	ebffffe9 	bl	690 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1c>
+     6e8:	e1540008 	cmp	r4, r8
+     6ec:	0a000011 	beq	738 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xc4>
+     6f0:	e58d0004 	str	r0, [sp, #4]
+     6f4:	e28a0008 	add	r0, sl, #8
+     6f8:	e0870000 	add	r0, r7, r0
+     6fc:	ebffffe3 	bl	690 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1c>
+     700:	e59d3004 	ldr	r3, [sp, #4]
+     704:	e1560003 	cmp	r6, r3
+     708:	2a000003 	bcs	71c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xa8>
+     70c:	e154000b 	cmp	r4, fp
+     710:	0a000006 	beq	730 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xbc>
+     714:	e2449001 	sub	r9, r4, #1
+     718:	eaffffeb 	b	6cc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x58>
+     71c:	e2400001 	sub	r0, r0, #1
+     720:	e1560000 	cmp	r6, r0
+     724:	9a000005 	bls	740 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcc>
+     728:	e284b001 	add	fp, r4, #1
+     72c:	eaffffe6 	b	6cc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x58>
+     730:	e3a05000 	mov	r5, #0
+     734:	ea000001 	b	740 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcc>
+     738:	e1560000 	cmp	r6, r0
+     73c:	3afffff2 	bcc	70c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x98>
+     740:	e1a00005 	mov	r0, r5
+     744:	e28dd00c 	add	sp, sp, #12
+     748:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+     74c:	e3500001 	cmp	r0, #1
+     750:	0a000006 	beq	770 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xfc>
+     754:	e3500002 	cmp	r0, #2
+     758:	0a000007 	beq	77c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x108>
+     75c:	e3500000 	cmp	r0, #0
+     760:	1a000008 	bne	788 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x114>
+     764:	e59f0024 	ldr	r0, [pc, #36]	; 790 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11c>
+     768:	e79f0000 	ldr	r0, [pc, r0]
+     76c:	e12fff1e 	bx	lr
+     770:	e59f001c 	ldr	r0, [pc, #28]	; 794 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x120>
+     774:	e79f0000 	ldr	r0, [pc, r0]
+     778:	e12fff1e 	bx	lr
+     77c:	e59f0014 	ldr	r0, [pc, #20]	; 798 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x124>
+     780:	e79f0000 	ldr	r0, [pc, r0]
+     784:	e12fff1e 	bx	lr
+     788:	e3a00000 	mov	r0, #0
+     78c:	e12fff1e 	bx	lr
+     790:	00011884 	andeq	r1, r1, r4, lsl #17
+     794:	00011870 	andeq	r1, r1, r0, ror r8
+     798:	00011868 	andeq	r1, r1, r8, ror #16
+     79c:	e59f30ec 	ldr	r3, [pc, #236]	; 890 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x21c>
+     7a0:	e92d4037 	push	{r0, r1, r2, r4, r5, lr}
+     7a4:	e1a04000 	mov	r4, r0
+     7a8:	e79f3003 	ldr	r3, [pc, r3]
+     7ac:	e2415002 	sub	r5, r1, #2
+     7b0:	e3530000 	cmp	r3, #0
+     7b4:	0a000008 	beq	7dc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x168>
+     7b8:	e1a00005 	mov	r0, r5
+     7bc:	e28d1004 	add	r1, sp, #4
+     7c0:	ebffff87 	bl	5e4 <__gnu_Unwind_Find_exidx@plt>
+     7c4:	e3500000 	cmp	r0, #0
+     7c8:	1a00000a 	bne	7f8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x184>
+     7cc:	e3a03000 	mov	r3, #0
+     7d0:	e3a00009 	mov	r0, #9
+     7d4:	e5843010 	str	r3, [r4, #16]
+     7d8:	ea00002a 	b	888 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x214>
+     7dc:	e59f30b0 	ldr	r3, [pc, #176]	; 894 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x220>
+     7e0:	e59f00b0 	ldr	r0, [pc, #176]	; 898 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x224>
+     7e4:	e79f3003 	ldr	r3, [pc, r3]
+     7e8:	e79f0000 	ldr	r0, [pc, r0]
+     7ec:	e0603003 	rsb	r3, r0, r3
+     7f0:	e1a031c3 	asr	r3, r3, #3
+     7f4:	e58d3004 	str	r3, [sp, #4]
+     7f8:	e1a02005 	mov	r2, r5
+     7fc:	e59d1004 	ldr	r1, [sp, #4]
+     800:	ebffffa8 	bl	6a8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x34>
+     804:	e2505000 	subs	r5, r0, #0
+     808:	0affffef 	beq	7cc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x158>
+     80c:	ebffff9f 	bl	690 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1c>
+     810:	e5953004 	ldr	r3, [r5, #4]
+     814:	e3530001 	cmp	r3, #1
+     818:	03a03000 	moveq	r3, #0
+     81c:	05843010 	streq	r3, [r4, #16]
+     820:	e5840048 	str	r0, [r4, #72]	; 0x48
+     824:	03a00005 	moveq	r0, #5
+     828:	0a000016 	beq	888 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x214>
+     82c:	e3530000 	cmp	r3, #0
+     830:	e2850004 	add	r0, r5, #4
+     834:	b584004c 	strlt	r0, [r4, #76]	; 0x4c
+     838:	b3a03001 	movlt	r3, #1
+     83c:	ba000002 	blt	84c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1d8>
+     840:	ebffff92 	bl	690 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1c>
+     844:	e3a03000 	mov	r3, #0
+     848:	e584004c 	str	r0, [r4, #76]	; 0x4c
+     84c:	e594004c 	ldr	r0, [r4, #76]	; 0x4c
+     850:	e5843050 	str	r3, [r4, #80]	; 0x50
+     854:	e5903000 	ldr	r3, [r0]
+     858:	e3530000 	cmp	r3, #0
+     85c:	aa000006 	bge	87c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x208>
+     860:	e7e30c53 	ubfx	r0, r3, #24, #4
+     864:	ebffffb8 	bl	74c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd8>
+     868:	e3500000 	cmp	r0, #0
+     86c:	e5840010 	str	r0, [r4, #16]
+     870:	03a00009 	moveq	r0, #9
+     874:	13a00000 	movne	r0, #0
+     878:	ea000002 	b	888 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x214>
+     87c:	ebffff83 	bl	690 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1c>
+     880:	e5840010 	str	r0, [r4, #16]
+     884:	e3a00000 	mov	r0, #0
+     888:	e28dd00c 	add	sp, sp, #12
+     88c:	e8bd8030 	pop	{r4, r5, pc}
+     890:	0001184c 	andeq	r1, r1, ip, asr #16
+     894:	0001180c 	andeq	r1, r1, ip, lsl #16
+     898:	000117f4 	strdeq	r1, [r1], -r4
+     89c:	e5903000 	ldr	r3, [r0]
+     8a0:	e92d4010 	push	{r4, lr}
+     8a4:	e3130001 	tst	r3, #1
+     8a8:	e1a04000 	mov	r4, r0
+     8ac:	1a000005 	bne	8c8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x254>
+     8b0:	e3130002 	tst	r3, #2
+     8b4:	e2800048 	add	r0, r0, #72	; 0x48
+     8b8:	0a000001 	beq	8c4 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x250>
+     8bc:	eb000331 	bl	1588 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf14>
+     8c0:	ea000000 	b	8c8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x254>
+     8c4:	eb00032b 	bl	1578 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf04>
+     8c8:	e5943000 	ldr	r3, [r4]
+     8cc:	e3130004 	tst	r3, #4
+     8d0:	1a000001 	bne	8dc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x268>
+     8d4:	e28400d0 	add	r0, r4, #208	; 0xd0
+     8d8:	eb00032e 	bl	1598 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf24>
+     8dc:	e5943000 	ldr	r3, [r4]
+     8e0:	e3130008 	tst	r3, #8
+     8e4:	1a000001 	bne	8f0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x27c>
+     8e8:	e2840e15 	add	r0, r4, #336	; 0x150
+     8ec:	eb00032d 	bl	15a8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf34>
+     8f0:	e5943000 	ldr	r3, [r4]
+     8f4:	e3130010 	tst	r3, #16
+     8f8:	18bd8010 	popne	{r4, pc}
+     8fc:	e2840e1d 	add	r0, r4, #464	; 0x1d0
+     900:	e8bd4010 	pop	{r4, lr}
+     904:	ea000349 	b	1630 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xfbc>
+     908:	e5903000 	ldr	r3, [r0]
+     90c:	e3530000 	cmp	r3, #0
+     910:	17930000 	ldrne	r0, [r3, r0]
+     914:	01a00003 	moveq	r0, r3
+     918:	e12fff1e 	bx	lr
+     91c:	e3a00009 	mov	r0, #9
+     920:	e12fff1e 	bx	lr
+     924:	e12fff1e 	bx	lr
+     928:	e92d4070 	push	{r4, r5, r6, lr}
+     92c:	e1a05000 	mov	r5, r0
+     930:	e1a04001 	mov	r4, r1
+     934:	e1a00005 	mov	r0, r5
+     938:	e5941040 	ldr	r1, [r4, #64]	; 0x40
+     93c:	ebffff96 	bl	79c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x128>
+     940:	e2506000 	subs	r6, r0, #0
+     944:	0a000000 	beq	94c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2d8>
+     948:	ebffff1f 	bl	5cc <abort@plt>
+     94c:	e5943040 	ldr	r3, [r4, #64]	; 0x40
+     950:	e3a00001 	mov	r0, #1
+     954:	e1a01005 	mov	r1, r5
+     958:	e1a02004 	mov	r2, r4
+     95c:	e5853014 	str	r3, [r5, #20]
+     960:	e5953010 	ldr	r3, [r5, #16]
+     964:	e12fff33 	blx	r3
+     968:	e3500008 	cmp	r0, #8
+     96c:	0afffff0 	beq	934 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2c0>
+     970:	e3500007 	cmp	r0, #7
+     974:	1afffff3 	bne	948 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2d4>
+     978:	e1a00006 	mov	r0, r6
+     97c:	e5941040 	ldr	r1, [r4, #64]	; 0x40
+     980:	ebffffe7 	bl	924 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2b0>
+     984:	e2840004 	add	r0, r4, #4
+     988:	eb0002f5 	bl	1564 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xef0>
+     98c:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
+     990:	e281e004 	add	lr, r1, #4
+     994:	e590800c 	ldr	r8, [r0, #12]
+     998:	e1a04000 	mov	r4, r0
+     99c:	e5909018 	ldr	r9, [r0, #24]
+     9a0:	e1a0a002 	mov	sl, r2
+     9a4:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     9a8:	e24ddff3 	sub	sp, sp, #972	; 0x3cc
+     9ac:	e28dc00c 	add	ip, sp, #12
+     9b0:	e28db008 	add	fp, sp, #8
+     9b4:	e28d7f7a 	add	r7, sp, #488	; 0x1e8
+     9b8:	e3a06000 	mov	r6, #0
+     9bc:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     9c0:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     9c4:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     9c8:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     9cc:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     9d0:	e89e000f 	ldm	lr, {r0, r1, r2, r3}
+     9d4:	e88c000f 	stm	ip, {r0, r1, r2, r3}
+     9d8:	e58d6008 	str	r6, [sp, #8]
+     9dc:	e1a00004 	mov	r0, r4
+     9e0:	e59d1048 	ldr	r1, [sp, #72]	; 0x48
+     9e4:	ebffff6c 	bl	79c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x128>
+     9e8:	e35a0000 	cmp	sl, #0
+     9ec:	13a0a00a 	movne	sl, #10
+     9f0:	03a0a009 	moveq	sl, #9
+     9f4:	e2505000 	subs	r5, r0, #0
+     9f8:	138aa010 	orrne	sl, sl, #16
+     9fc:	159d3040 	ldrne	r3, [sp, #64]	; 0x40
+     a00:	1a00000c 	bne	a38 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x3c4>
+     a04:	e59d3048 	ldr	r3, [sp, #72]	; 0x48
+     a08:	e1a0100b 	mov	r1, fp
+     a0c:	e3a02e1e 	mov	r2, #480	; 0x1e0
+     a10:	e1a00007 	mov	r0, r7
+     a14:	e5843014 	str	r3, [r4, #20]
+     a18:	ebfffef4 	bl	5f0 <memcpy@plt>
+     a1c:	e5943010 	ldr	r3, [r4, #16]
+     a20:	e1a0000a 	mov	r0, sl
+     a24:	e1a01004 	mov	r1, r4
+     a28:	e1a02007 	mov	r2, r7
+     a2c:	e12fff33 	blx	r3
+     a30:	e59d3220 	ldr	r3, [sp, #544]	; 0x220
+     a34:	e1a06000 	mov	r6, r0
+     a38:	e58d304c 	str	r3, [sp, #76]	; 0x4c
+     a3c:	e3a00001 	mov	r0, #1
+     a40:	e58db000 	str	fp, [sp]
+     a44:	e1a0100a 	mov	r1, sl
+     a48:	e58d9004 	str	r9, [sp, #4]
+     a4c:	e1a02004 	mov	r2, r4
+     a50:	e1a03004 	mov	r3, r4
+     a54:	e12fff38 	blx	r8
+     a58:	e3500000 	cmp	r0, #0
+     a5c:	1a00000f 	bne	aa0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x42c>
+     a60:	e3550000 	cmp	r5, #0
+     a64:	1a00000f 	bne	aa8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x434>
+     a68:	e1a0000b 	mov	r0, fp
+     a6c:	e1a01007 	mov	r1, r7
+     a70:	e3a02e1e 	mov	r2, #480	; 0x1e0
+     a74:	e1a0a005 	mov	sl, r5
+     a78:	ebfffedc 	bl	5f0 <memcpy@plt>
+     a7c:	e3560008 	cmp	r6, #8
+     a80:	0affffd5 	beq	9dc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x368>
+     a84:	e3560007 	cmp	r6, #7
+     a88:	1a000004 	bne	aa0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x42c>
+     a8c:	e1a00005 	mov	r0, r5
+     a90:	e59d1048 	ldr	r1, [sp, #72]	; 0x48
+     a94:	ebffffa2 	bl	924 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2b0>
+     a98:	e28d000c 	add	r0, sp, #12
+     a9c:	eb0002b0 	bl	1564 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xef0>
+     aa0:	e3a00009 	mov	r0, #9
+     aa4:	ea000000 	b	aac <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x438>
+     aa8:	e1a00005 	mov	r0, r5
+     aac:	e28ddff3 	add	sp, sp, #972	; 0x3cc
+     ab0:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+     ab4:	e5900044 	ldr	r0, [r0, #68]	; 0x44
+     ab8:	e12fff1e 	bx	lr
+     abc:	e591303c 	ldr	r3, [r1, #60]	; 0x3c
+     ac0:	e92d40f0 	push	{r4, r5, r6, r7, lr}
+     ac4:	e281e004 	add	lr, r1, #4
+     ac8:	e5813040 	str	r3, [r1, #64]	; 0x40
+     acc:	e1a05000 	mov	r5, r0
+     ad0:	e1a04001 	mov	r4, r1
+     ad4:	e24ddf79 	sub	sp, sp, #484	; 0x1e4
+     ad8:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     adc:	e28dc004 	add	ip, sp, #4
+     ae0:	e28d6e1e 	add	r6, sp, #480	; 0x1e0
+     ae4:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     ae8:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     aec:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     af0:	e8be000f 	ldm	lr!, {r0, r1, r2, r3}
+     af4:	e8ac000f 	stmia	ip!, {r0, r1, r2, r3}
+     af8:	e89e000f 	ldm	lr, {r0, r1, r2, r3}
+     afc:	e88c000f 	stm	ip, {r0, r1, r2, r3}
+     b00:	e3e03000 	mvn	r3, #0
+     b04:	e52631e0 	str	r3, [r6, #-480]!	; 0xfffffe20
+     b08:	e1a00005 	mov	r0, r5
+     b0c:	e59d1040 	ldr	r1, [sp, #64]	; 0x40
+     b10:	ebffff21 	bl	79c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x128>
+     b14:	e3500000 	cmp	r0, #0
+     b18:	1a00000d 	bne	b54 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x4e0>
+     b1c:	e5953010 	ldr	r3, [r5, #16]
+     b20:	e1a01005 	mov	r1, r5
+     b24:	e1a02006 	mov	r2, r6
+     b28:	e12fff33 	blx	r3
+     b2c:	e3500008 	cmp	r0, #8
+     b30:	e1a07000 	mov	r7, r0
+     b34:	0afffff3 	beq	b08 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x494>
+     b38:	e1a00006 	mov	r0, r6
+     b3c:	ebffff56 	bl	89c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x228>
+     b40:	e3570006 	cmp	r7, #6
+     b44:	1a000002 	bne	b54 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x4e0>
+     b48:	e1a00005 	mov	r0, r5
+     b4c:	e1a01004 	mov	r1, r4
+     b50:	ebffff74 	bl	928 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2b4>
+     b54:	e3a00009 	mov	r0, #9
+     b58:	e28ddf79 	add	sp, sp, #484	; 0x1e4
+     b5c:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+     b60:	e5802018 	str	r2, [r0, #24]
+     b64:	e593203c 	ldr	r2, [r3, #60]	; 0x3c
+     b68:	e580100c 	str	r1, [r0, #12]
+     b6c:	e1a01003 	mov	r1, r3
+     b70:	e5832040 	str	r2, [r3, #64]	; 0x40
+     b74:	e3a02000 	mov	r2, #0
+     b78:	eaffff83 	b	98c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x318>
+     b7c:	e92d4070 	push	{r4, r5, r6, lr}
+     b80:	e1a05000 	mov	r5, r0
+     b84:	e590600c 	ldr	r6, [r0, #12]
+     b88:	e1a04001 	mov	r4, r1
+     b8c:	e5903014 	ldr	r3, [r0, #20]
+     b90:	e3560000 	cmp	r6, #0
+     b94:	e5813040 	str	r3, [r1, #64]	; 0x40
+     b98:	0a000002 	beq	ba8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x534>
+     b9c:	e3a02001 	mov	r2, #1
+     ba0:	ebffff79 	bl	98c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x318>
+     ba4:	ea000010 	b	bec <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x578>
+     ba8:	e5903010 	ldr	r3, [r0, #16]
+     bac:	e1a01005 	mov	r1, r5
+     bb0:	e3a00002 	mov	r0, #2
+     bb4:	e1a02004 	mov	r2, r4
+     bb8:	e12fff33 	blx	r3
+     bbc:	e3500007 	cmp	r0, #7
+     bc0:	0a000004 	beq	bd8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x564>
+     bc4:	e3500008 	cmp	r0, #8
+     bc8:	1a000007 	bne	bec <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x578>
+     bcc:	e1a00005 	mov	r0, r5
+     bd0:	e1a01004 	mov	r1, r4
+     bd4:	ebffff53 	bl	928 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2b4>
+     bd8:	e1a00006 	mov	r0, r6
+     bdc:	e5941040 	ldr	r1, [r4, #64]	; 0x40
+     be0:	ebffff4f 	bl	924 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2b0>
+     be4:	e2840004 	add	r0, r4, #4
+     be8:	eb00025d 	bl	1564 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xef0>
+     bec:	ebfffe76 	bl	5cc <abort@plt>
+     bf0:	e590200c 	ldr	r2, [r0, #12]
+     bf4:	e3520000 	cmp	r2, #0
+     bf8:	1a000000 	bne	c00 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x58c>
+     bfc:	eaffffae 	b	abc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x448>
+     c00:	e591203c 	ldr	r2, [r1, #60]	; 0x3c
+     c04:	e5812040 	str	r2, [r1, #64]	; 0x40
+     c08:	e3a02000 	mov	r2, #0
+     c0c:	eaffff5e 	b	98c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x318>
+     c10:	e12fff1e 	bx	lr
+     c14:	e5903008 	ldr	r3, [r0, #8]
+     c18:	e1a01000 	mov	r1, r0
+     c1c:	e3530000 	cmp	r3, #0
+     c20:	012fff1e 	bxeq	lr
+     c24:	e3a00001 	mov	r0, #1
+     c28:	e12fff13 	bx	r3
+     c2c:	e3510004 	cmp	r1, #4
+     c30:	908ff101 	addls	pc, pc, r1, lsl #2
+     c34:	ea000011 	b	c80 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x60c>
+     c38:	ea000003 	b	c4c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x5d8>
+     c3c:	ea00000d 	b	c78 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x604>
+     c40:	ea00000e 	b	c80 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x60c>
+     c44:	ea00000b 	b	c78 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x604>
+     c48:	ea00000a 	b	c78 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x604>
+     c4c:	e352000f 	cmp	r2, #15
+     c50:	93530000 	cmpls	r3, #0
+     c54:	13a03001 	movne	r3, #1
+     c58:	03a03000 	moveq	r3, #0
+     c5c:	1a000007 	bne	c80 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x60c>
+     c60:	e0800102 	add	r0, r0, r2, lsl #2
+     c64:	e59d2000 	ldr	r2, [sp]
+     c68:	e5901004 	ldr	r1, [r0, #4]
+     c6c:	e1a00003 	mov	r0, r3
+     c70:	e5821000 	str	r1, [r2]
+     c74:	e12fff1e 	bx	lr
+     c78:	e3a00001 	mov	r0, #1
+     c7c:	e12fff1e 	bx	lr
+     c80:	e3a00002 	mov	r0, #2
+     c84:	e12fff1e 	bx	lr
+     c88:	e92d401f 	push	{r0, r1, r2, r3, r4, lr}
+     c8c:	e1a02001 	mov	r2, r1
+     c90:	e3a01000 	mov	r1, #0
+     c94:	e28d300c 	add	r3, sp, #12
+     c98:	e58d3000 	str	r3, [sp]
+     c9c:	e1a03001 	mov	r3, r1
+     ca0:	ebffffe1 	bl	c2c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x5b8>
+     ca4:	e59d000c 	ldr	r0, [sp, #12]
+     ca8:	e28dd014 	add	sp, sp, #20
+     cac:	e49df004 	pop	{pc}		; (ldr pc, [sp], #4)
+     cb0:	e3510004 	cmp	r1, #4
+     cb4:	908ff101 	addls	pc, pc, r1, lsl #2
+     cb8:	ea000011 	b	d04 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x690>
+     cbc:	ea000003 	b	cd0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x65c>
+     cc0:	ea00000d 	b	cfc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x688>
+     cc4:	ea00000e 	b	d04 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x690>
+     cc8:	ea00000b 	b	cfc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x688>
+     ccc:	ea00000a 	b	cfc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x688>
+     cd0:	e352000f 	cmp	r2, #15
+     cd4:	93530000 	cmpls	r3, #0
+     cd8:	13a03001 	movne	r3, #1
+     cdc:	03a03000 	moveq	r3, #0
+     ce0:	1a000007 	bne	d04 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x690>
+     ce4:	e59d1000 	ldr	r1, [sp]
+     ce8:	e0800102 	add	r0, r0, r2, lsl #2
+     cec:	e5911000 	ldr	r1, [r1]
+     cf0:	e5801004 	str	r1, [r0, #4]
+     cf4:	e1a00003 	mov	r0, r3
+     cf8:	e12fff1e 	bx	lr
+     cfc:	e3a00001 	mov	r0, #1
+     d00:	e12fff1e 	bx	lr
+     d04:	e3a00002 	mov	r0, #2
+     d08:	e12fff1e 	bx	lr
+     d0c:	e92d401f 	push	{r0, r1, r2, r3, r4, lr}
+     d10:	e28d3010 	add	r3, sp, #16
+     d14:	e1a0c001 	mov	ip, r1
+     d18:	e3a01000 	mov	r1, #0
+     d1c:	e5232004 	str	r2, [r3, #-4]!
+     d20:	e1a0200c 	mov	r2, ip
+     d24:	e58d3000 	str	r3, [sp]
+     d28:	e1a03001 	mov	r3, r1
+     d2c:	ebffffdf 	bl	cb0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x63c>
+     d30:	e28dd014 	add	sp, sp, #20
+     d34:	e49df004 	pop	{pc}		; (ldr pc, [sp], #4)
+     d38:	e592303c 	ldr	r3, [r2, #60]	; 0x3c
+     d3c:	e282c004 	add	ip, r2, #4
+     d40:	e92d41f0 	push	{r4, r5, r6, r7, r8, lr}
+     d44:	e1a07000 	mov	r7, r0
+     d48:	e5823040 	str	r3, [r2, #64]	; 0x40
+     d4c:	e1a08001 	mov	r8, r1
+     d50:	e8bc000f 	ldm	ip!, {r0, r1, r2, r3}
+     d54:	e24ddf8e 	sub	sp, sp, #568	; 0x238
+     d58:	e28de05c 	add	lr, sp, #92	; 0x5c
+     d5c:	e28d4058 	add	r4, sp, #88	; 0x58
+     d60:	e1a0600d 	mov	r6, sp
+     d64:	e8ae000f 	stmia	lr!, {r0, r1, r2, r3}
+     d68:	e8bc000f 	ldm	ip!, {r0, r1, r2, r3}
+     d6c:	e8ae000f 	stmia	lr!, {r0, r1, r2, r3}
+     d70:	e8bc000f 	ldm	ip!, {r0, r1, r2, r3}
+     d74:	e8ae000f 	stmia	lr!, {r0, r1, r2, r3}
+     d78:	e89c000f 	ldm	ip, {r0, r1, r2, r3}
+     d7c:	e88e000f 	stm	lr, {r0, r1, r2, r3}
+     d80:	e3e03000 	mvn	r3, #0
+     d84:	e58d3058 	str	r3, [sp, #88]	; 0x58
+     d88:	e1a00006 	mov	r0, r6
+     d8c:	e59d1098 	ldr	r1, [sp, #152]	; 0x98
+     d90:	ebfffe81 	bl	79c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x128>
+     d94:	e3500000 	cmp	r0, #0
+     d98:	0a000001 	beq	da4 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x730>
+     d9c:	e3a05009 	mov	r5, #9
+     da0:	ea000011 	b	dec <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x778>
+     da4:	e1a00004 	mov	r0, r4
+     da8:	e3a0100c 	mov	r1, #12
+     dac:	e1a02006 	mov	r2, r6
+     db0:	ebffffd5 	bl	d0c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x698>
+     db4:	e1a00004 	mov	r0, r4
+     db8:	e1a01008 	mov	r1, r8
+     dbc:	e12fff37 	blx	r7
+     dc0:	e3500000 	cmp	r0, #0
+     dc4:	1afffff4 	bne	d9c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x728>
+     dc8:	e59d3010 	ldr	r3, [sp, #16]
+     dcc:	e3a00008 	mov	r0, #8
+     dd0:	e1a01006 	mov	r1, r6
+     dd4:	e1a02004 	mov	r2, r4
+     dd8:	e12fff33 	blx	r3
+     ddc:	e2403005 	sub	r3, r0, #5
+     de0:	e1a05000 	mov	r5, r0
+     de4:	e3d33004 	bics	r3, r3, #4
+     de8:	1affffe6 	bne	d88 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x714>
+     dec:	e1a00004 	mov	r0, r4
+     df0:	ebfffea9 	bl	89c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x228>
+     df4:	e1a00005 	mov	r0, r5
+     df8:	e28ddf8e 	add	sp, sp, #568	; 0x238
+     dfc:	e8bd81f0 	pop	{r4, r5, r6, r7, r8, pc}
+     e00:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
+     e04:	e1a07002 	mov	r7, r2
+     e08:	e591204c 	ldr	r2, [r1, #76]	; 0x4c
+     e0c:	e24dd024 	sub	sp, sp, #36	; 0x24
+     e10:	e2539000 	subs	r9, r3, #0
+     e14:	e1a05001 	mov	r5, r1
+     e18:	e282c004 	add	ip, r2, #4
+     e1c:	e2008003 	and	r8, r0, #3
+     e20:	e5924000 	ldr	r4, [r2]
+     e24:	e58dc018 	str	ip, [sp, #24]
+     e28:	e58d4014 	str	r4, [sp, #20]
+     e2c:	1a000005 	bne	e48 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x7d4>
+     e30:	e1a04404 	lsl	r4, r4, #8
+     e34:	e3a03003 	mov	r3, #3
+     e38:	e58d4014 	str	r4, [sp, #20]
+     e3c:	e5cd901d 	strb	r9, [sp, #29]
+     e40:	e5cd301c 	strb	r3, [sp, #28]
+     e44:	ea000009 	b	e70 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x7fc>
+     e48:	e3590002 	cmp	r9, #2
+     e4c:	ca000007 	bgt	e70 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x7fc>
+     e50:	e1a03824 	lsr	r3, r4, #16
+     e54:	e5cd301d 	strb	r3, [sp, #29]
+     e58:	e1a04804 	lsl	r4, r4, #16
+     e5c:	e3a02002 	mov	r2, #2
+     e60:	e6ef3073 	uxtb	r3, r3
+     e64:	e58d4014 	str	r4, [sp, #20]
+     e68:	e5cd201c 	strb	r2, [sp, #28]
+     e6c:	e08cc103 	add	ip, ip, r3, lsl #2
+     e70:	e3580002 	cmp	r8, #2
+     e74:	e5953050 	ldr	r3, [r5, #80]	; 0x50
+     e78:	0595c038 	ldreq	ip, [r5, #56]	; 0x38
+     e7c:	e2133001 	ands	r3, r3, #1
+     e80:	1a0000af 	bne	1144 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xad0>
+     e84:	e2200008 	eor	r0, r0, #8
+     e88:	e58d3004 	str	r3, [sp, #4]
+     e8c:	e7e031d0 	ubfx	r3, r0, #3, #1
+     e90:	e58d3008 	str	r3, [sp, #8]
+     e94:	e59c4000 	ldr	r4, [ip]
+     e98:	e3540000 	cmp	r4, #0
+     e9c:	0a0000aa 	beq	114c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xad8>
+     ea0:	e3590002 	cmp	r9, #2
+     ea4:	e5953048 	ldr	r3, [r5, #72]	; 0x48
+     ea8:	e1a00007 	mov	r0, r7
+     eac:	e3a0100f 	mov	r1, #15
+     eb0:	059ca004 	ldreq	sl, [ip, #4]
+     eb4:	028c6008 	addeq	r6, ip, #8
+     eb8:	11dca0b2 	ldrhne	sl, [ip, #2]
+     ebc:	128c6004 	addne	r6, ip, #4
+     ec0:	11dc40b0 	ldrhne	r4, [ip]
+     ec4:	e3cab001 	bic	fp, sl, #1
+     ec8:	e08bb003 	add	fp, fp, r3
+     ecc:	ebffff6d 	bl	c88 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x614>
+     ed0:	e15b0000 	cmp	fp, r0
+     ed4:	83a0c000 	movhi	ip, #0
+     ed8:	8a000004 	bhi	ef0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x87c>
+     edc:	e3c43001 	bic	r3, r4, #1
+     ee0:	e08bb003 	add	fp, fp, r3
+     ee4:	e150000b 	cmp	r0, fp
+     ee8:	23a0c000 	movcs	ip, #0
+     eec:	33a0c001 	movcc	ip, #1
+     ef0:	e20aa001 	and	sl, sl, #1
+     ef4:	e2044001 	and	r4, r4, #1
+     ef8:	e184408a 	orr	r4, r4, sl, lsl #1
+     efc:	e3540001 	cmp	r4, #1
+     f00:	0a000017 	beq	f64 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x8f0>
+     f04:	3a000002 	bcc	f14 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x8a0>
+     f08:	e3540002 	cmp	r4, #2
+     f0c:	0a000048 	beq	1034 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x9c0>
+     f10:	ea0000a8 	b	11b8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb44>
+     f14:	e3580000 	cmp	r8, #0
+     f18:	03a0c000 	moveq	ip, #0
+     f1c:	120cc001 	andne	ip, ip, #1
+     f20:	e286a004 	add	sl, r6, #4
+     f24:	e35c0000 	cmp	ip, #0
+     f28:	0a00000b 	beq	f5c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x8e8>
+     f2c:	e1a00006 	mov	r0, r6
+     f30:	ebfffdd6 	bl	690 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1c>
+     f34:	e585a038 	str	sl, [r5, #56]	; 0x38
+     f38:	e1a04000 	mov	r4, r0
+     f3c:	e1a00005 	mov	r0, r5
+     f40:	ebfffda4 	bl	5d8 <__cxa_begin_cleanup@plt>
+     f44:	e3500000 	cmp	r0, #0
+     f48:	0a00009a 	beq	11b8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb44>
+     f4c:	e1a00007 	mov	r0, r7
+     f50:	e3a0100f 	mov	r1, #15
+     f54:	e1a02004 	mov	r2, r4
+     f58:	ea000093 	b	11ac <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb38>
+     f5c:	e1a0c00a 	mov	ip, sl
+     f60:	eaffffcb 	b	e94 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x820>
+     f64:	e3580000 	cmp	r8, #0
+     f68:	1a00001d 	bne	fe4 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x970>
+     f6c:	e35c0000 	cmp	ip, #0
+     f70:	0a00002d 	beq	102c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x9b8>
+     f74:	e5963004 	ldr	r3, [r6, #4]
+     f78:	e596a000 	ldr	sl, [r6]
+     f7c:	e3730002 	cmn	r3, #2
+     f80:	e1a0afaa 	lsr	sl, sl, #31
+     f84:	0a00008b 	beq	11b8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb44>
+     f88:	e3730001 	cmn	r3, #1
+     f8c:	e2852058 	add	r2, r5, #88	; 0x58
+     f90:	e58d2010 	str	r2, [sp, #16]
+     f94:	0a000008 	beq	fbc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x948>
+     f98:	e2860004 	add	r0, r6, #4
+     f9c:	ebfffe59 	bl	908 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x294>
+     fa0:	e1a0200a 	mov	r2, sl
+     fa4:	e28d3010 	add	r3, sp, #16
+     fa8:	e1a01000 	mov	r1, r0
+     fac:	e1a00005 	mov	r0, r5
+     fb0:	ebfffd82 	bl	5c0 <__cxa_type_match@plt>
+     fb4:	e2504000 	subs	r4, r0, #0
+     fb8:	0a00001b 	beq	102c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x9b8>
+     fbc:	e1a00007 	mov	r0, r7
+     fc0:	e3a0100d 	mov	r1, #13
+     fc4:	ebffff2f 	bl	c88 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x614>
+     fc8:	e3540002 	cmp	r4, #2
+     fcc:	e59d2010 	ldr	r2, [sp, #16]
+     fd0:	01a03005 	moveq	r3, r5
+     fd4:	11a03002 	movne	r3, r2
+     fd8:	e5850020 	str	r0, [r5, #32]
+     fdc:	05a3202c 	streq	r2, [r3, #44]!	; 0x2c
+     fe0:	ea00007b 	b	11d4 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb60>
+     fe4:	e1a00007 	mov	r0, r7
+     fe8:	e3a0100d 	mov	r1, #13
+     fec:	e5954020 	ldr	r4, [r5, #32]
+     ff0:	ebffff24 	bl	c88 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x614>
+     ff4:	e1540000 	cmp	r4, r0
+     ff8:	1a00000b 	bne	102c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x9b8>
+     ffc:	e5953028 	ldr	r3, [r5, #40]	; 0x28
+    1000:	e1560003 	cmp	r6, r3
+    1004:	1a000008 	bne	102c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x9b8>
+    1008:	e1a00006 	mov	r0, r6
+    100c:	ebfffd9f 	bl	690 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1c>
+    1010:	e3a0100f 	mov	r1, #15
+    1014:	e1a02000 	mov	r2, r0
+    1018:	e1a00007 	mov	r0, r7
+    101c:	ebffff3a 	bl	d0c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x698>
+    1020:	e1a00007 	mov	r0, r7
+    1024:	e3a01000 	mov	r1, #0
+    1028:	ea00003b 	b	111c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xaa8>
+    102c:	e286c008 	add	ip, r6, #8
+    1030:	eaffff97 	b	e94 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x820>
+    1034:	e5964000 	ldr	r4, [r6]
+    1038:	e3580000 	cmp	r8, #0
+    103c:	e3c44102 	bic	r4, r4, #-2147483648	; 0x80000000
+    1040:	1a000019 	bne	10ac <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xa38>
+    1044:	e35c0000 	cmp	ip, #0
+    1048:	0a000037 	beq	112c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xab8>
+    104c:	e59d3008 	ldr	r3, [sp, #8]
+    1050:	e3540000 	cmp	r4, #0
+    1054:	03833001 	orreq	r3, r3, #1
+    1058:	e3530000 	cmp	r3, #0
+    105c:	0a000032 	beq	112c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xab8>
+    1060:	e285c058 	add	ip, r5, #88	; 0x58
+    1064:	e28db010 	add	fp, sp, #16
+    1068:	e1a0a008 	mov	sl, r8
+    106c:	e15a0004 	cmp	sl, r4
+    1070:	0a000052 	beq	11c0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb4c>
+    1074:	e28aa001 	add	sl, sl, #1
+    1078:	e58dc010 	str	ip, [sp, #16]
+    107c:	e58dc00c 	str	ip, [sp, #12]
+    1080:	e086010a 	add	r0, r6, sl, lsl #2
+    1084:	ebfffe1f 	bl	908 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x294>
+    1088:	e3a02000 	mov	r2, #0
+    108c:	e1a0300b 	mov	r3, fp
+    1090:	e1a01000 	mov	r1, r0
+    1094:	e1a00005 	mov	r0, r5
+    1098:	ebfffd48 	bl	5c0 <__cxa_type_match@plt>
+    109c:	e59dc00c 	ldr	ip, [sp, #12]
+    10a0:	e3500000 	cmp	r0, #0
+    10a4:	0afffff0 	beq	106c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x9f8>
+    10a8:	ea00001f 	b	112c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xab8>
+    10ac:	e1a00007 	mov	r0, r7
+    10b0:	e3a0100d 	mov	r1, #13
+    10b4:	e595a020 	ldr	sl, [r5, #32]
+    10b8:	ebfffef2 	bl	c88 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x614>
+    10bc:	e15a0000 	cmp	sl, r0
+    10c0:	1a000019 	bne	112c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xab8>
+    10c4:	e5953028 	ldr	r3, [r5, #40]	; 0x28
+    10c8:	e1560003 	cmp	r6, r3
+    10cc:	1a000016 	bne	112c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xab8>
+    10d0:	e3a0a000 	mov	sl, #0
+    10d4:	e3a03004 	mov	r3, #4
+    10d8:	e5854028 	str	r4, [r5, #40]	; 0x28
+    10dc:	e5853030 	str	r3, [r5, #48]	; 0x30
+    10e0:	e0863003 	add	r3, r6, r3
+    10e4:	e585a02c 	str	sl, [r5, #44]	; 0x2c
+    10e8:	e5853034 	str	r3, [r5, #52]	; 0x34
+    10ec:	e5963000 	ldr	r3, [r6]
+    10f0:	e153000a 	cmp	r3, sl
+    10f4:	aa00000a 	bge	1124 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xab0>
+    10f8:	e2840001 	add	r0, r4, #1
+    10fc:	e0860100 	add	r0, r6, r0, lsl #2
+    1100:	ebfffd62 	bl	690 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1c>
+    1104:	e3a0100f 	mov	r1, #15
+    1108:	e1a02000 	mov	r2, r0
+    110c:	e1a00007 	mov	r0, r7
+    1110:	ebfffefd 	bl	d0c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x698>
+    1114:	e1a00007 	mov	r0, r7
+    1118:	e1a0100a 	mov	r1, sl
+    111c:	e1a02005 	mov	r2, r5
+    1120:	ea000021 	b	11ac <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb38>
+    1124:	e3a03001 	mov	r3, #1
+    1128:	e58d3004 	str	r3, [sp, #4]
+    112c:	e5963000 	ldr	r3, [r6]
+    1130:	e284c001 	add	ip, r4, #1
+    1134:	e3530000 	cmp	r3, #0
+    1138:	b2866004 	addlt	r6, r6, #4
+    113c:	e086c10c 	add	ip, r6, ip, lsl #2
+    1140:	eaffff53 	b	e94 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x820>
+    1144:	e3a03000 	mov	r3, #0
+    1148:	e58d3004 	str	r3, [sp, #4]
+    114c:	e3590002 	cmp	r9, #2
+    1150:	da000001 	ble	115c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xae8>
+    1154:	ebfffdf0 	bl	91c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x2a8>
+    1158:	ea000002 	b	1168 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xaf4>
+    115c:	e1a00007 	mov	r0, r7
+    1160:	e28d1014 	add	r1, sp, #20
+    1164:	eb00018b 	bl	1798 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1124>
+    1168:	e3500000 	cmp	r0, #0
+    116c:	1a000011 	bne	11b8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb44>
+    1170:	e59d3004 	ldr	r3, [sp, #4]
+    1174:	e3530000 	cmp	r3, #0
+    1178:	03a00008 	moveq	r0, #8
+    117c:	0a000017 	beq	11e0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb6c>
+    1180:	e3a0100f 	mov	r1, #15
+    1184:	e1a00007 	mov	r0, r7
+    1188:	ebfffebe 	bl	c88 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x614>
+    118c:	e3a0100e 	mov	r1, #14
+    1190:	e1a02000 	mov	r2, r0
+    1194:	e1a00007 	mov	r0, r7
+    1198:	ebfffedb 	bl	d0c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x698>
+    119c:	e59f2044 	ldr	r2, [pc, #68]	; 11e8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb74>
+    11a0:	e1a00007 	mov	r0, r7
+    11a4:	e3a0100f 	mov	r1, #15
+    11a8:	e79f2002 	ldr	r2, [pc, r2]
+    11ac:	ebfffed6 	bl	d0c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x698>
+    11b0:	e3a00007 	mov	r0, #7
+    11b4:	ea000009 	b	11e0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb6c>
+    11b8:	e3a00009 	mov	r0, #9
+    11bc:	ea000007 	b	11e0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb6c>
+    11c0:	e1a00007 	mov	r0, r7
+    11c4:	e3a0100d 	mov	r1, #13
+    11c8:	ebfffeae 	bl	c88 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x614>
+    11cc:	e59d3010 	ldr	r3, [sp, #16]
+    11d0:	e5850020 	str	r0, [r5, #32]
+    11d4:	e3a00006 	mov	r0, #6
+    11d8:	e5853024 	str	r3, [r5, #36]	; 0x24
+    11dc:	e5856028 	str	r6, [r5, #40]	; 0x28
+    11e0:	e28dd024 	add	sp, sp, #36	; 0x24
+    11e4:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+    11e8:	00010e38 	andeq	r0, r1, r8, lsr lr
+    11ec:	e3a03000 	mov	r3, #0
+    11f0:	eaffff02 	b	e00 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x78c>
+    11f4:	e3a03001 	mov	r3, #1
+    11f8:	eaffff00 	b	e00 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x78c>
+    11fc:	e3a03002 	mov	r3, #2
+    1200:	eafffefe 	b	e00 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x78c>
+    1204:	e92d43f0 	push	{r4, r5, r6, r7, r8, r9, lr}
+    1208:	e1a05000 	mov	r5, r0
+    120c:	e24ddf43 	sub	sp, sp, #268	; 0x10c
+    1210:	e1a04002 	mov	r4, r2
+    1214:	e3510004 	cmp	r1, #4
+    1218:	908ff101 	addls	pc, pc, r1, lsl #2
+    121c:	ea0000b9 	b	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    1220:	ea000003 	b	1234 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xbc0>
+    1224:	ea000014 	b	127c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xc08>
+    1228:	ea0000b6 	b	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    122c:	ea00007f 	b	1430 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xdbc>
+    1230:	ea00009a 	b	14a0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe2c>
+    1234:	e3530000 	cmp	r3, #0
+    1238:	1a0000b2 	bne	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    123c:	e3a03001 	mov	r3, #1
+    1240:	e6ff1072 	uxth	r1, r2
+    1244:	e5902038 	ldr	r2, [r0, #56]	; 0x38
+    1248:	e1a00003 	mov	r0, r3
+    124c:	e243c001 	sub	ip, r3, #1
+    1250:	e011cc10 	ands	ip, r1, r0, lsl ip
+    1254:	1592c000 	ldrne	ip, [r2]
+    1258:	12822004 	addne	r2, r2, #4
+    125c:	1785c103 	strne	ip, [r5, r3, lsl #2]
+    1260:	e2833001 	add	r3, r3, #1
+    1264:	e3530011 	cmp	r3, #17
+    1268:	1afffff7 	bne	124c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xbd8>
+    126c:	e2140a02 	ands	r0, r4, #8192	; 0x2000
+    1270:	05852038 	streq	r2, [r5, #56]	; 0x38
+    1274:	0a0000b8 	beq	155c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xee8>
+    1278:	ea0000a4 	b	1510 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe9c>
+    127c:	e3c32004 	bic	r2, r3, #4
+    1280:	e3520001 	cmp	r2, #1
+    1284:	1a00009f 	bne	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    1288:	e3530001 	cmp	r3, #1
+    128c:	e1a07824 	lsr	r7, r4, #16
+    1290:	e6ff4074 	uxth	r4, r4
+    1294:	e0846007 	add	r6, r4, r7
+    1298:	1a000006 	bne	12b8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xc44>
+    129c:	e3560010 	cmp	r6, #16
+    12a0:	8a000098 	bhi	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    12a4:	e357000f 	cmp	r7, #15
+    12a8:	91a08003 	movls	r8, r3
+    12ac:	93a06000 	movls	r6, #0
+    12b0:	8a000094 	bhi	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    12b4:	ea000005 	b	12d0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xc5c>
+    12b8:	e3560020 	cmp	r6, #32
+    12bc:	8a000091 	bhi	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    12c0:	e357000f 	cmp	r7, #15
+    12c4:	9a000093 	bls	1518 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xea4>
+    12c8:	e1a06004 	mov	r6, r4
+    12cc:	e3a08000 	mov	r8, #0
+    12d0:	e2969000 	adds	r9, r6, #0
+    12d4:	13a09001 	movne	r9, #1
+    12d8:	e3530005 	cmp	r3, #5
+    12dc:	13560000 	cmpne	r6, #0
+    12e0:	1a000088 	bne	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    12e4:	e357000f 	cmp	r7, #15
+    12e8:	8a000012 	bhi	1338 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcc4>
+    12ec:	e5952000 	ldr	r2, [r5]
+    12f0:	e3120001 	tst	r2, #1
+    12f4:	0a00000f 	beq	1338 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcc4>
+    12f8:	e3530005 	cmp	r3, #5
+    12fc:	e1a00005 	mov	r0, r5
+    1300:	e3c21001 	bic	r1, r2, #1
+    1304:	e4801048 	str	r1, [r0], #72	; 0x48
+    1308:	1a000007 	bne	132c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcb8>
+    130c:	e3811002 	orr	r1, r1, #2
+    1310:	e5851000 	str	r1, [r5]
+    1314:	eb00009d 	bl	1590 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf1c>
+    1318:	e3590000 	cmp	r9, #0
+    131c:	1a000007 	bne	1340 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xccc>
+    1320:	e28d0080 	add	r0, sp, #128	; 0x80
+    1324:	eb000099 	bl	1590 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf1c>
+    1328:	ea00000f 	b	136c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcf8>
+    132c:	e3c22003 	bic	r2, r2, #3
+    1330:	e5852000 	str	r2, [r5]
+    1334:	eb000091 	bl	1580 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf0c>
+    1338:	e3590000 	cmp	r9, #0
+    133c:	0a00007b 	beq	1530 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xebc>
+    1340:	e5953000 	ldr	r3, [r5]
+    1344:	e3130004 	tst	r3, #4
+    1348:	0a000003 	beq	135c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xce8>
+    134c:	e1a00005 	mov	r0, r5
+    1350:	e3c33004 	bic	r3, r3, #4
+    1354:	e48030d0 	str	r3, [r0], #208	; 0xd0
+    1358:	eb000090 	bl	15a0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf2c>
+    135c:	e3580000 	cmp	r8, #0
+    1360:	1a000077 	bne	1544 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xed0>
+    1364:	e357000f 	cmp	r7, #15
+    1368:	9affffec 	bls	1320 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcac>
+    136c:	e3590000 	cmp	r9, #0
+    1370:	0a000002 	beq	1380 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd0c>
+    1374:	e1a0000d 	mov	r0, sp
+    1378:	eb000088 	bl	15a0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf2c>
+    137c:	e2674010 	rsb	r4, r7, #16
+    1380:	e5952038 	ldr	r2, [r5, #56]	; 0x38
+    1384:	e3540000 	cmp	r4, #0
+    1388:	e1a03002 	mov	r3, r2
+    138c:	da000009 	ble	13b8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd44>
+    1390:	e28d1080 	add	r1, sp, #128	; 0x80
+    1394:	e1a04084 	lsl	r4, r4, #1
+    1398:	e0811187 	add	r1, r1, r7, lsl #3
+    139c:	e3a03000 	mov	r3, #0
+    13a0:	e1530004 	cmp	r3, r4
+    13a4:	17920103 	ldrne	r0, [r2, r3, lsl #2]
+    13a8:	17810103 	strne	r0, [r1, r3, lsl #2]
+    13ac:	12833001 	addne	r3, r3, #1
+    13b0:	1afffffa 	bne	13a0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd2c>
+    13b4:	e0823103 	add	r3, r2, r3, lsl #2
+    13b8:	e3590000 	cmp	r9, #0
+    13bc:	0a00000a 	beq	13ec <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd78>
+    13c0:	e3570010 	cmp	r7, #16
+    13c4:	e28d2f42 	add	r2, sp, #264	; 0x108
+    13c8:	e0836186 	add	r6, r3, r6, lsl #3
+    13cc:	21a04007 	movcs	r4, r7
+    13d0:	33a04010 	movcc	r4, #16
+    13d4:	e0824184 	add	r4, r2, r4, lsl #3
+    13d8:	e2444f63 	sub	r4, r4, #396	; 0x18c
+    13dc:	e1530006 	cmp	r3, r6
+    13e0:	14932004 	ldrne	r2, [r3], #4
+    13e4:	15a42004 	strne	r2, [r4, #4]!
+    13e8:	1afffffb 	bne	13dc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd68>
+    13ec:	e3580000 	cmp	r8, #0
+    13f0:	12833004 	addne	r3, r3, #4
+    13f4:	e3580000 	cmp	r8, #0
+    13f8:	e5853038 	str	r3, [r5, #56]	; 0x38
+    13fc:	0a000002 	beq	140c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd98>
+    1400:	e28d0080 	add	r0, sp, #128	; 0x80
+    1404:	eb00005b 	bl	1578 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf04>
+    1408:	ea000040 	b	1510 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe9c>
+    140c:	e357000f 	cmp	r7, #15
+    1410:	8a000001 	bhi	141c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xda8>
+    1414:	e28d0080 	add	r0, sp, #128	; 0x80
+    1418:	eb00005a 	bl	1588 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf14>
+    141c:	e3590000 	cmp	r9, #0
+    1420:	0a00003a 	beq	1510 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe9c>
+    1424:	e1a0000d 	mov	r0, sp
+    1428:	eb00005a 	bl	1598 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf24>
+    142c:	ea000037 	b	1510 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe9c>
+    1430:	e3530003 	cmp	r3, #3
+    1434:	1a000033 	bne	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    1438:	e1a06822 	lsr	r6, r2, #16
+    143c:	e6ff4072 	uxth	r4, r2
+    1440:	e0843006 	add	r3, r4, r6
+    1444:	e3530010 	cmp	r3, #16
+    1448:	8a00002e 	bhi	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    144c:	e5903000 	ldr	r3, [r0]
+    1450:	e3130008 	tst	r3, #8
+    1454:	0a000002 	beq	1464 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xdf0>
+    1458:	e3c33008 	bic	r3, r3, #8
+    145c:	e4803150 	str	r3, [r0], #336	; 0x150
+    1460:	eb000061 	bl	15ec <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf78>
+    1464:	e28d7080 	add	r7, sp, #128	; 0x80
+    1468:	e0876186 	add	r6, r7, r6, lsl #3
+    146c:	e1a00007 	mov	r0, r7
+    1470:	e2466004 	sub	r6, r6, #4
+    1474:	eb00005c 	bl	15ec <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf78>
+    1478:	e5953038 	ldr	r3, [r5, #56]	; 0x38
+    147c:	e0834184 	add	r4, r3, r4, lsl #3
+    1480:	e1530004 	cmp	r3, r4
+    1484:	14932004 	ldrne	r2, [r3], #4
+    1488:	15a62004 	strne	r2, [r6, #4]!
+    148c:	1afffffb 	bne	1480 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe0c>
+    1490:	e5853038 	str	r3, [r5, #56]	; 0x38
+    1494:	e1a00007 	mov	r0, r7
+    1498:	eb000042 	bl	15a8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf34>
+    149c:	ea00001b 	b	1510 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe9c>
+    14a0:	e3520010 	cmp	r2, #16
+    14a4:	93530000 	cmpls	r3, #0
+    14a8:	1a000016 	bne	1508 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe94>
+    14ac:	e5903000 	ldr	r3, [r0]
+    14b0:	e3130010 	tst	r3, #16
+    14b4:	0a000002 	beq	14c4 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe50>
+    14b8:	e3c33010 	bic	r3, r3, #16
+    14bc:	e48031d0 	str	r3, [r0], #464	; 0x1d0
+    14c0:	eb00005f 	bl	1644 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xfd0>
+    14c4:	e28d6080 	add	r6, sp, #128	; 0x80
+    14c8:	e1a00006 	mov	r0, r6
+    14cc:	eb00005c 	bl	1644 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xfd0>
+    14d0:	e5952038 	ldr	r2, [r5, #56]	; 0x38
+    14d4:	e3a03000 	mov	r3, #0
+    14d8:	e3a01001 	mov	r1, #1
+    14dc:	e0140311 	ands	r0, r4, r1, lsl r3
+    14e0:	15920000 	ldrne	r0, [r2]
+    14e4:	12822004 	addne	r2, r2, #4
+    14e8:	17860103 	strne	r0, [r6, r3, lsl #2]
+    14ec:	e2833001 	add	r3, r3, #1
+    14f0:	e3530004 	cmp	r3, #4
+    14f4:	1afffff8 	bne	14dc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe68>
+    14f8:	e5852038 	str	r2, [r5, #56]	; 0x38
+    14fc:	e1a00006 	mov	r0, r6
+    1500:	eb00004a 	bl	1630 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xfbc>
+    1504:	ea000001 	b	1510 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xe9c>
+    1508:	e3a00002 	mov	r0, #2
+    150c:	ea000012 	b	155c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xee8>
+    1510:	e3a00000 	mov	r0, #0
+    1514:	ea000010 	b	155c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xee8>
+    1518:	e3560010 	cmp	r6, #16
+    151c:	93a08000 	movls	r8, #0
+    1520:	91a06008 	movls	r6, r8
+    1524:	9affff69 	bls	12d0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xc5c>
+    1528:	e2466010 	sub	r6, r6, #16
+    152c:	eaffff66 	b	12cc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xc58>
+    1530:	e3580000 	cmp	r8, #0
+    1534:	0a000005 	beq	1550 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xedc>
+    1538:	e28d0080 	add	r0, sp, #128	; 0x80
+    153c:	eb00000f 	bl	1580 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf0c>
+    1540:	eaffff8e 	b	1380 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd0c>
+    1544:	e28d0080 	add	r0, sp, #128	; 0x80
+    1548:	eb00000c 	bl	1580 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xf0c>
+    154c:	eaffff8a 	b	137c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd08>
+    1550:	e357000f 	cmp	r7, #15
+    1554:	8affff89 	bhi	1380 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xd0c>
+    1558:	eaffff70 	b	1320 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xcac>
+    155c:	e28ddf43 	add	sp, sp, #268	; 0x10c
+    1560:	e8bd83f0 	pop	{r4, r5, r6, r7, r8, r9, pc}
+    1564:	e2801034 	add	r1, r0, #52	; 0x34
+    1568:	e8910038 	ldm	r1, {r3, r4, r5}
+    156c:	e92d0038 	push	{r3, r4, r5}
+    1570:	e8900fff 	ldm	r0, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp}
+    1574:	e89de000 	ldm	sp, {sp, lr, pc}
+    1578:	ec900b21 	fldmiax	r0, {d0-d15}	;@ Deprecated
+    157c:	e12fff1e 	bx	lr
+    1580:	ec800b21 	fstmiax	r0, {d0-d15}	;@ Deprecated
+    1584:	e12fff1e 	bx	lr
+    1588:	ec900b20 	vldmia	r0, {d0-d15}
+    158c:	e12fff1e 	bx	lr
+    1590:	ec800b20 	vstmia	r0, {d0-d15}
+    1594:	e12fff1e 	bx	lr
+    1598:	ecd00b20 	vldmia	r0, {d16-d31}
+    159c:	e12fff1e 	bx	lr
+    15a0:	ecc00b20 	vstmia	r0, {d16-d31}
+    15a4:	e12fff1e 	bx	lr
+    15a8:	ecf00102 	ldfe	f0, [r0], #8
+    15ac:	ecf01102 	ldfe	f1, [r0], #8
+    15b0:	ecf02102 	ldfe	f2, [r0], #8
+    15b4:	ecf03102 	ldfe	f3, [r0], #8
+    15b8:	ecf04102 	ldfe	f4, [r0], #8
+    15bc:	ecf05102 	ldfe	f5, [r0], #8
+    15c0:	ecf06102 	ldfe	f6, [r0], #8
+    15c4:	ecf07102 	ldfe	f7, [r0], #8
+    15c8:	ecf08102 	ldfp	f0, [r0], #8
+    15cc:	ecf09102 	ldfp	f1, [r0], #8
+    15d0:	ecf0a102 	ldfp	f2, [r0], #8
+    15d4:	ecf0b102 	ldfp	f3, [r0], #8
+    15d8:	ecf0c102 	ldfp	f4, [r0], #8
+    15dc:	ecf0d102 	ldfp	f5, [r0], #8
+    15e0:	ecf0e102 	ldfp	f6, [r0], #8
+    15e4:	ecf0f102 	ldfp	f7, [r0], #8
+    15e8:	e12fff1e 	bx	lr
+    15ec:	ece00102 	stfe	f0, [r0], #8
+    15f0:	ece01102 	stfe	f1, [r0], #8
+    15f4:	ece02102 	stfe	f2, [r0], #8
+    15f8:	ece03102 	stfe	f3, [r0], #8
+    15fc:	ece04102 	stfe	f4, [r0], #8
+    1600:	ece05102 	stfe	f5, [r0], #8
+    1604:	ece06102 	stfe	f6, [r0], #8
+    1608:	ece07102 	stfe	f7, [r0], #8
+    160c:	ece08102 	stfp	f0, [r0], #8
+    1610:	ece09102 	stfp	f1, [r0], #8
+    1614:	ece0a102 	stfp	f2, [r0], #8
+    1618:	ece0b102 	stfp	f3, [r0], #8
+    161c:	ece0c102 	stfp	f4, [r0], #8
+    1620:	ece0d102 	stfp	f5, [r0], #8
+    1624:	ece0e102 	stfp	f6, [r0], #8
+    1628:	ece0f102 	stfp	f7, [r0], #8
+    162c:	e12fff1e 	bx	lr
+    1630:	fcb08101 	ldc2	1, cr8, [r0], #4
+    1634:	fcb09101 	ldc2	1, cr9, [r0], #4
+    1638:	fcb0a101 	ldc2	1, cr10, [r0], #4
+    163c:	fcb0b101 	ldc2	1, cr11, [r0], #4
+    1640:	e12fff1e 	bx	lr
+    1644:	fca08101 	stc2	1, cr8, [r0], #4
+    1648:	fca09101 	stc2	1, cr9, [r0], #4
+    164c:	fca0a101 	stc2	1, cr10, [r0], #4
+    1650:	fca0b101 	stc2	1, cr11, [r0], #4
+    1654:	e12fff1e 	bx	lr
+    1658:	e92de000 	push	{sp, lr, pc}
+    165c:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    1660:	e3a03000 	mov	r3, #0
+    1664:	e92d000c 	push	{r2, r3}
+    1668:	e28d1004 	add	r1, sp, #4
+    166c:	ebfffd12 	bl	abc <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x448>
+    1670:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    1674:	e28dd048 	add	sp, sp, #72	; 0x48
+    1678:	e12fff1e 	bx	lr
+    167c:	e92de000 	push	{sp, lr, pc}
+    1680:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    1684:	e3a03000 	mov	r3, #0
+    1688:	e92d000c 	push	{r2, r3}
+    168c:	e28d1004 	add	r1, sp, #4
+    1690:	ebfffd39 	bl	b7c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x508>
+    1694:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    1698:	e28dd048 	add	sp, sp, #72	; 0x48
+    169c:	e12fff1e 	bx	lr
+    16a0:	e92de000 	push	{sp, lr, pc}
+    16a4:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    16a8:	e3a03000 	mov	r3, #0
+    16ac:	e92d000c 	push	{r2, r3}
+    16b0:	e28d1004 	add	r1, sp, #4
+    16b4:	ebfffd4d 	bl	bf0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x57c>
+    16b8:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    16bc:	e28dd048 	add	sp, sp, #72	; 0x48
+    16c0:	e12fff1e 	bx	lr
+    16c4:	e92de000 	push	{sp, lr, pc}
+    16c8:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    16cc:	e3a03000 	mov	r3, #0
+    16d0:	e92d000c 	push	{r2, r3}
+    16d4:	e28d3004 	add	r3, sp, #4
+    16d8:	ebfffd20 	bl	b60 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x4ec>
+    16dc:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    16e0:	e28dd048 	add	sp, sp, #72	; 0x48
+    16e4:	e12fff1e 	bx	lr
+    16e8:	e92de000 	push	{sp, lr, pc}
+    16ec:	e92d1fff 	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    16f0:	e3a03000 	mov	r3, #0
+    16f4:	e92d000c 	push	{r2, r3}
+    16f8:	e28d2004 	add	r2, sp, #4
+    16fc:	ebfffd8d 	bl	d38 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x6c4>
+    1700:	e59de040 	ldr	lr, [sp, #64]	; 0x40
+    1704:	e28dd048 	add	sp, sp, #72	; 0x48
+    1708:	e12fff1e 	bx	lr
+    170c:	e5d03008 	ldrb	r3, [r0, #8]
+    1710:	e3530000 	cmp	r3, #0
+    1714:	1a00000b 	bne	1748 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x10d4>
+    1718:	e5d03009 	ldrb	r3, [r0, #9]
+    171c:	e3530000 	cmp	r3, #0
+    1720:	0a00000f 	beq	1764 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x10f0>
+    1724:	e2433001 	sub	r3, r3, #1
+    1728:	e5c03009 	strb	r3, [r0, #9]
+    172c:	e5903004 	ldr	r3, [r0, #4]
+    1730:	e2832004 	add	r2, r3, #4
+    1734:	e5802004 	str	r2, [r0, #4]
+    1738:	e5933000 	ldr	r3, [r3]
+    173c:	e5803000 	str	r3, [r0]
+    1740:	e3a03003 	mov	r3, #3
+    1744:	ea000000 	b	174c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x10d8>
+    1748:	e2433001 	sub	r3, r3, #1
+    174c:	e5c03008 	strb	r3, [r0, #8]
+    1750:	e5903000 	ldr	r3, [r0]
+    1754:	e1a02403 	lsl	r2, r3, #8
+    1758:	e5802000 	str	r2, [r0]
+    175c:	e1a00c23 	lsr	r0, r3, #24
+    1760:	e12fff1e 	bx	lr
+    1764:	e3a000b0 	mov	r0, #176	; 0xb0
+    1768:	e12fff1e 	bx	lr
+    176c:	e92d401f 	push	{r0, r1, r2, r3, r4, lr}
+    1770:	e3a01000 	mov	r1, #0
+    1774:	e28d300c 	add	r3, sp, #12
+    1778:	e3a0200c 	mov	r2, #12
+    177c:	e58d3000 	str	r3, [sp]
+    1780:	e1a03001 	mov	r3, r1
+    1784:	ebfffd28 	bl	c2c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x5b8>
+    1788:	e59d000c 	ldr	r0, [sp, #12]
+    178c:	e28dd014 	add	sp, sp, #20
+    1790:	e49df004 	pop	{pc}		; (ldr pc, [sp], #4)
+    1794:	eafffff4 	b	176c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x10f8>
+    1798:	e92d43f0 	push	{r4, r5, r6, r7, r8, r9, lr}
+    179c:	e24dd014 	sub	sp, sp, #20
+    17a0:	e1a05000 	mov	r5, r0
+    17a4:	e1a07001 	mov	r7, r1
+    17a8:	e3a06000 	mov	r6, #0
+    17ac:	e1a00007 	mov	r0, r7
+    17b0:	ebffffd5 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    17b4:	e35000b0 	cmp	r0, #176	; 0xb0
+    17b8:	e1a04000 	mov	r4, r0
+    17bc:	1a00000f 	bne	1800 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x118c>
+    17c0:	e3560000 	cmp	r6, #0
+    17c4:	1a0000d6 	bne	1b24 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x14b0>
+    17c8:	e28d400c 	add	r4, sp, #12
+    17cc:	e1a01006 	mov	r1, r6
+    17d0:	e1a03006 	mov	r3, r6
+    17d4:	e58d4000 	str	r4, [sp]
+    17d8:	e1a00005 	mov	r0, r5
+    17dc:	e3a0200e 	mov	r2, #14
+    17e0:	ebfffd11 	bl	c2c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x5b8>
+    17e4:	e58d4000 	str	r4, [sp]
+    17e8:	e1a00005 	mov	r0, r5
+    17ec:	e1a01006 	mov	r1, r6
+    17f0:	e3a0200f 	mov	r2, #15
+    17f4:	e1a03006 	mov	r3, r6
+    17f8:	ebfffd2c 	bl	cb0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x63c>
+    17fc:	ea0000c8 	b	1b24 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x14b0>
+    1800:	e3c0107f 	bic	r1, r0, #127	; 0x7f
+    1804:	e21110ff 	ands	r1, r1, #255	; 0xff
+    1808:	1a00000f 	bne	184c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11d8>
+    180c:	e1a08100 	lsl	r8, r0, #2
+    1810:	e28d900c 	add	r9, sp, #12
+    1814:	e1a03001 	mov	r3, r1
+    1818:	e58d9000 	str	r9, [sp]
+    181c:	e1a00005 	mov	r0, r5
+    1820:	e3a0200d 	mov	r2, #13
+    1824:	ebfffd00 	bl	c2c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x5b8>
+    1828:	e6ef8078 	uxtb	r8, r8
+    182c:	e59d300c 	ldr	r3, [sp, #12]
+    1830:	e2888004 	add	r8, r8, #4
+    1834:	e3140040 	tst	r4, #64	; 0x40
+    1838:	e58d9000 	str	r9, [sp]
+    183c:	10688003 	rsbne	r8, r8, r3
+    1840:	00888003 	addeq	r8, r8, r3
+    1844:	e58d800c 	str	r8, [sp, #12]
+    1848:	ea000022 	b	18d8 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1264>
+    184c:	e20030f0 	and	r3, r0, #240	; 0xf0
+    1850:	e3530080 	cmp	r3, #128	; 0x80
+    1854:	1a000012 	bne	18a4 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1230>
+    1858:	e1a04400 	lsl	r4, r0, #8
+    185c:	e1a00007 	mov	r0, r7
+    1860:	ebffffa9 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    1864:	e1800004 	orr	r0, r0, r4
+    1868:	e3500902 	cmp	r0, #32768	; 0x8000
+    186c:	1a000001 	bne	1878 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1204>
+    1870:	e3a00009 	mov	r0, #9
+    1874:	ea0000ab 	b	1b28 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x14b4>
+    1878:	e1a04200 	lsl	r4, r0, #4
+    187c:	e3a01000 	mov	r1, #0
+    1880:	e1a00005 	mov	r0, r5
+    1884:	e1a03001 	mov	r3, r1
+    1888:	e6ff2074 	uxth	r2, r4
+    188c:	ebfffe5c 	bl	1204 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb90>
+    1890:	e3500000 	cmp	r0, #0
+    1894:	1afffff5 	bne	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    1898:	e3140902 	tst	r4, #32768	; 0x8000
+    189c:	13a06001 	movne	r6, #1
+    18a0:	eaffffc1 	b	17ac <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1138>
+    18a4:	e3530090 	cmp	r3, #144	; 0x90
+    18a8:	1a000010 	bne	18f0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x127c>
+    18ac:	e200300d 	and	r3, r0, #13
+    18b0:	e353000d 	cmp	r3, #13
+    18b4:	0affffed 	beq	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    18b8:	e3a01000 	mov	r1, #0
+    18bc:	e28d800c 	add	r8, sp, #12
+    18c0:	e1a00005 	mov	r0, r5
+    18c4:	e58d8000 	str	r8, [sp]
+    18c8:	e204200f 	and	r2, r4, #15
+    18cc:	e1a03001 	mov	r3, r1
+    18d0:	ebfffcd5 	bl	c2c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x5b8>
+    18d4:	e58d8000 	str	r8, [sp]
+    18d8:	e1a00005 	mov	r0, r5
+    18dc:	e3a01000 	mov	r1, #0
+    18e0:	e3a0200d 	mov	r2, #13
+    18e4:	e1a03001 	mov	r3, r1
+    18e8:	ebfffcf0 	bl	cb0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x63c>
+    18ec:	eaffffae 	b	17ac <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1138>
+    18f0:	e35300a0 	cmp	r3, #160	; 0xa0
+    18f4:	1a000009 	bne	1920 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x12ac>
+    18f8:	e1e02000 	mvn	r2, r0
+    18fc:	e3a03eff 	mov	r3, #4080	; 0xff0
+    1900:	e2022007 	and	r2, r2, #7
+    1904:	e3100008 	tst	r0, #8
+    1908:	e1a02253 	asr	r2, r3, r2
+    190c:	e1a00005 	mov	r0, r5
+    1910:	e0022003 	and	r2, r2, r3
+    1914:	e3a01000 	mov	r1, #0
+    1918:	13822901 	orrne	r2, r2, #16384	; 0x4000
+    191c:	ea00000a 	b	194c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x12d8>
+    1920:	e35300b0 	cmp	r3, #176	; 0xb0
+    1924:	1a000039 	bne	1a10 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x139c>
+    1928:	e35000b1 	cmp	r0, #177	; 0xb1
+    192c:	1a000008 	bne	1954 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x12e0>
+    1930:	e1a00007 	mov	r0, r7
+    1934:	ebffff74 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    1938:	e2502000 	subs	r2, r0, #0
+    193c:	0affffcb 	beq	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    1940:	e21210f0 	ands	r1, r2, #240	; 0xf0
+    1944:	1affffc9 	bne	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    1948:	e1a00005 	mov	r0, r5
+    194c:	e1a03001 	mov	r3, r1
+    1950:	ea00006f 	b	1b14 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x14a0>
+    1954:	e35000b2 	cmp	r0, #178	; 0xb2
+    1958:	1a000019 	bne	19c4 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1350>
+    195c:	e3a01000 	mov	r1, #0
+    1960:	e3a0200d 	mov	r2, #13
+    1964:	e1a03001 	mov	r3, r1
+    1968:	e28d400c 	add	r4, sp, #12
+    196c:	e1a00005 	mov	r0, r5
+    1970:	e58d4000 	str	r4, [sp]
+    1974:	ebfffcac 	bl	c2c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x5b8>
+    1978:	e1a00007 	mov	r0, r7
+    197c:	ebffff62 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    1980:	e3a08002 	mov	r8, #2
+    1984:	e2101080 	ands	r1, r0, #128	; 0x80
+    1988:	e59d300c 	ldr	r3, [sp, #12]
+    198c:	e200007f 	and	r0, r0, #127	; 0x7f
+    1990:	0a000005 	beq	19ac <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1338>
+    1994:	e0833810 	add	r3, r3, r0, lsl r8
+    1998:	e1a00007 	mov	r0, r7
+    199c:	e58d300c 	str	r3, [sp, #12]
+    19a0:	e2888007 	add	r8, r8, #7
+    19a4:	ebffff58 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    19a8:	eafffff5 	b	1984 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1310>
+    19ac:	e2833f81 	add	r3, r3, #516	; 0x204
+    19b0:	e58d4000 	str	r4, [sp]
+    19b4:	e0833810 	add	r3, r3, r0, lsl r8
+    19b8:	e1a00005 	mov	r0, r5
+    19bc:	e58d300c 	str	r3, [sp, #12]
+    19c0:	eaffffc6 	b	18e0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x126c>
+    19c4:	e35000b3 	cmp	r0, #179	; 0xb3
+    19c8:	1a000007 	bne	19ec <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1378>
+    19cc:	e1a00007 	mov	r0, r7
+    19d0:	ebffff4d 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    19d4:	e3a01001 	mov	r1, #1
+    19d8:	e200200f 	and	r2, r0, #15
+    19dc:	e20030f0 	and	r3, r0, #240	; 0xf0
+    19e0:	e2822001 	add	r2, r2, #1
+    19e4:	e1a00005 	mov	r0, r5
+    19e8:	ea000013 	b	1a3c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x13c8>
+    19ec:	e20030fc 	and	r3, r0, #252	; 0xfc
+    19f0:	e35300b4 	cmp	r3, #180	; 0xb4
+    19f4:	0affff9d 	beq	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    19f8:	e2002007 	and	r2, r0, #7
+    19fc:	e3a01001 	mov	r1, #1
+    1a00:	e2822001 	add	r2, r2, #1
+    1a04:	e1a00005 	mov	r0, r5
+    1a08:	e3822702 	orr	r2, r2, #524288	; 0x80000
+    1a0c:	eaffffce 	b	194c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x12d8>
+    1a10:	e35300c0 	cmp	r3, #192	; 0xc0
+    1a14:	1a000035 	bne	1af0 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x147c>
+    1a18:	e35000c6 	cmp	r0, #198	; 0xc6
+    1a1c:	1a000008 	bne	1a44 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x13d0>
+    1a20:	e1a00007 	mov	r0, r7
+    1a24:	ebffff38 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    1a28:	e3a01003 	mov	r1, #3
+    1a2c:	e200200f 	and	r2, r0, #15
+    1a30:	e20030f0 	and	r3, r0, #240	; 0xf0
+    1a34:	e2822001 	add	r2, r2, #1
+    1a38:	e1a00005 	mov	r0, r5
+    1a3c:	e1822603 	orr	r2, r2, r3, lsl #12
+    1a40:	eaffffc1 	b	194c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x12d8>
+    1a44:	e35000c7 	cmp	r0, #199	; 0xc7
+    1a48:	1a000008 	bne	1a70 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x13fc>
+    1a4c:	e1a00007 	mov	r0, r7
+    1a50:	ebffff2d 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    1a54:	e2502000 	subs	r2, r0, #0
+    1a58:	0affff84 	beq	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    1a5c:	e21230f0 	ands	r3, r2, #240	; 0xf0
+    1a60:	1affff82 	bne	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    1a64:	e1a00005 	mov	r0, r5
+    1a68:	e3a01004 	mov	r1, #4
+    1a6c:	ea000028 	b	1b14 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x14a0>
+    1a70:	e20030f8 	and	r3, r0, #248	; 0xf8
+    1a74:	e35300c0 	cmp	r3, #192	; 0xc0
+    1a78:	1a000005 	bne	1a94 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1420>
+    1a7c:	e200200f 	and	r2, r0, #15
+    1a80:	e3a01003 	mov	r1, #3
+    1a84:	e2822001 	add	r2, r2, #1
+    1a88:	e1a00005 	mov	r0, r5
+    1a8c:	e382280a 	orr	r2, r2, #655360	; 0xa0000
+    1a90:	eaffffad 	b	194c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x12d8>
+    1a94:	e35000c8 	cmp	r0, #200	; 0xc8
+    1a98:	1a000009 	bne	1ac4 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1450>
+    1a9c:	e1a00007 	mov	r0, r7
+    1aa0:	ebffff19 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    1aa4:	e3a01001 	mov	r1, #1
+    1aa8:	e20020f0 	and	r2, r0, #240	; 0xf0
+    1aac:	e200000f 	and	r0, r0, #15
+    1ab0:	e2822010 	add	r2, r2, #16
+    1ab4:	e2803001 	add	r3, r0, #1
+    1ab8:	e1a00005 	mov	r0, r5
+    1abc:	e1832602 	orr	r2, r3, r2, lsl #12
+    1ac0:	ea000012 	b	1b10 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x149c>
+    1ac4:	e35000c9 	cmp	r0, #201	; 0xc9
+    1ac8:	1affff68 	bne	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    1acc:	e1a00007 	mov	r0, r7
+    1ad0:	ebffff0d 	bl	170c <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1098>
+    1ad4:	e3a01001 	mov	r1, #1
+    1ad8:	e200200f 	and	r2, r0, #15
+    1adc:	e20030f0 	and	r3, r0, #240	; 0xf0
+    1ae0:	e2822001 	add	r2, r2, #1
+    1ae4:	e1a00005 	mov	r0, r5
+    1ae8:	e1822603 	orr	r2, r2, r3, lsl #12
+    1aec:	ea000007 	b	1b10 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x149c>
+    1af0:	e20030f8 	and	r3, r0, #248	; 0xf8
+    1af4:	e35300d0 	cmp	r3, #208	; 0xd0
+    1af8:	1affff5c 	bne	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    1afc:	e2002007 	and	r2, r0, #7
+    1b00:	e3a01001 	mov	r1, #1
+    1b04:	e2822001 	add	r2, r2, #1
+    1b08:	e1a00005 	mov	r0, r5
+    1b0c:	e3822702 	orr	r2, r2, #524288	; 0x80000
+    1b10:	e3a03005 	mov	r3, #5
+    1b14:	ebfffdba 	bl	1204 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0xb90>
+    1b18:	e3500000 	cmp	r0, #0
+    1b1c:	1affff53 	bne	1870 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x11fc>
+    1b20:	eaffff21 	b	17ac <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1138>
+    1b24:	e3a00000 	mov	r0, #0
+    1b28:	e28dd014 	add	sp, sp, #20
+    1b2c:	e8bd83f0 	pop	{r4, r5, r6, r7, r8, r9, pc}
+    1b30:	e92d401f 	push	{r0, r1, r2, r3, r4, lr}
+    1b34:	e590304c 	ldr	r3, [r0, #76]	; 0x4c
+    1b38:	e1a00001 	mov	r0, r1
+    1b3c:	e28d1004 	add	r1, sp, #4
+    1b40:	e5932004 	ldr	r2, [r3, #4]
+    1b44:	e1a02402 	lsl	r2, r2, #8
+    1b48:	e58d2004 	str	r2, [sp, #4]
+    1b4c:	e2832008 	add	r2, r3, #8
+    1b50:	e58d2008 	str	r2, [sp, #8]
+    1b54:	e3a02003 	mov	r2, #3
+    1b58:	e5cd200c 	strb	r2, [sp, #12]
+    1b5c:	e5d33007 	ldrb	r3, [r3, #7]
+    1b60:	e5cd300d 	strb	r3, [sp, #13]
+    1b64:	ebffff0b 	bl	1798 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1124>
+    1b68:	e28dd014 	add	sp, sp, #20
+    1b6c:	e49df004 	pop	{pc}		; (ldr pc, [sp], #4)
+    1b70:	e92d4008 	push	{r3, lr}
+    1b74:	ebffff06 	bl	1794 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1120>
+    1b78:	e5900048 	ldr	r0, [r0, #72]	; 0x48
+    1b7c:	e8bd8008 	pop	{r3, pc}
+    1b80:	e92d4008 	push	{r3, lr}
+    1b84:	ebffff02 	bl	1794 <_Z36TambahChangeParamaterPassByReferenceRiS_@@Base+0x1120>
+    1b88:	e590304c 	ldr	r3, [r0, #76]	; 0x4c
+    1b8c:	e5d30007 	ldrb	r0, [r3, #7]
+    1b90:	e0830100 	add	r0, r3, r0, lsl #2
+    1b94:	e2800008 	add	r0, r0, #8
+    1b98:	e8bd8008 	pop	{r3, pc}
+    1b9c:	e92d4008 	push	{r3, lr}
+    1ba0:	ebfffa89 	bl	5cc <abort@plt>
+    1ba4:	e92d4008 	push	{r3, lr}
+    1ba8:	ebfffa87 	bl	5cc <abort@plt>
