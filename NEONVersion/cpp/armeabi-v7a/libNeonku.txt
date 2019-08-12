@@ -1,0 +1,3977 @@
+
+C:\Users\TOSHIBA\Videos\ARMku\hello-neon\libs\armeabi-v7a\libNeonKu.so:     file format elf32-littlearm
+
+
+Disassembly of section .plt:
+
+00000a70 <open@plt-0x14>:
+ a70:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+ a74:	e59fe004 	ldr	lr, [pc, #4]	; a80 <open@plt-0x4>
+ a78:	e08fe00e 	add	lr, pc, lr
+ a7c:	e5bef008 	ldr	pc, [lr, #8]!
+ a80:	000134d0 	ldrdeq	r3, [r1], -r0
+
+00000a84 <open@plt>:
+ a84:	e28fc600 	add	ip, pc, #0, 12
+ a88:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ a8c:	e5bcf4d0 	ldr	pc, [ip, #1232]!	; 0x4d0
+
+00000a90 <strlcat@plt>:
+ a90:	e28fc600 	add	ip, pc, #0, 12
+ a94:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ a98:	e5bcf4c8 	ldr	pc, [ip, #1224]!	; 0x4c8
+
+00000a9c <memmem@plt>:
+ a9c:	e28fc600 	add	ip, pc, #0, 12
+ aa0:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ aa4:	e5bcf4c0 	ldr	pc, [ip, #1216]!	; 0x4c0
+
+00000aa8 <pthread_once@plt>:
+ aa8:	e28fc600 	add	ip, pc, #0, 12
+ aac:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ ab0:	e5bcf4b8 	ldr	pc, [ip, #1208]!	; 0x4b8
+
+00000ab4 <__cxa_finalize@plt>:
+ ab4:	e28fc600 	add	ip, pc, #0, 12
+ ab8:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ abc:	e5bcf4b0 	ldr	pc, [ip, #1200]!	; 0x4b0
+
+00000ac0 <read@plt>:
+ ac0:	e28fc600 	add	ip, pc, #0, 12
+ ac4:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ ac8:	e5bcf4a8 	ldr	pc, [ip, #1192]!	; 0x4a8
+
+00000acc <__cxa_type_match@plt>:
+ acc:	e28fc600 	add	ip, pc, #0, 12
+ ad0:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ ad4:	e5bcf4a0 	ldr	pc, [ip, #1184]!	; 0x4a0
+
+00000ad8 <abort@plt>:
+ ad8:	e28fc600 	add	ip, pc, #0, 12
+ adc:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ ae0:	e5bcf498 	ldr	pc, [ip, #1176]!	; 0x498
+
+00000ae4 <__aeabi_memcpy@plt>:
+ ae4:	e28fc600 	add	ip, pc, #0, 12
+ ae8:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ aec:	e5bcf490 	ldr	pc, [ip, #1168]!	; 0x490
+
+00000af0 <strlcpy@plt>:
+ af0:	e28fc600 	add	ip, pc, #0, 12
+ af4:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ af8:	e5bcf488 	ldr	pc, [ip, #1160]!	; 0x488
+
+00000afc <__errno@plt>:
+ afc:	e28fc600 	add	ip, pc, #0, 12
+ b00:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b04:	e5bcf480 	ldr	pc, [ip, #1152]!	; 0x480
+
+00000b08 <android_getCpuFeatures@plt>:
+ b08:	e28fc600 	add	ip, pc, #0, 12
+ b0c:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b10:	e5bcf478 	ldr	pc, [ip, #1144]!	; 0x478
+
+00000b14 <asprintf@plt>:
+ b14:	e28fc600 	add	ip, pc, #0, 12
+ b18:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b1c:	e5bcf470 	ldr	pc, [ip, #1136]!	; 0x470
+
+00000b20 <__cxa_begin_cleanup@plt>:
+ b20:	e28fc600 	add	ip, pc, #0, 12
+ b24:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b28:	e5bcf468 	ldr	pc, [ip, #1128]!	; 0x468
+
+00000b2c <memcmp@plt>:
+ b2c:	e28fc600 	add	ip, pc, #0, 12
+ b30:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b34:	e5bcf460 	ldr	pc, [ip, #1120]!	; 0x460
+
+00000b38 <__stack_chk_fail@plt>:
+ b38:	e28fc600 	add	ip, pc, #0, 12
+ b3c:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b40:	e5bcf458 	ldr	pc, [ip, #1112]!	; 0x458
+
+00000b44 <dlclose@plt>:
+ b44:	e28fc600 	add	ip, pc, #0, 12
+ b48:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b4c:	e5bcf450 	ldr	pc, [ip, #1104]!	; 0x450
+
+00000b50 <memchr@plt>:
+ b50:	e28fc600 	add	ip, pc, #0, 12
+ b54:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b58:	e5bcf448 	ldr	pc, [ip, #1096]!	; 0x448
+
+00000b5c <dlsym@plt>:
+ b5c:	e28fc600 	add	ip, pc, #0, 12
+ b60:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b64:	e5bcf440 	ldr	pc, [ip, #1088]!	; 0x440
+
+00000b68 <dlerror@plt>:
+ b68:	e28fc600 	add	ip, pc, #0, 12
+ b6c:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b70:	e5bcf438 	ldr	pc, [ip, #1080]!	; 0x438
+
+00000b74 <strcmp@plt>:
+ b74:	e28fc600 	add	ip, pc, #0, 12
+ b78:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b7c:	e5bcf430 	ldr	pc, [ip, #1072]!	; 0x430
+
+00000b80 <android_getCpuFamily@plt>:
+ b80:	e28fc600 	add	ip, pc, #0, 12
+ b84:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b88:	e5bcf428 	ldr	pc, [ip, #1064]!	; 0x428
+
+00000b8c <__gnu_Unwind_Find_exidx@plt>:
+ b8c:	e28fc600 	add	ip, pc, #0, 12
+ b90:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ b94:	e5bcf420 	ldr	pc, [ip, #1056]!	; 0x420
+
+00000b98 <strlen@plt>:
+ b98:	e28fc600 	add	ip, pc, #0, 12
+ b9c:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ ba0:	e5bcf418 	ldr	pc, [ip, #1048]!	; 0x418
+
+00000ba4 <close@plt>:
+ ba4:	e28fc600 	add	ip, pc, #0, 12
+ ba8:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ bac:	e5bcf410 	ldr	pc, [ip, #1040]!	; 0x410
+
+00000bb0 <dlopen@plt>:
+ bb0:	e28fc600 	add	ip, pc, #0, 12
+ bb4:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ bb8:	e5bcf408 	ldr	pc, [ip, #1032]!	; 0x408
+
+00000bbc <fir_filter_neon_intrinsics@plt>:
+ bbc:	e28fc600 	add	ip, pc, #0, 12
+ bc0:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ bc4:	e5bcf400 	ldr	pc, [ip, #1024]!	; 0x400
+
+00000bc8 <malloc@plt>:
+ bc8:	e28fc600 	add	ip, pc, #0, 12
+ bcc:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ bd0:	e5bcf3f8 	ldr	pc, [ip, #1016]!	; 0x3f8
+
+00000bd4 <memcpy@plt>:
+ bd4:	e28fc600 	add	ip, pc, #0, 12
+ bd8:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ bdc:	e5bcf3f0 	ldr	pc, [ip, #1008]!	; 0x3f0
+
+00000be0 <strtol@plt>:
+ be0:	e28fc600 	add	ip, pc, #0, 12
+ be4:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ be8:	e5bcf3e8 	ldr	pc, [ip, #1000]!	; 0x3e8
+
+00000bec <free@plt>:
+ bec:	46c04778 			; <UNDEFINED> instruction: 0x46c04778
+ bf0:	e28fc600 	add	ip, pc, #0, 12
+ bf4:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ bf8:	e5bcf3dc 	ldr	pc, [ip, #988]!	; 0x3dc
+
+00000bfc <clock_gettime@plt>:
+ bfc:	e28fc600 	add	ip, pc, #0, 12
+ c00:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ c04:	e5bcf3d4 	ldr	pc, [ip, #980]!	; 0x3d4
+
+00000c08 <__cxa_atexit@plt>:
+ c08:	e28fc600 	add	ip, pc, #0, 12
+ c0c:	e28cca13 	add	ip, ip, #77824	; 0x13000
+ c10:	e5bcf3cc 	ldr	pc, [ip, #972]!	; 0x3cc
+
+Disassembly of section .text:
+
+00000c18 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base-0x40>:
+     c18:	e59f0004 	ldr	r0, [pc, #4]	; c24 <__cxa_atexit@plt+0x1c>
+     c1c:	e08f0000 	add	r0, pc, r0
+     c20:	eaffffa3 	b	ab4 <__cxa_finalize@plt>
+     c24:	000133dc 	ldrdeq	r3, [r1], -ip
+     c28:	e3500000 	cmp	r0, #0
+     c2c:	012fff1e 	bxeq	lr
+     c30:	e12fff10 	bx	r0
+     c34:	e1a01000 	mov	r1, r0
+     c38:	e59f200c 	ldr	r2, [pc, #12]	; c4c <__cxa_atexit@plt+0x44>
+     c3c:	e59f000c 	ldr	r0, [pc, #12]	; c50 <__cxa_atexit@plt+0x48>
+     c40:	e08f2002 	add	r2, pc, r2
+     c44:	e08f0000 	add	r0, pc, r0
+     c48:	eaffffee 	b	c08 <__cxa_atexit@plt>
+     c4c:	000133b8 			; <UNDEFINED> instruction: 0x000133b8
+     c50:	ffffffdc 			; <UNDEFINED> instruction: 0xffffffdc
+     c54:	00000000 	andeq	r0, r0, r0
+
+00000c58 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base>:
+     c58:	e92d4bf0 	push	{r4, r5, r6, r7, r8, r9, fp, lr}
+     c5c:	e28db018 	add	fp, sp, #24
+     c60:	ed2d8b0a 	vpush	{d8-d12}
+     c64:	e24dde22 	sub	sp, sp, #544	; 0x220
+     c68:	e1a08000 	mov	r8, r0
+     c6c:	e59f02bc 	ldr	r0, [pc, #700]	; f30 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2d8>
+     c70:	e59f12bc 	ldr	r1, [pc, #700]	; f34 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2dc>
+     c74:	e3a02000 	mov	r2, #0
+     c78:	e79f0000 	ldr	r0, [pc, r0]
+     c7c:	e08f1001 	add	r1, pc, r1
+     c80:	e5900000 	ldr	r0, [r0]
+     c84:	e50b0048 	str	r0, [fp, #-72]	; 0xffffffb8
+     c88:	e3a00000 	mov	r0, #0
+     c8c:	e0813002 	add	r3, r1, r2
+     c90:	e6ef7070 	uxtb	r7, r0
+     c94:	e2822002 	add	r2, r2, #2
+     c98:	e2800005 	add	r0, r0, #5
+     c9c:	e3520d51 	cmp	r2, #5184	; 0x1440
+     ca0:	e1c370b0 	strh	r7, [r3]
+     ca4:	1afffff8 	bne	c8c <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x34>
+     ca8:	e3a00c0a 	mov	r0, #2560	; 0xa00
+     cac:	e2500001 	subs	r0, r0, #1
+     cb0:	1afffffd 	bne	cac <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x54>
+     cb4:	e28d1018 	add	r1, sp, #24
+     cb8:	e3a00000 	mov	r0, #0
+     cbc:	ebffffce 	bl	bfc <clock_gettime@plt>
+     cc0:	ed9d1a07 	vldr	s2, [sp, #28]
+     cc4:	e3a0ef96 	mov	lr, #600	; 0x258
+     cc8:	ed9d0a06 	vldr	s0, [sp, #24]
+     ccc:	eeb81bc1 	vcvt.f64.s32	d1, s2
+     cd0:	e59f2264 	ldr	r2, [pc, #612]	; f3c <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2e4>
+     cd4:	e59f3264 	ldr	r3, [pc, #612]	; f40 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2e8>
+     cd8:	e59fc258 	ldr	ip, [pc, #600]	; f38 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2e0>
+     cdc:	e08f2002 	add	r2, pc, r2
+     ce0:	e08f3003 	add	r3, pc, r3
+     ce4:	ed9f8b8b 	vldr	d8, [pc, #556]	; f18 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2c0>
+     ce8:	eeb8bbc0 	vcvt.f64.s32	d11, s0
+     cec:	ee819b08 	vdiv.f64	d9, d1, d8
+     cf0:	e08f700c 	add	r7, pc, ip
+     cf4:	e3a06000 	mov	r6, #0
+     cf8:	e3a04000 	mov	r4, #0
+     cfc:	e3a05000 	mov	r5, #0
+     d00:	e0871004 	add	r1, r7, r4
+     d04:	e0820004 	add	r0, r2, r4
+     d08:	e2844002 	add	r4, r4, #2
+     d0c:	e1d110f0 	ldrsh	r1, [r1]
+     d10:	e3540040 	cmp	r4, #64	; 0x40
+     d14:	e1d000f0 	ldrsh	r0, [r0]
+     d18:	e1055081 	smlabb	r5, r1, r0, r5
+     d1c:	1afffff7 	bne	d00 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0xa8>
+     d20:	e2851902 	add	r1, r5, #32768	; 0x8000
+     d24:	e0830086 	add	r0, r3, r6, lsl #1
+     d28:	e2866001 	add	r6, r6, #1
+     d2c:	e2877002 	add	r7, r7, #2
+     d30:	e1a01821 	lsr	r1, r1, #16
+     d34:	e3560c0a 	cmp	r6, #2560	; 0xa00
+     d38:	e1c010b0 	strh	r1, [r0]
+     d3c:	1affffed 	bne	cf8 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0xa0>
+     d40:	e25ee001 	subs	lr, lr, #1
+     d44:	8affffe9 	bhi	cf0 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x98>
+     d48:	e28d1018 	add	r1, sp, #24
+     d4c:	e3a00000 	mov	r0, #0
+     d50:	ebffffa9 	bl	bfc <clock_gettime@plt>
+     d54:	ed9d1a07 	vldr	s2, [sp, #28]
+     d58:	ed9d0a06 	vldr	s0, [sp, #24]
+     d5c:	eeb81bc1 	vcvt.f64.s32	d1, s2
+     d60:	e59f01dc 	ldr	r0, [pc, #476]	; f44 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2ec>
+     d64:	e08f1000 	add	r1, pc, r0
+     d68:	e28d000c 	add	r0, sp, #12
+     d6c:	ee811b08 	vdiv.f64	d1, d1, d8
+     d70:	eeb80bc0 	vcvt.f64.s32	d0, s0
+     d74:	ed9fab69 	vldr	d10, [pc, #420]	; f20 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2c8>
+     d78:	ee0b9b0a 	vmla.f64	d9, d11, d10
+     d7c:	ee001b0a 	vmla.f64	d1, d0, d10
+     d80:	ee319b49 	vsub.f64	d9, d1, d9
+     d84:	ec532b19 	vmov	r2, r3, d9
+     d88:	ebffff61 	bl	b14 <asprintf@plt>
+     d8c:	e28d5018 	add	r5, sp, #24
+     d90:	e59d100c 	ldr	r1, [sp, #12]
+     d94:	e3a02c02 	mov	r2, #512	; 0x200
+     d98:	e1a00005 	mov	r0, r5
+     d9c:	ebffff53 	bl	af0 <strlcpy@plt>
+     da0:	e59d000c 	ldr	r0, [sp, #12]
+     da4:	ebffff91 	bl	bf0 <free@plt+0x4>
+     da8:	e59f0198 	ldr	r0, [pc, #408]	; f48 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2f0>
+     dac:	e3a02c02 	mov	r2, #512	; 0x200
+     db0:	e08f1000 	add	r1, pc, r0
+     db4:	e1a00005 	mov	r0, r5
+     db8:	ebffff34 	bl	a90 <strlcat@plt>
+     dbc:	ebffff6f 	bl	b80 <android_getCpuFamily@plt>
+     dc0:	e2400001 	sub	r0, r0, #1
+     dc4:	e3500002 	cmp	r0, #2
+     dc8:	3a000002 	bcc	dd8 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x180>
+     dcc:	e59f018c 	ldr	r0, [pc, #396]	; f60 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x308>
+     dd0:	e08f1000 	add	r1, pc, r0
+     dd4:	ea000004 	b	dec <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x194>
+     dd8:	ebffff4a 	bl	b08 <android_getCpuFeatures@plt>
+     ddc:	e3100001 	tst	r0, #1
+     de0:	1a000005 	bne	dfc <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x1a4>
+     de4:	e59f0170 	ldr	r0, [pc, #368]	; f5c <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x304>
+     de8:	e08f1000 	add	r1, pc, r0
+     dec:	e28d0018 	add	r0, sp, #24
+     df0:	e3a02c02 	mov	r2, #512	; 0x200
+     df4:	ebffff25 	bl	a90 <strlcat@plt>
+     df8:	ea000037 	b	edc <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x284>
+     dfc:	e28d1010 	add	r1, sp, #16
+     e00:	e3a00000 	mov	r0, #0
+     e04:	ebffff7c 	bl	bfc <clock_gettime@plt>
+     e08:	ed9d1a05 	vldr	s2, [sp, #20]
+     e0c:	e3004259 	movw	r4, #601	; 0x259
+     e10:	ed9d0a04 	vldr	s0, [sp, #16]
+     e14:	e3a09020 	mov	r9, #32
+     e18:	eeb81bc1 	vcvt.f64.s32	d1, s2
+     e1c:	e59f0128 	ldr	r0, [pc, #296]	; f4c <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2f4>
+     e20:	e59f1128 	ldr	r1, [pc, #296]	; f50 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2f8>
+     e24:	e59f2128 	ldr	r2, [pc, #296]	; f54 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2fc>
+     e28:	e08f6000 	add	r6, pc, r0
+     e2c:	e08f0001 	add	r0, pc, r1
+     e30:	e08f5002 	add	r5, pc, r2
+     e34:	e2807020 	add	r7, r0, #32
+     e38:	ee81bb08 	vdiv.f64	d11, d1, d8
+     e3c:	eeb8cbc0 	vcvt.f64.s32	d12, s0
+     e40:	e1a00005 	mov	r0, r5
+     e44:	e1a01007 	mov	r1, r7
+     e48:	e1a02006 	mov	r2, r6
+     e4c:	e3a03c0a 	mov	r3, #2560	; 0xa00
+     e50:	e58d9000 	str	r9, [sp]
+     e54:	ebffff58 	bl	bbc <fir_filter_neon_intrinsics@plt>
+     e58:	e2444001 	sub	r4, r4, #1
+     e5c:	e3540001 	cmp	r4, #1
+     e60:	8afffff6 	bhi	e40 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x1e8>
+     e64:	e28d1010 	add	r1, sp, #16
+     e68:	e3a00000 	mov	r0, #0
+     e6c:	ebffff62 	bl	bfc <clock_gettime@plt>
+     e70:	ed9d1a05 	vldr	s2, [sp, #20]
+     e74:	ed9d0a04 	vldr	s0, [sp, #16]
+     e78:	eeb81bc1 	vcvt.f64.s32	d1, s2
+     e7c:	e59f00d4 	ldr	r0, [pc, #212]	; f58 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x300>
+     e80:	e08f1000 	add	r1, pc, r0
+     e84:	e28d000c 	add	r0, sp, #12
+     e88:	ee811b08 	vdiv.f64	d1, d1, d8
+     e8c:	eeb80bc0 	vcvt.f64.s32	d0, s0
+     e90:	ee0cbb0a 	vmla.f64	d11, d12, d10
+     e94:	ee001b0a 	vmla.f64	d1, d0, d10
+     e98:	ed9f2b22 	vldr	d2, [pc, #136]	; f28 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x2d0>
+     e9c:	ee310b4b 	vsub.f64	d0, d1, d11
+     ea0:	eeb40bc2 	vcmpe.f64	d0, d2
+     ea4:	eef1fa10 	vmrs	APSR_nzcv, fpscr
+     ea8:	ec532b10 	vmov	r2, r3, d0
+     eac:	eeb71b00 	vmov.f64	d1, #112	; 0x3f800000  1.0
+     eb0:	eeb02b40 	vmov.f64	d2, d0
+     eb4:	4eb02b41 	vmovmi.f64	d2, d1
+     eb8:	ee891b02 	vdiv.f64	d1, d9, d2
+     ebc:	ed8d1b00 	vstr	d1, [sp]
+     ec0:	ebffff13 	bl	b14 <asprintf@plt>
+     ec4:	e59d100c 	ldr	r1, [sp, #12]
+     ec8:	e28d0018 	add	r0, sp, #24
+     ecc:	e3a02c02 	mov	r2, #512	; 0x200
+     ed0:	ebfffeee 	bl	a90 <strlcat@plt>
+     ed4:	e59d000c 	ldr	r0, [sp, #12]
+     ed8:	ebffff44 	bl	bf0 <free@plt+0x4>
+     edc:	e5980000 	ldr	r0, [r8]
+     ee0:	e28d1018 	add	r1, sp, #24
+     ee4:	e590229c 	ldr	r2, [r0, #668]	; 0x29c
+     ee8:	e1a00008 	mov	r0, r8
+     eec:	e12fff32 	blx	r2
+     ef0:	e59f106c 	ldr	r1, [pc, #108]	; f64 <Java_com_example_neon_HelloNeon_stringFromJNI@@Base+0x30c>
+     ef4:	e51b2048 	ldr	r2, [fp, #-72]	; 0xffffffb8
+     ef8:	e79f1001 	ldr	r1, [pc, r1]
+     efc:	e5911000 	ldr	r1, [r1]
+     f00:	e0511002 	subs	r1, r1, r2
+     f04:	024bd040 	subeq	sp, fp, #64	; 0x40
+     f08:	0cbd8b0a 	vpopeq	{d8-d12}
+     f0c:	08bd8bf0 	popeq	{r4, r5, r6, r7, r8, r9, fp, pc}
+     f10:	ebffff08 	bl	b38 <__stack_chk_fail@plt>
+     f14:	e320f000 	nop	{0}
+     f18:	00000000 	andeq	r0, r0, r0
+     f1c:	412e8480 	smlawbmi	lr, r0, r4, r8
+     f20:	00000000 	andeq	r0, r0, r0
+     f24:	408f4000 	addmi	r4, pc, r0
+     f28:	a0b5ed8d 	adcsge	lr, r5, sp, lsl #27
+     f2c:	3eb0c6f7 	mrccc	6, 5, ip, cr0, cr7, {7}
+     f30:	00013378 	andeq	r3, r1, r8, ror r3
+     f34:	00013384 	andeq	r3, r1, r4, lsl #7
+     f38:	00013310 	andeq	r3, r1, r0, lsl r3
+     f3c:	000023f4 	strdeq	r2, [r0], -r4
+     f40:	00014760 	andeq	r4, r1, r0, ror #14
+     f44:	000023ac 	andeq	r2, r0, ip, lsr #7
+     f48:	00002392 	muleq	r0, r2, r3
+     f4c:	000022a8 	andeq	r2, r0, r8, lsr #5
+     f50:	000131d4 	ldrdeq	r3, [r1], -r4
+     f54:	00014610 	andeq	r4, r1, r0, lsl r6
+     f58:	0000231e 	andeq	r2, r0, lr, lsl r3
+     f5c:	0000238d 	andeq	r2, r0, sp, lsl #7
+     f60:	00002384 	andeq	r2, r0, r4, lsl #7
+     f64:	000130f8 	strdeq	r3, [r1], -r8
+
+00000f68 <fir_filter_neon_intrinsics@@Base>:
+     f68:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
+     f6c:	e28db01c 	add	fp, sp, #28
+     f70:	e24dd018 	sub	sp, sp, #24
+     f74:	e3530001 	cmp	r3, #1
+     f78:	e58d0014 	str	r0, [sp, #20]
+     f7c:	ba00005b 	blt	10f0 <fir_filter_neon_intrinsics@@Base+0x188>
+     f80:	e59bc008 	ldr	ip, [fp, #8]
+     f84:	e3a0e000 	mov	lr, #0
+     f88:	eea0eb90 	vdup.32	q8, lr
+     f8c:	e08c4fac 	add	r4, ip, ip, lsr #31
+     f90:	e04e40c4 	sub	r4, lr, r4, asr #1
+     f94:	e0819084 	add	r9, r1, r4, lsl #1
+     f98:	e20c4003 	and	r4, ip, #3
+     f9c:	e1a0108c 	lsl	r1, ip, #1
+     fa0:	e04c5004 	sub	r5, ip, r4
+     fa4:	e0410084 	sub	r0, r1, r4, lsl #1
+     fa8:	e1a01fcc 	asr	r1, ip, #31
+     fac:	e08c1f21 	add	r1, ip, r1, lsr #30
+     fb0:	e58d0008 	str	r0, [sp, #8]
+     fb4:	e58d5004 	str	r5, [sp, #4]
+     fb8:	e1a00141 	asr	r0, r1, #2
+     fbc:	e28c1001 	add	r1, ip, #1
+     fc0:	e0411004 	sub	r1, r1, r4
+     fc4:	e58d000c 	str	r0, [sp, #12]
+     fc8:	e151000c 	cmp	r1, ip
+     fcc:	b1a0100c 	movlt	r1, ip
+     fd0:	e0811004 	add	r1, r1, r4
+     fd4:	e041000c 	sub	r0, r1, ip
+     fd8:	e3c01003 	bic	r1, r0, #3
+     fdc:	e58d1010 	str	r1, [sp, #16]
+     fe0:	e0851001 	add	r1, r5, r1
+     fe4:	e58d1000 	str	r1, [sp]
+     fe8:	f2c02050 	vmov.i32	q9, #0	; 0x00000000
+     fec:	e35c0004 	cmp	ip, #4
+     ff0:	ba000007 	blt	1014 <fir_filter_neon_intrinsics@@Base+0xac>
+     ff4:	e59d700c 	ldr	r7, [sp, #12]
+     ff8:	e1a01009 	mov	r1, r9
+     ffc:	e1a06002 	mov	r6, r2
+    1000:	f461474d 	vld1.16	{d20}, [r1]!
+    1004:	e2577001 	subs	r7, r7, #1
+    1008:	f466574d 	vld1.16	{d21}, [r6]!
+    100c:	f2d528a4 	vmlal.s16	q9, d21, d20
+    1010:	1afffffa 	bne	1000 <fir_filter_neon_intrinsics@@Base+0x98>
+    1014:	ee321b90 	vmov.32	r1, d18[1]
+    1018:	e3540000 	cmp	r4, #0
+    101c:	ee126b90 	vmov.32	r6, d18[0]
+    1020:	ee137b90 	vmov.32	r7, d19[0]
+    1024:	ee335b90 	vmov.32	r5, d19[1]
+    1028:	e0861001 	add	r1, r6, r1
+    102c:	e0811007 	add	r1, r1, r7
+    1030:	e0818005 	add	r8, r1, r5
+    1034:	0a000024 	beq	10cc <fir_filter_neon_intrinsics@@Base+0x164>
+    1038:	e3500004 	cmp	r0, #4
+    103c:	2a000001 	bcs	1048 <fir_filter_neon_intrinsics@@Base+0xe0>
+    1040:	e59da004 	ldr	sl, [sp, #4]
+    1044:	ea000016 	b	10a4 <fir_filter_neon_intrinsics@@Base+0x13c>
+    1048:	f26041b0 	vorr	d20, d16, d16
+    104c:	e59d1010 	ldr	r1, [sp, #16]
+    1050:	f26021f0 	vorr	q9, q8, q8
+    1054:	e59d6008 	ldr	r6, [sp, #8]
+    1058:	ee048b90 	vmov.32	d20[0], r8
+    105c:	f26421b4 	vorr	d18, d20, d20
+    1060:	e0825006 	add	r5, r2, r6
+    1064:	e2511004 	subs	r1, r1, #4
+    1068:	f465474f 	vld1.16	{d20}, [r5]
+    106c:	e0895006 	add	r5, r9, r6
+    1070:	e2866008 	add	r6, r6, #8
+    1074:	f465574f 	vld1.16	{d21}, [r5]
+    1078:	f2d528a4 	vmlal.s16	q9, d21, d20
+    107c:	1afffff7 	bne	1060 <fir_filter_neon_intrinsics@@Base+0xf8>
+    1080:	f2f248e0 	vext.8	q10, q9, q8, #8
+    1084:	e59d1010 	ldr	r1, [sp, #16]
+    1088:	e59da000 	ldr	sl, [sp]
+    108c:	f26228e4 	vadd.i32	q9, q9, q10
+    1090:	e1500001 	cmp	r0, r1
+    1094:	f3fc4c62 	vdup.32	q10, d18[1]
+    1098:	f26228e4 	vadd.i32	q9, q9, q10
+    109c:	ee128b90 	vmov.32	r8, d18[0]
+    10a0:	0a000009 	beq	10cc <fir_filter_neon_intrinsics@@Base+0x164>
+    10a4:	e1a0108a 	lsl	r1, sl, #1
+    10a8:	e0825001 	add	r5, r2, r1
+    10ac:	e0896001 	add	r6, r9, r1
+    10b0:	e28aa001 	add	sl, sl, #1
+    10b4:	e2811002 	add	r1, r1, #2
+    10b8:	e1d550f0 	ldrsh	r5, [r5]
+    10bc:	e15a000c 	cmp	sl, ip
+    10c0:	e1d660f0 	ldrsh	r6, [r6]
+    10c4:	e1088586 	smlabb	r8, r6, r5, r8
+    10c8:	bafffff6 	blt	10a8 <fir_filter_neon_intrinsics@@Base+0x140>
+    10cc:	e59d1014 	ldr	r1, [sp, #20]
+    10d0:	e2885902 	add	r5, r8, #32768	; 0x8000
+    10d4:	e2899002 	add	r9, r9, #2
+    10d8:	e081108e 	add	r1, r1, lr, lsl #1
+    10dc:	e28ee001 	add	lr, lr, #1
+    10e0:	e1a05825 	lsr	r5, r5, #16
+    10e4:	e15e0003 	cmp	lr, r3
+    10e8:	e1c150b0 	strh	r5, [r1]
+    10ec:	1affffbd 	bne	fe8 <fir_filter_neon_intrinsics@@Base+0x80>
+    10f0:	e24bd01c 	sub	sp, fp, #28
+    10f4:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+
+000010f8 <android_getCpuFamily@@Base>:
+    10f8:	b580      	push	{r7, lr}
+    10fa:	466f      	mov	r7, sp
+    10fc:	4804      	ldr	r0, [pc, #16]	; (1110 <android_getCpuFamily@@Base+0x18>)
+    10fe:	4905      	ldr	r1, [pc, #20]	; (1114 <android_getCpuFamily@@Base+0x1c>)
+    1100:	4478      	add	r0, pc
+    1102:	4479      	add	r1, pc
+    1104:	f7ff ecd0 	blx	aa8 <pthread_once@plt>
+    1108:	4803      	ldr	r0, [pc, #12]	; (1118 <android_getCpuFamily@@Base+0x20>)
+    110a:	4478      	add	r0, pc
+    110c:	7800      	ldrb	r0, [r0, #0]
+    110e:	bd80      	pop	{r7, pc}
+    1110:	5744      	ldrsb	r4, [r0, r5]
+    1112:	0001      	movs	r1, r0
+    1114:	0017      	movs	r7, r2
+    1116:	0000      	movs	r0, r0
+    1118:	573e      	ldrsb	r6, [r7, r4]
+    111a:	0001      	movs	r1, r0
+    111c:	b5f0      	push	{r4, r5, r6, r7, lr}
+    111e:	af03      	add	r7, sp, #12
+    1120:	e92d 0f00 	stmdb	sp!, {r8, r9, sl, fp}
+    1124:	b0c7      	sub	sp, #284	; 0x11c
+    1126:	f8df 1590 	ldr.w	r1, [pc, #1424]	; 16b8 <android_getCpuFamily@@Base+0x5c0>
+    112a:	2400      	movs	r4, #0
+    112c:	f8df 258c 	ldr.w	r2, [pc, #1420]	; 16bc <android_getCpuFamily@@Base+0x5c4>
+    1130:	4479      	add	r1, pc
+    1132:	f8df 358c 	ldr.w	r3, [pc, #1420]	; 16c0 <android_getCpuFamily@@Base+0x5c8>
+    1136:	f8df 658c 	ldr.w	r6, [pc, #1420]	; 16c4 <android_getCpuFamily@@Base+0x5cc>
+    113a:	447a      	add	r2, pc
+    113c:	f8df 5588 	ldr.w	r5, [pc, #1416]	; 16c8 <android_getCpuFamily@@Base+0x5d0>
+    1140:	447b      	add	r3, pc
+    1142:	6809      	ldr	r1, [r1, #0]
+    1144:	447e      	add	r6, pc
+    1146:	f8df 0584 	ldr.w	r0, [pc, #1412]	; 16cc <android_getCpuFamily@@Base+0x5d4>
+    114a:	447d      	add	r5, pc
+    114c:	e9c2 4400 	strd	r4, r4, [r2]
+    1150:	2201      	movs	r2, #1
+    1152:	6809      	ldr	r1, [r1, #0]
+    1154:	4478      	add	r0, pc
+    1156:	701a      	strb	r2, [r3, #0]
+    1158:	6032      	str	r2, [r6, #0]
+    115a:	702a      	strb	r2, [r5, #0]
+    115c:	9146      	str	r1, [sp, #280]	; 0x118
+    115e:	2100      	movs	r1, #0
+    1160:	f7ff ec90 	blx	a84 <open@plt>
+    1164:	4604      	mov	r4, r0
+    1166:	2c00      	cmp	r4, #0
+    1168:	f2c0 8087 	blt.w	127a <android_getCpuFamily@@Base+0x182>
+    116c:	ae06      	add	r6, sp, #24
+    116e:	2500      	movs	r5, #0
+    1170:	4620      	mov	r0, r4
+    1172:	4631      	mov	r1, r6
+    1174:	f44f 7280 	mov.w	r2, #256	; 0x100
+    1178:	f7ff eca2 	blx	ac0 <read@plt>
+    117c:	f1b0 3fff 	cmp.w	r0, #4294967295
+    1180:	dc05      	bgt.n	118e <android_getCpuFamily@@Base+0x96>
+    1182:	f7ff ecbc 	blx	afc <__errno@plt>
+    1186:	6800      	ldr	r0, [r0, #0]
+    1188:	2804      	cmp	r0, #4
+    118a:	d0f1      	beq.n	1170 <android_getCpuFamily@@Base+0x78>
+    118c:	e002      	b.n	1194 <android_getCpuFamily@@Base+0x9c>
+    118e:	4405      	add	r5, r0
+    1190:	2800      	cmp	r0, #0
+    1192:	d1ed      	bne.n	1170 <android_getCpuFamily@@Base+0x78>
+    1194:	4620      	mov	r0, r4
+    1196:	f7ff ed06 	blx	ba4 <close@plt>
+    119a:	2d00      	cmp	r5, #0
+    119c:	db6d      	blt.n	127a <android_getCpuFamily@@Base+0x182>
+    119e:	4628      	mov	r0, r5
+    11a0:	f7ff ed12 	blx	bc8 <malloc@plt>
+    11a4:	4680      	mov	r8, r0
+    11a6:	f1b8 0f00 	cmp.w	r8, #0
+    11aa:	d066      	beq.n	127a <android_getCpuFamily@@Base+0x182>
+    11ac:	f8df 0520 	ldr.w	r0, [pc, #1312]	; 16d0 <android_getCpuFamily@@Base+0x5d8>
+    11b0:	4641      	mov	r1, r8
+    11b2:	462a      	mov	r2, r5
+    11b4:	4478      	add	r0, pc
+    11b6:	f000 fb97 	bl	18e8 <android_setCpuArm@@Base+0x74>
+    11ba:	4682      	mov	sl, r0
+    11bc:	f1ba 3fff 	cmp.w	sl, #4294967295
+    11c0:	dd68      	ble.n	1294 <android_getCpuFamily@@Base+0x19c>
+    11c2:	f8df 1510 	ldr.w	r1, [pc, #1296]	; 16d4 <android_getCpuFamily@@Base+0x5dc>
+    11c6:	a806      	add	r0, sp, #24
+    11c8:	4479      	add	r1, pc
+    11ca:	f000 fc6b 	bl	1aa4 <android_setCpuArm@@Base+0x230>
+    11ce:	f8df 1508 	ldr.w	r1, [pc, #1288]	; 16d8 <android_getCpuFamily@@Base+0x5e0>
+    11d2:	a805      	add	r0, sp, #20
+    11d4:	4479      	add	r1, pc
+    11d6:	f000 fc65 	bl	1aa4 <android_setCpuArm@@Base+0x230>
+    11da:	e9dd 0105 	ldrd	r0, r1, [sp, #20]
+    11de:	f8df 2500 	ldr.w	r2, [pc, #1280]	; 16e0 <android_getCpuFamily@@Base+0x5e8>
+    11e2:	4008      	ands	r0, r1
+    11e4:	f04f 3155 	mov.w	r1, #1431655765	; 0x55555555
+    11e8:	447a      	add	r2, pc
+    11ea:	ea01 0150 	and.w	r1, r1, r0, lsr #1
+    11ee:	eba0 0001 	sub.w	r0, r0, r1
+    11f2:	f04f 3133 	mov.w	r1, #858993459	; 0x33333333
+    11f6:	ea01 0190 	and.w	r1, r1, r0, lsr #2
+    11fa:	f020 30cc 	bic.w	r0, r0, #3435973836	; 0xcccccccc
+    11fe:	4408      	add	r0, r1
+    1200:	f04f 3101 	mov.w	r1, #16843009	; 0x1010101
+    1204:	eb00 1010 	add.w	r0, r0, r0, lsr #4
+    1208:	f020 30f0 	bic.w	r0, r0, #4042322160	; 0xf0f0f0f0
+    120c:	fb01 f000 	mul.w	r0, r1, r0
+    1210:	f8df 14c8 	ldr.w	r1, [pc, #1224]	; 16dc <android_getCpuFamily@@Base+0x5e4>
+    1214:	4479      	add	r1, pc
+    1216:	ea4f 6010 	mov.w	r0, r0, lsr #24
+    121a:	bf08      	it	eq
+    121c:	2001      	moveq	r0, #1
+    121e:	6008      	str	r0, [r1, #0]
+    1220:	4640      	mov	r0, r8
+    1222:	4651      	mov	r1, sl
+    1224:	f000 fb99 	bl	195a <android_setCpuArm@@Base+0xe6>
+    1228:	4605      	mov	r5, r0
+    122a:	2d00      	cmp	r5, #0
+    122c:	d049      	beq.n	12c2 <android_getCpuFamily@@Base+0x1ca>
+    122e:	a906      	add	r1, sp, #24
+    1230:	4628      	mov	r0, r5
+    1232:	220a      	movs	r2, #10
+    1234:	f7ff ecd4 	blx	be0 <strtol@plt>
+    1238:	2807      	cmp	r0, #7
+    123a:	db36      	blt.n	12aa <android_getCpuFamily@@Base+0x1b2>
+    123c:	9906      	ldr	r1, [sp, #24]
+    123e:	42a9      	cmp	r1, r5
+    1240:	d933      	bls.n	12aa <android_getCpuFamily@@Base+0x1b2>
+    1242:	f8df 24a0 	ldr.w	r2, [pc, #1184]	; 16e4 <android_getCpuFamily@@Base+0x5ec>
+    1246:	4640      	mov	r0, r8
+    1248:	4651      	mov	r1, sl
+    124a:	447a      	add	r2, pc
+    124c:	f000 fb85 	bl	195a <android_setCpuArm@@Base+0xe6>
+    1250:	4604      	mov	r4, r0
+    1252:	b154      	cbz	r4, 126a <android_getCpuFamily@@Base+0x172>
+    1254:	f8df 1490 	ldr.w	r1, [pc, #1168]	; 16e8 <android_getCpuFamily@@Base+0x5f0>
+    1258:	4620      	mov	r0, r4
+    125a:	4479      	add	r1, pc
+    125c:	f000 fbcc 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    1260:	4606      	mov	r6, r0
+    1262:	4620      	mov	r0, r4
+    1264:	f7ff ecc4 	blx	bf0 <free@plt+0x4>
+    1268:	bb0e      	cbnz	r6, 12ae <android_getCpuFamily@@Base+0x1b6>
+    126a:	f8df 0480 	ldr.w	r0, [pc, #1152]	; 16ec <android_getCpuFamily@@Base+0x5f4>
+    126e:	4478      	add	r0, pc
+    1270:	6801      	ldr	r1, [r0, #0]
+    1272:	f041 0101 	orr.w	r1, r1, #1
+    1276:	6001      	str	r1, [r0, #0]
+    1278:	e019      	b.n	12ae <android_getCpuFamily@@Base+0x1b6>
+    127a:	f8df 0510 	ldr.w	r0, [pc, #1296]	; 178c <android_getCpuFamily@@Base+0x694>
+    127e:	9946      	ldr	r1, [sp, #280]	; 0x118
+    1280:	4478      	add	r0, pc
+    1282:	6800      	ldr	r0, [r0, #0]
+    1284:	6800      	ldr	r0, [r0, #0]
+    1286:	1a40      	subs	r0, r0, r1
+    1288:	bf02      	ittt	eq
+    128a:	b047      	addeq	sp, #284	; 0x11c
+    128c:	e8bd 0f00 	ldmiaeq.w	sp!, {r8, r9, sl, fp}
+    1290:	bdf0      	popeq	{r4, r5, r6, r7, pc}
+    1292:	e153      	b.n	153c <android_getCpuFamily@@Base+0x444>
+    1294:	f8df 04f0 	ldr.w	r0, [pc, #1264]	; 1788 <android_getCpuFamily@@Base+0x690>
+    1298:	9946      	ldr	r1, [sp, #280]	; 0x118
+    129a:	4478      	add	r0, pc
+    129c:	6800      	ldr	r0, [r0, #0]
+    129e:	6800      	ldr	r0, [r0, #0]
+    12a0:	1a40      	subs	r0, r0, r1
+    12a2:	f040 814b 	bne.w	153c <android_getCpuFamily@@Base+0x444>
+    12a6:	4640      	mov	r0, r8
+    12a8:	e141      	b.n	152e <android_getCpuFamily@@Base+0x436>
+    12aa:	2806      	cmp	r0, #6
+    12ac:	db06      	blt.n	12bc <android_getCpuFamily@@Base+0x1c4>
+    12ae:	f8df 0440 	ldr.w	r0, [pc, #1088]	; 16f0 <android_getCpuFamily@@Base+0x5f8>
+    12b2:	4478      	add	r0, pc
+    12b4:	6801      	ldr	r1, [r0, #0]
+    12b6:	f041 0108 	orr.w	r1, r1, #8
+    12ba:	6001      	str	r1, [r0, #0]
+    12bc:	4628      	mov	r0, r5
+    12be:	f7ff ec98 	blx	bf0 <free@plt+0x4>
+    12c2:	2010      	movs	r0, #16
+    12c4:	f000 fbc8 	bl	1a58 <android_setCpuArm@@Base+0x1e4>
+    12c8:	4606      	mov	r6, r0
+    12ca:	2e00      	cmp	r6, #0
+    12cc:	f000 8138 	beq.w	1540 <android_getCpuFamily@@Base+0x448>
+    12d0:	f416 3180 	ands.w	r1, r6, #65536	; 0x10000
+    12d4:	d006      	beq.n	12e4 <android_getCpuFamily@@Base+0x1ec>
+    12d6:	f8df 044c 	ldr.w	r0, [pc, #1100]	; 1724 <android_getCpuFamily@@Base+0x62c>
+    12da:	4478      	add	r0, pc
+    12dc:	6802      	ldr	r2, [r0, #0]
+    12de:	f042 02c2 	orr.w	r2, r2, #194	; 0xc2
+    12e2:	6002      	str	r2, [r0, #0]
+    12e4:	f006 0040 	and.w	r0, r6, #64	; 0x40
+    12e8:	f416 4fc0 	tst.w	r6, #24576	; 0x6000
+    12ec:	d006      	beq.n	12fc <android_getCpuFamily@@Base+0x204>
+    12ee:	f8df 2438 	ldr.w	r2, [pc, #1080]	; 1728 <android_getCpuFamily@@Base+0x630>
+    12f2:	447a      	add	r2, pc
+    12f4:	6813      	ldr	r3, [r2, #0]
+    12f6:	f043 0302 	orr.w	r3, r3, #2
+    12fa:	6013      	str	r3, [r2, #0]
+    12fc:	f406 5280 	and.w	r2, r6, #4096	; 0x1000
+    1300:	b150      	cbz	r0, 1318 <android_getCpuFamily@@Base+0x220>
+    1302:	f8df 0428 	ldr.w	r0, [pc, #1064]	; 172c <android_getCpuFamily@@Base+0x634>
+    1306:	2502      	movs	r5, #2
+    1308:	4478      	add	r0, pc
+    130a:	6803      	ldr	r3, [r0, #0]
+    130c:	f013 0f01 	tst.w	r3, #1
+    1310:	bf08      	it	eq
+    1312:	2510      	moveq	r5, #16
+    1314:	432b      	orrs	r3, r5
+    1316:	6003      	str	r3, [r0, #0]
+    1318:	f8df 0414 	ldr.w	r0, [pc, #1044]	; 1730 <android_getCpuFamily@@Base+0x638>
+    131c:	2a00      	cmp	r2, #0
+    131e:	4478      	add	r0, pc
+    1320:	e9d0 3000 	ldrd	r3, r0, [r0]
+    1324:	d101      	bne.n	132a <android_getCpuFamily@@Base+0x232>
+    1326:	461a      	mov	r2, r3
+    1328:	e00f      	b.n	134a <android_getCpuFamily@@Base+0x252>
+    132a:	f8df 5408 	ldr.w	r5, [pc, #1032]	; 1734 <android_getCpuFamily@@Base+0x63c>
+    132e:	f043 0226 	orr.w	r2, r3, #38	; 0x26
+    1332:	2900      	cmp	r1, #0
+    1334:	447d      	add	r5, pc
+    1336:	e9c5 2000 	strd	r2, r0, [r5]
+    133a:	d006      	beq.n	134a <android_getCpuFamily@@Base+0x252>
+    133c:	f8df 13f8 	ldr.w	r1, [pc, #1016]	; 1738 <android_getCpuFamily@@Base+0x640>
+    1340:	f443 7293 	orr.w	r2, r3, #294	; 0x126
+    1344:	4479      	add	r1, pc
+    1346:	e9c1 2000 	strd	r2, r0, [r1]
+    134a:	f44f 7500 	mov.w	r5, #512	; 0x200
+    134e:	f012 0302 	ands.w	r3, r2, #2
+    1352:	bf18      	it	ne
+    1354:	f042 0211 	orrne.w	r2, r2, #17
+    1358:	ea05 2516 	and.w	r5, r5, r6, lsr #8
+    135c:	432a      	orrs	r2, r5
+    135e:	f44f 6580 	mov.w	r5, #1024	; 0x400
+    1362:	ea05 2516 	and.w	r5, r5, r6, lsr #8
+    1366:	f416 2fc0 	tst.w	r6, #393216	; 0x60000
+    136a:	f406 7100 	and.w	r1, r6, #512	; 0x200
+    136e:	ea42 0205 	orr.w	r2, r2, r5
+    1372:	bf08      	it	eq
+    1374:	2b00      	cmpeq	r3, #0
+    1376:	d004      	beq.n	1382 <android_getCpuFamily@@Base+0x28a>
+    1378:	f8df 33c0 	ldr.w	r3, [pc, #960]	; 173c <android_getCpuFamily@@Base+0x644>
+    137c:	447b      	add	r3, pc
+    137e:	e9c3 2000 	strd	r2, r0, [r3]
+    1382:	b131      	cbz	r1, 1392 <android_getCpuFamily@@Base+0x29a>
+    1384:	f8df 13b8 	ldr.w	r1, [pc, #952]	; 1740 <android_getCpuFamily@@Base+0x648>
+    1388:	f442 6200 	orr.w	r2, r2, #2048	; 0x800
+    138c:	4479      	add	r1, pc
+    138e:	e9c1 2000 	strd	r2, r0, [r1]
+    1392:	201a      	movs	r0, #26
+    1394:	f000 fb60 	bl	1a58 <android_setCpuArm@@Base+0x1e4>
+    1398:	b378      	cbz	r0, 13fa <android_getCpuFamily@@Base+0x302>
+    139a:	f000 0102 	and.w	r1, r0, #2
+    139e:	f010 0f01 	tst.w	r0, #1
+    13a2:	d006      	beq.n	13b2 <android_getCpuFamily@@Base+0x2ba>
+    13a4:	f8df 239c 	ldr.w	r2, [pc, #924]	; 1744 <android_getCpuFamily@@Base+0x64c>
+    13a8:	447a      	add	r2, pc
+    13aa:	6813      	ldr	r3, [r2, #0]
+    13ac:	f443 5380 	orr.w	r3, r3, #4096	; 0x1000
+    13b0:	6013      	str	r3, [r2, #0]
+    13b2:	f000 0204 	and.w	r2, r0, #4
+    13b6:	b131      	cbz	r1, 13c6 <android_getCpuFamily@@Base+0x2ce>
+    13b8:	f8df 138c 	ldr.w	r1, [pc, #908]	; 1748 <android_getCpuFamily@@Base+0x650>
+    13bc:	4479      	add	r1, pc
+    13be:	680b      	ldr	r3, [r1, #0]
+    13c0:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
+    13c4:	600b      	str	r3, [r1, #0]
+    13c6:	f000 0108 	and.w	r1, r0, #8
+    13ca:	b132      	cbz	r2, 13da <android_getCpuFamily@@Base+0x2e2>
+    13cc:	f8df 237c 	ldr.w	r2, [pc, #892]	; 174c <android_getCpuFamily@@Base+0x654>
+    13d0:	447a      	add	r2, pc
+    13d2:	6813      	ldr	r3, [r2, #0]
+    13d4:	f443 4380 	orr.w	r3, r3, #16384	; 0x4000
+    13d8:	6013      	str	r3, [r2, #0]
+    13da:	f000 0010 	and.w	r0, r0, #16
+    13de:	b129      	cbz	r1, 13ec <android_getCpuFamily@@Base+0x2f4>
+    13e0:	49db      	ldr	r1, [pc, #876]	; (1750 <android_getCpuFamily@@Base+0x658>)
+    13e2:	4479      	add	r1, pc
+    13e4:	680a      	ldr	r2, [r1, #0]
+    13e6:	f442 4200 	orr.w	r2, r2, #32768	; 0x8000
+    13ea:	600a      	str	r2, [r1, #0]
+    13ec:	b128      	cbz	r0, 13fa <android_getCpuFamily@@Base+0x302>
+    13ee:	48d9      	ldr	r0, [pc, #868]	; (1754 <android_getCpuFamily@@Base+0x65c>)
+    13f0:	4478      	add	r0, pc
+    13f2:	6801      	ldr	r1, [r0, #0]
+    13f4:	f441 3180 	orr.w	r1, r1, #65536	; 0x10000
+    13f8:	6001      	str	r1, [r0, #0]
+    13fa:	4ed7      	ldr	r6, [pc, #860]	; (1758 <android_getCpuFamily@@Base+0x660>)
+    13fc:	46c1      	mov	r9, r8
+    13fe:	f8df 835c 	ldr.w	r8, [pc, #860]	; 175c <android_getCpuFamily@@Base+0x664>
+    1402:	46d3      	mov	fp, sl
+    1404:	447e      	add	r6, pc
+    1406:	f04f 0a00 	mov.w	sl, #0
+    140a:	44f8      	add	r8, pc
+    140c:	f856 203a 	ldr.w	r2, [r6, sl, lsl #3]
+    1410:	4648      	mov	r0, r9
+    1412:	4659      	mov	r1, fp
+    1414:	f000 faa1 	bl	195a <android_setCpuArm@@Base+0xe6>
+    1418:	4605      	mov	r5, r0
+    141a:	b3bd      	cbz	r5, 148c <android_getCpuFamily@@Base+0x394>
+    141c:	4628      	mov	r0, r5
+    141e:	f7ff ebbc 	blx	b98 <strlen@plt>
+    1422:	2100      	movs	r1, #0
+    1424:	782a      	ldrb	r2, [r5, #0]
+    1426:	9106      	str	r1, [sp, #24]
+    1428:	1829      	adds	r1, r5, r0
+    142a:	2a30      	cmp	r2, #48	; 0x30
+    142c:	d10b      	bne.n	1446 <android_getCpuFamily@@Base+0x34e>
+    142e:	7868      	ldrb	r0, [r5, #1]
+    1430:	f040 0020 	orr.w	r0, r0, #32
+    1434:	2878      	cmp	r0, #120	; 0x78
+    1436:	d106      	bne.n	1446 <android_getCpuFamily@@Base+0x34e>
+    1438:	1cac      	adds	r4, r5, #2
+    143a:	ab06      	add	r3, sp, #24
+    143c:	2210      	movs	r2, #16
+    143e:	4620      	mov	r0, r4
+    1440:	f000 fb98 	bl	1b74 <android_setCpuArm@@Base+0x300>
+    1444:	e009      	b.n	145a <android_getCpuFamily@@Base+0x362>
+    1446:	f1ba 0f03 	cmp.w	sl, #3
+    144a:	bf0c      	ite	eq
+    144c:	220a      	moveq	r2, #10
+    144e:	2210      	movne	r2, #16
+    1450:	ab06      	add	r3, sp, #24
+    1452:	4628      	mov	r0, r5
+    1454:	f000 fb8e 	bl	1b74 <android_setCpuArm@@Base+0x300>
+    1458:	462c      	mov	r4, r5
+    145a:	42a0      	cmp	r0, r4
+    145c:	d913      	bls.n	1486 <android_getCpuFamily@@Base+0x38e>
+    145e:	48cc      	ldr	r0, [pc, #816]	; (1790 <android_getCpuFamily@@Base+0x698>)
+    1460:	2401      	movs	r4, #1
+    1462:	9a06      	ldr	r2, [sp, #24]
+    1464:	4478      	add	r0, pc
+    1466:	f8d8 3000 	ldr.w	r3, [r8]
+    146a:	eb00 00ca 	add.w	r0, r0, sl, lsl #3
+    146e:	7941      	ldrb	r1, [r0, #5]
+    1470:	7980      	ldrb	r0, [r0, #6]
+    1472:	fa04 f000 	lsl.w	r0, r4, r0
+    1476:	3801      	subs	r0, #1
+    1478:	4010      	ands	r0, r2
+    147a:	4088      	lsls	r0, r1
+    147c:	ea43 0100 	orr.w	r1, r3, r0
+    1480:	f8c8 1000 	str.w	r1, [r8]
+    1484:	9006      	str	r0, [sp, #24]
+    1486:	4628      	mov	r0, r5
+    1488:	f7ff ebb2 	blx	bf0 <free@plt+0x4>
+    148c:	f10a 0a01 	add.w	sl, sl, #1
+    1490:	f1ba 0f04 	cmp.w	sl, #4
+    1494:	d1ba      	bne.n	140c <android_getCpuFamily@@Base+0x314>
+    1496:	48b2      	ldr	r0, [pc, #712]	; (1760 <android_getCpuFamily@@Base+0x668>)
+    1498:	2300      	movs	r3, #0
+    149a:	f8df e2c8 	ldr.w	lr, [pc, #712]	; 1764 <android_getCpuFamily@@Base+0x66c>
+    149e:	4478      	add	r0, pc
+    14a0:	f8df a2c4 	ldr.w	sl, [pc, #708]	; 1768 <android_getCpuFamily@@Base+0x670>
+    14a4:	f8df c2c4 	ldr.w	ip, [pc, #708]	; 176c <android_getCpuFamily@@Base+0x674>
+    14a8:	44fe      	add	lr, pc
+    14aa:	6800      	ldr	r0, [r0, #0]
+    14ac:	44fa      	add	sl, pc
+    14ae:	44fc      	add	ip, pc
+    14b0:	f85e 5003 	ldr.w	r5, [lr, r3]
+    14b4:	42a8      	cmp	r0, r5
+    14b6:	d10a      	bne.n	14ce <android_getCpuFamily@@Base+0x3d6>
+    14b8:	eb0c 0603 	add.w	r6, ip, r3
+    14bc:	e9da 5400 	ldrd	r5, r4, [sl]
+    14c0:	e9d6 6202 	ldrd	r6, r2, [r6, #8]
+    14c4:	4322      	orrs	r2, r4
+    14c6:	ea45 0406 	orr.w	r4, r5, r6
+    14ca:	e9ca 4200 	strd	r4, r2, [sl]
+    14ce:	3310      	adds	r3, #16
+    14d0:	2b20      	cmp	r3, #32
+    14d2:	d1ed      	bne.n	14b0 <android_getCpuFamily@@Base+0x3b8>
+    14d4:	4aa6      	ldr	r2, [pc, #664]	; (1770 <android_getCpuFamily@@Base+0x678>)
+    14d6:	4648      	mov	r0, r9
+    14d8:	4659      	mov	r1, fp
+    14da:	447a      	add	r2, pc
+    14dc:	f000 fa3d 	bl	195a <android_setCpuArm@@Base+0xe6>
+    14e0:	4605      	mov	r5, r0
+    14e2:	b1e5      	cbz	r5, 151e <android_getCpuFamily@@Base+0x426>
+    14e4:	49a3      	ldr	r1, [pc, #652]	; (1774 <android_getCpuFamily@@Base+0x67c>)
+    14e6:	4628      	mov	r0, r5
+    14e8:	4479      	add	r1, pc
+    14ea:	f7ff eb44 	blx	b74 <strcmp@plt>
+    14ee:	b998      	cbnz	r0, 1518 <android_getCpuFamily@@Base+0x420>
+    14f0:	48a1      	ldr	r0, [pc, #644]	; (1778 <android_getCpuFamily@@Base+0x680>)
+    14f2:	f24c 0180 	movw	r1, #49280	; 0xc080
+    14f6:	f2c4 1100 	movt	r1, #16640	; 0x4100
+    14fa:	4478      	add	r0, pc
+    14fc:	6800      	ldr	r0, [r0, #0]
+    14fe:	4288      	cmp	r0, r1
+    1500:	d10a      	bne.n	1518 <android_getCpuFamily@@Base+0x420>
+    1502:	489e      	ldr	r0, [pc, #632]	; (177c <android_getCpuFamily@@Base+0x684>)
+    1504:	4478      	add	r0, pc
+    1506:	7800      	ldrb	r0, [r0, #0]
+    1508:	2801      	cmp	r0, #1
+    150a:	d105      	bne.n	1518 <android_getCpuFamily@@Base+0x420>
+    150c:	489c      	ldr	r0, [pc, #624]	; (1780 <android_getCpuFamily@@Base+0x688>)
+    150e:	4478      	add	r0, pc
+    1510:	6801      	ldr	r1, [r0, #0]
+    1512:	f441 7100 	orr.w	r1, r1, #512	; 0x200
+    1516:	6001      	str	r1, [r0, #0]
+    1518:	4628      	mov	r0, r5
+    151a:	f7ff eb6a 	blx	bf0 <free@plt+0x4>
+    151e:	4899      	ldr	r0, [pc, #612]	; (1784 <android_getCpuFamily@@Base+0x68c>)
+    1520:	9946      	ldr	r1, [sp, #280]	; 0x118
+    1522:	4478      	add	r0, pc
+    1524:	6800      	ldr	r0, [r0, #0]
+    1526:	6800      	ldr	r0, [r0, #0]
+    1528:	1a40      	subs	r0, r0, r1
+    152a:	d107      	bne.n	153c <android_getCpuFamily@@Base+0x444>
+    152c:	4648      	mov	r0, r9
+    152e:	b047      	add	sp, #284	; 0x11c
+    1530:	e8bd 0f00 	ldmia.w	sp!, {r8, r9, sl, fp}
+    1534:	e8bd 40f0 	ldmia.w	sp!, {r4, r5, r6, r7, lr}
+    1538:	f7ff bb58 	b.w	bec <free@plt>
+    153c:	f7ff eafc 	blx	b38 <__stack_chk_fail@plt>
+    1540:	4e6c      	ldr	r6, [pc, #432]	; (16f4 <android_getCpuFamily@@Base+0x5fc>)
+    1542:	447e      	add	r6, pc
+    1544:	4630      	mov	r0, r6
+    1546:	2100      	movs	r1, #0
+    1548:	f7ff ea9c 	blx	a84 <open@plt>
+    154c:	4605      	mov	r5, r0
+    154e:	1c68      	adds	r0, r5, #1
+    1550:	d105      	bne.n	155e <android_getCpuFamily@@Base+0x466>
+    1552:	f7ff ead4 	blx	afc <__errno@plt>
+    1556:	6800      	ldr	r0, [r0, #0]
+    1558:	2804      	cmp	r0, #4
+    155a:	d0f3      	beq.n	1544 <android_getCpuFamily@@Base+0x44c>
+    155c:	e022      	b.n	15a4 <android_getCpuFamily@@Base+0x4ac>
+    155e:	2d00      	cmp	r5, #0
+    1560:	db20      	blt.n	15a4 <android_getCpuFamily@@Base+0x4ac>
+    1562:	ae06      	add	r6, sp, #24
+    1564:	4628      	mov	r0, r5
+    1566:	4631      	mov	r1, r6
+    1568:	2208      	movs	r2, #8
+    156a:	f7ff eaaa 	blx	ac0 <read@plt>
+    156e:	1c41      	adds	r1, r0, #1
+    1570:	d006      	beq.n	1580 <android_getCpuFamily@@Base+0x488>
+    1572:	2801      	cmp	r0, #1
+    1574:	db0d      	blt.n	1592 <android_getCpuFamily@@Base+0x49a>
+    1576:	9806      	ldr	r0, [sp, #24]
+    1578:	b140      	cbz	r0, 158c <android_getCpuFamily@@Base+0x494>
+    157a:	2810      	cmp	r0, #16
+    157c:	d1f2      	bne.n	1564 <android_getCpuFamily@@Base+0x46c>
+    157e:	e00a      	b.n	1596 <android_getCpuFamily@@Base+0x49e>
+    1580:	f7ff eabc 	blx	afc <__errno@plt>
+    1584:	6800      	ldr	r0, [r0, #0]
+    1586:	2804      	cmp	r0, #4
+    1588:	d0ec      	beq.n	1564 <android_getCpuFamily@@Base+0x46c>
+    158a:	e002      	b.n	1592 <android_getCpuFamily@@Base+0x49a>
+    158c:	9807      	ldr	r0, [sp, #28]
+    158e:	2800      	cmp	r0, #0
+    1590:	d1e8      	bne.n	1564 <android_getCpuFamily@@Base+0x46c>
+    1592:	2600      	movs	r6, #0
+    1594:	e000      	b.n	1598 <android_getCpuFamily@@Base+0x4a0>
+    1596:	9e07      	ldr	r6, [sp, #28]
+    1598:	4628      	mov	r0, r5
+    159a:	f7ff eb04 	blx	ba4 <close@plt>
+    159e:	2e00      	cmp	r6, #0
+    15a0:	f47f ae96 	bne.w	12d0 <android_getCpuFamily@@Base+0x1d8>
+    15a4:	4a54      	ldr	r2, [pc, #336]	; (16f8 <android_getCpuFamily@@Base+0x600>)
+    15a6:	4640      	mov	r0, r8
+    15a8:	4651      	mov	r1, sl
+    15aa:	447a      	add	r2, pc
+    15ac:	f000 f9d5 	bl	195a <android_setCpuArm@@Base+0xe6>
+    15b0:	4604      	mov	r4, r0
+    15b2:	b17c      	cbz	r4, 15d4 <android_getCpuFamily@@Base+0x4dc>
+    15b4:	4620      	mov	r0, r4
+    15b6:	2100      	movs	r1, #0
+    15b8:	220a      	movs	r2, #10
+    15ba:	f7ff eb12 	blx	be0 <strtol@plt>
+    15be:	4605      	mov	r5, r0
+    15c0:	4620      	mov	r0, r4
+    15c2:	f7ff eb16 	blx	bf0 <free@plt+0x4>
+    15c6:	2d07      	cmp	r5, #7
+    15c8:	dd04      	ble.n	15d4 <android_getCpuFamily@@Base+0x4dc>
+    15ca:	f243 0640 	movw	r6, #12352	; 0x3040
+    15ce:	f2c0 0607 	movt	r6, #7
+    15d2:	e67d      	b.n	12d0 <android_getCpuFamily@@Base+0x1d8>
+    15d4:	4a49      	ldr	r2, [pc, #292]	; (16fc <android_getCpuFamily@@Base+0x604>)
+    15d6:	4640      	mov	r0, r8
+    15d8:	4651      	mov	r1, sl
+    15da:	447a      	add	r2, pc
+    15dc:	f000 f9bd 	bl	195a <android_setCpuArm@@Base+0xe6>
+    15e0:	4605      	mov	r5, r0
+    15e2:	2d00      	cmp	r5, #0
+    15e4:	f43f aed5 	beq.w	1392 <android_getCpuFamily@@Base+0x29a>
+    15e8:	4945      	ldr	r1, [pc, #276]	; (1700 <android_getCpuFamily@@Base+0x608>)
+    15ea:	4628      	mov	r0, r5
+    15ec:	4479      	add	r1, pc
+    15ee:	f000 fa03 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    15f2:	4944      	ldr	r1, [pc, #272]	; (1704 <android_getCpuFamily@@Base+0x60c>)
+    15f4:	4606      	mov	r6, r0
+    15f6:	4628      	mov	r0, r5
+    15f8:	4479      	add	r1, pc
+    15fa:	f000 f9fd 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    15fe:	4942      	ldr	r1, [pc, #264]	; (1708 <android_getCpuFamily@@Base+0x610>)
+    1600:	9004      	str	r0, [sp, #16]
+    1602:	4628      	mov	r0, r5
+    1604:	4479      	add	r1, pc
+    1606:	f000 f9f7 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    160a:	4940      	ldr	r1, [pc, #256]	; (170c <android_getCpuFamily@@Base+0x614>)
+    160c:	9003      	str	r0, [sp, #12]
+    160e:	4628      	mov	r0, r5
+    1610:	4479      	add	r1, pc
+    1612:	f000 f9f1 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    1616:	493e      	ldr	r1, [pc, #248]	; (1710 <android_getCpuFamily@@Base+0x618>)
+    1618:	9002      	str	r0, [sp, #8]
+    161a:	4628      	mov	r0, r5
+    161c:	4479      	add	r1, pc
+    161e:	f000 f9eb 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    1622:	493c      	ldr	r1, [pc, #240]	; (1714 <android_getCpuFamily@@Base+0x61c>)
+    1624:	9001      	str	r0, [sp, #4]
+    1626:	4628      	mov	r0, r5
+    1628:	4479      	add	r1, pc
+    162a:	f000 f9e5 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    162e:	493a      	ldr	r1, [pc, #232]	; (1718 <android_getCpuFamily@@Base+0x620>)
+    1630:	9000      	str	r0, [sp, #0]
+    1632:	4628      	mov	r0, r5
+    1634:	4479      	add	r1, pc
+    1636:	f000 f9df 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    163a:	4938      	ldr	r1, [pc, #224]	; (171c <android_getCpuFamily@@Base+0x624>)
+    163c:	4683      	mov	fp, r0
+    163e:	4628      	mov	r0, r5
+    1640:	4479      	add	r1, pc
+    1642:	f000 f9d9 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    1646:	4936      	ldr	r1, [pc, #216]	; (1720 <android_getCpuFamily@@Base+0x628>)
+    1648:	4681      	mov	r9, r0
+    164a:	4628      	mov	r0, r5
+    164c:	4479      	add	r1, pc
+    164e:	f000 f9d3 	bl	19f8 <android_setCpuArm@@Base+0x184>
+    1652:	4604      	mov	r4, r0
+    1654:	4628      	mov	r0, r5
+    1656:	f7ff eacc 	blx	bf0 <free@plt+0x4>
+    165a:	2e00      	cmp	r6, #0
+    165c:	bf18      	it	ne
+    165e:	2640      	movne	r6, #64	; 0x40
+    1660:	9804      	ldr	r0, [sp, #16]
+    1662:	2800      	cmp	r0, #0
+    1664:	bf18      	it	ne
+    1666:	f446 5600 	orrne.w	r6, r6, #8192	; 0x2000
+    166a:	9803      	ldr	r0, [sp, #12]
+    166c:	2800      	cmp	r0, #0
+    166e:	bf18      	it	ne
+    1670:	f446 4680 	orrne.w	r6, r6, #16384	; 0x4000
+    1674:	9802      	ldr	r0, [sp, #8]
+    1676:	2800      	cmp	r0, #0
+    1678:	bf18      	it	ne
+    167a:	f446 3680 	orrne.w	r6, r6, #65536	; 0x10000
+    167e:	9801      	ldr	r0, [sp, #4]
+    1680:	2800      	cmp	r0, #0
+    1682:	bf18      	it	ne
+    1684:	f446 5680 	orrne.w	r6, r6, #4096	; 0x1000
+    1688:	9800      	ldr	r0, [sp, #0]
+    168a:	2800      	cmp	r0, #0
+    168c:	bf18      	it	ne
+    168e:	f446 3600 	orrne.w	r6, r6, #131072	; 0x20000
+    1692:	f1bb 0f00 	cmp.w	fp, #0
+    1696:	bf18      	it	ne
+    1698:	f446 2680 	orrne.w	r6, r6, #262144	; 0x40000
+    169c:	f1b9 0f00 	cmp.w	r9, #0
+    16a0:	bf18      	it	ne
+    16a2:	f446 26c0 	orrne.w	r6, r6, #393216	; 0x60000
+    16a6:	b114      	cbz	r4, 16ae <android_getCpuFamily@@Base+0x5b6>
+    16a8:	f446 7600 	orr.w	r6, r6, #512	; 0x200
+    16ac:	e610      	b.n	12d0 <android_getCpuFamily@@Base+0x1d8>
+    16ae:	2e00      	cmp	r6, #0
+    16b0:	f47f ae0e 	bne.w	12d0 <android_getCpuFamily@@Base+0x1d8>
+    16b4:	e66d      	b.n	1392 <android_getCpuFamily@@Base+0x29a>
+    16b6:	bf00      	nop
+    16b8:	2ec4      	cmp	r6, #196	; 0xc4
+    16ba:	0001      	movs	r1, r0
+    16bc:	5712      	ldrsb	r2, [r2, r4]
+    16be:	0001      	movs	r1, r0
+    16c0:	5708      	ldrsb	r0, [r1, r4]
+    16c2:	0001      	movs	r1, r0
+    16c4:	5710      	ldrsb	r0, [r2, r4]
+    16c6:	0001      	movs	r1, r0
+    16c8:	570e      	ldrsb	r6, [r1, r4]
+    16ca:	0001      	movs	r1, r0
+    16cc:	2062      	movs	r0, #98	; 0x62
+    16ce:	0000      	movs	r0, r0
+    16d0:	2002      	movs	r0, #2
+    16d2:	0000      	movs	r0, r0
+    16d4:	2061      	movs	r0, #97	; 0x61
+    16d6:	0000      	movs	r0, r0
+    16d8:	2075      	movs	r0, #117	; 0x75
+    16da:	0000      	movs	r0, r0
+    16dc:	5640      	ldrsb	r0, [r0, r1]
+    16de:	0001      	movs	r1, r0
+    16e0:	1fdc      	subs	r4, r3, #7
+    16e2:	0000      	movs	r0, r0
+    16e4:	1f8b      	subs	r3, r1, #6
+    16e6:	0000      	movs	r0, r0
+    16e8:	1f85      	subs	r5, r0, #6
+    16ea:	0000      	movs	r0, r0
+    16ec:	55de      	strb	r6, [r3, r7]
+    16ee:	0001      	movs	r1, r0
+    16f0:	559a      	strb	r2, [r3, r6]
+    16f2:	0001      	movs	r1, r0
+    16f4:	1d9a      	adds	r2, r3, #6
+    16f6:	0000      	movs	r0, r0
+    16f8:	1c1a      	adds	r2, r3, #0
+    16fa:	0000      	movs	r0, r0
+    16fc:	1ca2      	adds	r2, r4, #2
+    16fe:	0000      	movs	r0, r0
+    1700:	1c99      	adds	r1, r3, #2
+    1702:	0000      	movs	r0, r0
+    1704:	1c91      	adds	r1, r2, #2
+    1706:	0000      	movs	r0, r0
+    1708:	1c8b      	adds	r3, r1, #2
+    170a:	0000      	movs	r0, r0
+    170c:	1c88      	adds	r0, r1, #2
+    170e:	0000      	movs	r0, r0
+    1710:	1c82      	adds	r2, r0, #2
+    1712:	0000      	movs	r0, r0
+    1714:	1c7b      	adds	r3, r7, #1
+    1716:	0000      	movs	r0, r0
+    1718:	1c75      	adds	r5, r6, #1
+    171a:	0000      	movs	r0, r0
+    171c:	1c6f      	adds	r7, r5, #1
+    171e:	0000      	movs	r0, r0
+    1720:	1c68      	adds	r0, r5, #1
+    1722:	0000      	movs	r0, r0
+    1724:	5572      	strb	r2, [r6, r5]
+    1726:	0001      	movs	r1, r0
+    1728:	555a      	strb	r2, [r3, r5]
+    172a:	0001      	movs	r1, r0
+    172c:	5544      	strb	r4, [r0, r5]
+    172e:	0001      	movs	r1, r0
+    1730:	552e      	strb	r6, [r5, r4]
+    1732:	0001      	movs	r1, r0
+    1734:	5518      	strb	r0, [r3, r4]
+    1736:	0001      	movs	r1, r0
+    1738:	5508      	strb	r0, [r1, r4]
+    173a:	0001      	movs	r1, r0
+    173c:	54d0      	strb	r0, [r2, r3]
+    173e:	0001      	movs	r1, r0
+    1740:	54c0      	strb	r0, [r0, r3]
+    1742:	0001      	movs	r1, r0
+    1744:	54a4      	strb	r4, [r4, r2]
+    1746:	0001      	movs	r1, r0
+    1748:	5490      	strb	r0, [r2, r2]
+    174a:	0001      	movs	r1, r0
+    174c:	547c      	strb	r4, [r7, r1]
+    174e:	0001      	movs	r1, r0
+    1750:	546a      	strb	r2, [r5, r1]
+    1752:	0001      	movs	r1, r0
+    1754:	545c      	strb	r4, [r3, r1]
+    1756:	0001      	movs	r1, r0
+    1758:	2a30      	cmp	r2, #48	; 0x30
+    175a:	0001      	movs	r1, r0
+    175c:	5452      	strb	r2, [r2, r1]
+    175e:	0001      	movs	r1, r0
+    1760:	53be      	strh	r6, [r7, r6]
+    1762:	0001      	movs	r1, r0
+    1764:	1e14      	subs	r4, r2, #0
+    1766:	0000      	movs	r0, r0
+    1768:	53a0      	strh	r0, [r4, r6]
+    176a:	0001      	movs	r1, r0
+    176c:	1e0e      	subs	r6, r1, #0
+    176e:	0000      	movs	r0, r0
+    1770:	1d3d      	adds	r5, r7, #4
+    1772:	0000      	movs	r0, r0
+    1774:	1d38      	adds	r0, r7, #4
+    1776:	0000      	movs	r0, r0
+    1778:	5362      	strh	r2, [r4, r5]
+    177a:	0001      	movs	r1, r0
+    177c:	5344      	strh	r4, [r0, r5]
+    177e:	0001      	movs	r1, r0
+    1780:	533e      	strh	r6, [r7, r4]
+    1782:	0001      	movs	r1, r0
+    1784:	2ad2      	cmp	r2, #210	; 0xd2
+    1786:	0001      	movs	r1, r0
+    1788:	2d5a      	cmp	r5, #90	; 0x5a
+    178a:	0001      	movs	r1, r0
+    178c:	2d74      	cmp	r5, #116	; 0x74
+    178e:	0001      	movs	r1, r0
+    1790:	29d0      	cmp	r1, #208	; 0xd0
+    1792:	0001      	movs	r1, r0
+
+00001794 <android_getCpuFeatures@@Base>:
+    1794:	b580      	push	{r7, lr}
+    1796:	466f      	mov	r7, sp
+    1798:	4805      	ldr	r0, [pc, #20]	; (17b0 <android_getCpuFeatures@@Base+0x1c>)
+    179a:	4906      	ldr	r1, [pc, #24]	; (17b4 <android_getCpuFeatures@@Base+0x20>)
+    179c:	4478      	add	r0, pc
+    179e:	4479      	add	r1, pc
+    17a0:	f7ff e982 	blx	aa8 <pthread_once@plt>
+    17a4:	4804      	ldr	r0, [pc, #16]	; (17b8 <android_getCpuFeatures@@Base+0x24>)
+    17a6:	4478      	add	r0, pc
+    17a8:	e9d0 0100 	ldrd	r0, r1, [r0]
+    17ac:	bd80      	pop	{r7, pc}
+    17ae:	bf00      	nop
+    17b0:	50a8      	str	r0, [r5, r2]
+    17b2:	0001      	movs	r1, r0
+    17b4:	f97b ffff 	ldr??.w	pc, [fp, #255]!
+    17b8:	50a6      	str	r6, [r4, r2]
+    17ba:	0001      	movs	r1, r0
+
+000017bc <android_getCpuCount@@Base>:
+    17bc:	b580      	push	{r7, lr}
+    17be:	466f      	mov	r7, sp
+    17c0:	4804      	ldr	r0, [pc, #16]	; (17d4 <android_getCpuCount@@Base+0x18>)
+    17c2:	4905      	ldr	r1, [pc, #20]	; (17d8 <android_getCpuCount@@Base+0x1c>)
+    17c4:	4478      	add	r0, pc
+    17c6:	4479      	add	r1, pc
+    17c8:	f7ff e96e 	blx	aa8 <pthread_once@plt>
+    17cc:	4803      	ldr	r0, [pc, #12]	; (17dc <android_getCpuCount@@Base+0x20>)
+    17ce:	4478      	add	r0, pc
+    17d0:	6800      	ldr	r0, [r0, #0]
+    17d2:	bd80      	pop	{r7, pc}
+    17d4:	5080      	str	r0, [r0, r2]
+    17d6:	0001      	movs	r1, r0
+    17d8:	f953 ffff 	ldr??.w	pc, [r3, #255]!
+    17dc:	5086      	str	r6, [r0, r2]
+    17de:	0001      	movs	r1, r0
+
+000017e0 <android_setCpu@@Base>:
+    17e0:	b5b0      	push	{r4, r5, r7, lr}
+    17e2:	af02      	add	r7, sp, #8
+    17e4:	4910      	ldr	r1, [pc, #64]	; (1828 <android_setCpu@@Base+0x48>)
+    17e6:	4479      	add	r1, pc
+    17e8:	7809      	ldrb	r1, [r1, #0]
+    17ea:	b109      	cbz	r1, 17f0 <android_setCpu@@Base+0x10>
+    17ec:	2400      	movs	r4, #0
+    17ee:	e018      	b.n	1822 <android_setCpu@@Base+0x42>
+    17f0:	4c0e      	ldr	r4, [pc, #56]	; (182c <android_setCpu@@Base+0x4c>)
+    17f2:	2801      	cmp	r0, #1
+    17f4:	f8df c03c 	ldr.w	ip, [pc, #60]	; 1834 <android_setCpu@@Base+0x54>
+    17f8:	4d10      	ldr	r5, [pc, #64]	; (183c <android_setCpu@@Base+0x5c>)
+    17fa:	447c      	add	r4, pc
+    17fc:	f8df e030 	ldr.w	lr, [pc, #48]	; 1830 <android_setCpu@@Base+0x50>
+    1800:	44fc      	add	ip, pc
+    1802:	490d      	ldr	r1, [pc, #52]	; (1838 <android_setCpu@@Base+0x58>)
+    1804:	447d      	add	r5, pc
+    1806:	e9c4 2300 	strd	r2, r3, [r4]
+    180a:	f04f 0401 	mov.w	r4, #1
+    180e:	bfd8      	it	le
+    1810:	4620      	movle	r0, r4
+    1812:	44fe      	add	lr, pc
+    1814:	4479      	add	r1, pc
+    1816:	6028      	str	r0, [r5, #0]
+    1818:	4660      	mov	r0, ip
+    181a:	f88e 4000 	strb.w	r4, [lr]
+    181e:	f7ff e944 	blx	aa8 <pthread_once@plt>
+    1822:	4620      	mov	r0, r4
+    1824:	bdb0      	pop	{r4, r5, r7, pc}
+    1826:	bf00      	nop
+    1828:	5072      	str	r2, [r6, r1]
+    182a:	0001      	movs	r1, r0
+    182c:	5052      	str	r2, [r2, r1]
+    182e:	0001      	movs	r1, r0
+    1830:	5036      	str	r6, [r6, r0]
+    1832:	0001      	movs	r1, r0
+    1834:	5044      	str	r4, [r0, r1]
+    1836:	0001      	movs	r1, r0
+    1838:	0029      	movs	r1, r5
+    183a:	0000      	movs	r0, r0
+    183c:	5050      	str	r0, [r2, r1]
+    183e:	0001      	movs	r1, r0
+    1840:	4802      	ldr	r0, [pc, #8]	; (184c <android_setCpu@@Base+0x6c>)
+    1842:	2101      	movs	r1, #1
+    1844:	4478      	add	r0, pc
+    1846:	7001      	strb	r1, [r0, #0]
+    1848:	4770      	bx	lr
+    184a:	bf00      	nop
+    184c:	5014      	str	r4, [r2, r0]
+    184e:	0001      	movs	r1, r0
+
+00001850 <android_getCpuIdArm@@Base>:
+    1850:	b580      	push	{r7, lr}
+    1852:	466f      	mov	r7, sp
+    1854:	4804      	ldr	r0, [pc, #16]	; (1868 <android_getCpuIdArm@@Base+0x18>)
+    1856:	4905      	ldr	r1, [pc, #20]	; (186c <android_getCpuIdArm@@Base+0x1c>)
+    1858:	4478      	add	r0, pc
+    185a:	4479      	add	r1, pc
+    185c:	f7ff e924 	blx	aa8 <pthread_once@plt>
+    1860:	4803      	ldr	r0, [pc, #12]	; (1870 <android_getCpuIdArm@@Base+0x20>)
+    1862:	4478      	add	r0, pc
+    1864:	6800      	ldr	r0, [r0, #0]
+    1866:	bd80      	pop	{r7, pc}
+    1868:	4fec      	ldr	r7, [pc, #944]	; (1c1c <android_setCpuArm@@Base+0x3a8>)
+    186a:	0001      	movs	r1, r0
+    186c:	f8bf ffff 	pldw	[pc, #4095]	; 286f <android_setCpuArm@@Base+0xffb>
+    1870:	4ffa      	ldr	r7, [pc, #1000]	; (1c5c <android_setCpuArm@@Base+0x3e8>)
+    1872:	0001      	movs	r1, r0
+
+00001874 <android_setCpuArm@@Base>:
+    1874:	b5f0      	push	{r4, r5, r6, r7, lr}
+    1876:	af03      	add	r7, sp, #12
+    1878:	f84d 8d04 	str.w	r8, [sp, #-4]!
+    187c:	4913      	ldr	r1, [pc, #76]	; (18cc <android_setCpuArm@@Base+0x58>)
+    187e:	4479      	add	r1, pc
+    1880:	7809      	ldrb	r1, [r1, #0]
+    1882:	b109      	cbz	r1, 1888 <android_setCpuArm@@Base+0x14>
+    1884:	2400      	movs	r4, #0
+    1886:	e01c      	b.n	18c2 <android_setCpuArm@@Base+0x4e>
+    1888:	4c11      	ldr	r4, [pc, #68]	; (18d0 <android_setCpuArm@@Base+0x5c>)
+    188a:	2801      	cmp	r0, #1
+    188c:	f8df c048 	ldr.w	ip, [pc, #72]	; 18d8 <android_setCpuArm@@Base+0x64>
+    1890:	4e13      	ldr	r6, [pc, #76]	; (18e0 <android_setCpuArm@@Base+0x6c>)
+    1892:	447c      	add	r4, pc
+    1894:	4d0f      	ldr	r5, [pc, #60]	; (18d4 <android_setCpuArm@@Base+0x60>)
+    1896:	44fc      	add	ip, pc
+    1898:	4910      	ldr	r1, [pc, #64]	; (18dc <android_setCpuArm@@Base+0x68>)
+    189a:	447e      	add	r6, pc
+    189c:	e9c4 2300 	strd	r2, r3, [r4]
+    18a0:	f04f 0401 	mov.w	r4, #1
+    18a4:	bfd8      	it	le
+    18a6:	4620      	movle	r0, r4
+    18a8:	447d      	add	r5, pc
+    18aa:	4479      	add	r1, pc
+    18ac:	6030      	str	r0, [r6, #0]
+    18ae:	4660      	mov	r0, ip
+    18b0:	f8d7 8008 	ldr.w	r8, [r7, #8]
+    18b4:	702c      	strb	r4, [r5, #0]
+    18b6:	f7ff e8f8 	blx	aa8 <pthread_once@plt>
+    18ba:	480a      	ldr	r0, [pc, #40]	; (18e4 <android_setCpuArm@@Base+0x70>)
+    18bc:	4478      	add	r0, pc
+    18be:	f8c0 8000 	str.w	r8, [r0]
+    18c2:	4620      	mov	r0, r4
+    18c4:	f85d 8b04 	ldr.w	r8, [sp], #4
+    18c8:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    18ca:	bf00      	nop
+    18cc:	4fda      	ldr	r7, [pc, #872]	; (1c38 <android_setCpuArm@@Base+0x3c4>)
+    18ce:	0001      	movs	r1, r0
+    18d0:	4fba      	ldr	r7, [pc, #744]	; (1bbc <android_setCpuArm@@Base+0x348>)
+    18d2:	0001      	movs	r1, r0
+    18d4:	4fa0      	ldr	r7, [pc, #640]	; (1b58 <android_setCpuArm@@Base+0x2e4>)
+    18d6:	0001      	movs	r1, r0
+    18d8:	4fae      	ldr	r7, [pc, #696]	; (1b94 <android_setCpuArm@@Base+0x320>)
+    18da:	0001      	movs	r1, r0
+    18dc:	ff93 ffff 			; <UNDEFINED> instruction: 0xff93ffff
+    18e0:	4fba      	ldr	r7, [pc, #744]	; (1bcc <android_setCpuArm@@Base+0x358>)
+    18e2:	0001      	movs	r1, r0
+    18e4:	4fa0      	ldr	r7, [pc, #640]	; (1b68 <android_setCpuArm@@Base+0x2f4>)
+    18e6:	0001      	movs	r1, r0
+    18e8:	b5f0      	push	{r4, r5, r6, r7, lr}
+    18ea:	af03      	add	r7, sp, #12
+    18ec:	f84d 8d04 	str.w	r8, [sp, #-4]!
+    18f0:	4688      	mov	r8, r1
+    18f2:	2100      	movs	r1, #0
+    18f4:	4616      	mov	r6, r2
+    18f6:	f7ff e8c6 	blx	a84 <open@plt>
+    18fa:	4605      	mov	r5, r0
+    18fc:	2d00      	cmp	r5, #0
+    18fe:	db1e      	blt.n	193e <android_setCpuArm@@Base+0xca>
+    1900:	2400      	movs	r4, #0
+    1902:	2e01      	cmp	r6, #1
+    1904:	db22      	blt.n	194c <android_setCpuArm@@Base+0xd8>
+    1906:	eb08 0104 	add.w	r1, r8, r4
+    190a:	1b32      	subs	r2, r6, r4
+    190c:	4628      	mov	r0, r5
+    190e:	f7ff e8d8 	blx	ac0 <read@plt>
+    1912:	f1b0 3fff 	cmp.w	r0, #4294967295
+    1916:	dd05      	ble.n	1924 <android_setCpuArm@@Base+0xb0>
+    1918:	2100      	movs	r1, #0
+    191a:	4404      	add	r4, r0
+    191c:	2800      	cmp	r0, #0
+    191e:	bf08      	it	eq
+    1920:	2105      	moveq	r1, #5
+    1922:	e005      	b.n	1930 <android_setCpuArm@@Base+0xbc>
+    1924:	f7ff e8ea 	blx	afc <__errno@plt>
+    1928:	6800      	ldr	r0, [r0, #0]
+    192a:	2804      	cmp	r0, #4
+    192c:	d10a      	bne.n	1944 <android_setCpuArm@@Base+0xd0>
+    192e:	2104      	movs	r1, #4
+    1930:	f001 0007 	and.w	r0, r1, #7
+    1934:	2805      	cmp	r0, #5
+    1936:	d009      	beq.n	194c <android_setCpuArm@@Base+0xd8>
+    1938:	42b4      	cmp	r4, r6
+    193a:	dbe4      	blt.n	1906 <android_setCpuArm@@Base+0x92>
+    193c:	e006      	b.n	194c <android_setCpuArm@@Base+0xd8>
+    193e:	f04f 34ff 	mov.w	r4, #4294967295
+    1942:	e006      	b.n	1952 <android_setCpuArm@@Base+0xde>
+    1944:	2c00      	cmp	r4, #0
+    1946:	bf08      	it	eq
+    1948:	f04f 34ff 	moveq.w	r4, #4294967295
+    194c:	4628      	mov	r0, r5
+    194e:	f7ff e92a 	blx	ba4 <close@plt>
+    1952:	4620      	mov	r0, r4
+    1954:	f85d 8b04 	ldr.w	r8, [sp], #4
+    1958:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    195a:	b5f0      	push	{r4, r5, r6, r7, lr}
+    195c:	af03      	add	r7, sp, #12
+    195e:	f84d 8d04 	str.w	r8, [sp, #-4]!
+    1962:	4616      	mov	r6, r2
+    1964:	4604      	mov	r4, r0
+    1966:	4630      	mov	r0, r6
+    1968:	4688      	mov	r8, r1
+    196a:	f7ff e916 	blx	b98 <strlen@plt>
+    196e:	4605      	mov	r5, r0
+    1970:	4620      	mov	r0, r4
+    1972:	4641      	mov	r1, r8
+    1974:	4632      	mov	r2, r6
+    1976:	462b      	mov	r3, r5
+    1978:	f7ff e890 	blx	a9c <memmem@plt>
+    197c:	b3b8      	cbz	r0, 19ee <android_setCpuArm@@Base+0x17a>
+    197e:	44a0      	add	r8, r4
+    1980:	42a0      	cmp	r0, r4
+    1982:	d00e      	beq.n	19a2 <android_setCpuArm@@Base+0x12e>
+    1984:	f810 1c01 	ldrb.w	r1, [r0, #-1]
+    1988:	290a      	cmp	r1, #10
+    198a:	d009      	beq.n	19a0 <android_setCpuArm@@Base+0x12c>
+    198c:	4428      	add	r0, r5
+    198e:	4632      	mov	r2, r6
+    1990:	eba8 0100 	sub.w	r1, r8, r0
+    1994:	462b      	mov	r3, r5
+    1996:	f7ff e882 	blx	a9c <memmem@plt>
+    199a:	2800      	cmp	r0, #0
+    199c:	d1f0      	bne.n	1980 <android_setCpuArm@@Base+0x10c>
+    199e:	e026      	b.n	19ee <android_setCpuArm@@Base+0x17a>
+    19a0:	4604      	mov	r4, r0
+    19a2:	1960      	adds	r0, r4, r5
+    19a4:	213a      	movs	r1, #58	; 0x3a
+    19a6:	eba8 0200 	sub.w	r2, r8, r0
+    19aa:	f7ff e8d2 	blx	b50 <memchr@plt>
+    19ae:	b1f0      	cbz	r0, 19ee <android_setCpuArm@@Base+0x17a>
+    19b0:	7841      	ldrb	r1, [r0, #1]
+    19b2:	2920      	cmp	r1, #32
+    19b4:	d11b      	bne.n	19ee <android_setCpuArm@@Base+0x17a>
+    19b6:	1c85      	adds	r5, r0, #2
+    19b8:	210a      	movs	r1, #10
+    19ba:	eba8 0205 	sub.w	r2, r8, r5
+    19be:	4628      	mov	r0, r5
+    19c0:	f7ff e8c6 	blx	b50 <memchr@plt>
+    19c4:	2800      	cmp	r0, #0
+    19c6:	bf08      	it	eq
+    19c8:	4640      	moveq	r0, r8
+    19ca:	eba0 0805 	sub.w	r8, r0, r5
+    19ce:	f108 0001 	add.w	r0, r8, #1
+    19d2:	f7ff e8fa 	blx	bc8 <malloc@plt>
+    19d6:	4606      	mov	r6, r0
+    19d8:	2400      	movs	r4, #0
+    19da:	b14e      	cbz	r6, 19f0 <android_setCpuArm@@Base+0x17c>
+    19dc:	4630      	mov	r0, r6
+    19de:	4629      	mov	r1, r5
+    19e0:	4642      	mov	r2, r8
+    19e2:	f7ff e880 	blx	ae4 <__aeabi_memcpy@plt>
+    19e6:	f806 4008 	strb.w	r4, [r6, r8]
+    19ea:	4634      	mov	r4, r6
+    19ec:	e000      	b.n	19f0 <android_setCpuArm@@Base+0x17c>
+    19ee:	2400      	movs	r4, #0
+    19f0:	4620      	mov	r0, r4
+    19f2:	f85d 8b04 	ldr.w	r8, [sp], #4
+    19f6:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    19f8:	b5f0      	push	{r4, r5, r6, r7, lr}
+    19fa:	af03      	add	r7, sp, #12
+    19fc:	e92d 0b00 	stmdb	sp!, {r8, r9, fp}
+    1a00:	4688      	mov	r8, r1
+    1a02:	4605      	mov	r5, r0
+    1a04:	4640      	mov	r0, r8
+    1a06:	f7ff e8c8 	blx	b98 <strlen@plt>
+    1a0a:	4681      	mov	r9, r0
+    1a0c:	b1f5      	cbz	r5, 1a4c <android_setCpuArm@@Base+0x1d8>
+    1a0e:	782c      	ldrb	r4, [r5, #0]
+    1a10:	b1e4      	cbz	r4, 1a4c <android_setCpuArm@@Base+0x1d8>
+    1a12:	b2e0      	uxtb	r0, r4
+    1a14:	2809      	cmp	r0, #9
+    1a16:	d002      	beq.n	1a1e <android_setCpuArm@@Base+0x1aa>
+    1a18:	2820      	cmp	r0, #32
+    1a1a:	462e      	mov	r6, r5
+    1a1c:	d104      	bne.n	1a28 <android_setCpuArm@@Base+0x1b4>
+    1a1e:	f815 4f01 	ldrb.w	r4, [r5, #1]!
+    1a22:	e7f6      	b.n	1a12 <android_setCpuArm@@Base+0x19e>
+    1a24:	f816 4f01 	ldrb.w	r4, [r6, #1]!
+    1a28:	b2e0      	uxtb	r0, r4
+    1a2a:	b118      	cbz	r0, 1a34 <android_setCpuArm@@Base+0x1c0>
+    1a2c:	2809      	cmp	r0, #9
+    1a2e:	bf18      	it	ne
+    1a30:	2820      	cmpne	r0, #32
+    1a32:	d1f7      	bne.n	1a24 <android_setCpuArm@@Base+0x1b0>
+    1a34:	1b70      	subs	r0, r6, r5
+    1a36:	4581      	cmp	r9, r0
+    1a38:	d105      	bne.n	1a46 <android_setCpuArm@@Base+0x1d2>
+    1a3a:	4628      	mov	r0, r5
+    1a3c:	4641      	mov	r1, r8
+    1a3e:	464a      	mov	r2, r9
+    1a40:	f7ff e874 	blx	b2c <memcmp@plt>
+    1a44:	b130      	cbz	r0, 1a54 <android_setCpuArm@@Base+0x1e0>
+    1a46:	0620      	lsls	r0, r4, #24
+    1a48:	4635      	mov	r5, r6
+    1a4a:	d1e2      	bne.n	1a12 <android_setCpuArm@@Base+0x19e>
+    1a4c:	2000      	movs	r0, #0
+    1a4e:	e8bd 0b00 	ldmia.w	sp!, {r8, r9, fp}
+    1a52:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    1a54:	2001      	movs	r0, #1
+    1a56:	e7fa      	b.n	1a4e <android_setCpuArm@@Base+0x1da>
+    1a58:	b5f0      	push	{r4, r5, r6, r7, lr}
+    1a5a:	af03      	add	r7, sp, #12
+    1a5c:	f84d bd04 	str.w	fp, [sp, #-4]!
+    1a60:	4605      	mov	r5, r0
+    1a62:	f7ff e882 	blx	b68 <dlerror@plt>
+    1a66:	480d      	ldr	r0, [pc, #52]	; (1a9c <android_setCpuArm@@Base+0x228>)
+    1a68:	2100      	movs	r1, #0
+    1a6a:	2600      	movs	r6, #0
+    1a6c:	4478      	add	r0, pc
+    1a6e:	f7ff e8a0 	blx	bb0 <dlopen@plt>
+    1a72:	4604      	mov	r4, r0
+    1a74:	b174      	cbz	r4, 1a94 <android_setCpuArm@@Base+0x220>
+    1a76:	490a      	ldr	r1, [pc, #40]	; (1aa0 <android_setCpuArm@@Base+0x22c>)
+    1a78:	4620      	mov	r0, r4
+    1a7a:	4479      	add	r1, pc
+    1a7c:	f7ff e86e 	blx	b5c <dlsym@plt>
+    1a80:	4601      	mov	r1, r0
+    1a82:	b119      	cbz	r1, 1a8c <android_setCpuArm@@Base+0x218>
+    1a84:	4628      	mov	r0, r5
+    1a86:	4788      	blx	r1
+    1a88:	4606      	mov	r6, r0
+    1a8a:	e000      	b.n	1a8e <android_setCpuArm@@Base+0x21a>
+    1a8c:	2600      	movs	r6, #0
+    1a8e:	4620      	mov	r0, r4
+    1a90:	f7ff e858 	blx	b44 <dlclose@plt>
+    1a94:	4630      	mov	r0, r6
+    1a96:	f85d bb04 	ldr.w	fp, [sp], #4
+    1a9a:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    1a9c:	17fe      	asrs	r6, r7, #31
+    1a9e:	0000      	movs	r0, r0
+    1aa0:	17f8      	asrs	r0, r7, #31
+    1aa2:	0000      	movs	r0, r0
+    1aa4:	b5f0      	push	{r4, r5, r6, r7, lr}
+    1aa6:	af03      	add	r7, sp, #12
+    1aa8:	e92d 0f00 	stmdb	sp!, {r8, r9, sl, fp}
+    1aac:	b093      	sub	sp, #76	; 0x4c
+    1aae:	4604      	mov	r4, r0
+    1ab0:	482e      	ldr	r0, [pc, #184]	; (1b6c <android_setCpuArm@@Base+0x2f8>)
+    1ab2:	ad02      	add	r5, sp, #8
+    1ab4:	2240      	movs	r2, #64	; 0x40
+    1ab6:	4478      	add	r0, pc
+    1ab8:	6800      	ldr	r0, [r0, #0]
+    1aba:	6800      	ldr	r0, [r0, #0]
+    1abc:	9012      	str	r0, [sp, #72]	; 0x48
+    1abe:	2000      	movs	r0, #0
+    1ac0:	6020      	str	r0, [r4, #0]
+    1ac2:	4608      	mov	r0, r1
+    1ac4:	4629      	mov	r1, r5
+    1ac6:	f7ff ff0f 	bl	18e8 <android_setCpuArm@@Base+0x74>
+    1aca:	2800      	cmp	r0, #0
+    1acc:	db40      	blt.n	1b50 <android_setCpuArm@@Base+0x2dc>
+    1ace:	d03f      	beq.n	1b50 <android_setCpuArm@@Base+0x2dc>
+    1ad0:	eb05 0a00 	add.w	sl, r5, r0
+    1ad4:	ad02      	add	r5, sp, #8
+    1ad6:	f10d 0904 	add.w	r9, sp, #4
+    1ada:	46e8      	mov	r8, sp
+    1adc:	f04f 0b01 	mov.w	fp, #1
+    1ae0:	7828      	ldrb	r0, [r5, #0]
+    1ae2:	280a      	cmp	r0, #10
+    1ae4:	d034      	beq.n	1b50 <android_setCpuArm@@Base+0x2dc>
+    1ae6:	ebaa 0205 	sub.w	r2, sl, r5
+    1aea:	4628      	mov	r0, r5
+    1aec:	212c      	movs	r1, #44	; 0x2c
+    1aee:	f7ff e830 	blx	b50 <memchr@plt>
+    1af2:	4606      	mov	r6, r0
+    1af4:	2e00      	cmp	r6, #0
+    1af6:	bf08      	it	eq
+    1af8:	4656      	moveq	r6, sl
+    1afa:	4628      	mov	r0, r5
+    1afc:	4631      	mov	r1, r6
+    1afe:	220a      	movs	r2, #10
+    1b00:	464b      	mov	r3, r9
+    1b02:	f000 f837 	bl	1b74 <android_setCpuArm@@Base+0x300>
+    1b06:	b318      	cbz	r0, 1b50 <android_setCpuArm@@Base+0x2dc>
+    1b08:	9d01      	ldr	r5, [sp, #4]
+    1b0a:	42b0      	cmp	r0, r6
+    1b0c:	9500      	str	r5, [sp, #0]
+    1b0e:	4629      	mov	r1, r5
+    1b10:	d20b      	bcs.n	1b2a <android_setCpuArm@@Base+0x2b6>
+    1b12:	7801      	ldrb	r1, [r0, #0]
+    1b14:	292d      	cmp	r1, #45	; 0x2d
+    1b16:	4629      	mov	r1, r5
+    1b18:	d107      	bne.n	1b2a <android_setCpuArm@@Base+0x2b6>
+    1b1a:	3001      	adds	r0, #1
+    1b1c:	4631      	mov	r1, r6
+    1b1e:	220a      	movs	r2, #10
+    1b20:	4643      	mov	r3, r8
+    1b22:	f000 f827 	bl	1b74 <android_setCpuArm@@Base+0x300>
+    1b26:	b198      	cbz	r0, 1b50 <android_setCpuArm@@Base+0x2dc>
+    1b28:	9900      	ldr	r1, [sp, #0]
+    1b2a:	428d      	cmp	r5, r1
+    1b2c:	dc0a      	bgt.n	1b44 <android_setCpuArm@@Base+0x2d0>
+    1b2e:	2d1f      	cmp	r5, #31
+    1b30:	bf9f      	itttt	ls
+    1b32:	6820      	ldrls	r0, [r4, #0]
+    1b34:	fa0b f205 	lslls.w	r2, fp, r5
+    1b38:	4310      	orrls	r0, r2
+    1b3a:	6020      	strls	r0, [r4, #0]
+    1b3c:	1c68      	adds	r0, r5, #1
+    1b3e:	428d      	cmp	r5, r1
+    1b40:	4605      	mov	r5, r0
+    1b42:	dbf4      	blt.n	1b2e <android_setCpuArm@@Base+0x2ba>
+    1b44:	4556      	cmp	r6, sl
+    1b46:	bf38      	it	cc
+    1b48:	3601      	addcc	r6, #1
+    1b4a:	4556      	cmp	r6, sl
+    1b4c:	4635      	mov	r5, r6
+    1b4e:	d3c7      	bcc.n	1ae0 <android_setCpuArm@@Base+0x26c>
+    1b50:	4807      	ldr	r0, [pc, #28]	; (1b70 <android_setCpuArm@@Base+0x2fc>)
+    1b52:	9912      	ldr	r1, [sp, #72]	; 0x48
+    1b54:	4478      	add	r0, pc
+    1b56:	6800      	ldr	r0, [r0, #0]
+    1b58:	6800      	ldr	r0, [r0, #0]
+    1b5a:	1a40      	subs	r0, r0, r1
+    1b5c:	bf02      	ittt	eq
+    1b5e:	b013      	addeq	sp, #76	; 0x4c
+    1b60:	e8bd 0f00 	ldmiaeq.w	sp!, {r8, r9, sl, fp}
+    1b64:	bdf0      	popeq	{r4, r5, r6, r7, pc}
+    1b66:	f7fe efe8 	blx	b38 <__stack_chk_fail@plt>
+    1b6a:	bf00      	nop
+    1b6c:	253e      	movs	r5, #62	; 0x3e
+    1b6e:	0001      	movs	r1, r0
+    1b70:	24a0      	movs	r4, #160	; 0xa0
+    1b72:	0001      	movs	r1, r0
+    1b74:	b5b0      	push	{r4, r5, r7, lr}
+    1b76:	af02      	add	r7, sp, #8
+    1b78:	4684      	mov	ip, r0
+    1b7a:	458c      	cmp	ip, r1
+    1b7c:	d21c      	bcs.n	1bb8 <android_setCpuArm@@Base+0x344>
+    1b7e:	f04f 0e00 	mov.w	lr, #0
+    1b82:	4660      	mov	r0, ip
+    1b84:	7805      	ldrb	r5, [r0, #0]
+    1b86:	f1a5 0430 	sub.w	r4, r5, #48	; 0x30
+    1b8a:	2c0a      	cmp	r4, #10
+    1b8c:	d308      	bcc.n	1ba0 <android_setCpuArm@@Base+0x32c>
+    1b8e:	f1a5 0461 	sub.w	r4, r5, #97	; 0x61
+    1b92:	2c05      	cmp	r4, #5
+    1b94:	bf88      	it	hi
+    1b96:	f1a5 0441 	subhi.w	r4, r5, #65	; 0x41
+    1b9a:	2c05      	cmp	r4, #5
+    1b9c:	d807      	bhi.n	1bae <android_setCpuArm@@Base+0x33a>
+    1b9e:	340a      	adds	r4, #10
+    1ba0:	4294      	cmp	r4, r2
+    1ba2:	da04      	bge.n	1bae <android_setCpuArm@@Base+0x33a>
+    1ba4:	fb0e 4e02 	mla	lr, lr, r2, r4
+    1ba8:	3001      	adds	r0, #1
+    1baa:	4288      	cmp	r0, r1
+    1bac:	d3ea      	bcc.n	1b84 <android_setCpuArm@@Base+0x310>
+    1bae:	4560      	cmp	r0, ip
+    1bb0:	bf1c      	itt	ne
+    1bb2:	f8c3 e000 	strne.w	lr, [r3]
+    1bb6:	bdb0      	popne	{r4, r5, r7, pc}
+    1bb8:	2000      	movs	r0, #0
+    1bba:	bdb0      	pop	{r4, r5, r7, pc}
+    1bbc:	3000      	adds	r0, #0
+    1bbe:	e590      	b.n	16e2 <android_getCpuFamily@@Base+0x5ea>
+    1bc0:	0101      	lsls	r1, r0, #4
+    1bc2:	e313      	b.n	21ec <android_setCpuArm@@Base+0x978>
+    1bc4:	3102      	adds	r1, #2
+    1bc6:	1383      	asrs	r3, r0, #14
+    1bc8:	3102      	adds	r1, #2
+    1bca:	03c3      	lsls	r3, r0, #15
+    1bcc:	0003      	movs	r3, r0
+    1bce:	e080      	b.n	1cd2 <android_setCpuArm@@Base+0x45e>
+    1bd0:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1bd4:	4ff7      	ldr	r7, [pc, #988]	; (1fb4 <android_setCpuArm@@Base+0x740>)
+    1bd6:	e92d 0000 	stmdb	sp!, {}
+    1bda:	e351      	b.n	2280 <android_setCpuArm@@Base+0xa0c>
+    1bdc:	5001      	str	r1, [r0, r0]
+    1bde:	e1a0      	b.n	1f22 <android_setCpuArm@@Base+0x6ae>
+    1be0:	0021      	movs	r1, r4
+    1be2:	0a00      	lsrs	r0, r0, #8
+    1be4:	8001      	strh	r1, [r0, #0]
+    1be6:	e241      	b.n	206c <android_setCpuArm@@Base+0x7f8>
+    1be8:	6002      	str	r2, [r0, #0]
+    1bea:	e1a0      	b.n	1f2e <android_setCpuArm@@Base+0x6ba>
+    1bec:	7000      	strb	r0, [r0, #0]
+    1bee:	e1a0      	b.n	1f32 <android_setCpuArm@@Base+0x6be>
+    1bf0:	b000      	add	sp, #0
+    1bf2:	e3a0      	b.n	2336 <android_setCpuArm@@Base+0xac2>
+    1bf4:	9008      	str	r0, [sp, #32]
+    1bf6:	e1a0      	b.n	1f3a <android_setCpuArm@@Base+0x6c6>
+    1bf8:	4009      	ands	r1, r1
+    1bfa:	e08b      	b.n	1d14 <android_setCpuArm@@Base+0x4a0>
+    1bfc:	4fa4      	ldr	r7, [pc, #656]	; (1e90 <android_setCpuArm@@Base+0x61c>)
+    1bfe:	e084      	b.n	1d0a <android_setCpuArm@@Base+0x496>
+    1c00:	40c4      	lsrs	r4, r0
+    1c02:	e1a0      	b.n	1f46 <android_setCpuArm@@Base+0x6d2>
+    1c04:	a184      	add	r1, pc, #528	; (adr r1, 1e18 <android_setCpuArm@@Base+0x5a4>)
+    1c06:	e1a0      	b.n	1f4a <android_setCpuArm@@Base+0x6d6>
+    1c08:	500a      	str	r2, [r1, r0]
+    1c0a:	e087      	b.n	1d1c <android_setCpuArm@@Base+0x4a8>
+    1c0c:	0005      	movs	r5, r0
+    1c0e:	e1a0      	b.n	1f52 <android_setCpuArm@@Base+0x6de>
+    1c10:	ffe9 ebff 			; <UNDEFINED> instruction: 0xffe9ebff
+    1c14:	0008      	movs	r0, r1
+    1c16:	e154      	b.n	1ec2 <android_setCpuArm@@Base+0x64e>
+    1c18:	0011      	movs	r1, r2
+    1c1a:	0a00      	lsrs	r0, r0, #8
+    1c1c:	0004      	movs	r4, r0
+    1c1e:	e58d      	b.n	173c <android_getCpuFamily@@Base+0x644>
+    1c20:	0008      	movs	r0, r1
+    1c22:	e28a      	b.n	213a <android_setCpuArm@@Base+0x8c6>
+    1c24:	0000      	movs	r0, r0
+    1c26:	e087      	b.n	1d38 <android_setCpuArm@@Base+0x4c4>
+    1c28:	ffe3 ebff 			; <UNDEFINED> instruction: 0xffe3ebff
+    1c2c:	3004      	adds	r0, #4
+    1c2e:	e59d      	b.n	176c <android_getCpuFamily@@Base+0x674>
+    1c30:	0003      	movs	r3, r0
+    1c32:	e156      	b.n	1ee2 <android_setCpuArm@@Base+0x66e>
+    1c34:	0003      	movs	r3, r0
+    1c36:	2a00      	cmp	r2, #0
+    1c38:	000b      	movs	r3, r1
+    1c3a:	e154      	b.n	1ee6 <android_setCpuArm@@Base+0x672>
+    1c3c:	0006      	movs	r6, r0
+    1c3e:	0a00      	lsrs	r0, r0, #8
+    1c40:	9001      	str	r0, [sp, #4]
+    1c42:	e244      	b.n	20ce <android_setCpuArm@@Base+0x85a>
+    1c44:	ffeb eaff 			; <UNDEFINED> instruction: 0xffebeaff
+    1c48:	0001      	movs	r1, r0
+    1c4a:	e240      	b.n	20ce <android_setCpuArm@@Base+0x85a>
+    1c4c:	0000      	movs	r0, r0
+    1c4e:	e156      	b.n	1efe <android_setCpuArm@@Base+0x68a>
+    1c50:	0005      	movs	r5, r0
+    1c52:	9a00      	ldr	r2, [sp, #0]
+    1c54:	b001      	add	sp, #4
+    1c56:	e284      	b.n	2162 <android_setCpuArm@@Base+0x8ee>
+    1c58:	ffe6 eaff 			; <UNDEFINED> instruction: 0xffe6eaff
+    1c5c:	5000      	str	r0, [r0, r0]
+    1c5e:	e3a0      	b.n	23a2 <android_setCpuArm@@Base+0xb2e>
+    1c60:	0001      	movs	r1, r0
+    1c62:	ea00 0000 	and.w	r0, r0, r0
+    1c66:	e156      	b.n	1f16 <android_setCpuArm@@Base+0x6a2>
+    1c68:	fff2 3aff 			; <UNDEFINED> instruction: 0xfff23aff
+    1c6c:	0005      	movs	r5, r0
+    1c6e:	e1a0      	b.n	1fb2 <android_setCpuArm@@Base+0x73e>
+    1c70:	d00c      	beq.n	1c8c <android_setCpuArm@@Base+0x418>
+    1c72:	e28d      	b.n	2190 <android_setCpuArm@@Base+0x91c>
+    1c74:	8ff0      	ldrh	r0, [r6, #62]	; 0x3e
+    1c76:	e8bd 0001 	ldmia.w	sp!, {r0}
+    1c7a:	e350      	b.n	231e <android_setCpuArm@@Base+0xaaa>
+    1c7c:	0006      	movs	r6, r0
+    1c7e:	0a00      	lsrs	r0, r0, #8
+    1c80:	0002      	movs	r2, r0
+    1c82:	e350      	b.n	2326 <android_setCpuArm@@Base+0xab2>
+    1c84:	0007      	movs	r7, r0
+    1c86:	0a00      	lsrs	r0, r0, #8
+    1c88:	0000      	movs	r0, r0
+    1c8a:	e350      	b.n	232e <android_setCpuArm@@Base+0xaba>
+    1c8c:	0008      	movs	r0, r1
+    1c8e:	1a00      	subs	r0, r0, r0
+    1c90:	0024      	movs	r4, r4
+    1c92:	e59f      	b.n	17d4 <android_getCpuCount@@Base+0x18>
+    1c94:	0000      	movs	r0, r0
+    1c96:	e79f      	b.n	1bd8 <android_setCpuArm@@Base+0x364>
+    1c98:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1c9c:	001c      	movs	r4, r3
+    1c9e:	e59f      	b.n	17e0 <android_setCpu@@Base>
+    1ca0:	0000      	movs	r0, r0
+    1ca2:	e79f      	b.n	1be4 <android_setCpuArm@@Base+0x370>
+    1ca4:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1ca8:	0014      	movs	r4, r2
+    1caa:	e59f      	b.n	17ec <android_setCpu@@Base+0xc>
+    1cac:	0000      	movs	r0, r0
+    1cae:	e79f      	b.n	1bf0 <android_setCpuArm@@Base+0x37c>
+    1cb0:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1cb4:	0000      	movs	r0, r0
+    1cb6:	e3a0      	b.n	23fa <android_setCpuArm@@Base+0xb86>
+    1cb8:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1cbc:	2354      	movs	r3, #84	; 0x54
+    1cbe:	0001      	movs	r1, r0
+    1cc0:	2340      	movs	r3, #64	; 0x40
+    1cc2:	0001      	movs	r1, r0
+    1cc4:	2338      	movs	r3, #56	; 0x38
+    1cc6:	0001      	movs	r1, r0
+    1cc8:	30ec      	adds	r0, #236	; 0xec
+    1cca:	e59f      	b.n	180c <android_setCpu@@Base+0x2c>
+    1ccc:	4037      	ands	r7, r6
+    1cce:	e92d 4000 	stmdb	sp!, {lr}
+    1cd2:	e1a0      	b.n	2016 <android_setCpuArm@@Base+0x7a2>
+    1cd4:	3003      	adds	r0, #3
+    1cd6:	e79f      	b.n	1c18 <android_setCpuArm@@Base+0x3a4>
+    1cd8:	5002      	str	r2, [r0, r0]
+    1cda:	e241      	b.n	2160 <android_setCpuArm@@Base+0x8ec>
+    1cdc:	0000      	movs	r0, r0
+    1cde:	e353      	b.n	2388 <android_setCpuArm@@Base+0xb14>
+    1ce0:	0008      	movs	r0, r1
+    1ce2:	0a00      	lsrs	r0, r0, #8
+    1ce4:	0005      	movs	r5, r0
+    1ce6:	e1a0      	b.n	202a <android_setCpuArm@@Base+0x7b6>
+    1ce8:	1004      	asrs	r4, r0, #32
+    1cea:	e28d      	b.n	2208 <android_setCpuArm@@Base+0x994>
+    1cec:	fba6 ebff 			; <UNDEFINED> instruction: 0xfba6ebff
+    1cf0:	0000      	movs	r0, r0
+    1cf2:	e350      	b.n	2396 <android_setCpuArm@@Base+0xb22>
+    1cf4:	000a      	movs	r2, r1
+    1cf6:	1a00      	subs	r0, r0, r0
+    1cf8:	3000      	adds	r0, #0
+    1cfa:	e3a0      	b.n	243e <android_setCpuArm@@Base+0xbca>
+    1cfc:	0009      	movs	r1, r1
+    1cfe:	e3a0      	b.n	2442 <android_setCpuArm@@Base+0xbce>
+    1d00:	3010      	adds	r0, #16
+    1d02:	e584      	b.n	180e <android_setCpu@@Base+0x2e>
+    1d04:	002a      	movs	r2, r5
+    1d06:	ea00 30b0 	and.w	r0, r0, r0, ror #14
+    1d0a:	e59f      	b.n	184c <android_setCpu@@Base+0x6c>
+    1d0c:	00b0      	lsls	r0, r6, #2
+    1d0e:	e59f      	b.n	1850 <android_getCpuIdArm@@Base>
+    1d10:	3003      	adds	r0, #3
+    1d12:	e79f      	b.n	1c54 <android_setCpuArm@@Base+0x3e0>
+    1d14:	0000      	movs	r0, r0
+    1d16:	e79f      	b.n	1c58 <android_setCpuArm@@Base+0x3e4>
+    1d18:	3003      	adds	r0, #3
+    1d1a:	e060      	b.n	1dde <android_setCpuArm@@Base+0x56a>
+    1d1c:	31c3      	adds	r1, #195	; 0xc3
+    1d1e:	e1a0      	b.n	2062 <android_setCpuArm@@Base+0x7ee>
+    1d20:	3004      	adds	r0, #4
+    1d22:	e58d      	b.n	1840 <android_setCpu@@Base+0x60>
+    1d24:	2005      	movs	r0, #5
+    1d26:	e1a0      	b.n	206a <android_setCpuArm@@Base+0x7f6>
+    1d28:	1004      	asrs	r4, r0, #32
+    1d2a:	e59d      	b.n	1868 <android_getCpuIdArm@@Base+0x18>
+    1d2c:	ffa8 ebff 			; <UNDEFINED> instruction: 0xffa8ebff
+    1d30:	5000      	str	r0, [r0, r0]
+    1d32:	e250      	b.n	21d6 <android_setCpuArm@@Base+0x962>
+    1d34:	ffef 0aff 			; <UNDEFINED> instruction: 0xffef0aff
+    1d38:	ff9f ebff 			; <UNDEFINED> instruction: 0xff9febff
+    1d3c:	3004      	adds	r0, #4
+    1d3e:	e595      	b.n	186c <android_getCpuIdArm@@Base+0x1c>
+    1d40:	0001      	movs	r1, r0
+    1d42:	e353      	b.n	23ec <android_setCpuArm@@Base+0xb78>
+    1d44:	3000      	adds	r0, #0
+    1d46:	03a0      	lsls	r0, r4, #14
+    1d48:	3010      	adds	r0, #16
+    1d4a:	0584      	lsls	r4, r0, #22
+    1d4c:	0048      	lsls	r0, r1, #1
+    1d4e:	e584      	b.n	185a <android_getCpuIdArm@@Base+0xa>
+    1d50:	0005      	movs	r5, r0
+    1d52:	03a0      	lsls	r0, r4, #14
+    1d54:	0016      	movs	r6, r2
+    1d56:	0a00      	lsrs	r0, r0, #8
+    1d58:	0000      	movs	r0, r0
+    1d5a:	e353      	b.n	2404 <android_setCpuArm@@Base+0xb90>
+    1d5c:	0004      	movs	r4, r0
+    1d5e:	e285      	b.n	226c <android_setCpuArm@@Base+0x9f8>
+    1d60:	004c      	lsls	r4, r1, #1
+    1d62:	b584      	push	{r2, r7, lr}
+    1d64:	3001      	adds	r0, #1
+    1d66:	b3a0      	cbz	r0, 1dd2 <android_setCpuArm@@Base+0x55e>
+    1d68:	0002      	movs	r2, r0
+    1d6a:	ba00      	rev	r0, r0
+    1d6c:	ff92 ebff 			; <UNDEFINED> instruction: 0xff92ebff
+    1d70:	3000      	adds	r0, #0
+    1d72:	e3a0      	b.n	24b6 <android_setCpuArm@@Base+0xc42>
+    1d74:	004c      	lsls	r4, r1, #1
+    1d76:	e584      	b.n	1882 <android_setCpuArm@@Base+0xe>
+    1d78:	004c      	lsls	r4, r1, #1
+    1d7a:	e594      	b.n	18a6 <android_setCpuArm@@Base+0x32>
+    1d7c:	3050      	adds	r0, #80	; 0x50
+    1d7e:	e584      	b.n	188a <android_setCpuArm@@Base+0x16>
+    1d80:	3000      	adds	r0, #0
+    1d82:	e590      	b.n	18a6 <android_setCpuArm@@Base+0x32>
+    1d84:	0000      	movs	r0, r0
+    1d86:	e353      	b.n	2430 <android_setCpuArm@@Base+0xbbc>
+    1d88:	0006      	movs	r6, r0
+    1d8a:	aa00      	add	r2, sp, #0
+    1d8c:	0c53      	lsrs	r3, r2, #17
+    1d8e:	e7e3      	b.n	1d58 <android_setCpuArm@@Base+0x4e4>
+    1d90:	ffb8 ebff 			; <UNDEFINED> instruction: 0xffb8ebff
+    1d94:	0000      	movs	r0, r0
+    1d96:	e350      	b.n	243a <android_setCpuArm@@Base+0xbc6>
+    1d98:	0010      	movs	r0, r2
+    1d9a:	e584      	b.n	18a6 <android_setCpuArm@@Base+0x32>
+    1d9c:	0009      	movs	r1, r1
+    1d9e:	03a0      	lsls	r0, r4, #14
+    1da0:	0000      	movs	r0, r0
+    1da2:	13a0      	asrs	r0, r4, #14
+    1da4:	0002      	movs	r2, r0
+    1da6:	ea00 ff83 			; <UNDEFINED> instruction: 0xea00ff83
+    1daa:	ebff 0010 			; <UNDEFINED> instruction: 0xebff0010
+    1dae:	e584      	b.n	18ba <android_setCpuArm@@Base+0x46>
+    1db0:	0000      	movs	r0, r0
+    1db2:	e3a0      	b.n	24f6 <android_setCpuArm@@Base+0xc82>
+    1db4:	d00c      	beq.n	1dd0 <android_setCpuArm@@Base+0x55c>
+    1db6:	e28d      	b.n	22d4 <android_setCpuArm@@Base+0xa60>
+    1db8:	8030      	strh	r0, [r6, #0]
+    1dba:	e8bd 2320 	ldmia.w	sp!, {r5, r8, r9, sp}
+    1dbe:	0001      	movs	r1, r0
+    1dc0:	22dc      	movs	r2, #220	; 0xdc
+    1dc2:	0001      	movs	r1, r0
+    1dc4:	22c4      	movs	r2, #196	; 0xc4
+    1dc6:	0001      	movs	r1, r0
+    1dc8:	3000      	adds	r0, #0
+    1dca:	e590      	b.n	18ee <android_setCpuArm@@Base+0x7a>
+    1dcc:	4010      	ands	r0, r2
+    1dce:	e92d 0001 	stmdb	sp!, {r0}
+    1dd2:	e313      	b.n	23fc <android_setCpuArm@@Base+0xb88>
+    1dd4:	4000      	ands	r0, r0
+    1dd6:	e1a0      	b.n	211a <android_setCpuArm@@Base+0x8a6>
+    1dd8:	0005      	movs	r5, r0
+    1dda:	1a00      	subs	r0, r0, r0
+    1ddc:	0002      	movs	r2, r0
+    1dde:	e313      	b.n	2408 <android_setCpuArm@@Base+0xb94>
+    1de0:	0048      	lsls	r0, r1, #1
+    1de2:	e280      	b.n	22e6 <android_setCpuArm@@Base+0xa72>
+    1de4:	0001      	movs	r1, r0
+    1de6:	0a00      	lsrs	r0, r0, #8
+    1de8:	0331      	lsls	r1, r6, #12
+    1dea:	eb00 0000 	add.w	r0, r0, r0
+    1dee:	ea00 032b 	and.w	r3, r0, fp, asr #32
+    1df2:	eb00 3000 	add.w	r0, r0, r0, lsl #12
+    1df6:	e594      	b.n	1922 <android_setCpuArm@@Base+0xae>
+    1df8:	0004      	movs	r4, r0
+    1dfa:	e313      	b.n	2424 <android_setCpuArm@@Base+0xbb0>
+    1dfc:	0001      	movs	r1, r0
+    1dfe:	1a00      	subs	r0, r0, r0
+    1e00:	00d0      	lsls	r0, r2, #3
+    1e02:	e284      	b.n	230e <android_setCpuArm@@Base+0xa9a>
+    1e04:	032e      	lsls	r6, r5, #12
+    1e06:	eb00 3000 	add.w	r0, r0, r0, lsl #12
+    1e0a:	e594      	b.n	1936 <android_setCpuArm@@Base+0xc2>
+    1e0c:	0008      	movs	r0, r1
+    1e0e:	e313      	b.n	2438 <android_setCpuArm@@Base+0xbc4>
+    1e10:	0001      	movs	r1, r0
+    1e12:	1a00      	subs	r0, r0, r0
+    1e14:	0e15      	lsrs	r5, r2, #24
+    1e16:	e284      	b.n	2322 <android_setCpuArm@@Base+0xaae>
+    1e18:	032d      	lsls	r5, r5, #12
+    1e1a:	eb00 3000 	add.w	r0, r0, r0, lsl #12
+    1e1e:	e594      	b.n	194a <android_setCpuArm@@Base+0xd6>
+    1e20:	0010      	movs	r0, r2
+    1e22:	e313      	b.n	244c <android_setCpuArm@@Base+0xbd8>
+    1e24:	8010      	strh	r0, [r2, #0]
+    1e26:	18bd      	adds	r5, r7, r2
+    1e28:	0e1d      	lsrs	r5, r3, #24
+    1e2a:	e284      	b.n	2336 <android_setCpuArm@@Base+0xac2>
+    1e2c:	4010      	ands	r0, r2
+    1e2e:	e8bd 0349 	ldmia.w	sp!, {r0, r3, r6, r8, r9}
+    1e32:	ea00 3000 	and.w	r0, r0, r0, lsl #12
+    1e36:	e590      	b.n	195a <android_setCpuArm@@Base+0xe6>
+    1e38:	0000      	movs	r0, r0
+    1e3a:	e353      	b.n	24e4 <android_setCpuArm@@Base+0xc70>
+    1e3c:	0000      	movs	r0, r0
+    1e3e:	1793      	asrs	r3, r2, #30
+    1e40:	0003      	movs	r3, r0
+    1e42:	01a0      	lsls	r0, r4, #6
+    1e44:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1e48:	0009      	movs	r1, r1
+    1e4a:	e3a0      	b.n	258e <android_setCpuArm@@Base+0xd1a>
+    1e4c:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1e50:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1e54:	4070      	eors	r0, r6
+    1e56:	e92d 5000 	stmdb	sp!, {ip, lr}
+    1e5a:	e1a0      	b.n	219e <android_setCpuArm@@Base+0x92a>
+    1e5c:	4001      	ands	r1, r0
+    1e5e:	e1a0      	b.n	21a2 <android_setCpuArm@@Base+0x92e>
+    1e60:	0005      	movs	r5, r0
+    1e62:	e1a0      	b.n	21a6 <android_setCpuArm@@Base+0x932>
+    1e64:	1040      	asrs	r0, r0, #1
+    1e66:	e594      	b.n	1992 <android_setCpuArm@@Base+0x11e>
+    1e68:	ff96 ebff 			; <UNDEFINED> instruction: 0xff96ebff
+    1e6c:	6000      	str	r0, [r0, #0]
+    1e6e:	e250      	b.n	2312 <android_setCpuArm@@Base+0xa9e>
+    1e70:	0000      	movs	r0, r0
+    1e72:	0a00      	lsrs	r0, r0, #8
+    1e74:	fb17 ebff 			; <UNDEFINED> instruction: 0xfb17ebff
+    1e78:	3040      	adds	r0, #64	; 0x40
+    1e7a:	e594      	b.n	19a6 <android_setCpuArm@@Base+0x132>
+    1e7c:	0001      	movs	r1, r0
+    1e7e:	e3a0      	b.n	25c2 <android_setCpuArm@@Base+0xd4e>
+    1e80:	1005      	asrs	r5, r0, #32
+    1e82:	e1a0      	b.n	21c6 <android_setCpuArm@@Base+0x952>
+    1e84:	2004      	movs	r0, #4
+    1e86:	e1a0      	b.n	21ca <android_setCpuArm@@Base+0x956>
+    1e88:	3014      	adds	r0, #20
+    1e8a:	e585      	b.n	1998 <android_setCpuArm@@Base+0x124>
+    1e8c:	3010      	adds	r0, #16
+    1e8e:	e595      	b.n	19bc <android_setCpuArm@@Base+0x148>
+    1e90:	ff33 e12f 	vrhadd.u<illegal width 64>	d14, d3, d31
+    1e94:	0008      	movs	r0, r1
+    1e96:	e350      	b.n	253a <android_setCpuArm@@Base+0xcc6>
+    1e98:	fff0 0aff 			; <UNDEFINED> instruction: 0xfff00aff
+    1e9c:	0007      	movs	r7, r0
+    1e9e:	e350      	b.n	2542 <android_setCpuArm@@Base+0xcce>
+    1ea0:	fff3 1aff 			; <UNDEFINED> instruction: 0xfff31aff
+    1ea4:	0006      	movs	r6, r0
+    1ea6:	e1a0      	b.n	21ea <android_setCpuArm@@Base+0x976>
+    1ea8:	1040      	asrs	r0, r0, #1
+    1eaa:	e594      	b.n	19d6 <android_setCpuArm@@Base+0x162>
+    1eac:	ffe7 ebff 			; <UNDEFINED> instruction: 0xffe7ebff
+    1eb0:	0004      	movs	r4, r0
+    1eb2:	e284      	b.n	23be <android_setCpuArm@@Base+0xb4a>
+    1eb4:	02f5      	lsls	r5, r6, #11
+    1eb6:	eb00 4ff0 	add.w	pc, r0, r0, ror #19
+    1eba:	e92d e004 	stmdb	sp!, {r2, sp, lr, pc}
+    1ebe:	e281      	b.n	23c4 <android_setCpuArm@@Base+0xb50>
+    1ec0:	800c      	strh	r4, [r1, #0]
+    1ec2:	e590      	b.n	19e6 <android_setCpuArm@@Base+0x172>
+    1ec4:	4000      	ands	r0, r0
+    1ec6:	e1a0      	b.n	220a <android_setCpuArm@@Base+0x996>
+    1ec8:	9018      	str	r0, [sp, #96]	; 0x60
+    1eca:	e590      	b.n	19ee <android_setCpuArm@@Base+0x17a>
+    1ecc:	a002      	add	r0, pc, #8	; (adr r0, 1ed8 <android_setCpuArm@@Base+0x664>)
+    1ece:	e1a0      	b.n	2212 <android_setCpuArm@@Base+0x99e>
+    1ed0:	000f      	movs	r7, r1
+    1ed2:	e8be dff3 	ldmia.w	lr!, {r0, r1, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
+    1ed6:	e24d      	b.n	2374 <android_setCpuArm@@Base+0xb00>
+    1ed8:	c00c      	stmia	r0!, {r2, r3}
+    1eda:	e28d      	b.n	23f8 <android_setCpuArm@@Base+0xb84>
+    1edc:	b008      	add	sp, #32
+    1ede:	e28d      	b.n	23fc <android_setCpuArm@@Base+0xb88>
+    1ee0:	7f7a      	ldrb	r2, [r7, #29]
+    1ee2:	e28d      	b.n	2400 <android_setCpuArm@@Base+0xb8c>
+    1ee4:	6000      	str	r0, [r0, #0]
+    1ee6:	e3a0      	b.n	262a <android_setCpuArm@@Base+0xdb6>
+    1ee8:	000f      	movs	r7, r1
+    1eea:	e8ac 000f 	stmia.w	ip!, {r0, r1, r2, r3}
+    1eee:	e8be 000f 	ldmia.w	lr!, {r0, r1, r2, r3}
+    1ef2:	e8ac 000f 	stmia.w	ip!, {r0, r1, r2, r3}
+    1ef6:	e8be 000f 	ldmia.w	lr!, {r0, r1, r2, r3}
+    1efa:	e8ac 000f 	stmia.w	ip!, {r0, r1, r2, r3}
+    1efe:	e89e 000f 	ldmia.w	lr, {r0, r1, r2, r3}
+    1f02:	e88c 6008 	stmia.w	ip, {r3, sp, lr}
+    1f06:	e58d      	b.n	1a24 <android_setCpuArm@@Base+0x1b0>
+    1f08:	0004      	movs	r4, r0
+    1f0a:	e1a0      	b.n	224e <android_setCpuArm@@Base+0x9da>
+    1f0c:	1048      	asrs	r0, r1, #1
+    1f0e:	e59d      	b.n	1a4c <android_setCpuArm@@Base+0x1d8>
+    1f10:	ff6c ebff 	vqrdmlah.s32	q15, q14, <illegal reg q15.5>
+    1f14:	0000      	movs	r0, r0
+    1f16:	e35a      	b.n	25ce <android_setCpuArm@@Base+0xd5a>
+    1f18:	a00a      	add	r0, pc, #40	; (adr r0, 1f44 <android_setCpuArm@@Base+0x6d0>)
+    1f1a:	13a0      	asrs	r0, r4, #14
+    1f1c:	a009      	add	r0, pc, #36	; (adr r0, 1f44 <android_setCpuArm@@Base+0x6d0>)
+    1f1e:	03a0      	lsls	r0, r4, #14
+    1f20:	5000      	str	r0, [r0, r0]
+    1f22:	e250      	b.n	23c6 <android_setCpuArm@@Base+0xb52>
+    1f24:	a010      	add	r0, pc, #64	; (adr r0, 1f68 <android_setCpuArm@@Base+0x6f4>)
+    1f26:	138a      	asrs	r2, r1, #14
+    1f28:	3040      	adds	r0, #64	; 0x40
+    1f2a:	159d      	asrs	r5, r3, #22
+    1f2c:	000c      	movs	r4, r1
+    1f2e:	1a00      	subs	r0, r0, r0
+    1f30:	3048      	adds	r0, #72	; 0x48
+    1f32:	e59d      	b.n	1a70 <android_setCpuArm@@Base+0x1fc>
+    1f34:	100b      	asrs	r3, r1, #32
+    1f36:	e1a0      	b.n	227a <android_setCpuArm@@Base+0xa06>
+    1f38:	2e1e      	cmp	r6, #30
+    1f3a:	e3a0      	b.n	267e <android_setCpuArm@@Base+0xe0a>
+    1f3c:	0007      	movs	r7, r0
+    1f3e:	e1a0      	b.n	2282 <android_setCpuArm@@Base+0xa0e>
+    1f40:	3014      	adds	r0, #20
+    1f42:	e584      	b.n	1a4e <android_setCpuArm@@Base+0x1da>
+    1f44:	fb22 ebff 			; <UNDEFINED> instruction: 0xfb22ebff
+    1f48:	3010      	adds	r0, #16
+    1f4a:	e594      	b.n	1a76 <android_setCpuArm@@Base+0x202>
+    1f4c:	000a      	movs	r2, r1
+    1f4e:	e1a0      	b.n	2292 <android_setCpuArm@@Base+0xa1e>
+    1f50:	1004      	asrs	r4, r0, #32
+    1f52:	e1a0      	b.n	2296 <android_setCpuArm@@Base+0xa22>
+    1f54:	2007      	movs	r0, #7
+    1f56:	e1a0      	b.n	229a <android_setCpuArm@@Base+0xa26>
+    1f58:	ff33 e12f 	vrhadd.u<illegal width 64>	d14, d3, d31
+    1f5c:	3220      	adds	r2, #32
+    1f5e:	e59d      	b.n	1a9c <android_setCpuArm@@Base+0x228>
+    1f60:	6000      	str	r0, [r0, #0]
+    1f62:	e1a0      	b.n	22a6 <android_setCpuArm@@Base+0xa32>
+    1f64:	304c      	adds	r0, #76	; 0x4c
+    1f66:	e58d      	b.n	1a84 <android_setCpuArm@@Base+0x210>
+    1f68:	0001      	movs	r1, r0
+    1f6a:	e3a0      	b.n	26ae <android_setCpuArm@@Base+0xe3a>
+    1f6c:	b000      	add	sp, #0
+    1f6e:	e58d      	b.n	1a8c <android_setCpuArm@@Base+0x218>
+    1f70:	100a      	asrs	r2, r1, #32
+    1f72:	e1a0      	b.n	22b6 <android_setCpuArm@@Base+0xa42>
+    1f74:	9004      	str	r0, [sp, #16]
+    1f76:	e58d      	b.n	1a94 <android_setCpuArm@@Base+0x220>
+    1f78:	2004      	movs	r0, #4
+    1f7a:	e1a0      	b.n	22be <android_setCpuArm@@Base+0xa4a>
+    1f7c:	3004      	adds	r0, #4
+    1f7e:	e1a0      	b.n	22c2 <android_setCpuArm@@Base+0xa4e>
+    1f80:	ff38 e12f 	vrhadd.u<illegal width 64>	d14, d8, d31
+    1f84:	0000      	movs	r0, r0
+    1f86:	e350      	b.n	262a <android_setCpuArm@@Base+0xdb6>
+    1f88:	000f      	movs	r7, r1
+    1f8a:	1a00      	subs	r0, r0, r0
+    1f8c:	0000      	movs	r0, r0
+    1f8e:	e355      	b.n	263c <android_setCpuArm@@Base+0xdc8>
+    1f90:	000f      	movs	r7, r1
+    1f92:	1a00      	subs	r0, r0, r0
+    1f94:	000b      	movs	r3, r1
+    1f96:	e1a0      	b.n	22da <android_setCpuArm@@Base+0xa66>
+    1f98:	1007      	asrs	r7, r0, #32
+    1f9a:	e1a0      	b.n	22de <android_setCpuArm@@Base+0xa6a>
+    1f9c:	2e1e      	cmp	r6, #30
+    1f9e:	e3a0      	b.n	26e2 <android_setCpuArm@@Base+0xe6e>
+    1fa0:	a005      	add	r0, pc, #20	; (adr r0, 1fb8 <android_setCpuArm@@Base+0x744>)
+    1fa2:	e1a0      	b.n	22e6 <android_setCpuArm@@Base+0xa72>
+    1fa4:	fb0a ebff 			; <UNDEFINED> instruction: 0xfb0aebff
+    1fa8:	0008      	movs	r0, r1
+    1faa:	e356      	b.n	265a <android_setCpuArm@@Base+0xde6>
+    1fac:	ffd5 0aff 			; <UNDEFINED> instruction: 0xffd50aff
+    1fb0:	0007      	movs	r7, r0
+    1fb2:	e356      	b.n	2662 <android_setCpuArm@@Base+0xdee>
+    1fb4:	0004      	movs	r4, r0
+    1fb6:	1a00      	subs	r0, r0, r0
+    1fb8:	0005      	movs	r5, r0
+    1fba:	e1a0      	b.n	22fe <android_setCpuArm@@Base+0xa8a>
+    1fbc:	1048      	asrs	r0, r1, #1
+    1fbe:	e59d      	b.n	1afc <android_setCpuArm@@Base+0x288>
+    1fc0:	ffa2 ebff 			; <UNDEFINED> instruction: 0xffa2ebff
+    1fc4:	000c      	movs	r4, r1
+    1fc6:	e28d      	b.n	24e4 <android_setCpuArm@@Base+0xc70>
+    1fc8:	02b0      	lsls	r0, r6, #10
+    1fca:	eb00 0009 	add.w	r0, r0, r9
+    1fce:	e3a0      	b.n	2712 <android_setCpuArm@@Base+0xe9e>
+    1fd0:	0000      	movs	r0, r0
+    1fd2:	ea00 0005 	and.w	r0, r0, r5
+    1fd6:	e1a0      	b.n	231a <android_setCpuArm@@Base+0xaa6>
+    1fd8:	dff3      	svc	243	; 0xf3
+    1fda:	e28d      	b.n	24f8 <android_setCpuArm@@Base+0xc84>
+    1fdc:	8ff0      	ldrh	r0, [r6, #62]	; 0x3e
+    1fde:	e8bd 0044 	ldmia.w	sp!, {r2, r6}
+    1fe2:	e590      	b.n	1b06 <android_setCpuArm@@Base+0x292>
+    1fe4:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    1fe8:	303c      	adds	r0, #60	; 0x3c
+    1fea:	e591      	b.n	1b10 <android_setCpuArm@@Base+0x29c>
+    1fec:	40f0      	lsrs	r0, r6
+    1fee:	e92d e004 	stmdb	sp!, {r2, sp, lr, pc}
+    1ff2:	e281      	b.n	24f8 <android_setCpuArm@@Base+0xc84>
+    1ff4:	3040      	adds	r0, #64	; 0x40
+    1ff6:	e581      	b.n	1afc <android_setCpuArm@@Base+0x288>
+    1ff8:	5000      	str	r0, [r0, r0]
+    1ffa:	e1a0      	b.n	233e <android_setCpuArm@@Base+0xaca>
+    1ffc:	4001      	ands	r1, r0
+    1ffe:	e1a0      	b.n	2342 <android_setCpuArm@@Base+0xace>
+    2000:	df79      	svc	121	; 0x79
+    2002:	e24d      	b.n	24a0 <android_setCpuArm@@Base+0xc2c>
+    2004:	000f      	movs	r7, r1
+    2006:	e8be c004 	ldmia.w	lr!, {r2, lr, pc}
+    200a:	e28d      	b.n	2528 <android_setCpuArm@@Base+0xcb4>
+    200c:	6e1e      	ldr	r6, [r3, #96]	; 0x60
+    200e:	e28d      	b.n	252c <android_setCpuArm@@Base+0xcb8>
+    2010:	000f      	movs	r7, r1
+    2012:	e8ac 000f 	stmia.w	ip!, {r0, r1, r2, r3}
+    2016:	e8be 000f 	ldmia.w	lr!, {r0, r1, r2, r3}
+    201a:	e8ac 000f 	stmia.w	ip!, {r0, r1, r2, r3}
+    201e:	e8be 000f 	ldmia.w	lr!, {r0, r1, r2, r3}
+    2022:	e8ac 000f 	stmia.w	ip!, {r0, r1, r2, r3}
+    2026:	e89e 000f 	ldmia.w	lr, {r0, r1, r2, r3}
+    202a:	e88c 3000 	stmia.w	ip, {ip, sp}
+    202e:	e3e0      	b.n	27f2 <android_setCpuArm@@Base+0xf7e>
+    2030:	31e0      	adds	r1, #224	; 0xe0
+    2032:	e526      	b.n	1a82 <android_setCpuArm@@Base+0x20e>
+    2034:	0005      	movs	r5, r0
+    2036:	e1a0      	b.n	237a <android_setCpuArm@@Base+0xb06>
+    2038:	1040      	asrs	r0, r0, #1
+    203a:	e59d      	b.n	1b78 <android_setCpuArm@@Base+0x304>
+    203c:	ff21 ebff 	vqrdmlah.s32	q7, <illegal reg q8.5>, <illegal reg q15.5>
+    2040:	0000      	movs	r0, r0
+    2042:	e350      	b.n	26e6 <android_setCpuArm@@Base+0xe72>
+    2044:	000d      	movs	r5, r1
+    2046:	1a00      	subs	r0, r0, r0
+    2048:	3010      	adds	r0, #16
+    204a:	e595      	b.n	1b78 <android_setCpuArm@@Base+0x304>
+    204c:	1005      	asrs	r5, r0, #32
+    204e:	e1a0      	b.n	2392 <android_setCpuArm@@Base+0xb1e>
+    2050:	2006      	movs	r0, #6
+    2052:	e1a0      	b.n	2396 <android_setCpuArm@@Base+0xb22>
+    2054:	ff33 e12f 	vrhadd.u<illegal width 64>	d14, d3, d31
+    2058:	0008      	movs	r0, r1
+    205a:	e350      	b.n	26fe <android_setCpuArm@@Base+0xe8a>
+    205c:	7000      	strb	r0, [r0, #0]
+    205e:	e1a0      	b.n	23a2 <android_setCpuArm@@Base+0xb2e>
+    2060:	fff3 0aff 			; <UNDEFINED> instruction: 0xfff30aff
+    2064:	0006      	movs	r6, r0
+    2066:	e1a0      	b.n	23aa <android_setCpuArm@@Base+0xb36>
+    2068:	ff56 ebff 	vqrdmlah.s16	q15, q11, <illegal reg q15.5>
+    206c:	0006      	movs	r6, r0
+    206e:	e357      	b.n	2720 <android_setCpuArm@@Base+0xeac>
+    2070:	0002      	movs	r2, r0
+    2072:	1a00      	subs	r0, r0, r0
+    2074:	0005      	movs	r5, r0
+    2076:	e1a0      	b.n	23ba <android_setCpuArm@@Base+0xb46>
+    2078:	1004      	asrs	r4, r0, #32
+    207a:	e1a0      	b.n	23be <android_setCpuArm@@Base+0xb4a>
+    207c:	ff74 ebff 	vqrdmlah.s<illegal width 64>	q15, q10, <illegal reg q15.5>
+    2080:	0009      	movs	r1, r1
+    2082:	e3a0      	b.n	27c6 <android_setCpuArm@@Base+0xf52>
+    2084:	df79      	svc	121	; 0x79
+    2086:	e28d      	b.n	25a4 <android_setCpuArm@@Base+0xd30>
+    2088:	80f0      	strh	r0, [r6, #6]
+    208a:	e8bd 2018 	ldmia.w	sp!, {r3, r4, sp}
+    208e:	e580      	b.n	1b92 <android_setCpuArm@@Base+0x31e>
+    2090:	203c      	movs	r0, #60	; 0x3c
+    2092:	e593      	b.n	1bbc <android_setCpuArm@@Base+0x348>
+    2094:	100c      	asrs	r4, r1, #32
+    2096:	e580      	b.n	1b9a <android_setCpuArm@@Base+0x326>
+    2098:	1003      	asrs	r3, r0, #32
+    209a:	e1a0      	b.n	23de <android_setCpuArm@@Base+0xb6a>
+    209c:	2040      	movs	r0, #64	; 0x40
+    209e:	e583      	b.n	1ba8 <android_setCpuArm@@Base+0x334>
+    20a0:	2000      	movs	r0, #0
+    20a2:	e3a0      	b.n	27e6 <android_setCpuArm@@Base+0xf72>
+    20a4:	ff83 eaff 			; <UNDEFINED> instruction: 0xff83eaff
+    20a8:	4070      	eors	r0, r6
+    20aa:	e92d 5000 	stmdb	sp!, {ip, lr}
+    20ae:	e1a0      	b.n	23f2 <android_setCpuArm@@Base+0xb7e>
+    20b0:	600c      	str	r4, [r1, #0]
+    20b2:	e590      	b.n	1bd6 <android_setCpuArm@@Base+0x362>
+    20b4:	4001      	ands	r1, r0
+    20b6:	e1a0      	b.n	23fa <android_setCpuArm@@Base+0xb86>
+    20b8:	3014      	adds	r0, #20
+    20ba:	e590      	b.n	1bde <android_setCpuArm@@Base+0x36a>
+    20bc:	0000      	movs	r0, r0
+    20be:	e356      	b.n	276e <android_setCpuArm@@Base+0xefa>
+    20c0:	3040      	adds	r0, #64	; 0x40
+    20c2:	e581      	b.n	1bc8 <android_setCpuArm@@Base+0x354>
+    20c4:	0002      	movs	r2, r0
+    20c6:	0a00      	lsrs	r0, r0, #8
+    20c8:	2001      	movs	r0, #1
+    20ca:	e3a0      	b.n	280e <android_setCpuArm@@Base+0xf9a>
+    20cc:	ff79 ebff 	vqrdmlah.s<illegal width 64>	q15, <illegal reg q12.5>, <illegal reg q15.5>
+    20d0:	0010      	movs	r0, r2
+    20d2:	ea00 3010 	and.w	r0, r0, r0, lsr #12
+    20d6:	e590      	b.n	1bfa <android_setCpuArm@@Base+0x386>
+    20d8:	1005      	asrs	r5, r0, #32
+    20da:	e1a0      	b.n	241e <android_setCpuArm@@Base+0xbaa>
+    20dc:	0002      	movs	r2, r0
+    20de:	e3a0      	b.n	2822 <android_setCpuArm@@Base+0xfae>
+    20e0:	2004      	movs	r0, #4
+    20e2:	e1a0      	b.n	2426 <android_setCpuArm@@Base+0xbb2>
+    20e4:	ff33 e12f 	vrhadd.u<illegal width 64>	d14, d3, d31
+    20e8:	0007      	movs	r7, r0
+    20ea:	e350      	b.n	278e <android_setCpuArm@@Base+0xf1a>
+    20ec:	0004      	movs	r4, r0
+    20ee:	0a00      	lsrs	r0, r0, #8
+    20f0:	0008      	movs	r0, r1
+    20f2:	e350      	b.n	2796 <android_setCpuArm@@Base+0xf22>
+    20f4:	0007      	movs	r7, r0
+    20f6:	1a00      	subs	r0, r0, r0
+    20f8:	0005      	movs	r5, r0
+    20fa:	e1a0      	b.n	243e <android_setCpuArm@@Base+0xbca>
+    20fc:	1004      	asrs	r4, r0, #32
+    20fe:	e1a0      	b.n	2442 <android_setCpuArm@@Base+0xbce>
+    2100:	ff53 ebff 	vqrdmlah.s16	q15, <illegal reg q9.5>, <illegal reg q15.5>
+    2104:	0006      	movs	r6, r0
+    2106:	e1a0      	b.n	244a <android_setCpuArm@@Base+0xbd6>
+    2108:	1040      	asrs	r0, r0, #1
+    210a:	e594      	b.n	1c36 <android_setCpuArm@@Base+0x3c2>
+    210c:	ff4f ebff 	vqrdmlah.s<illegal width 8>	q15, <illegal reg q15.5>, <illegal reg q15.5>
+    2110:	0004      	movs	r4, r0
+    2112:	e284      	b.n	261e <android_setCpuArm@@Base+0xdaa>
+    2114:	025d      	lsls	r5, r3, #9
+    2116:	eb00 fa6e 			; <UNDEFINED> instruction: 0xeb00fa6e
+    211a:	ebff 200c 			; <UNDEFINED> instruction: 0xebff200c
+    211e:	e590      	b.n	1c42 <android_setCpuArm@@Base+0x3ce>
+    2120:	0000      	movs	r0, r0
+    2122:	e352      	b.n	27ca <android_setCpuArm@@Base+0xf56>
+    2124:	0000      	movs	r0, r0
+    2126:	1a00      	subs	r0, r0, r0
+    2128:	ffae eaff 			; <UNDEFINED> instruction: 0xffaeeaff
+    212c:	203c      	movs	r0, #60	; 0x3c
+    212e:	e591      	b.n	1c54 <android_setCpuArm@@Base+0x3e0>
+    2130:	2040      	movs	r0, #64	; 0x40
+    2132:	e581      	b.n	1c38 <android_setCpuArm@@Base+0x3c4>
+    2134:	2000      	movs	r0, #0
+    2136:	e3a0      	b.n	287a <android_setCpuArm@@Base+0x1006>
+    2138:	ff5e eaff 	vpmin.u16	q15, q15, <illegal reg q15.5>
+    213c:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2140:	3008      	adds	r0, #8
+    2142:	e590      	b.n	1c66 <android_setCpuArm@@Base+0x3f2>
+    2144:	1000      	asrs	r0, r0, #32
+    2146:	e1a0      	b.n	248a <android_setCpuArm@@Base+0xc16>
+    2148:	0000      	movs	r0, r0
+    214a:	e353      	b.n	27f4 <android_setCpuArm@@Base+0xf80>
+    214c:	ff1e 012f 	vrhadd.u16	d0, d14, d31
+    2150:	0001      	movs	r1, r0
+    2152:	e3a0      	b.n	2896 <android_setCpuArm@@Base+0x1022>
+    2154:	ff13 e12f 	vrhadd.u16	d14, d3, d31
+    2158:	0004      	movs	r4, r0
+    215a:	e351      	b.n	2800 <android_setCpuArm@@Base+0xf8c>
+    215c:	f101 908f 	b.w	d0327e <__bss_end__@@Base+0xceca1a>
+    2160:	0011      	movs	r1, r2
+    2162:	ea00 0003 	and.w	r0, r0, r3
+    2166:	ea00 000d 	and.w	r0, r0, sp
+    216a:	ea00 000e 	and.w	r0, r0, lr
+    216e:	ea00 000b 	and.w	r0, r0, fp
+    2172:	ea00 000a 	and.w	r0, r0, sl
+    2176:	ea00 000f 	and.w	r0, r0, pc
+    217a:	e352      	b.n	2822 <android_setCpuArm@@Base+0xfae>
+    217c:	0000      	movs	r0, r0
+    217e:	9353      	str	r3, [sp, #332]	; 0x14c
+    2180:	3001      	adds	r0, #1
+    2182:	13a0      	asrs	r0, r4, #14
+    2184:	3000      	adds	r0, #0
+    2186:	03a0      	lsls	r0, r4, #14
+    2188:	0007      	movs	r7, r0
+    218a:	1a00      	subs	r0, r0, r0
+    218c:	0102      	lsls	r2, r0, #4
+    218e:	e080      	b.n	2292 <android_setCpuArm@@Base+0xa1e>
+    2190:	2000      	movs	r0, #0
+    2192:	e59d      	b.n	1cd0 <android_setCpuArm@@Base+0x45c>
+    2194:	1004      	asrs	r4, r0, #32
+    2196:	e590      	b.n	1cba <android_setCpuArm@@Base+0x446>
+    2198:	0003      	movs	r3, r0
+    219a:	e1a0      	b.n	24de <android_setCpuArm@@Base+0xc6a>
+    219c:	1000      	asrs	r0, r0, #32
+    219e:	e582      	b.n	1ca6 <android_setCpuArm@@Base+0x432>
+    21a0:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    21a4:	0001      	movs	r1, r0
+    21a6:	e3a0      	b.n	28ea <android_setCpuArm@@Base+0x1076>
+    21a8:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    21ac:	0002      	movs	r2, r0
+    21ae:	e3a0      	b.n	28f2 <android_setCpuArm@@Base+0x107e>
+    21b0:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    21b4:	401f      	ands	r7, r3
+    21b6:	e92d 2001 	stmdb	sp!, {r0, sp}
+    21ba:	e1a0      	b.n	24fe <android_setCpuArm@@Base+0xc8a>
+    21bc:	1000      	asrs	r0, r0, #32
+    21be:	e3a0      	b.n	2902 <android_setCpuArm@@Base+0x108e>
+    21c0:	300c      	adds	r0, #12
+    21c2:	e28d      	b.n	26e0 <android_setCpuArm@@Base+0xe6c>
+    21c4:	3000      	adds	r0, #0
+    21c6:	e58d      	b.n	1ce4 <android_setCpuArm@@Base+0x470>
+    21c8:	3001      	adds	r0, #1
+    21ca:	e1a0      	b.n	250e <android_setCpuArm@@Base+0xc9a>
+    21cc:	ffe1 ebff 			; <UNDEFINED> instruction: 0xffe1ebff
+    21d0:	000c      	movs	r4, r1
+    21d2:	e59d      	b.n	1d10 <android_setCpuArm@@Base+0x49c>
+    21d4:	d014      	beq.n	2200 <android_setCpuArm@@Base+0x98c>
+    21d6:	e28d      	b.n	26f4 <android_setCpuArm@@Base+0xe80>
+    21d8:	f004 e49d 			; <UNDEFINED> instruction: 0xf004e49d
+    21dc:	0004      	movs	r4, r0
+    21de:	e351      	b.n	2884 <android_setCpuArm@@Base+0x1010>
+    21e0:	f101 908f 	b.w	d03302 <__bss_end__@@Base+0xceca9e>
+    21e4:	0011      	movs	r1, r2
+    21e6:	ea00 0003 	and.w	r0, r0, r3
+    21ea:	ea00 000d 	and.w	r0, r0, sp
+    21ee:	ea00 000e 	and.w	r0, r0, lr
+    21f2:	ea00 000b 	and.w	r0, r0, fp
+    21f6:	ea00 000a 	and.w	r0, r0, sl
+    21fa:	ea00 000f 	and.w	r0, r0, pc
+    21fe:	e352      	b.n	28a6 <android_setCpuArm@@Base+0x1032>
+    2200:	0000      	movs	r0, r0
+    2202:	9353      	str	r3, [sp, #332]	; 0x14c
+    2204:	3001      	adds	r0, #1
+    2206:	13a0      	asrs	r0, r4, #14
+    2208:	3000      	adds	r0, #0
+    220a:	03a0      	lsls	r0, r4, #14
+    220c:	0007      	movs	r7, r0
+    220e:	1a00      	subs	r0, r0, r0
+    2210:	1000      	asrs	r0, r0, #32
+    2212:	e59d      	b.n	1d50 <android_setCpuArm@@Base+0x4dc>
+    2214:	0102      	lsls	r2, r0, #4
+    2216:	e080      	b.n	231a <android_setCpuArm@@Base+0xaa6>
+    2218:	1000      	asrs	r0, r0, #32
+    221a:	e591      	b.n	1d40 <android_setCpuArm@@Base+0x4cc>
+    221c:	1004      	asrs	r4, r0, #32
+    221e:	e580      	b.n	1d22 <android_setCpuArm@@Base+0x4ae>
+    2220:	0003      	movs	r3, r0
+    2222:	e1a0      	b.n	2566 <android_setCpuArm@@Base+0xcf2>
+    2224:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2228:	0001      	movs	r1, r0
+    222a:	e3a0      	b.n	296e <android_setCpuArm@@Base+0x10fa>
+    222c:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2230:	0002      	movs	r2, r0
+    2232:	e3a0      	b.n	2976 <android_setCpuArm@@Base+0x1102>
+    2234:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2238:	401f      	ands	r7, r3
+    223a:	e92d 3010 	stmdb	sp!, {r4, ip, sp}
+    223e:	e28d      	b.n	275c <android_setCpuArm@@Base+0xee8>
+    2240:	c001      	stmia	r0!, {r0}
+    2242:	e1a0      	b.n	2586 <android_setCpuArm@@Base+0xd12>
+    2244:	1000      	asrs	r0, r0, #32
+    2246:	e3a0      	b.n	298a <android_setCpuArm@@Base+0x1116>
+    2248:	2004      	movs	r0, #4
+    224a:	e523      	b.n	1c94 <android_setCpuArm@@Base+0x420>
+    224c:	200c      	movs	r0, #12
+    224e:	e1a0      	b.n	2592 <android_setCpuArm@@Base+0xd1e>
+    2250:	3000      	adds	r0, #0
+    2252:	e58d      	b.n	1d70 <android_setCpuArm@@Base+0x4fc>
+    2254:	3001      	adds	r0, #1
+    2256:	e1a0      	b.n	259a <android_setCpuArm@@Base+0xd26>
+    2258:	ffdf ebff 			; <UNDEFINED> instruction: 0xffdfebff
+    225c:	d014      	beq.n	2288 <android_setCpuArm@@Base+0xa14>
+    225e:	e28d      	b.n	277c <android_setCpuArm@@Base+0xf08>
+    2260:	f004 e49d 			; <UNDEFINED> instruction: 0xf004e49d
+    2264:	303c      	adds	r0, #60	; 0x3c
+    2266:	e592      	b.n	1d8e <android_setCpuArm@@Base+0x51a>
+    2268:	c004      	stmia	r0!, {r2}
+    226a:	e282      	b.n	2772 <android_setCpuArm@@Base+0xefe>
+    226c:	41f0      	rors	r0, r6
+    226e:	e92d 7000 	stmdb	sp!, {ip, sp, lr}
+    2272:	e1a0      	b.n	25b6 <android_setCpuArm@@Base+0xd42>
+    2274:	3040      	adds	r0, #64	; 0x40
+    2276:	e582      	b.n	1d7e <android_setCpuArm@@Base+0x50a>
+    2278:	8001      	strh	r1, [r0, #0]
+    227a:	e1a0      	b.n	25be <android_setCpuArm@@Base+0xd4a>
+    227c:	000f      	movs	r7, r1
+    227e:	e8bc df8e 	ldmia.w	ip!, {r1, r2, r3, r7, r8, r9, sl, fp, ip, lr, pc}
+    2282:	e24d      	b.n	2720 <android_setCpuArm@@Base+0xeac>
+    2284:	e05c      	b.n	2340 <android_setCpuArm@@Base+0xacc>
+    2286:	e28d      	b.n	27a4 <android_setCpuArm@@Base+0xf30>
+    2288:	4058      	eors	r0, r3
+    228a:	e28d      	b.n	27a8 <android_setCpuArm@@Base+0xf34>
+    228c:	600d      	str	r5, [r1, #0]
+    228e:	e1a0      	b.n	25d2 <android_setCpuArm@@Base+0xd5e>
+    2290:	000f      	movs	r7, r1
+    2292:	e8ae 000f 	stmia.w	lr!, {r0, r1, r2, r3}
+    2296:	e8bc 000f 	ldmia.w	ip!, {r0, r1, r2, r3}
+    229a:	e8ae 000f 	stmia.w	lr!, {r0, r1, r2, r3}
+    229e:	e8bc 000f 	ldmia.w	ip!, {r0, r1, r2, r3}
+    22a2:	e8ae 000f 	stmia.w	lr!, {r0, r1, r2, r3}
+    22a6:	e89c 000f 	ldmia.w	ip, {r0, r1, r2, r3}
+    22aa:	e88e 3000 	stmia.w	lr, {ip, sp}
+    22ae:	e3e0      	b.n	2a72 <android_setCpuArm@@Base+0x11fe>
+    22b0:	3058      	adds	r0, #88	; 0x58
+    22b2:	e58d      	b.n	1dd0 <android_setCpuArm@@Base+0x55c>
+    22b4:	0006      	movs	r6, r0
+    22b6:	e1a0      	b.n	25fa <android_setCpuArm@@Base+0xd86>
+    22b8:	1098      	asrs	r0, r3, #2
+    22ba:	e59d      	b.n	1df8 <android_setCpuArm@@Base+0x584>
+    22bc:	fe81 ebff 	mcr2	11, 4, lr, cr1, cr15, {7}	; <UNPREDICTABLE>
+    22c0:	0000      	movs	r0, r0
+    22c2:	e350      	b.n	2966 <android_setCpuArm@@Base+0x10f2>
+    22c4:	0001      	movs	r1, r0
+    22c6:	0a00      	lsrs	r0, r0, #8
+    22c8:	5009      	str	r1, [r1, r0]
+    22ca:	e3a0      	b.n	2a0e <android_setCpuArm@@Base+0x119a>
+    22cc:	0011      	movs	r1, r2
+    22ce:	ea00 0004 	and.w	r0, r0, r4
+    22d2:	e1a0      	b.n	2616 <android_setCpuArm@@Base+0xda2>
+    22d4:	100c      	asrs	r4, r1, #32
+    22d6:	e3a0      	b.n	2a1a <android_setCpuArm@@Base+0x11a6>
+    22d8:	2006      	movs	r0, #6
+    22da:	e1a0      	b.n	261e <android_setCpuArm@@Base+0xdaa>
+    22dc:	ffd5 ebff 			; <UNDEFINED> instruction: 0xffd5ebff
+    22e0:	0004      	movs	r4, r0
+    22e2:	e1a0      	b.n	2626 <android_setCpuArm@@Base+0xdb2>
+    22e4:	1008      	asrs	r0, r1, #32
+    22e6:	e1a0      	b.n	262a <android_setCpuArm@@Base+0xdb6>
+    22e8:	ff37 e12f 	vrhadd.u<illegal width 64>	d14, d7, d31
+    22ec:	0000      	movs	r0, r0
+    22ee:	e350      	b.n	2992 <android_setCpuArm@@Base+0x111e>
+    22f0:	fff4 1aff 			; <UNDEFINED> instruction: 0xfff41aff
+    22f4:	3010      	adds	r0, #16
+    22f6:	e59d      	b.n	1e34 <android_setCpuArm@@Base+0x5c0>
+    22f8:	0008      	movs	r0, r1
+    22fa:	e3a0      	b.n	2a3e <android_setCpuArm@@Base+0x11ca>
+    22fc:	1006      	asrs	r6, r0, #32
+    22fe:	e1a0      	b.n	2642 <android_setCpuArm@@Base+0xdce>
+    2300:	2004      	movs	r0, #4
+    2302:	e1a0      	b.n	2646 <android_setCpuArm@@Base+0xdd2>
+    2304:	ff33 e12f 	vrhadd.u<illegal width 64>	d14, d3, d31
+    2308:	3005      	adds	r0, #5
+    230a:	e240      	b.n	278e <android_setCpuArm@@Base+0xf1a>
+    230c:	5000      	str	r0, [r0, r0]
+    230e:	e1a0      	b.n	2652 <android_setCpuArm@@Base+0xdde>
+    2310:	3004      	adds	r0, #4
+    2312:	e3d3      	b.n	2abc <android_setCpuArm@@Base+0x1248>
+    2314:	ffe6 1aff 			; <UNDEFINED> instruction: 0xffe61aff
+    2318:	0004      	movs	r4, r0
+    231a:	e1a0      	b.n	265e <android_setCpuArm@@Base+0xdea>
+    231c:	fea9 ebff 	mcr2	11, 5, lr, cr9, cr15, {7}	; <UNPREDICTABLE>
+    2320:	0005      	movs	r5, r0
+    2322:	e1a0      	b.n	2666 <android_setCpuArm@@Base+0xdf2>
+    2324:	df8e      	svc	142	; 0x8e
+    2326:	e28d      	b.n	2844 <android_setCpuArm@@Base+0xfd0>
+    2328:	81f0      	strh	r0, [r6, #14]
+    232a:	e8bd 4ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+    232e:	e92d 7002 	stmdb	sp!, {r1, ip, sp, lr}
+    2332:	e1a0      	b.n	2676 <android_setCpuArm@@Base+0xe02>
+    2334:	204c      	movs	r0, #76	; 0x4c
+    2336:	e591      	b.n	1e5c <android_setCpuArm@@Base+0x5e8>
+    2338:	d024      	beq.n	2384 <android_setCpuArm@@Base+0xb10>
+    233a:	e24d      	b.n	27d8 <android_setCpuArm@@Base+0xf64>
+    233c:	9000      	str	r0, [sp, #0]
+    233e:	e253      	b.n	27e8 <android_setCpuArm@@Base+0xf74>
+    2340:	5001      	str	r1, [r0, r0]
+    2342:	e1a0      	b.n	2686 <android_setCpuArm@@Base+0xe12>
+    2344:	c004      	stmia	r0!, {r2}
+    2346:	e282      	b.n	284e <android_setCpuArm@@Base+0xfda>
+    2348:	8003      	strh	r3, [r0, #0]
+    234a:	e200      	b.n	274e <android_setCpuArm@@Base+0xeda>
+    234c:	4000      	ands	r0, r0
+    234e:	e592      	b.n	1e76 <android_setCpuArm@@Base+0x602>
+    2350:	c018      	stmia	r0!, {r3, r4}
+    2352:	e58d      	b.n	1e70 <android_setCpuArm@@Base+0x5fc>
+    2354:	4014      	ands	r4, r2
+    2356:	e58d      	b.n	1e74 <android_setCpuArm@@Base+0x600>
+    2358:	0005      	movs	r5, r0
+    235a:	1a00      	subs	r0, r0, r0
+    235c:	4404      	add	r4, r0
+    235e:	e1a0      	b.n	26a2 <android_setCpuArm@@Base+0xe2e>
+    2360:	3003      	adds	r0, #3
+    2362:	e3a0      	b.n	2aa6 <android_setCpuArm@@Base+0x1232>
+    2364:	4014      	ands	r4, r2
+    2366:	e58d      	b.n	1e84 <android_setCpuArm@@Base+0x610>
+    2368:	901d      	str	r0, [sp, #116]	; 0x74
+    236a:	e5cd      	b.n	1f08 <android_setCpuArm@@Base+0x694>
+    236c:	301c      	adds	r0, #28
+    236e:	e5cd      	b.n	1f0c <android_setCpuArm@@Base+0x698>
+    2370:	0009      	movs	r1, r1
+    2372:	ea00 0002 	and.w	r0, r0, r2
+    2376:	e359      	b.n	2a2c <android_setCpuArm@@Base+0x11b8>
+    2378:	0007      	movs	r7, r0
+    237a:	ca00      	ldmia	r2!, {}
+    237c:	3824      	subs	r0, #36	; 0x24
+    237e:	e1a0      	b.n	26c2 <android_setCpuArm@@Base+0xe4e>
+    2380:	301d      	adds	r0, #29
+    2382:	e5cd      	b.n	1f20 <android_setCpuArm@@Base+0x6ac>
+    2384:	4804      	ldr	r0, [pc, #16]	; (2398 <android_setCpuArm@@Base+0xb24>)
+    2386:	e1a0      	b.n	26ca <android_setCpuArm@@Base+0xe56>
+    2388:	2002      	movs	r0, #2
+    238a:	e3a0      	b.n	2ace <android_setCpuArm@@Base+0x125a>
+    238c:	3073      	adds	r0, #115	; 0x73
+    238e:	e6ef      	b.n	2170 <android_setCpuArm@@Base+0x8fc>
+    2390:	4014      	ands	r4, r2
+    2392:	e58d      	b.n	1eb0 <android_setCpuArm@@Base+0x63c>
+    2394:	201c      	movs	r0, #28
+    2396:	e5cd      	b.n	1f34 <android_setCpuArm@@Base+0x6c0>
+    2398:	c103      	stmia	r1!, {r0, r1}
+    239a:	e08c      	b.n	24b6 <android_setCpuArm@@Base+0xc42>
+    239c:	0002      	movs	r2, r0
+    239e:	e358      	b.n	2a52 <android_setCpuArm@@Base+0x11de>
+    23a0:	3050      	adds	r0, #80	; 0x50
+    23a2:	e595      	b.n	1ed0 <android_setCpuArm@@Base+0x65c>
+    23a4:	c038      	stmia	r0!, {r3, r4, r5}
+    23a6:	0595      	lsls	r5, r2, #22
+    23a8:	3001      	adds	r0, #1
+    23aa:	e213      	b.n	27d4 <android_setCpuArm@@Base+0xf60>
+    23ac:	00af      	lsls	r7, r5, #2
+    23ae:	1a00      	subs	r0, r0, r0
+    23b0:	0008      	movs	r0, r1
+    23b2:	e220      	b.n	27f6 <android_setCpuArm@@Base+0xf82>
+    23b4:	3004      	adds	r0, #4
+    23b6:	e58d      	b.n	1ed4 <android_setCpuArm@@Base+0x660>
+    23b8:	31d0      	adds	r1, #208	; 0xd0
+    23ba:	e7e0      	b.n	237e <android_setCpuArm@@Base+0xb0a>
+    23bc:	3008      	adds	r0, #8
+    23be:	e58d      	b.n	1edc <android_setCpuArm@@Base+0x668>
+    23c0:	4000      	ands	r0, r0
+    23c2:	e59c      	b.n	1efe <android_setCpuArm@@Base+0x68a>
+    23c4:	0000      	movs	r0, r0
+    23c6:	e354      	b.n	2a72 <android_setCpuArm@@Base+0x11fe>
+    23c8:	00aa      	lsls	r2, r5, #2
+    23ca:	0a00      	lsrs	r0, r0, #8
+    23cc:	0002      	movs	r2, r0
+    23ce:	e359      	b.n	2a84 <android_setCpuArm@@Base+0x1210>
+    23d0:	3048      	adds	r0, #72	; 0x48
+    23d2:	e595      	b.n	1f00 <android_setCpuArm@@Base+0x68c>
+    23d4:	0007      	movs	r7, r0
+    23d6:	e1a0      	b.n	271a <android_setCpuArm@@Base+0xea6>
+    23d8:	100f      	asrs	r7, r1, #32
+    23da:	e3a0      	b.n	2b1e <android_setCpuArm@@Base+0x12aa>
+    23dc:	a004      	add	r0, pc, #16	; (adr r0, 23f0 <android_setCpuArm@@Base+0xb7c>)
+    23de:	059c      	lsls	r4, r3, #22
+    23e0:	6008      	str	r0, [r1, #0]
+    23e2:	028c      	lsls	r4, r1, #10
+    23e4:	a0b2      	add	r0, pc, #712	; (adr r0, 26b0 <android_setCpuArm@@Base+0xe3c>)
+    23e6:	11dc      	asrs	r4, r3, #7
+    23e8:	6004      	str	r4, [r0, #0]
+    23ea:	128c      	asrs	r4, r1, #10
+    23ec:	40b0      	lsls	r0, r6
+    23ee:	11dc      	asrs	r4, r3, #7
+    23f0:	b001      	add	sp, #4
+    23f2:	e3ca      	b.n	2b8a <android_setCpuArm@@Base+0x1316>
+    23f4:	b003      	add	sp, #12
+    23f6:	e08b      	b.n	2510 <android_setCpuArm@@Base+0xc9c>
+    23f8:	ff6d ebff 	vqrdmlah.s32	q15, <illegal reg q14.5>, <illegal reg q15.5>
+    23fc:	0000      	movs	r0, r0
+    23fe:	e15b      	b.n	26b8 <android_setCpuArm@@Base+0xe44>
+    2400:	c000      	stmia	r0!, {}
+    2402:	83a0      	strh	r0, [r4, #28]
+    2404:	0004      	movs	r4, r0
+    2406:	8a00      	ldrh	r0, [r0, #16]
+    2408:	3001      	adds	r0, #1
+    240a:	e3c4      	b.n	2b96 <android_setCpuArm@@Base+0x1322>
+    240c:	b003      	add	sp, #12
+    240e:	e08b      	b.n	2528 <android_setCpuArm@@Base+0xcb4>
+    2410:	000b      	movs	r3, r1
+    2412:	e150      	b.n	26b6 <android_setCpuArm@@Base+0xe42>
+    2414:	c000      	stmia	r0!, {}
+    2416:	23a0      	movs	r3, #160	; 0xa0
+    2418:	c001      	stmia	r0!, {r0}
+    241a:	33a0      	adds	r3, #160	; 0xa0
+    241c:	a001      	add	r0, pc, #4	; (adr r0, 2424 <android_setCpuArm@@Base+0xbb0>)
+    241e:	e20a      	b.n	2836 <android_setCpuArm@@Base+0xfc2>
+    2420:	4001      	ands	r1, r0
+    2422:	e204      	b.n	282e <android_setCpuArm@@Base+0xfba>
+    2424:	408a      	lsls	r2, r1
+    2426:	e184      	b.n	2732 <android_setCpuArm@@Base+0xebe>
+    2428:	0001      	movs	r1, r0
+    242a:	e354      	b.n	2ad6 <android_setCpuArm@@Base+0x1262>
+    242c:	0017      	movs	r7, r2
+    242e:	0a00      	lsrs	r0, r0, #8
+    2430:	0002      	movs	r2, r0
+    2432:	3a00      	subs	r2, #0
+    2434:	0002      	movs	r2, r0
+    2436:	e354      	b.n	2ae2 <android_setCpuArm@@Base+0x126e>
+    2438:	0048      	lsls	r0, r1, #1
+    243a:	0a00      	lsrs	r0, r0, #8
+    243c:	00a8      	lsls	r0, r5, #2
+    243e:	ea00 0000 	and.w	r0, r0, r0
+    2442:	e358      	b.n	2af6 <android_setCpuArm@@Base+0x1282>
+    2444:	c000      	stmia	r0!, {}
+    2446:	03a0      	lsls	r0, r4, #14
+    2448:	c001      	stmia	r0!, {r0}
+    244a:	120c      	asrs	r4, r1, #8
+    244c:	a004      	add	r0, pc, #16	; (adr r0, 2460 <android_setCpuArm@@Base+0xbec>)
+    244e:	e286      	b.n	295e <android_setCpuArm@@Base+0x10ea>
+    2450:	0000      	movs	r0, r0
+    2452:	e35c      	b.n	2b0e <android_setCpuArm@@Base+0x129a>
+    2454:	000b      	movs	r3, r1
+    2456:	0a00      	lsrs	r0, r0, #8
+    2458:	0006      	movs	r6, r0
+    245a:	e1a0      	b.n	279e <android_setCpuArm@@Base+0xf2a>
+    245c:	fdd6 ebff 	ldc2l	11, cr14, [r6, #1020]	; 0x3fc	; <UNPREDICTABLE>
+    2460:	a038      	add	r0, pc, #224	; (adr r0, 2544 <android_setCpuArm@@Base+0xcd0>)
+    2462:	e585      	b.n	1f70 <android_setCpuArm@@Base+0x6fc>
+    2464:	4000      	ands	r0, r0
+    2466:	e1a0      	b.n	27aa <android_setCpuArm@@Base+0xf36>
+    2468:	0005      	movs	r5, r0
+    246a:	e1a0      	b.n	27ae <android_setCpuArm@@Base+0xf3a>
+    246c:	f9ab ebff 	vld4.32			; <UNDEFINED> instruction: 0xf9abebff
+    2470:	0000      	movs	r0, r0
+    2472:	e350      	b.n	2b16 <android_setCpuArm@@Base+0x12a2>
+    2474:	009a      	lsls	r2, r3, #2
+    2476:	0a00      	lsrs	r0, r0, #8
+    2478:	0007      	movs	r7, r0
+    247a:	e1a0      	b.n	27be <android_setCpuArm@@Base+0xf4a>
+    247c:	100f      	asrs	r7, r1, #32
+    247e:	e3a0      	b.n	2bc2 <android_setCpuArm@@Base+0x134e>
+    2480:	2004      	movs	r0, #4
+    2482:	e1a0      	b.n	27c6 <android_setCpuArm@@Base+0xf52>
+    2484:	0093      	lsls	r3, r2, #2
+    2486:	ea00 c00a 			; <UNDEFINED> instruction: 0xea00c00a
+    248a:	e1a0      	b.n	27ce <android_setCpuArm@@Base+0xf5a>
+    248c:	ffcb eaff 			; <UNDEFINED> instruction: 0xffcbeaff
+    2490:	0000      	movs	r0, r0
+    2492:	e358      	b.n	2b46 <android_setCpuArm@@Base+0x12d2>
+    2494:	001d      	movs	r5, r3
+    2496:	1a00      	subs	r0, r0, r0
+    2498:	0000      	movs	r0, r0
+    249a:	e35c      	b.n	2b56 <android_setCpuArm@@Base+0x12e2>
+    249c:	002d      	movs	r5, r5
+    249e:	0a00      	lsrs	r0, r0, #8
+    24a0:	3004      	adds	r0, #4
+    24a2:	e596      	b.n	1fd2 <android_setCpuArm@@Base+0x75e>
+    24a4:	a000      	add	r0, pc, #0	; (adr r0, 24a8 <android_setCpuArm@@Base+0xc34>)
+    24a6:	e596      	b.n	1fd6 <android_setCpuArm@@Base+0x762>
+    24a8:	0002      	movs	r2, r0
+    24aa:	e373      	b.n	2b94 <android_setCpuArm@@Base+0x1320>
+    24ac:	afaa      	add	r7, sp, #680	; 0x2a8
+    24ae:	e1a0      	b.n	27f2 <android_setCpuArm@@Base+0xf7e>
+    24b0:	008b      	lsls	r3, r1, #2
+    24b2:	0a00      	lsrs	r0, r0, #8
+    24b4:	0001      	movs	r1, r0
+    24b6:	e373      	b.n	2ba0 <android_setCpuArm@@Base+0x132c>
+    24b8:	2058      	movs	r0, #88	; 0x58
+    24ba:	e285      	b.n	29c8 <android_setCpuArm@@Base+0x1154>
+    24bc:	2010      	movs	r0, #16
+    24be:	e58d      	b.n	1fdc <android_setCpuArm@@Base+0x768>
+    24c0:	0008      	movs	r0, r1
+    24c2:	0a00      	lsrs	r0, r0, #8
+    24c4:	0004      	movs	r4, r0
+    24c6:	e286      	b.n	29d6 <android_setCpuArm@@Base+0x1162>
+    24c8:	fe59 ebff 	mrc2	11, 2, lr, cr9, cr15, {7}	; <UNPREDICTABLE>
+    24cc:	200a      	movs	r0, #10
+    24ce:	e1a0      	b.n	2812 <android_setCpuArm@@Base+0xf9e>
+    24d0:	3010      	adds	r0, #16
+    24d2:	e28d      	b.n	29f0 <android_setCpuArm@@Base+0x117c>
+    24d4:	1000      	asrs	r0, r0, #32
+    24d6:	e1a0      	b.n	281a <android_setCpuArm@@Base+0xfa6>
+    24d8:	0005      	movs	r5, r0
+    24da:	e1a0      	b.n	281e <android_setCpuArm@@Base+0xfaa>
+    24dc:	f97a ebff 	ldr??.w	lr, [sl], #255
+    24e0:	4000      	ands	r0, r0
+    24e2:	e250      	b.n	2986 <android_setCpuArm@@Base+0x1112>
+    24e4:	001b      	movs	r3, r3
+    24e6:	0a00      	lsrs	r0, r0, #8
+    24e8:	0007      	movs	r7, r0
+    24ea:	e1a0      	b.n	282e <android_setCpuArm@@Base+0xfba>
+    24ec:	100d      	asrs	r5, r1, #32
+    24ee:	e3a0      	b.n	2c32 <android_setCpuArm@@Base+0x13be>
+    24f0:	ff2f ebff 	vqrdmlah.s32	q7, <illegal reg q15.5>, <illegal reg q15.5>
+    24f4:	0002      	movs	r2, r0
+    24f6:	e354      	b.n	2ba2 <android_setCpuArm@@Base+0x132e>
+    24f8:	2010      	movs	r0, #16
+    24fa:	e59d      	b.n	2038 <android_setCpuArm@@Base+0x7c4>
+    24fc:	3005      	adds	r0, #5
+    24fe:	01a0      	lsls	r0, r4, #6
+    2500:	3002      	adds	r0, #2
+    2502:	11a0      	asrs	r0, r4, #6
+    2504:	0020      	movs	r0, r4
+    2506:	e585      	b.n	2014 <android_setCpuArm@@Base+0x7a0>
+    2508:	202c      	movs	r0, #44	; 0x2c
+    250a:	05a3      	lsls	r3, r4, #22
+    250c:	007b      	lsls	r3, r7, #1
+    250e:	ea00 0007 	and.w	r0, r0, r7
+    2512:	e1a0      	b.n	2856 <android_setCpuArm@@Base+0xfe2>
+    2514:	100d      	asrs	r5, r1, #32
+    2516:	e3a0      	b.n	2c5a <android_setCpuArm@@Base+0x13e6>
+    2518:	4020      	ands	r0, r4
+    251a:	e595      	b.n	2048 <android_setCpuArm@@Base+0x7d4>
+    251c:	ff24 ebff 	vqrdmlah.s32	q7, q10, <illegal reg q15.5>
+    2520:	0000      	movs	r0, r0
+    2522:	e154      	b.n	27ce <android_setCpuArm@@Base+0xf5a>
+    2524:	000b      	movs	r3, r1
+    2526:	1a00      	subs	r0, r0, r0
+    2528:	3028      	adds	r0, #40	; 0x28
+    252a:	e595      	b.n	2058 <android_setCpuArm@@Base+0x7e4>
+    252c:	0003      	movs	r3, r0
+    252e:	e156      	b.n	27de <android_setCpuArm@@Base+0xf6a>
+    2530:	0008      	movs	r0, r1
+    2532:	1a00      	subs	r0, r0, r0
+    2534:	0006      	movs	r6, r0
+    2536:	e1a0      	b.n	287a <android_setCpuArm@@Base+0x1006>
+    2538:	fd9f ebff 	ldc2	11, cr14, [pc, #1020]	; 2938 <android_setCpuArm@@Base+0x10c4>	; <UNPREDICTABLE>
+    253c:	100f      	asrs	r7, r1, #32
+    253e:	e3a0      	b.n	2c82 <android_setCpuArm@@Base+0x140e>
+    2540:	2000      	movs	r0, #0
+    2542:	e1a0      	b.n	2886 <android_setCpuArm@@Base+0x1012>
+    2544:	0007      	movs	r7, r0
+    2546:	e1a0      	b.n	288a <android_setCpuArm@@Base+0x1016>
+    2548:	ff3a ebff 	vqrdmlah.s<illegal width 64>	q7, q13, <illegal reg q15.5>
+    254c:	0007      	movs	r7, r0
+    254e:	e1a0      	b.n	2892 <android_setCpuArm@@Base+0x101e>
+    2550:	1000      	asrs	r0, r0, #32
+    2552:	e3a0      	b.n	2c96 <android_setCpuArm@@Base+0x1422>
+    2554:	003b      	movs	r3, r7
+    2556:	ea00 c008 			; <UNDEFINED> instruction: 0xea00c008
+    255a:	e286      	b.n	2a6a <android_setCpuArm@@Base+0x11f6>
+    255c:	ff97 eaff 			; <UNDEFINED> instruction: 0xff97eaff
+    2560:	4000      	ands	r0, r0
+    2562:	e596      	b.n	2092 <android_setCpuArm@@Base+0x81e>
+    2564:	0000      	movs	r0, r0
+    2566:	e358      	b.n	2c1a <android_setCpuArm@@Base+0x13a6>
+    2568:	4102      	asrs	r2, r0
+    256a:	e3c4      	b.n	2cf6 <android_setCpuArm@@Base+0x1482>
+    256c:	0019      	movs	r1, r3
+    256e:	1a00      	subs	r0, r0, r0
+    2570:	0000      	movs	r0, r0
+    2572:	e35c      	b.n	2c2e <android_setCpuArm@@Base+0x13ba>
+    2574:	0037      	movs	r7, r6
+    2576:	0a00      	lsrs	r0, r0, #8
+    2578:	3008      	adds	r0, #8
+    257a:	e59d      	b.n	20b8 <android_setCpuArm@@Base+0x844>
+    257c:	0000      	movs	r0, r0
+    257e:	e354      	b.n	2c2a <android_setCpuArm@@Base+0x13b6>
+    2580:	3001      	adds	r0, #1
+    2582:	0383      	lsls	r3, r0, #14
+    2584:	0000      	movs	r0, r0
+    2586:	e353      	b.n	2c30 <android_setCpuArm@@Base+0x13bc>
+    2588:	0032      	movs	r2, r6
+    258a:	0a00      	lsrs	r0, r0, #8
+    258c:	c058      	stmia	r0!, {r3, r4, r6}
+    258e:	e285      	b.n	2a9c <android_setCpuArm@@Base+0x1228>
+    2590:	b010      	add	sp, #64	; 0x40
+    2592:	e28d      	b.n	2ab0 <android_setCpuArm@@Base+0x123c>
+    2594:	a008      	add	r0, pc, #32	; (adr r0, 25b8 <android_setCpuArm@@Base+0xd44>)
+    2596:	e1a0      	b.n	28da <android_setCpuArm@@Base+0x1066>
+    2598:	0004      	movs	r4, r0
+    259a:	e15a      	b.n	2852 <android_setCpuArm@@Base+0xfde>
+    259c:	0052      	lsls	r2, r2, #1
+    259e:	0a00      	lsrs	r0, r0, #8
+    25a0:	a001      	add	r0, pc, #4	; (adr r0, 25a8 <android_setCpuArm@@Base+0xd34>)
+    25a2:	e28a      	b.n	2aba <android_setCpuArm@@Base+0x1246>
+    25a4:	c010      	stmia	r0!, {r4}
+    25a6:	e58d      	b.n	20c4 <android_setCpuArm@@Base+0x850>
+    25a8:	c00c      	stmia	r0!, {r2, r3}
+    25aa:	e58d      	b.n	20c8 <android_setCpuArm@@Base+0x854>
+    25ac:	010a      	lsls	r2, r1, #4
+    25ae:	e086      	b.n	26be <android_setCpuArm@@Base+0xe4a>
+    25b0:	fe1f ebff 	mrc2	11, 0, lr, cr15, cr15, {7}	; <UNPREDICTABLE>
+    25b4:	2000      	movs	r0, #0
+    25b6:	e3a0      	b.n	2cfa <android_setCpuArm@@Base+0x1486>
+    25b8:	300b      	adds	r0, #11
+    25ba:	e1a0      	b.n	28fe <android_setCpuArm@@Base+0x108a>
+    25bc:	1000      	asrs	r0, r0, #32
+    25be:	e1a0      	b.n	2902 <android_setCpuArm@@Base+0x108e>
+    25c0:	0005      	movs	r5, r0
+    25c2:	e1a0      	b.n	2906 <android_setCpuArm@@Base+0x1092>
+    25c4:	f940 ebff 			; <UNDEFINED> instruction: 0xf940ebff
+    25c8:	c00c      	stmia	r0!, {r2, r3}
+    25ca:	e59d      	b.n	2108 <android_setCpuArm@@Base+0x894>
+    25cc:	0000      	movs	r0, r0
+    25ce:	e350      	b.n	2c72 <android_setCpuArm@@Base+0x13fe>
+    25d0:	fff0 0aff 			; <UNDEFINED> instruction: 0xfff00aff
+    25d4:	001f      	movs	r7, r3
+    25d6:	ea00 0007 	and.w	r0, r0, r7
+    25da:	e1a0      	b.n	291e <android_setCpuArm@@Base+0x10aa>
+    25dc:	100d      	asrs	r5, r1, #32
+    25de:	e3a0      	b.n	2d22 <android_setCpuArm@@Base+0x14ae>
+    25e0:	a020      	add	r0, pc, #128	; (adr r0, 2664 <android_setCpuArm@@Base+0xdf0>)
+    25e2:	e595      	b.n	2110 <android_setCpuArm@@Base+0x89c>
+    25e4:	fef2 ebff 	mrc2	11, 7, lr, cr2, cr15, {7}	; <UNPREDICTABLE>
+    25e8:	0000      	movs	r0, r0
+    25ea:	e15a      	b.n	28a2 <android_setCpuArm@@Base+0x102e>
+    25ec:	0019      	movs	r1, r3
+    25ee:	1a00      	subs	r0, r0, r0
+    25f0:	3028      	adds	r0, #40	; 0x28
+    25f2:	e595      	b.n	2120 <android_setCpuArm@@Base+0x8ac>
+    25f4:	0003      	movs	r3, r0
+    25f6:	e156      	b.n	28a6 <android_setCpuArm@@Base+0x1032>
+    25f8:	0016      	movs	r6, r2
+    25fa:	1a00      	subs	r0, r0, r0
+    25fc:	a000      	add	r0, pc, #0	; (adr r0, 2600 <android_setCpuArm@@Base+0xd8c>)
+    25fe:	e3a0      	b.n	2d42 <android_setCpuArm@@Base+0x14ce>
+    2600:	3004      	adds	r0, #4
+    2602:	e3a0      	b.n	2d46 <android_setCpuArm@@Base+0x14d2>
+    2604:	4028      	ands	r0, r5
+    2606:	e585      	b.n	2114 <android_setCpuArm@@Base+0x8a0>
+    2608:	3030      	adds	r0, #48	; 0x30
+    260a:	e585      	b.n	2118 <android_setCpuArm@@Base+0x8a4>
+    260c:	3003      	adds	r0, #3
+    260e:	e086      	b.n	271e <android_setCpuArm@@Base+0xeaa>
+    2610:	a02c      	add	r0, pc, #176	; (adr r0, 26c4 <android_setCpuArm@@Base+0xe50>)
+    2612:	e585      	b.n	2120 <android_setCpuArm@@Base+0x8ac>
+    2614:	3034      	adds	r0, #52	; 0x34
+    2616:	e585      	b.n	2124 <android_setCpuArm@@Base+0x8b0>
+    2618:	3000      	adds	r0, #0
+    261a:	e596      	b.n	214a <android_setCpuArm@@Base+0x8d6>
+    261c:	000a      	movs	r2, r1
+    261e:	e153      	b.n	28c8 <android_setCpuArm@@Base+0x1054>
+    2620:	000a      	movs	r2, r1
+    2622:	aa00      	add	r2, sp, #0
+    2624:	0001      	movs	r1, r0
+    2626:	e284      	b.n	2b32 <android_setCpuArm@@Base+0x12be>
+    2628:	0100      	lsls	r0, r0, #4
+    262a:	e086      	b.n	273a <android_setCpuArm@@Base+0xec6>
+    262c:	fd62 ebff 	stc2l	11, cr14, [r2, #-1020]!	; 0xfffffc04	; <UNPREDICTABLE>
+    2630:	100f      	asrs	r7, r1, #32
+    2632:	e3a0      	b.n	2d76 <android_setCpuArm@@Base+0x1502>
+    2634:	2000      	movs	r0, #0
+    2636:	e1a0      	b.n	297a <android_setCpuArm@@Base+0x1106>
+    2638:	0007      	movs	r7, r0
+    263a:	e1a0      	b.n	297e <android_setCpuArm@@Base+0x110a>
+    263c:	fefd ebff 	mrc2	11, 7, lr, cr13, cr15, {7}	; <UNPREDICTABLE>
+    2640:	0007      	movs	r7, r0
+    2642:	e1a0      	b.n	2986 <android_setCpuArm@@Base+0x1112>
+    2644:	100a      	asrs	r2, r1, #32
+    2646:	e1a0      	b.n	298a <android_setCpuArm@@Base+0x1116>
+    2648:	2005      	movs	r0, #5
+    264a:	e1a0      	b.n	298e <android_setCpuArm@@Base+0x111a>
+    264c:	0021      	movs	r1, r4
+    264e:	ea00 3001 	and.w	r0, r0, r1, lsl #12
+    2652:	e3a0      	b.n	2d96 <android_setCpuArm@@Base+0x1522>
+    2654:	3004      	adds	r0, #4
+    2656:	e58d      	b.n	2174 <android_setCpuArm@@Base+0x900>
+    2658:	3000      	adds	r0, #0
+    265a:	e596      	b.n	218a <android_setCpuArm@@Base+0x916>
+    265c:	c001      	stmia	r0!, {r0}
+    265e:	e284      	b.n	2b6a <android_setCpuArm@@Base+0x12f6>
+    2660:	0000      	movs	r0, r0
+    2662:	e353      	b.n	2d0c <android_setCpuArm@@Base+0x1498>
+    2664:	6004      	str	r4, [r0, #0]
+    2666:	b286      	uxth	r6, r0
+    2668:	c10c      	stmia	r1!, {r2, r3}
+    266a:	e086      	b.n	277a <android_setCpuArm@@Base+0xf06>
+    266c:	ff53 eaff 	vpmin.u16	q15, <illegal reg q9.5>, <illegal reg q15.5>
+    2670:	3000      	adds	r0, #0
+    2672:	e3a0      	b.n	2db6 <android_setCpuArm@@Base+0x1542>
+    2674:	3004      	adds	r0, #4
+    2676:	e58d      	b.n	2194 <android_setCpuArm@@Base+0x920>
+    2678:	0002      	movs	r2, r0
+    267a:	e359      	b.n	2d30 <android_setCpuArm@@Base+0x14bc>
+    267c:	0001      	movs	r1, r0
+    267e:	da00      	bge.n	2682 <android_setCpuArm@@Base+0xe0e>
+    2680:	fdf0 ebff 	ldc2l	11, cr14, [r0, #1020]!	; 0x3fc	; <UNPREDICTABLE>
+    2684:	0002      	movs	r2, r0
+    2686:	ea00 0007 	and.w	r0, r0, r7
+    268a:	e1a0      	b.n	29ce <android_setCpuArm@@Base+0x115a>
+    268c:	1014      	asrs	r4, r2, #32
+    268e:	e28d      	b.n	2bac <android_setCpuArm@@Base+0x1338>
+    2690:	018b      	lsls	r3, r1, #6
+    2692:	eb00 0000 	add.w	r0, r0, r0
+    2696:	e350      	b.n	2d3a <android_setCpuArm@@Base+0x14c6>
+    2698:	0011      	movs	r1, r2
+    269a:	1a00      	subs	r0, r0, r0
+    269c:	3004      	adds	r0, #4
+    269e:	e59d      	b.n	21dc <android_setCpuArm@@Base+0x968>
+    26a0:	0000      	movs	r0, r0
+    26a2:	e353      	b.n	2d4c <android_setCpuArm@@Base+0x14d8>
+    26a4:	0008      	movs	r0, r1
+    26a6:	03a0      	lsls	r0, r4, #14
+    26a8:	0017      	movs	r7, r2
+    26aa:	0a00      	lsrs	r0, r0, #8
+    26ac:	100f      	asrs	r7, r1, #32
+    26ae:	e3a0      	b.n	2df2 <android_setCpuArm@@Base+0x157e>
+    26b0:	0007      	movs	r7, r0
+    26b2:	e1a0      	b.n	29f6 <android_setCpuArm@@Base+0x1182>
+    26b4:	febe ebff 	mrc2	11, 5, lr, cr14, cr15, {7}	; <UNPREDICTABLE>
+    26b8:	100e      	asrs	r6, r1, #32
+    26ba:	e3a0      	b.n	2dfe <android_setCpuArm@@Base+0x158a>
+    26bc:	2000      	movs	r0, #0
+    26be:	e1a0      	b.n	2a02 <android_setCpuArm@@Base+0x118e>
+    26c0:	0007      	movs	r7, r0
+    26c2:	e1a0      	b.n	2a06 <android_setCpuArm@@Base+0x1192>
+    26c4:	fedb ebff 	mrc2	11, 6, lr, cr11, cr15, {7}	; <UNPREDICTABLE>
+    26c8:	2044      	movs	r0, #68	; 0x44
+    26ca:	e59f      	b.n	220c <android_setCpuArm@@Base+0x998>
+    26cc:	0007      	movs	r7, r0
+    26ce:	e1a0      	b.n	2a12 <android_setCpuArm@@Base+0x119e>
+    26d0:	100f      	asrs	r7, r1, #32
+    26d2:	e3a0      	b.n	2e16 <android_setCpuArm@@Base+0x15a2>
+    26d4:	2002      	movs	r0, #2
+    26d6:	e79f      	b.n	2618 <android_setCpuArm@@Base+0xda4>
+    26d8:	fed6 ebff 	mrc2	11, 6, lr, cr6, cr15, {7}	; <UNPREDICTABLE>
+    26dc:	0007      	movs	r7, r0
+    26de:	e3a0      	b.n	2e22 <android_setCpuArm@@Base+0x15ae>
+    26e0:	0009      	movs	r1, r1
+    26e2:	ea00 0009 	and.w	r0, r0, r9
+    26e6:	e3a0      	b.n	2e2a <android_setCpuArm@@Base+0x15b6>
+    26e8:	0007      	movs	r7, r0
+    26ea:	ea00 0007 	and.w	r0, r0, r7
+    26ee:	e1a0      	b.n	2a32 <android_setCpuArm@@Base+0x11be>
+    26f0:	100d      	asrs	r5, r1, #32
+    26f2:	e3a0      	b.n	2e36 <android_setCpuArm@@Base+0x15c2>
+    26f4:	feae ebff 	mcr2	11, 5, lr, cr14, cr15, {7}	; <UNPREDICTABLE>
+    26f8:	3010      	adds	r0, #16
+    26fa:	e59d      	b.n	2238 <android_setCpuArm@@Base+0x9c4>
+    26fc:	0020      	movs	r0, r4
+    26fe:	e585      	b.n	220c <android_setCpuArm@@Base+0x998>
+    2700:	0006      	movs	r6, r0
+    2702:	e3a0      	b.n	2e46 <android_setCpuArm@@Base+0x15d2>
+    2704:	3024      	adds	r0, #36	; 0x24
+    2706:	e585      	b.n	2214 <android_setCpuArm@@Base+0x9a0>
+    2708:	6028      	str	r0, [r5, #0]
+    270a:	e585      	b.n	2218 <android_setCpuArm@@Base+0x9a4>
+    270c:	d024      	beq.n	2758 <android_setCpuArm@@Base+0xee4>
+    270e:	e28d      	b.n	2c2c <android_setCpuArm@@Base+0x13b8>
+    2710:	8ff0      	ldrh	r0, [r6, #62]	; 0x3e
+    2712:	e8bd 1908 	ldmia.w	sp!, {r3, r8, fp, ip}
+    2716:	0001      	movs	r1, r0
+    2718:	3000      	adds	r0, #0
+    271a:	e3a0      	b.n	2e5e <android_setCpuArm@@Base+0x15ea>
+    271c:	ff02 eaff 	vpmin.u8	q7, q9, <illegal reg q15.5>
+    2720:	3001      	adds	r0, #1
+    2722:	e3a0      	b.n	2e66 <android_setCpuArm@@Base+0x15f2>
+    2724:	ff00 eaff 	vpmin.u8	q7, q8, <illegal reg q15.5>
+    2728:	3002      	adds	r0, #2
+    272a:	e3a0      	b.n	2e6e <android_setCpuArm@@Base+0x15fa>
+    272c:	fefe eaff 	mrc2	10, 7, lr, cr14, cr15, {7}	; <UNPREDICTABLE>
+    2730:	43f0      	mvns	r0, r6
+    2732:	e92d 5000 	stmdb	sp!, {ip, lr}
+    2736:	e1a0      	b.n	2a7a <android_setCpuArm@@Base+0x1206>
+    2738:	df43      	svc	67	; 0x43
+    273a:	e24d      	b.n	2bd8 <android_setCpuArm@@Base+0x1364>
+    273c:	4002      	ands	r2, r0
+    273e:	e1a0      	b.n	2a82 <android_setCpuArm@@Base+0x120e>
+    2740:	0004      	movs	r4, r0
+    2742:	e351      	b.n	2de8 <android_setCpuArm@@Base+0x1574>
+    2744:	f101 908f 	b.w	d03866 <__bss_end__@@Base+0xced002>
+    2748:	00b9      	lsls	r1, r7, #2
+    274a:	ea00 0003 	and.w	r0, r0, r3
+    274e:	ea00 0014 	and.w	r0, r0, r4, lsr #32
+    2752:	ea00 00b6 	and.w	r0, r0, r6, ror #2
+    2756:	ea00 007f 	and.w	r0, r0, pc, ror #1
+    275a:	ea00 009a 	and.w	r0, r0, sl, lsr #2
+    275e:	ea00 0000 	and.w	r0, r0, r0
+    2762:	e353      	b.n	2e0c <android_setCpuArm@@Base+0x1598>
+    2764:	00b2      	lsls	r2, r6, #2
+    2766:	1a00      	subs	r0, r0, r0
+    2768:	3001      	adds	r0, #1
+    276a:	e3a0      	b.n	2eae <android_setCpuArm@@Base+0x163a>
+    276c:	1072      	asrs	r2, r6, #1
+    276e:	e6ff      	b.n	2570 <android_setCpuArm@@Base+0xcfc>
+    2770:	2038      	movs	r0, #56	; 0x38
+    2772:	e590      	b.n	2296 <android_setCpuArm@@Base+0xa22>
+    2774:	0003      	movs	r3, r0
+    2776:	e1a0      	b.n	2aba <android_setCpuArm@@Base+0x1246>
+    2778:	c001      	stmia	r0!, {r0}
+    277a:	e243      	b.n	2c04 <android_setCpuArm@@Base+0x1390>
+    277c:	cc10      	ldmia	r4, {r4}
+    277e:	e011      	b.n	27a4 <android_setCpuArm@@Base+0xf30>
+    2780:	c000      	stmia	r0!, {}
+    2782:	1592      	asrs	r2, r2, #22
+    2784:	2004      	movs	r0, #4
+    2786:	1282      	asrs	r2, r0, #10
+    2788:	c103      	stmia	r1!, {r0, r1}
+    278a:	1785      	asrs	r5, r0, #30
+    278c:	3001      	adds	r0, #1
+    278e:	e283      	b.n	2c98 <android_setCpuArm@@Base+0x1424>
+    2790:	0011      	movs	r1, r2
+    2792:	e353      	b.n	2e3c <android_setCpuArm@@Base+0x15c8>
+    2794:	fff7 1aff 			; <UNDEFINED> instruction: 0xfff71aff
+    2798:	0a02      	lsrs	r2, r0, #8
+    279a:	e214      	b.n	2bc6 <android_setCpuArm@@Base+0x1352>
+    279c:	2038      	movs	r0, #56	; 0x38
+    279e:	0585      	lsls	r5, r0, #22
+    27a0:	00b8      	lsls	r0, r7, #2
+    27a2:	0a00      	lsrs	r0, r0, #8
+    27a4:	00a4      	lsls	r4, r4, #2
+    27a6:	ea00 2004 	and.w	r0, r0, r4, lsl #8
+    27aa:	e3c3      	b.n	2f34 <android_setCpuArm@@Base+0x16c0>
+    27ac:	0001      	movs	r1, r0
+    27ae:	e352      	b.n	2e56 <android_setCpuArm@@Base+0x15e2>
+    27b0:	009f      	lsls	r7, r3, #2
+    27b2:	1a00      	subs	r0, r0, r0
+    27b4:	0001      	movs	r1, r0
+    27b6:	e353      	b.n	2e60 <android_setCpuArm@@Base+0x15ec>
+    27b8:	7824      	ldrb	r4, [r4, #0]
+    27ba:	e1a0      	b.n	2afe <android_setCpuArm@@Base+0x128a>
+    27bc:	4074      	eors	r4, r6
+    27be:	e6ff      	b.n	25c0 <android_setCpuArm@@Base+0xd4c>
+    27c0:	6007      	str	r7, [r0, #0]
+    27c2:	e084      	b.n	28ce <android_setCpuArm@@Base+0x105a>
+    27c4:	0006      	movs	r6, r0
+    27c6:	1a00      	subs	r0, r0, r0
+    27c8:	0010      	movs	r0, r2
+    27ca:	e356      	b.n	2e7a <android_setCpuArm@@Base+0x1606>
+    27cc:	0098      	lsls	r0, r3, #2
+    27ce:	8a00      	ldrh	r0, [r0, #16]
+    27d0:	000f      	movs	r7, r1
+    27d2:	e357      	b.n	2e84 <android_setCpuArm@@Base+0x1610>
+    27d4:	8003      	strh	r3, [r0, #0]
+    27d6:	91a0      	str	r1, [sp, #640]	; 0x280
+    27d8:	6000      	str	r0, [r0, #0]
+    27da:	93a0      	str	r3, [sp, #640]	; 0x280
+    27dc:	0094      	lsls	r4, r2, #2
+    27de:	8a00      	ldrh	r0, [r0, #16]
+    27e0:	0005      	movs	r5, r0
+    27e2:	ea00 0020 	and.w	r0, r0, r0, asr #32
+    27e6:	e356      	b.n	2e96 <android_setCpuArm@@Base+0x1622>
+    27e8:	0091      	lsls	r1, r2, #2
+    27ea:	8a00      	ldrh	r0, [r0, #16]
+    27ec:	000f      	movs	r7, r1
+    27ee:	e357      	b.n	2ea0 <android_setCpuArm@@Base+0x162c>
+    27f0:	0093      	lsls	r3, r2, #2
+    27f2:	9a00      	ldr	r2, [sp, #0]
+    27f4:	6004      	str	r4, [r0, #0]
+    27f6:	e1a0      	b.n	2b3a <android_setCpuArm@@Base+0x12c6>
+    27f8:	8000      	strh	r0, [r0, #0]
+    27fa:	e3a0      	b.n	2f3e <android_setCpuArm@@Base+0x16ca>
+    27fc:	9000      	str	r0, [sp, #0]
+    27fe:	e296      	b.n	2d2e <android_setCpuArm@@Base+0x14ba>
+    2800:	9001      	str	r0, [sp, #4]
+    2802:	13a0      	asrs	r0, r4, #14
+    2804:	0005      	movs	r5, r0
+    2806:	e353      	b.n	2eb0 <android_setCpuArm@@Base+0x163c>
+    2808:	0000      	movs	r0, r0
+    280a:	1356      	asrs	r6, r2, #13
+    280c:	0088      	lsls	r0, r1, #2
+    280e:	1a00      	subs	r0, r0, r0
+    2810:	000f      	movs	r7, r1
+    2812:	e357      	b.n	2ec4 <android_setCpuArm@@Base+0x1650>
+    2814:	0012      	movs	r2, r2
+    2816:	8a00      	ldrh	r0, [r0, #16]
+    2818:	2000      	movs	r0, #0
+    281a:	e595      	b.n	2348 <android_setCpuArm@@Base+0xad4>
+    281c:	0001      	movs	r1, r0
+    281e:	e312      	b.n	2e46 <android_setCpuArm@@Base+0x15d2>
+    2820:	000f      	movs	r7, r1
+    2822:	0a00      	lsrs	r0, r0, #8
+    2824:	0005      	movs	r5, r0
+    2826:	e353      	b.n	2ed0 <android_setCpuArm@@Base+0x165c>
+    2828:	0005      	movs	r5, r0
+    282a:	e1a0      	b.n	2b6e <android_setCpuArm@@Base+0x12fa>
+    282c:	1001      	asrs	r1, r0, #32
+    282e:	e3c2      	b.n	2fb6 <android_setCpuArm@@Base+0x1742>
+    2830:	1048      	asrs	r0, r1, #1
+    2832:	e480      	b.n	2136 <android_setCpuArm@@Base+0x8c2>
+    2834:	0007      	movs	r7, r0
+    2836:	1a00      	subs	r0, r0, r0
+    2838:	1002      	asrs	r2, r0, #32
+    283a:	e381      	b.n	2f40 <android_setCpuArm@@Base+0x16cc>
+    283c:	1000      	asrs	r0, r0, #32
+    283e:	e585      	b.n	234c <android_setCpuArm@@Base+0xad8>
+    2840:	009d      	lsls	r5, r3, #2
+    2842:	eb00 0000 	add.w	r0, r0, r0
+    2846:	e359      	b.n	2efc <android_setCpuArm@@Base+0x1688>
+    2848:	0007      	movs	r7, r0
+    284a:	1a00      	subs	r0, r0, r0
+    284c:	0080      	lsls	r0, r0, #2
+    284e:	e28d      	b.n	2d6c <android_setCpuArm@@Base+0x14f8>
+    2850:	0099      	lsls	r1, r3, #2
+    2852:	eb00 000f 	add.w	r0, r0, pc
+    2856:	ea00 2003 	and.w	r0, r0, r3, lsl #8
+    285a:	e3c2      	b.n	2fe2 <android_setCpuArm@@Base+0x176e>
+    285c:	2000      	movs	r0, #0
+    285e:	e585      	b.n	236c <android_setCpuArm@@Base+0xaf8>
+    2860:	0091      	lsls	r1, r2, #2
+    2862:	eb00 0000 	add.w	r0, r0, r0
+    2866:	e359      	b.n	2f1c <android_setCpuArm@@Base+0x16a8>
+    2868:	007b      	lsls	r3, r7, #1
+    286a:	0a00      	lsrs	r0, r0, #8
+    286c:	3000      	adds	r0, #0
+    286e:	e595      	b.n	239c <android_setCpuArm@@Base+0xb28>
+    2870:	0004      	movs	r4, r0
+    2872:	e313      	b.n	2e9c <android_setCpuArm@@Base+0x1628>
+    2874:	0003      	movs	r3, r0
+    2876:	0a00      	lsrs	r0, r0, #8
+    2878:	0005      	movs	r5, r0
+    287a:	e1a0      	b.n	2bbe <android_setCpuArm@@Base+0x134a>
+    287c:	3004      	adds	r0, #4
+    287e:	e3c3      	b.n	3008 <android_setCpuArm@@Base+0x1794>
+    2880:	30d0      	adds	r0, #208	; 0xd0
+    2882:	e480      	b.n	2186 <android_setCpuArm@@Base+0x912>
+    2884:	0090      	lsls	r0, r2, #2
+    2886:	eb00 0000 	add.w	r0, r0, r0
+    288a:	e358      	b.n	2f3e <android_setCpuArm@@Base+0x16ca>
+    288c:	0077      	lsls	r7, r6, #1
+    288e:	1a00      	subs	r0, r0, r0
+    2890:	000f      	movs	r7, r1
+    2892:	e357      	b.n	2f44 <android_setCpuArm@@Base+0x16d0>
+    2894:	ffec 9aff 			; <UNDEFINED> instruction: 0xffec9aff
+    2898:	0000      	movs	r0, r0
+    289a:	e359      	b.n	2f50 <android_setCpuArm@@Base+0x16dc>
+    289c:	0002      	movs	r2, r0
+    289e:	0a00      	lsrs	r0, r0, #8
+    28a0:	000d      	movs	r5, r1
+    28a2:	e1a0      	b.n	2be6 <android_setCpuArm@@Base+0x1372>
+    28a4:	0088      	lsls	r0, r1, #2
+    28a6:	eb00 4010 	add.w	r0, r0, r0, lsr #16
+    28aa:	e267      	b.n	2d7c <android_setCpuArm@@Base+0x1508>
+    28ac:	2038      	movs	r0, #56	; 0x38
+    28ae:	e595      	b.n	23dc <android_setCpuArm@@Base+0xb68>
+    28b0:	0000      	movs	r0, r0
+    28b2:	e354      	b.n	2f5e <android_setCpuArm@@Base+0x16ea>
+    28b4:	3002      	adds	r0, #2
+    28b6:	e1a0      	b.n	2bfa <android_setCpuArm@@Base+0x1386>
+    28b8:	0009      	movs	r1, r1
+    28ba:	da00      	bge.n	28be <android_setCpuArm@@Base+0x104a>
+    28bc:	1080      	asrs	r0, r0, #2
+    28be:	e28d      	b.n	2ddc <android_setCpuArm@@Base+0x1568>
+    28c0:	4084      	lsls	r4, r0
+    28c2:	e1a0      	b.n	2c06 <android_setCpuArm@@Base+0x1392>
+    28c4:	1187      	asrs	r7, r0, #6
+    28c6:	e081      	b.n	29cc <android_setCpuArm@@Base+0x1158>
+    28c8:	3000      	adds	r0, #0
+    28ca:	e3a0      	b.n	300e <android_setCpuArm@@Base+0x179a>
+    28cc:	0004      	movs	r4, r0
+    28ce:	e153      	b.n	2b78 <android_setCpuArm@@Base+0x1304>
+    28d0:	0103      	lsls	r3, r0, #4
+    28d2:	1792      	asrs	r2, r2, #30
+    28d4:	0103      	lsls	r3, r0, #4
+    28d6:	1781      	asrs	r1, r0, #30
+    28d8:	3001      	adds	r0, #1
+    28da:	1283      	asrs	r3, r0, #10
+    28dc:	fffa 1aff 			; <UNDEFINED> instruction: 0xfffa1aff
+    28e0:	3103      	adds	r1, #3
+    28e2:	e082      	b.n	29ea <android_setCpuArm@@Base+0x1176>
+    28e4:	0000      	movs	r0, r0
+    28e6:	e359      	b.n	2f9c <android_setCpuArm@@Base+0x1728>
+    28e8:	000a      	movs	r2, r1
+    28ea:	0a00      	lsrs	r0, r0, #8
+    28ec:	0010      	movs	r0, r2
+    28ee:	e357      	b.n	2fa0 <android_setCpuArm@@Base+0x172c>
+    28f0:	2f42      	cmp	r7, #66	; 0x42
+    28f2:	e28d      	b.n	2e10 <android_setCpuArm@@Base+0x159c>
+    28f4:	6186      	str	r6, [r0, #24]
+    28f6:	e083      	b.n	2a00 <android_setCpuArm@@Base+0x118c>
+    28f8:	4007      	ands	r7, r0
+    28fa:	21a0      	movs	r1, #160	; 0xa0
+    28fc:	4010      	ands	r0, r2
+    28fe:	33a0      	adds	r3, #160	; 0xa0
+    2900:	4184      	sbcs	r4, r0
+    2902:	e082      	b.n	2a0a <android_setCpuArm@@Base+0x1196>
+    2904:	4f63      	ldr	r7, [pc, #396]	; (2a94 <android_setCpuArm@@Base+0x1220>)
+    2906:	e244      	b.n	2d92 <android_setCpuArm@@Base+0x151e>
+    2908:	0006      	movs	r6, r0
+    290a:	e153      	b.n	2bb4 <android_setCpuArm@@Base+0x1340>
+    290c:	2004      	movs	r0, #4
+    290e:	1493      	asrs	r3, r2, #18
+    2910:	2004      	movs	r0, #4
+    2912:	15a4      	asrs	r4, r4, #22
+    2914:	fffb 1aff 			; <UNDEFINED> instruction: 0xfffb1aff
+    2918:	0000      	movs	r0, r0
+    291a:	e358      	b.n	2fce <android_setCpuArm@@Base+0x175a>
+    291c:	3004      	adds	r0, #4
+    291e:	1283      	asrs	r3, r0, #10
+    2920:	0000      	movs	r0, r0
+    2922:	e358      	b.n	2fd6 <android_setCpuArm@@Base+0x1762>
+    2924:	3038      	adds	r0, #56	; 0x38
+    2926:	e585      	b.n	2434 <android_setCpuArm@@Base+0xbc0>
+    2928:	0002      	movs	r2, r0
+    292a:	0a00      	lsrs	r0, r0, #8
+    292c:	0080      	lsls	r0, r0, #2
+    292e:	e28d      	b.n	2e4c <android_setCpuArm@@Base+0x15d8>
+    2930:	005b      	lsls	r3, r3, #1
+    2932:	eb00 0040 	add.w	r0, r0, r0, lsl #1
+    2936:	ea00 000f 	and.w	r0, r0, pc
+    293a:	e357      	b.n	2fec <android_setCpuArm@@Base+0x1778>
+    293c:	0001      	movs	r1, r0
+    293e:	8a00      	ldrh	r0, [r0, #16]
+    2940:	0080      	lsls	r0, r0, #2
+    2942:	e28d      	b.n	2e60 <android_setCpuArm@@Base+0x15ec>
+    2944:	005a      	lsls	r2, r3, #1
+    2946:	eb00 0000 	add.w	r0, r0, r0
+    294a:	e359      	b.n	3000 <android_setCpuArm@@Base+0x178c>
+    294c:	003a      	movs	r2, r7
+    294e:	0a00      	lsrs	r0, r0, #8
+    2950:	000d      	movs	r5, r1
+    2952:	e1a0      	b.n	2c96 <android_setCpuArm@@Base+0x1422>
+    2954:	005a      	lsls	r2, r3, #1
+    2956:	eb00 0037 	add.w	r0, r0, r7, rrx
+    295a:	ea00 0003 	and.w	r0, r0, r3
+    295e:	e353      	b.n	3008 <android_setCpuArm@@Base+0x1794>
+    2960:	0033      	movs	r3, r6
+    2962:	1a00      	subs	r0, r0, r0
+    2964:	6822      	ldr	r2, [r4, #0]
+    2966:	e1a0      	b.n	2caa <android_setCpuArm@@Base+0x1436>
+    2968:	4072      	eors	r2, r6
+    296a:	e6ff      	b.n	276c <android_setCpuArm@@Base+0xef8>
+    296c:	3006      	adds	r0, #6
+    296e:	e084      	b.n	2a7a <android_setCpuArm@@Base+0x1206>
+    2970:	0010      	movs	r0, r2
+    2972:	e353      	b.n	301c <android_setCpuArm@@Base+0x17a8>
+    2974:	002e      	movs	r6, r5
+    2976:	8a00      	ldrh	r0, [r0, #16]
+    2978:	3000      	adds	r0, #0
+    297a:	e590      	b.n	249e <android_setCpuArm@@Base+0xc2a>
+    297c:	0008      	movs	r0, r1
+    297e:	e313      	b.n	2fa8 <android_setCpuArm@@Base+0x1734>
+    2980:	0002      	movs	r2, r0
+    2982:	0a00      	lsrs	r0, r0, #8
+    2984:	3008      	adds	r0, #8
+    2986:	e3c3      	b.n	3110 <android_setCpuArm@@Base+0x189c>
+    2988:	3150      	adds	r1, #80	; 0x50
+    298a:	e480      	b.n	228e <android_setCpuArm@@Base+0xa1a>
+    298c:	0061      	lsls	r1, r4, #1
+    298e:	eb00 7080 	add.w	r0, r0, r0, lsl #30
+    2992:	e28d      	b.n	2eb0 <android_setCpuArm@@Base+0x163c>
+    2994:	6186      	str	r6, [r0, #24]
+    2996:	e087      	b.n	2aa8 <android_setCpuArm@@Base+0x1234>
+    2998:	0007      	movs	r7, r0
+    299a:	e1a0      	b.n	2cde <android_setCpuArm@@Base+0x146a>
+    299c:	6004      	str	r4, [r0, #0]
+    299e:	e246      	b.n	2e2e <android_setCpuArm@@Base+0x15ba>
+    29a0:	005c      	lsls	r4, r3, #1
+    29a2:	eb00 3038 	add.w	r0, r0, r8, ror #12
+    29a6:	e595      	b.n	24d4 <android_setCpuArm@@Base+0xc60>
+    29a8:	4184      	sbcs	r4, r0
+    29aa:	e083      	b.n	2ab4 <android_setCpuArm@@Base+0x1240>
+    29ac:	0004      	movs	r4, r0
+    29ae:	e153      	b.n	2c58 <android_setCpuArm@@Base+0x13e4>
+    29b0:	2004      	movs	r0, #4
+    29b2:	1493      	asrs	r3, r2, #18
+    29b4:	2004      	movs	r0, #4
+    29b6:	15a6      	asrs	r6, r4, #22
+    29b8:	fffb 1aff 			; <UNDEFINED> instruction: 0xfffb1aff
+    29bc:	3038      	adds	r0, #56	; 0x38
+    29be:	e585      	b.n	24cc <android_setCpuArm@@Base+0xc58>
+    29c0:	0007      	movs	r7, r0
+    29c2:	e1a0      	b.n	2d06 <android_setCpuArm@@Base+0x1492>
+    29c4:	0042      	lsls	r2, r0, #1
+    29c6:	eb00 001b 	add.w	r0, r0, fp, lsr #32
+    29ca:	ea00 0010 	and.w	r0, r0, r0, lsr #32
+    29ce:	e352      	b.n	3076 <android_setCpuArm@@Base+0x1802>
+    29d0:	0000      	movs	r0, r0
+    29d2:	9353      	str	r3, [sp, #332]	; 0x14c
+    29d4:	0016      	movs	r6, r2
+    29d6:	1a00      	subs	r0, r0, r0
+    29d8:	3000      	adds	r0, #0
+    29da:	e590      	b.n	24fe <android_setCpuArm@@Base+0xc8a>
+    29dc:	0010      	movs	r0, r2
+    29de:	e313      	b.n	3008 <android_setCpuArm@@Base+0x1794>
+    29e0:	0002      	movs	r2, r0
+    29e2:	0a00      	lsrs	r0, r0, #8
+    29e4:	3010      	adds	r0, #16
+    29e6:	e3c3      	b.n	3170 <android_setCpuArm@@Base+0x18fc>
+    29e8:	31d0      	adds	r1, #208	; 0xd0
+    29ea:	e480      	b.n	22ee <android_setCpuArm@@Base+0xa7a>
+    29ec:	005f      	lsls	r7, r3, #1
+    29ee:	eb00 6080 	add.w	r0, r0, r0, lsl #26
+    29f2:	e28d      	b.n	2f10 <android_setCpuArm@@Base+0x169c>
+    29f4:	0006      	movs	r6, r0
+    29f6:	e1a0      	b.n	2d3a <android_setCpuArm@@Base+0x14c6>
+    29f8:	005c      	lsls	r4, r3, #1
+    29fa:	eb00 2038 	add.w	r0, r0, r8, ror #8
+    29fe:	e595      	b.n	252c <android_setCpuArm@@Base+0xcb8>
+    2a00:	3000      	adds	r0, #0
+    2a02:	e3a0      	b.n	3146 <android_setCpuArm@@Base+0x18d2>
+    2a04:	1001      	asrs	r1, r0, #32
+    2a06:	e3a0      	b.n	314a <android_setCpuArm@@Base+0x18d6>
+    2a08:	0311      	lsls	r1, r2, #12
+    2a0a:	e014      	b.n	2a36 <android_setCpuArm@@Base+0x11c2>
+    2a0c:	0000      	movs	r0, r0
+    2a0e:	1592      	asrs	r2, r2, #22
+    2a10:	2004      	movs	r0, #4
+    2a12:	1282      	asrs	r2, r0, #10
+    2a14:	0103      	lsls	r3, r0, #4
+    2a16:	1786      	asrs	r6, r0, #30
+    2a18:	3001      	adds	r0, #1
+    2a1a:	e283      	b.n	2f24 <android_setCpuArm@@Base+0x16b0>
+    2a1c:	0004      	movs	r4, r0
+    2a1e:	e353      	b.n	30c8 <android_setCpuArm@@Base+0x1854>
+    2a20:	fff8 1aff 			; <UNDEFINED> instruction: 0xfff81aff
+    2a24:	2038      	movs	r0, #56	; 0x38
+    2a26:	e585      	b.n	2534 <android_setCpuArm@@Base+0xcc0>
+    2a28:	0006      	movs	r6, r0
+    2a2a:	e1a0      	b.n	2d6e <android_setCpuArm@@Base+0x14fa>
+    2a2c:	004a      	lsls	r2, r1, #1
+    2a2e:	eb00 0001 	add.w	r0, r0, r1
+    2a32:	ea00 0002 	and.w	r0, r0, r2
+    2a36:	e3a0      	b.n	317a <android_setCpuArm@@Base+0x1906>
+    2a38:	0012      	movs	r2, r2
+    2a3a:	ea00 0000 	and.w	r0, r0, r0
+    2a3e:	e3a0      	b.n	3182 <android_setCpuArm@@Base+0x190e>
+    2a40:	0010      	movs	r0, r2
+    2a42:	ea00 0010 	and.w	r0, r0, r0, lsr #32
+    2a46:	e356      	b.n	30f6 <android_setCpuArm@@Base+0x1882>
+    2a48:	8000      	strh	r0, [r0, #0]
+    2a4a:	93a0      	str	r3, [sp, #640]	; 0x280
+    2a4c:	6008      	str	r0, [r1, #0]
+    2a4e:	91a0      	str	r1, [sp, #640]	; 0x280
+    2a50:	ff69 9aff 	vpmin.u32	<illegal reg q12.5>, <illegal reg q12.5>, <illegal reg q15.5>
+    2a54:	6010      	str	r0, [r2, #0]
+    2a56:	e246      	b.n	2ee6 <android_setCpuArm@@Base+0x1672>
+    2a58:	ff66 eaff 	vpmin.u32	q15, q11, <illegal reg q15.5>
+    2a5c:	0000      	movs	r0, r0
+    2a5e:	e358      	b.n	3112 <android_setCpuArm@@Base+0x189e>
+    2a60:	0005      	movs	r5, r0
+    2a62:	0a00      	lsrs	r0, r0, #8
+    2a64:	0080      	lsls	r0, r0, #2
+    2a66:	e28d      	b.n	2f84 <android_setCpuArm@@Base+0x1710>
+    2a68:	000f      	movs	r7, r1
+    2a6a:	eb00 ff8e 			; <UNDEFINED> instruction: 0xeb00ff8e
+    2a6e:	eaff 0080 			; <UNDEFINED> instruction: 0xeaff0080
+    2a72:	e28d      	b.n	2f90 <android_setCpuArm@@Base+0x171c>
+    2a74:	000c      	movs	r4, r1
+    2a76:	eb00 ff8a 			; <UNDEFINED> instruction: 0xeb00ff8a
+    2a7a:	eaff 000f 			; <UNDEFINED> instruction: 0xeaff000f
+    2a7e:	e357      	b.n	3130 <android_setCpuArm@@Base+0x18bc>
+    2a80:	ff89 8aff 			; <UNDEFINED> instruction: 0xff898aff
+    2a84:	ff70 eaff 	vpmin.u<illegal width 64>	q15, q8, <illegal reg q15.5>
+    2a88:	df43      	svc	67	; 0x43
+    2a8a:	e28d      	b.n	2fa8 <android_setCpuArm@@Base+0x1734>
+    2a8c:	83f0      	strh	r0, [r6, #30]
+    2a8e:	e8bd 1034 	ldmia.w	sp!, {r2, r4, r5, ip}
+    2a92:	e280      	b.n	2f96 <android_setCpuArm@@Base+0x1722>
+    2a94:	0038      	movs	r0, r7
+    2a96:	e891 0038 	ldmia.w	r1, {r3, r4, r5}
+    2a9a:	e92d 0fff 	stmdb	sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp}
+    2a9e:	e890 e000 	ldmia.w	r0, {sp, lr, pc}
+    2aa2:	e89d 0b21 	ldmia.w	sp, {r0, r5, r8, r9, fp}
+    2aa6:	ec90 ff1e 	ldc	15, cr15, [r0], {30}
+    2aaa:	e12f      	b.n	2d0c <android_setCpuArm@@Base+0x1498>
+    2aac:	0b21      	lsrs	r1, r4, #12
+    2aae:	ec80 ff1e 	stc	15, cr15, [r0], {30}
+    2ab2:	e12f      	b.n	2d14 <android_setCpuArm@@Base+0x14a0>
+    2ab4:	0b20      	lsrs	r0, r4, #12
+    2ab6:	ec90 ff1e 	ldc	15, cr15, [r0], {30}
+    2aba:	e12f      	b.n	2d1c <android_setCpuArm@@Base+0x14a8>
+    2abc:	0b20      	lsrs	r0, r4, #12
+    2abe:	ec80 ff1e 	stc	15, cr15, [r0], {30}
+    2ac2:	e12f      	b.n	2d24 <android_setCpuArm@@Base+0x14b0>
+    2ac4:	0b20      	lsrs	r0, r4, #12
+    2ac6:	ecd0 ff1e 	ldcl	15, cr15, [r0], {30}
+    2aca:	e12f      	b.n	2d2c <android_setCpuArm@@Base+0x14b8>
+    2acc:	0b20      	lsrs	r0, r4, #12
+    2ace:	ecc0 ff1e 	stcl	15, cr15, [r0], {30}
+    2ad2:	e12f      	b.n	2d34 <android_setCpuArm@@Base+0x14c0>
+    2ad4:	0102      	lsls	r2, r0, #4
+    2ad6:	ecf0 1102 	ldfe	f1, [r0], #8
+    2ada:	ecf0 2102 	ldfe	f2, [r0], #8
+    2ade:	ecf0 3102 	ldfe	f3, [r0], #8
+    2ae2:	ecf0 4102 	ldfe	f4, [r0], #8
+    2ae6:	ecf0 5102 	ldfe	f5, [r0], #8
+    2aea:	ecf0 6102 	ldfe	f6, [r0], #8
+    2aee:	ecf0 7102 	ldfe	f7, [r0], #8
+    2af2:	ecf0 8102 	ldfp	f0, [r0], #8
+    2af6:	ecf0 9102 	ldfp	f1, [r0], #8
+    2afa:	ecf0 a102 	ldfp	f2, [r0], #8
+    2afe:	ecf0 b102 	ldfp	f3, [r0], #8
+    2b02:	ecf0 c102 	ldfp	f4, [r0], #8
+    2b06:	ecf0 d102 	ldfp	f5, [r0], #8
+    2b0a:	ecf0 e102 	ldfp	f6, [r0], #8
+    2b0e:	ecf0 f102 	ldfp	f7, [r0], #8
+    2b12:	ecf0 ff1e 	ldcl	15, cr15, [r0], #120	; 0x78
+    2b16:	e12f      	b.n	2d78 <android_setCpuArm@@Base+0x1504>
+    2b18:	0102      	lsls	r2, r0, #4
+    2b1a:	ece0 1102 	stfe	f1, [r0], #8
+    2b1e:	ece0 2102 	stfe	f2, [r0], #8
+    2b22:	ece0 3102 	stfe	f3, [r0], #8
+    2b26:	ece0 4102 	stfe	f4, [r0], #8
+    2b2a:	ece0 5102 	stfe	f5, [r0], #8
+    2b2e:	ece0 6102 	stfe	f6, [r0], #8
+    2b32:	ece0 7102 	stfe	f7, [r0], #8
+    2b36:	ece0 8102 	stfp	f0, [r0], #8
+    2b3a:	ece0 9102 	stfp	f1, [r0], #8
+    2b3e:	ece0 a102 	stfp	f2, [r0], #8
+    2b42:	ece0 b102 	stfp	f3, [r0], #8
+    2b46:	ece0 c102 	stfp	f4, [r0], #8
+    2b4a:	ece0 d102 	stfp	f5, [r0], #8
+    2b4e:	ece0 e102 	stfp	f6, [r0], #8
+    2b52:	ece0 f102 	stfp	f7, [r0], #8
+    2b56:	ece0 ff1e 	stcl	15, cr15, [r0], #120	; 0x78
+    2b5a:	e12f      	b.n	2dbc <android_setCpuArm@@Base+0x1548>
+    2b5c:	8101      	strh	r1, [r0, #8]
+    2b5e:	fcb0 9101 	ldc2	1, cr9, [r0], #4
+    2b62:	fcb0 a101 	ldc2	1, cr10, [r0], #4
+    2b66:	fcb0 b101 	ldc2	1, cr11, [r0], #4
+    2b6a:	fcb0 ff1e 	ldc2	15, cr15, [r0], #120	; 0x78
+    2b6e:	e12f      	b.n	2dd0 <android_setCpuArm@@Base+0x155c>
+    2b70:	8101      	strh	r1, [r0, #8]
+    2b72:	fca0 9101 	stc2	1, cr9, [r0], #4
+    2b76:	fca0 a101 	stc2	1, cr10, [r0], #4
+    2b7a:	fca0 b101 	stc2	1, cr11, [r0], #4
+    2b7e:	fca0 ff1e 	stc2	15, cr15, [r0], #120	; 0x78
+    2b82:	e12f      	b.n	2de4 <android_setCpuArm@@Base+0x1570>
+    2b84:	e000      	b.n	2b88 <android_setCpuArm@@Base+0x1314>
+    2b86:	e92d 1fff 	stmdb	sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    2b8a:	e92d 3000 	stmdb	sp!, {ip, sp}
+    2b8e:	e3a0      	b.n	32d2 <android_setCpuArm@@Base+0x1a5e>
+    2b90:	000c      	movs	r4, r1
+    2b92:	e92d 1004 	stmdb	sp!, {r2, ip}
+    2b96:	e28d      	b.n	30b4 <android_setCpuArm@@Base+0x1840>
+    2b98:	fd12 ebff 	ldc2	11, cr14, [r2, #-1020]	; 0xfffffc04	; <UNPREDICTABLE>
+    2b9c:	e040      	b.n	2c20 <android_setCpuArm@@Base+0x13ac>
+    2b9e:	e59d      	b.n	26dc <android_setCpuArm@@Base+0xe68>
+    2ba0:	d048      	beq.n	2c34 <android_setCpuArm@@Base+0x13c0>
+    2ba2:	e28d      	b.n	30c0 <android_setCpuArm@@Base+0x184c>
+    2ba4:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2ba8:	e000      	b.n	2bac <android_setCpuArm@@Base+0x1338>
+    2baa:	e92d 1fff 	stmdb	sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    2bae:	e92d 3000 	stmdb	sp!, {ip, sp}
+    2bb2:	e3a0      	b.n	32f6 <android_setCpuArm@@Base+0x1a82>
+    2bb4:	000c      	movs	r4, r1
+    2bb6:	e92d 1004 	stmdb	sp!, {r2, ip}
+    2bba:	e28d      	b.n	30d8 <android_setCpuArm@@Base+0x1864>
+    2bbc:	fd39 ebff 	ldc2	11, cr14, [r9, #-1020]!	; 0xfffffc04	; <UNPREDICTABLE>
+    2bc0:	e040      	b.n	2c44 <android_setCpuArm@@Base+0x13d0>
+    2bc2:	e59d      	b.n	2700 <android_setCpuArm@@Base+0xe8c>
+    2bc4:	d048      	beq.n	2c58 <android_setCpuArm@@Base+0x13e4>
+    2bc6:	e28d      	b.n	30e4 <android_setCpuArm@@Base+0x1870>
+    2bc8:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2bcc:	e000      	b.n	2bd0 <android_setCpuArm@@Base+0x135c>
+    2bce:	e92d 1fff 	stmdb	sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    2bd2:	e92d 3000 	stmdb	sp!, {ip, sp}
+    2bd6:	e3a0      	b.n	331a <android_setCpuArm@@Base+0x1aa6>
+    2bd8:	000c      	movs	r4, r1
+    2bda:	e92d 1004 	stmdb	sp!, {r2, ip}
+    2bde:	e28d      	b.n	30fc <android_setCpuArm@@Base+0x1888>
+    2be0:	fd4d ebff 	stc2l	11, cr14, [sp, #-1020]	; 0xfffffc04	; <UNPREDICTABLE>
+    2be4:	e040      	b.n	2c68 <android_setCpuArm@@Base+0x13f4>
+    2be6:	e59d      	b.n	2724 <android_setCpuArm@@Base+0xeb0>
+    2be8:	d048      	beq.n	2c7c <android_setCpuArm@@Base+0x1408>
+    2bea:	e28d      	b.n	3108 <android_setCpuArm@@Base+0x1894>
+    2bec:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2bf0:	e000      	b.n	2bf4 <android_setCpuArm@@Base+0x1380>
+    2bf2:	e92d 1fff 	stmdb	sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    2bf6:	e92d 3000 	stmdb	sp!, {ip, sp}
+    2bfa:	e3a0      	b.n	333e <android_setCpuArm@@Base+0x1aca>
+    2bfc:	000c      	movs	r4, r1
+    2bfe:	e92d 3004 	stmdb	sp!, {r2, ip, sp}
+    2c02:	e28d      	b.n	3120 <android_setCpuArm@@Base+0x18ac>
+    2c04:	fd20 ebff 	stc2	11, cr14, [r0, #-1020]!	; 0xfffffc04	; <UNPREDICTABLE>
+    2c08:	e040      	b.n	2c8c <android_setCpuArm@@Base+0x1418>
+    2c0a:	e59d      	b.n	2748 <android_setCpuArm@@Base+0xed4>
+    2c0c:	d048      	beq.n	2ca0 <android_setCpuArm@@Base+0x142c>
+    2c0e:	e28d      	b.n	312c <android_setCpuArm@@Base+0x18b8>
+    2c10:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2c14:	e000      	b.n	2c18 <android_setCpuArm@@Base+0x13a4>
+    2c16:	e92d 1fff 	stmdb	sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip}
+    2c1a:	e92d 3000 	stmdb	sp!, {ip, sp}
+    2c1e:	e3a0      	b.n	3362 <android_setCpuArm@@Base+0x1aee>
+    2c20:	000c      	movs	r4, r1
+    2c22:	e92d 2004 	stmdb	sp!, {r2, sp}
+    2c26:	e28d      	b.n	3144 <android_setCpuArm@@Base+0x18d0>
+    2c28:	fd8d ebff 	stc2	11, cr14, [sp, #1020]	; 0x3fc	; <UNPREDICTABLE>
+    2c2c:	e040      	b.n	2cb0 <android_setCpuArm@@Base+0x143c>
+    2c2e:	e59d      	b.n	276c <android_setCpuArm@@Base+0xef8>
+    2c30:	d048      	beq.n	2cc4 <android_setCpuArm@@Base+0x1450>
+    2c32:	e28d      	b.n	3150 <android_setCpuArm@@Base+0x18dc>
+    2c34:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2c38:	3008      	adds	r0, #8
+    2c3a:	e5d0      	b.n	27de <android_setCpuArm@@Base+0xf6a>
+    2c3c:	0000      	movs	r0, r0
+    2c3e:	e353      	b.n	32e8 <android_setCpuArm@@Base+0x1a74>
+    2c40:	000b      	movs	r3, r1
+    2c42:	1a00      	subs	r0, r0, r0
+    2c44:	3009      	adds	r0, #9
+    2c46:	e5d0      	b.n	27ea <android_setCpuArm@@Base+0xf76>
+    2c48:	0000      	movs	r0, r0
+    2c4a:	e353      	b.n	32f4 <android_setCpuArm@@Base+0x1a80>
+    2c4c:	000f      	movs	r7, r1
+    2c4e:	0a00      	lsrs	r0, r0, #8
+    2c50:	3001      	adds	r0, #1
+    2c52:	e243      	b.n	30dc <android_setCpuArm@@Base+0x1868>
+    2c54:	3009      	adds	r0, #9
+    2c56:	e5c0      	b.n	27da <android_setCpuArm@@Base+0xf66>
+    2c58:	3004      	adds	r0, #4
+    2c5a:	e590      	b.n	277e <android_setCpuArm@@Base+0xf0a>
+    2c5c:	2004      	movs	r0, #4
+    2c5e:	e283      	b.n	3168 <android_setCpuArm@@Base+0x18f4>
+    2c60:	2004      	movs	r0, #4
+    2c62:	e580      	b.n	2766 <android_setCpuArm@@Base+0xef2>
+    2c64:	3000      	adds	r0, #0
+    2c66:	e593      	b.n	2790 <android_setCpuArm@@Base+0xf1c>
+    2c68:	3000      	adds	r0, #0
+    2c6a:	e580      	b.n	276e <android_setCpuArm@@Base+0xefa>
+    2c6c:	3003      	adds	r0, #3
+    2c6e:	e3a0      	b.n	33b2 <android_setCpuArm@@Base+0x1b3e>
+    2c70:	0000      	movs	r0, r0
+    2c72:	ea00 3001 	and.w	r0, r0, r1, lsl #12
+    2c76:	e243      	b.n	3100 <android_setCpuArm@@Base+0x188c>
+    2c78:	3008      	adds	r0, #8
+    2c7a:	e5c0      	b.n	27fe <android_setCpuArm@@Base+0xf8a>
+    2c7c:	3000      	adds	r0, #0
+    2c7e:	e590      	b.n	27a2 <android_setCpuArm@@Base+0xf2e>
+    2c80:	2403      	movs	r4, #3
+    2c82:	e1a0      	b.n	2fc6 <android_setCpuArm@@Base+0x1752>
+    2c84:	2000      	movs	r0, #0
+    2c86:	e580      	b.n	278a <android_setCpuArm@@Base+0xf16>
+    2c88:	0c23      	lsrs	r3, r4, #16
+    2c8a:	e1a0      	b.n	2fce <android_setCpuArm@@Base+0x175a>
+    2c8c:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2c90:	00b0      	lsls	r0, r6, #2
+    2c92:	e3a0      	b.n	33d6 <android_setCpuArm@@Base+0x1b62>
+    2c94:	ff1e e12f 	vrhadd.u16	d14, d14, d31
+    2c98:	401f      	ands	r7, r3
+    2c9a:	e92d 1000 	stmdb	sp!, {ip}
+    2c9e:	e3a0      	b.n	33e2 <android_setCpuArm@@Base+0x1b6e>
+    2ca0:	300c      	adds	r0, #12
+    2ca2:	e28d      	b.n	31c0 <android_setCpuArm@@Base+0x194c>
+    2ca4:	200c      	movs	r0, #12
+    2ca6:	e3a0      	b.n	33ea <android_setCpuArm@@Base+0x1b76>
+    2ca8:	3000      	adds	r0, #0
+    2caa:	e58d      	b.n	27c8 <android_setCpuArm@@Base+0xf54>
+    2cac:	3001      	adds	r0, #1
+    2cae:	e1a0      	b.n	2ff2 <android_setCpuArm@@Base+0x177e>
+    2cb0:	fd28 ebff 	stc2	11, cr14, [r8, #-1020]!	; 0xfffffc04	; <UNPREDICTABLE>
+    2cb4:	000c      	movs	r4, r1
+    2cb6:	e59d      	b.n	27f4 <android_setCpuArm@@Base+0xf80>
+    2cb8:	d014      	beq.n	2ce4 <android_setCpuArm@@Base+0x1470>
+    2cba:	e28d      	b.n	31d8 <android_setCpuArm@@Base+0x1964>
+    2cbc:	f004 e49d 			; <UNDEFINED> instruction: 0xf004e49d
+    2cc0:	fff4 eaff 			; <UNDEFINED> instruction: 0xfff4eaff
+    2cc4:	43f0      	mvns	r0, r6
+    2cc6:	e92d d014 	stmdb	sp!, {r2, r4, ip, lr, pc}
+    2cca:	e24d      	b.n	3168 <android_setCpuArm@@Base+0x18f4>
+    2ccc:	5000      	str	r0, [r0, r0]
+    2cce:	e1a0      	b.n	3012 <android_setCpuArm@@Base+0x179e>
+    2cd0:	7001      	strb	r1, [r0, #0]
+    2cd2:	e1a0      	b.n	3016 <android_setCpuArm@@Base+0x17a2>
+    2cd4:	6000      	str	r0, [r0, #0]
+    2cd6:	e3a0      	b.n	341a <android_setCpuArm@@Base+0x1ba6>
+    2cd8:	0007      	movs	r7, r0
+    2cda:	e1a0      	b.n	301e <android_setCpuArm@@Base+0x17aa>
+    2cdc:	ffd5 ebff 			; <UNDEFINED> instruction: 0xffd5ebff
+    2ce0:	00b0      	lsls	r0, r6, #2
+    2ce2:	e350      	b.n	3386 <android_setCpuArm@@Base+0x1b12>
+    2ce4:	4000      	ands	r0, r0
+    2ce6:	e1a0      	b.n	302a <android_setCpuArm@@Base+0x17b6>
+    2ce8:	000f      	movs	r7, r1
+    2cea:	1a00      	subs	r0, r0, r0
+    2cec:	0000      	movs	r0, r0
+    2cee:	e356      	b.n	339e <android_setCpuArm@@Base+0x1b2a>
+    2cf0:	00d6      	lsls	r6, r2, #3
+    2cf2:	1a00      	subs	r0, r0, r0
+    2cf4:	400c      	ands	r4, r1
+    2cf6:	e28d      	b.n	3214 <android_setCpuArm@@Base+0x19a0>
+    2cf8:	1006      	asrs	r6, r0, #32
+    2cfa:	e1a0      	b.n	303e <android_setCpuArm@@Base+0x17ca>
+    2cfc:	3006      	adds	r0, #6
+    2cfe:	e1a0      	b.n	3042 <android_setCpuArm@@Base+0x17ce>
+    2d00:	4000      	ands	r0, r0
+    2d02:	e58d      	b.n	2820 <android_setCpuArm@@Base+0xfac>
+    2d04:	0005      	movs	r5, r0
+    2d06:	e1a0      	b.n	304a <android_setCpuArm@@Base+0x17d6>
+    2d08:	200e      	movs	r0, #14
+    2d0a:	e3a0      	b.n	344e <android_setCpuArm@@Base+0x1bda>
+    2d0c:	fd11 ebff 	ldc2	11, cr14, [r1, #-1020]	; 0xfffffc04	; <UNPREDICTABLE>
+    2d10:	4000      	ands	r0, r0
+    2d12:	e58d      	b.n	2830 <android_setCpuArm@@Base+0xfbc>
+    2d14:	0005      	movs	r5, r0
+    2d16:	e1a0      	b.n	305a <android_setCpuArm@@Base+0x17e6>
+    2d18:	1006      	asrs	r6, r0, #32
+    2d1a:	e1a0      	b.n	305e <android_setCpuArm@@Base+0x17ea>
+    2d1c:	200f      	movs	r0, #15
+    2d1e:	e3a0      	b.n	3462 <android_setCpuArm@@Base+0x1bee>
+    2d20:	3006      	adds	r0, #6
+    2d22:	e1a0      	b.n	3066 <android_setCpuArm@@Base+0x17f2>
+    2d24:	fd2c ebff 	stc2	11, cr14, [ip, #-1020]!	; 0xfffffc04	; <UNPREDICTABLE>
+    2d28:	00c8      	lsls	r0, r1, #3
+    2d2a:	ea00 107f 	and.w	r0, r0, pc, ror #5
+    2d2e:	e3c0      	b.n	34b2 <android_setCpuArm@@Base+0x1c3e>
+    2d30:	10ff      	asrs	r7, r7, #3
+    2d32:	e211      	b.n	3158 <android_setCpuArm@@Base+0x18e4>
+    2d34:	000f      	movs	r7, r1
+    2d36:	1a00      	subs	r0, r0, r0
+    2d38:	8100      	strh	r0, [r0, #8]
+    2d3a:	e1a0      	b.n	307e <android_setCpuArm@@Base+0x180a>
+    2d3c:	900c      	str	r0, [sp, #48]	; 0x30
+    2d3e:	e28d      	b.n	325c <android_setCpuArm@@Base+0x19e8>
+    2d40:	3001      	adds	r0, #1
+    2d42:	e1a0      	b.n	3086 <android_setCpuArm@@Base+0x1812>
+    2d44:	9000      	str	r0, [sp, #0]
+    2d46:	e58d      	b.n	2864 <android_setCpuArm@@Base+0xff0>
+    2d48:	0005      	movs	r5, r0
+    2d4a:	e1a0      	b.n	308e <android_setCpuArm@@Base+0x181a>
+    2d4c:	200d      	movs	r0, #13
+    2d4e:	e3a0      	b.n	3492 <android_setCpuArm@@Base+0x1c1e>
+    2d50:	fd00 ebff 	stc2	11, cr14, [r0, #-1020]	; 0xfffffc04	; <UNPREDICTABLE>
+    2d54:	8078      	strh	r0, [r7, #2]
+    2d56:	e6ef      	b.n	2b38 <android_setCpuArm@@Base+0x12c4>
+    2d58:	300c      	adds	r0, #12
+    2d5a:	e59d      	b.n	2898 <android_setCpuArm@@Base+0x1024>
+    2d5c:	8004      	strh	r4, [r0, #0]
+    2d5e:	e288      	b.n	3272 <android_setCpuArm@@Base+0x19fe>
+    2d60:	0040      	lsls	r0, r0, #1
+    2d62:	e314      	b.n	338e <android_setCpuArm@@Base+0x1b1a>
+    2d64:	9000      	str	r0, [sp, #0]
+    2d66:	e58d      	b.n	2884 <android_setCpuArm@@Base+0x1010>
+    2d68:	8003      	strh	r3, [r0, #0]
+    2d6a:	1068      	asrs	r0, r5, #1
+    2d6c:	8003      	strh	r3, [r0, #0]
+    2d6e:	0088      	lsls	r0, r1, #2
+    2d70:	800c      	strh	r4, [r1, #0]
+    2d72:	e58d      	b.n	2890 <android_setCpuArm@@Base+0x101c>
+    2d74:	0022      	movs	r2, r4
+    2d76:	ea00 30f0 	and.w	r0, r0, r0, ror #15
+    2d7a:	e200      	b.n	317e <android_setCpuArm@@Base+0x190a>
+    2d7c:	0080      	lsls	r0, r0, #2
+    2d7e:	e353      	b.n	3428 <android_setCpuArm@@Base+0x1bb4>
+    2d80:	0012      	movs	r2, r2
+    2d82:	1a00      	subs	r0, r0, r0
+    2d84:	4400      	add	r0, r0
+    2d86:	e1a0      	b.n	30ca <android_setCpuArm@@Base+0x1856>
+    2d88:	0007      	movs	r7, r0
+    2d8a:	e1a0      	b.n	30ce <android_setCpuArm@@Base+0x185a>
+    2d8c:	ffa9 ebff 			; <UNDEFINED> instruction: 0xffa9ebff
+    2d90:	0004      	movs	r4, r0
+    2d92:	e180      	b.n	3096 <android_setCpuArm@@Base+0x1822>
+    2d94:	0902      	lsrs	r2, r0, #4
+    2d96:	e350      	b.n	343a <android_setCpuArm@@Base+0x1bc6>
+    2d98:	0001      	movs	r1, r0
+    2d9a:	1a00      	subs	r0, r0, r0
+    2d9c:	0009      	movs	r1, r1
+    2d9e:	e3a0      	b.n	34e2 <android_setCpuArm@@Base+0x1c6e>
+    2da0:	00ab      	lsls	r3, r5, #2
+    2da2:	ea00 4200 	and.w	r2, r0, r0, lsl #16
+    2da6:	e1a0      	b.n	30ea <android_setCpuArm@@Base+0x1876>
+    2da8:	1000      	asrs	r0, r0, #32
+    2daa:	e3a0      	b.n	34ee <android_setCpuArm@@Base+0x1c7a>
+    2dac:	0005      	movs	r5, r0
+    2dae:	e1a0      	b.n	30f2 <android_setCpuArm@@Base+0x187e>
+    2db0:	3001      	adds	r0, #1
+    2db2:	e1a0      	b.n	30f6 <android_setCpuArm@@Base+0x1882>
+    2db4:	2074      	movs	r0, #116	; 0x74
+    2db6:	e6ff      	b.n	2bb8 <android_setCpuArm@@Base+0x1344>
+    2db8:	fe5c ebff 	mrc2	11, 2, lr, cr12, cr15, {7}	; <UNPREDICTABLE>
+    2dbc:	0000      	movs	r0, r0
+    2dbe:	e350      	b.n	3462 <android_setCpuArm@@Base+0x1bee>
+    2dc0:	fff5 1aff 			; <UNDEFINED> instruction: 0xfff51aff
+    2dc4:	0902      	lsrs	r2, r0, #4
+    2dc6:	e314      	b.n	33f2 <android_setCpuArm@@Base+0x1b7e>
+    2dc8:	6001      	str	r1, [r0, #0]
+    2dca:	13a0      	asrs	r0, r4, #14
+    2dcc:	ffc1 eaff 			; <UNDEFINED> instruction: 0xffc1eaff
+    2dd0:	0090      	lsls	r0, r2, #2
+    2dd2:	e353      	b.n	347c <android_setCpuArm@@Base+0x1c08>
+    2dd4:	0010      	movs	r0, r2
+    2dd6:	1a00      	subs	r0, r0, r0
+    2dd8:	300d      	adds	r0, #13
+    2dda:	e200      	b.n	31de <android_setCpuArm@@Base+0x196a>
+    2ddc:	000d      	movs	r5, r1
+    2dde:	e353      	b.n	3488 <android_setCpuArm@@Base+0x1c14>
+    2de0:	ffed 0aff 			; <UNDEFINED> instruction: 0xffed0aff
+    2de4:	1000      	asrs	r0, r0, #32
+    2de6:	e3a0      	b.n	352a <android_setCpuArm@@Base+0x1cb6>
+    2de8:	800c      	strh	r4, [r1, #0]
+    2dea:	e28d      	b.n	3308 <android_setCpuArm@@Base+0x1a94>
+    2dec:	0005      	movs	r5, r0
+    2dee:	e1a0      	b.n	3132 <android_setCpuArm@@Base+0x18be>
+    2df0:	8000      	strh	r0, [r0, #0]
+    2df2:	e58d      	b.n	2910 <android_setCpuArm@@Base+0x109c>
+    2df4:	200f      	movs	r0, #15
+    2df6:	e204      	b.n	3202 <android_setCpuArm@@Base+0x198e>
+    2df8:	3001      	adds	r0, #1
+    2dfa:	e1a0      	b.n	313e <android_setCpuArm@@Base+0x18ca>
+    2dfc:	fcd5 ebff 	ldc2l	11, cr14, [r5], {255}	; 0xff	; <UNPREDICTABLE>
+    2e00:	8000      	strh	r0, [r0, #0]
+    2e02:	e58d      	b.n	2920 <android_setCpuArm@@Base+0x10ac>
+    2e04:	0005      	movs	r5, r0
+    2e06:	e1a0      	b.n	314a <android_setCpuArm@@Base+0x18d6>
+    2e08:	1000      	asrs	r0, r0, #32
+    2e0a:	e3a0      	b.n	354e <android_setCpuArm@@Base+0x1cda>
+    2e0c:	200d      	movs	r0, #13
+    2e0e:	e3a0      	b.n	3552 <android_setCpuArm@@Base+0x1cde>
+    2e10:	3001      	adds	r0, #1
+    2e12:	e1a0      	b.n	3156 <android_setCpuArm@@Base+0x18e2>
+    2e14:	fcf0 ebff 	ldc2l	11, cr14, [r0], #1020	; 0x3fc	; <UNPREDICTABLE>
+    2e18:	ffae eaff 			; <UNDEFINED> instruction: 0xffaeeaff
+    2e1c:	00a0      	lsls	r0, r4, #2
+    2e1e:	e353      	b.n	34c8 <android_setCpuArm@@Base+0x1c54>
+    2e20:	0009      	movs	r1, r1
+    2e22:	1a00      	subs	r0, r0, r0
+    2e24:	2000      	movs	r0, #0
+    2e26:	e1e0      	b.n	31ea <android_setCpuArm@@Base+0x1976>
+    2e28:	3eff      	subs	r6, #255	; 0xff
+    2e2a:	e3a0      	b.n	356e <android_setCpuArm@@Base+0x1cfa>
+    2e2c:	2007      	movs	r0, #7
+    2e2e:	e202      	b.n	3236 <android_setCpuArm@@Base+0x19c2>
+    2e30:	0008      	movs	r0, r1
+    2e32:	e310      	b.n	3456 <android_setCpuArm@@Base+0x1be2>
+    2e34:	2253      	movs	r2, #83	; 0x53
+    2e36:	e1a0      	b.n	317a <android_setCpuArm@@Base+0x1906>
+    2e38:	0005      	movs	r5, r0
+    2e3a:	e1a0      	b.n	317e <android_setCpuArm@@Base+0x190a>
+    2e3c:	2003      	movs	r0, #3
+    2e3e:	e002      	b.n	2e46 <android_setCpuArm@@Base+0x15d2>
+    2e40:	1000      	asrs	r0, r0, #32
+    2e42:	e3a0      	b.n	3586 <android_setCpuArm@@Base+0x1d12>
+    2e44:	2901      	cmp	r1, #1
+    2e46:	1382      	asrs	r2, r0, #14
+    2e48:	000a      	movs	r2, r1
+    2e4a:	ea00 00b0 	and.w	r0, r0, r0, ror #2
+    2e4e:	e353      	b.n	34f8 <android_setCpuArm@@Base+0x1c84>
+    2e50:	0039      	movs	r1, r7
+    2e52:	1a00      	subs	r0, r0, r0
+    2e54:	00b1      	lsls	r1, r6, #2
+    2e56:	e350      	b.n	34fa <android_setCpuArm@@Base+0x1c86>
+    2e58:	0008      	movs	r0, r1
+    2e5a:	1a00      	subs	r0, r0, r0
+    2e5c:	0007      	movs	r7, r0
+    2e5e:	e1a0      	b.n	31a2 <android_setCpuArm@@Base+0x192e>
+    2e60:	ff74 ebff 	vqrdmlah.s<illegal width 64>	q15, q10, <illegal reg q15.5>
+    2e64:	2000      	movs	r0, #0
+    2e66:	e250      	b.n	330a <android_setCpuArm@@Base+0x1a96>
+    2e68:	ffcb 0aff 			; <UNDEFINED> instruction: 0xffcb0aff
+    2e6c:	10f0      	asrs	r0, r6, #3
+    2e6e:	e212      	b.n	3296 <android_setCpuArm@@Base+0x1a22>
+    2e70:	ffc9 1aff 			; <UNDEFINED> instruction: 0xffc91aff
+    2e74:	0005      	movs	r5, r0
+    2e76:	e1a0      	b.n	31ba <android_setCpuArm@@Base+0x1946>
+    2e78:	3001      	adds	r0, #1
+    2e7a:	e1a0      	b.n	31be <android_setCpuArm@@Base+0x194a>
+    2e7c:	006f      	lsls	r7, r5, #1
+    2e7e:	ea00 00b2 	and.w	r0, r0, r2, ror #2
+    2e82:	e350      	b.n	3526 <android_setCpuArm@@Base+0x1cb2>
+    2e84:	0019      	movs	r1, r3
+    2e86:	1a00      	subs	r0, r0, r0
+    2e88:	1000      	asrs	r0, r0, #32
+    2e8a:	e3a0      	b.n	35ce <android_setCpuArm@@Base+0x1d5a>
+    2e8c:	200d      	movs	r0, #13
+    2e8e:	e3a0      	b.n	35d2 <android_setCpuArm@@Base+0x1d5e>
+    2e90:	3001      	adds	r0, #1
+    2e92:	e1a0      	b.n	31d6 <android_setCpuArm@@Base+0x1962>
+    2e94:	400c      	ands	r4, r1
+    2e96:	e28d      	b.n	33b4 <android_setCpuArm@@Base+0x1b40>
+    2e98:	0005      	movs	r5, r0
+    2e9a:	e1a0      	b.n	31de <android_setCpuArm@@Base+0x196a>
+    2e9c:	4000      	ands	r0, r0
+    2e9e:	e58d      	b.n	29bc <android_setCpuArm@@Base+0x1148>
+    2ea0:	fcac ebff 	stc2	11, cr14, [ip], #1020	; 0x3fc	; <UNPREDICTABLE>
+    2ea4:	0007      	movs	r7, r0
+    2ea6:	e1a0      	b.n	31ea <android_setCpuArm@@Base+0x1976>
+    2ea8:	ff62 ebff 	vqrdmlah.s32	q15, q9, <illegal reg q15.5>
+    2eac:	8002      	strh	r2, [r0, #0]
+    2eae:	e3a0      	b.n	35f2 <android_setCpuArm@@Base+0x1d7e>
+    2eb0:	1080      	asrs	r0, r0, #2
+    2eb2:	e210      	b.n	32d6 <android_setCpuArm@@Base+0x1a62>
+    2eb4:	300c      	adds	r0, #12
+    2eb6:	e59d      	b.n	29f4 <android_setCpuArm@@Base+0x1180>
+    2eb8:	007f      	lsls	r7, r7, #1
+    2eba:	e200      	b.n	32be <android_setCpuArm@@Base+0x1a4a>
+    2ebc:	0005      	movs	r5, r0
+    2ebe:	0a00      	lsrs	r0, r0, #8
+    2ec0:	3810      	subs	r0, #16
+    2ec2:	e083      	b.n	2fcc <android_setCpuArm@@Base+0x1758>
+    2ec4:	0007      	movs	r7, r0
+    2ec6:	e1a0      	b.n	320a <android_setCpuArm@@Base+0x1996>
+    2ec8:	300c      	adds	r0, #12
+    2eca:	e58d      	b.n	29e8 <android_setCpuArm@@Base+0x1174>
+    2ecc:	8007      	strh	r7, [r0, #0]
+    2ece:	e288      	b.n	33e2 <android_setCpuArm@@Base+0x1b6e>
+    2ed0:	ff58 ebff 	vqrdmlah.s16	q15, q12, <illegal reg q15.5>
+    2ed4:	fff5 eaff 			; <UNDEFINED> instruction: 0xfff5eaff
+    2ed8:	3f81      	subs	r7, #129	; 0x81
+    2eda:	e283      	b.n	33e4 <android_setCpuArm@@Base+0x1b70>
+    2edc:	4000      	ands	r0, r0
+    2ede:	e58d      	b.n	29fc <android_setCpuArm@@Base+0x1188>
+    2ee0:	3810      	subs	r0, #16
+    2ee2:	e083      	b.n	2fec <android_setCpuArm@@Base+0x1778>
+    2ee4:	0005      	movs	r5, r0
+    2ee6:	e1a0      	b.n	322a <android_setCpuArm@@Base+0x19b6>
+    2ee8:	300c      	adds	r0, #12
+    2eea:	e58d      	b.n	2a08 <android_setCpuArm@@Base+0x1194>
+    2eec:	ffc6 eaff 			; <UNDEFINED> instruction: 0xffc6eaff
+    2ef0:	00b3      	lsls	r3, r6, #2
+    2ef2:	e350      	b.n	3596 <android_setCpuArm@@Base+0x1d22>
+    2ef4:	0007      	movs	r7, r0
+    2ef6:	1a00      	subs	r0, r0, r0
+    2ef8:	0007      	movs	r7, r0
+    2efa:	e1a0      	b.n	323e <android_setCpuArm@@Base+0x19ca>
+    2efc:	ff4d ebff 	vqrdmlah.s<illegal width 8>	q15, <illegal reg q14.5>, <illegal reg q15.5>
+    2f00:	1001      	asrs	r1, r0, #32
+    2f02:	e3a0      	b.n	3646 <android_setCpuArm@@Base+0x1dd2>
+    2f04:	200f      	movs	r0, #15
+    2f06:	e200      	b.n	330a <android_setCpuArm@@Base+0x1a96>
+    2f08:	30f0      	adds	r0, #240	; 0xf0
+    2f0a:	e200      	b.n	330e <android_setCpuArm@@Base+0x1a9a>
+    2f0c:	2001      	movs	r0, #1
+    2f0e:	e282      	b.n	3416 <android_setCpuArm@@Base+0x1ba2>
+    2f10:	0005      	movs	r5, r0
+    2f12:	e1a0      	b.n	3256 <android_setCpuArm@@Base+0x19e2>
+    2f14:	0013      	movs	r3, r2
+    2f16:	ea00 30fc 	and.w	r0, r0, ip, ror #15
+    2f1a:	e200      	b.n	331e <android_setCpuArm@@Base+0x1aaa>
+    2f1c:	00b4      	lsls	r4, r6, #2
+    2f1e:	e353      	b.n	35c8 <android_setCpuArm@@Base+0x1d54>
+    2f20:	ff9d 0aff 			; <UNDEFINED> instruction: 0xff9d0aff
+    2f24:	2007      	movs	r0, #7
+    2f26:	e200      	b.n	332a <android_setCpuArm@@Base+0x1ab6>
+    2f28:	1001      	asrs	r1, r0, #32
+    2f2a:	e3a0      	b.n	366e <android_setCpuArm@@Base+0x1dfa>
+    2f2c:	2001      	movs	r0, #1
+    2f2e:	e282      	b.n	3436 <android_setCpuArm@@Base+0x1bc2>
+    2f30:	0005      	movs	r5, r0
+    2f32:	e1a0      	b.n	3276 <android_setCpuArm@@Base+0x1a02>
+    2f34:	2702      	movs	r7, #2
+    2f36:	e382      	b.n	363e <android_setCpuArm@@Base+0x1dca>
+    2f38:	ffce eaff 			; <UNDEFINED> instruction: 0xffceeaff
+    2f3c:	00c0      	lsls	r0, r0, #3
+    2f3e:	e353      	b.n	35e8 <android_setCpuArm@@Base+0x1d74>
+    2f40:	0035      	movs	r5, r6
+    2f42:	1a00      	subs	r0, r0, r0
+    2f44:	00c6      	lsls	r6, r0, #3
+    2f46:	e350      	b.n	35ea <android_setCpuArm@@Base+0x1d76>
+    2f48:	0008      	movs	r0, r1
+    2f4a:	1a00      	subs	r0, r0, r0
+    2f4c:	0007      	movs	r7, r0
+    2f4e:	e1a0      	b.n	3292 <android_setCpuArm@@Base+0x1a1e>
+    2f50:	ff38 ebff 	vqrdmlah.s<illegal width 64>	q7, q12, <illegal reg q15.5>
+    2f54:	1003      	asrs	r3, r0, #32
+    2f56:	e3a0      	b.n	369a <android_setCpuArm@@Base+0x1e26>
+    2f58:	200f      	movs	r0, #15
+    2f5a:	e200      	b.n	335e <android_setCpuArm@@Base+0x1aea>
+    2f5c:	30f0      	adds	r0, #240	; 0xf0
+    2f5e:	e200      	b.n	3362 <android_setCpuArm@@Base+0x1aee>
+    2f60:	2001      	movs	r0, #1
+    2f62:	e282      	b.n	346a <android_setCpuArm@@Base+0x1bf6>
+    2f64:	0005      	movs	r5, r0
+    2f66:	e1a0      	b.n	32aa <android_setCpuArm@@Base+0x1a36>
+    2f68:	2603      	movs	r6, #3
+    2f6a:	e182      	b.n	3272 <android_setCpuArm@@Base+0x19fe>
+    2f6c:	ffc1 eaff 			; <UNDEFINED> instruction: 0xffc1eaff
+    2f70:	00c7      	lsls	r7, r0, #3
+    2f72:	e350      	b.n	3616 <android_setCpuArm@@Base+0x1da2>
+    2f74:	0008      	movs	r0, r1
+    2f76:	1a00      	subs	r0, r0, r0
+    2f78:	0007      	movs	r7, r0
+    2f7a:	e1a0      	b.n	32be <android_setCpuArm@@Base+0x1a4a>
+    2f7c:	ff2d ebff 	vqrdmlah.s32	q7, <illegal reg q14.5>, <illegal reg q15.5>
+    2f80:	2000      	movs	r0, #0
+    2f82:	e250      	b.n	3426 <android_setCpuArm@@Base+0x1bb2>
+    2f84:	ff84 0aff 			; <UNDEFINED> instruction: 0xff840aff
+    2f88:	30f0      	adds	r0, #240	; 0xf0
+    2f8a:	e212      	b.n	33b2 <android_setCpuArm@@Base+0x1b3e>
+    2f8c:	ff82 1aff 			; <UNDEFINED> instruction: 0xff821aff
+    2f90:	0005      	movs	r5, r0
+    2f92:	e1a0      	b.n	32d6 <android_setCpuArm@@Base+0x1a62>
+    2f94:	1004      	asrs	r4, r0, #32
+    2f96:	e3a0      	b.n	36da <android_setCpuArm@@Base+0x1e66>
+    2f98:	0028      	movs	r0, r5
+    2f9a:	ea00 30f8 	and.w	r0, r0, r8, ror #15
+    2f9e:	e200      	b.n	33a2 <android_setCpuArm@@Base+0x1b2e>
+    2fa0:	00c0      	lsls	r0, r0, #3
+    2fa2:	e353      	b.n	364c <android_setCpuArm@@Base+0x1dd8>
+    2fa4:	0005      	movs	r5, r0
+    2fa6:	1a00      	subs	r0, r0, r0
+    2fa8:	200f      	movs	r0, #15
+    2faa:	e200      	b.n	33ae <android_setCpuArm@@Base+0x1b3a>
+    2fac:	1003      	asrs	r3, r0, #32
+    2fae:	e3a0      	b.n	36f2 <android_setCpuArm@@Base+0x1e7e>
+    2fb0:	2001      	movs	r0, #1
+    2fb2:	e282      	b.n	34ba <android_setCpuArm@@Base+0x1c46>
+    2fb4:	0005      	movs	r5, r0
+    2fb6:	e1a0      	b.n	32fa <android_setCpuArm@@Base+0x1a86>
+    2fb8:	280a      	cmp	r0, #10
+    2fba:	e382      	b.n	36c2 <android_setCpuArm@@Base+0x1e4e>
+    2fbc:	ffad eaff 			; <UNDEFINED> instruction: 0xffadeaff
+    2fc0:	00c8      	lsls	r0, r1, #3
+    2fc2:	e350      	b.n	3666 <android_setCpuArm@@Base+0x1df2>
+    2fc4:	0009      	movs	r1, r1
+    2fc6:	1a00      	subs	r0, r0, r0
+    2fc8:	0007      	movs	r7, r0
+    2fca:	e1a0      	b.n	330e <android_setCpuArm@@Base+0x1a9a>
+    2fcc:	ff19 ebff 	vqrdmlah.s16	q7, <illegal reg q12.5>, <illegal reg q15.5>
+    2fd0:	1001      	asrs	r1, r0, #32
+    2fd2:	e3a0      	b.n	3716 <android_setCpuArm@@Base+0x1ea2>
+    2fd4:	20f0      	movs	r0, #240	; 0xf0
+    2fd6:	e200      	b.n	33da <android_setCpuArm@@Base+0x1b66>
+    2fd8:	000f      	movs	r7, r1
+    2fda:	e200      	b.n	33de <android_setCpuArm@@Base+0x1b6a>
+    2fdc:	2010      	movs	r0, #16
+    2fde:	e282      	b.n	34e6 <android_setCpuArm@@Base+0x1c72>
+    2fe0:	3001      	adds	r0, #1
+    2fe2:	e280      	b.n	34e6 <android_setCpuArm@@Base+0x1c72>
+    2fe4:	0005      	movs	r5, r0
+    2fe6:	e1a0      	b.n	332a <android_setCpuArm@@Base+0x1ab6>
+    2fe8:	2602      	movs	r6, #2
+    2fea:	e183      	b.n	32f4 <android_setCpuArm@@Base+0x1a80>
+    2fec:	0012      	movs	r2, r2
+    2fee:	ea00 00c9 	and.w	r0, r0, r9, lsl #3
+    2ff2:	e350      	b.n	3696 <android_setCpuArm@@Base+0x1e22>
+    2ff4:	ff68 1aff 	vpmin.u32	<illegal reg q8.5>, q12, <illegal reg q15.5>
+    2ff8:	0007      	movs	r7, r0
+    2ffa:	e1a0      	b.n	333e <android_setCpuArm@@Base+0x1aca>
+    2ffc:	ff0d ebff 	vqrdmlah.s<illegal width 8>	q7, <illegal reg q14.5>, <illegal reg q15.5>
+    3000:	1001      	asrs	r1, r0, #32
+    3002:	e3a0      	b.n	3746 <android_setCpuArm@@Base+0x1ed2>
+    3004:	200f      	movs	r0, #15
+    3006:	e200      	b.n	340a <android_setCpuArm@@Base+0x1b96>
+    3008:	30f0      	adds	r0, #240	; 0xf0
+    300a:	e200      	b.n	340e <android_setCpuArm@@Base+0x1b9a>
+    300c:	2001      	movs	r0, #1
+    300e:	e282      	b.n	3516 <android_setCpuArm@@Base+0x1ca2>
+    3010:	0005      	movs	r5, r0
+    3012:	e1a0      	b.n	3356 <android_setCpuArm@@Base+0x1ae2>
+    3014:	2603      	movs	r6, #3
+    3016:	e182      	b.n	331e <android_setCpuArm@@Base+0x1aaa>
+    3018:	0007      	movs	r7, r0
+    301a:	ea00 30f8 	and.w	r0, r0, r8, ror #15
+    301e:	e200      	b.n	3422 <android_setCpuArm@@Base+0x1bae>
+    3020:	00d0      	lsls	r0, r2, #3
+    3022:	e353      	b.n	36cc <android_setCpuArm@@Base+0x1e58>
+    3024:	ff5c 1aff 	vpmin.u16	<illegal reg q8.5>, q14, <illegal reg q15.5>
+    3028:	2007      	movs	r0, #7
+    302a:	e200      	b.n	342e <android_setCpuArm@@Base+0x1bba>
+    302c:	1001      	asrs	r1, r0, #32
+    302e:	e3a0      	b.n	3772 <android_setCpuArm@@Base+0x1efe>
+    3030:	2001      	movs	r0, #1
+    3032:	e282      	b.n	353a <android_setCpuArm@@Base+0x1cc6>
+    3034:	0005      	movs	r5, r0
+    3036:	e1a0      	b.n	337a <android_setCpuArm@@Base+0x1b06>
+    3038:	2702      	movs	r7, #2
+    303a:	e382      	b.n	3742 <android_setCpuArm@@Base+0x1ece>
+    303c:	3005      	adds	r0, #5
+    303e:	e3a0      	b.n	3782 <android_setCpuArm@@Base+0x1f0e>
+    3040:	fdba ebff 	ldc2	11, cr14, [sl, #1020]!	; 0x3fc	; <UNPREDICTABLE>
+    3044:	0000      	movs	r0, r0
+    3046:	e350      	b.n	36ea <android_setCpuArm@@Base+0x1e76>
+    3048:	ff53 1aff 	vpmin.u16	<illegal reg q8.5>, <illegal reg q9.5>, <illegal reg q15.5>
+    304c:	ff21 eaff 	vpmin.u32	q7, <illegal reg q8.5>, <illegal reg q15.5>
+    3050:	0000      	movs	r0, r0
+    3052:	e3a0      	b.n	3796 <android_setCpuArm@@Base+0x1f22>
+    3054:	d014      	beq.n	3080 <android_setCpuArm@@Base+0x180c>
+    3056:	e28d      	b.n	3574 <android_setCpuArm@@Base+0x1d00>
+    3058:	83f0      	strh	r0, [r6, #30]
+    305a:	e8bd 401f 	ldmia.w	sp!, {r0, r1, r2, r3, r4, lr}
+    305e:	e92d 304c 	stmdb	sp!, {r2, r3, r6, ip, sp}
+    3062:	e590      	b.n	2b86 <android_setCpuArm@@Base+0x1312>
+    3064:	0001      	movs	r1, r0
+    3066:	e1a0      	b.n	33aa <android_setCpuArm@@Base+0x1b36>
+    3068:	1004      	asrs	r4, r0, #32
+    306a:	e28d      	b.n	3588 <android_setCpuArm@@Base+0x1d14>
+    306c:	2004      	movs	r0, #4
+    306e:	e593      	b.n	2b98 <android_setCpuArm@@Base+0x1324>
+    3070:	2402      	movs	r4, #2
+    3072:	e1a0      	b.n	33b6 <android_setCpuArm@@Base+0x1b42>
+    3074:	2004      	movs	r0, #4
+    3076:	e58d      	b.n	2b94 <android_setCpuArm@@Base+0x1320>
+    3078:	2008      	movs	r0, #8
+    307a:	e283      	b.n	3584 <android_setCpuArm@@Base+0x1d10>
+    307c:	2008      	movs	r0, #8
+    307e:	e58d      	b.n	2b9c <android_setCpuArm@@Base+0x1328>
+    3080:	2003      	movs	r0, #3
+    3082:	e3a0      	b.n	37c6 <android_setCpuArm@@Base+0x1f52>
+    3084:	200c      	movs	r0, #12
+    3086:	e5cd      	b.n	2c24 <android_setCpuArm@@Base+0x13b0>
+    3088:	3007      	adds	r0, #7
+    308a:	e5d3      	b.n	2c34 <android_setCpuArm@@Base+0x13c0>
+    308c:	300d      	adds	r0, #13
+    308e:	e5cd      	b.n	2c2c <android_setCpuArm@@Base+0x13b8>
+    3090:	ff0b ebff 	vqrdmlah.s<illegal width 8>	q7, <illegal reg q13.5>, <illegal reg q15.5>
+    3094:	d014      	beq.n	30c0 <android_setCpuArm@@Base+0x184c>
+    3096:	e28d      	b.n	35b4 <android_setCpuArm@@Base+0x1d40>
+    3098:	f004 e49d 			; <UNDEFINED> instruction: 0xf004e49d
+    309c:	4008      	ands	r0, r1
+    309e:	e92d ff06 	stmdb	sp!, {r1, r2, r8, r9, sl, fp, ip, sp, lr, pc}
+    30a2:	ebff 0048 			; <UNDEFINED> instruction: 0xebff0048
+    30a6:	e590      	b.n	2bca <android_setCpuArm@@Base+0x1356>
+    30a8:	8008      	strh	r0, [r1, #0]
+    30aa:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+    30ae:	e92d ff02 	stmdb	sp!, {r1, r8, r9, sl, fp, ip, sp, lr, pc}
+    30b2:	ebff 304c 			; <UNDEFINED> instruction: 0xebff304c
+    30b6:	e590      	b.n	2bda <android_setCpuArm@@Base+0x1366>
+    30b8:	0007      	movs	r7, r0
+    30ba:	e5d3      	b.n	2c64 <android_setCpuArm@@Base+0x13f0>
+    30bc:	0100      	lsls	r0, r0, #4
+    30be:	e083      	b.n	31c8 <android_setCpuArm@@Base+0x1954>
+    30c0:	0008      	movs	r0, r1
+    30c2:	e280      	b.n	35c6 <android_setCpuArm@@Base+0x1d52>
+    30c4:	8008      	strh	r0, [r1, #0]
+    30c6:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+    30ca:	e92d f681 	stmdb	sp!, {r0, r7, r9, sl, ip, sp, lr, pc}
+    30ce:	ebff 4008 			; <UNDEFINED> instruction: 0xebff4008
+    30d2:	e92d f67f 	stmdb	sp!, {r0, r1, r2, r3, r4, r5, r6, r9, sl, ip, sp, lr, pc}
+    30d6:	Address 0x000030d6 is out of bounds.
+
